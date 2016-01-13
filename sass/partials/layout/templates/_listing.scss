@@ -1,0 +1,12 @@
+/**
+ * @file
+ * sass/partials/layout/templates/_listing.scss
+ */
+
+@include listing-layout(4, 'top-down');
+@include breakpoint($s-break) {
+  @include listing-layout(8, 'left-right');
+}
+@include breakpoint($m-break) {
+  @include listing-layout(12, 'left-right');
+}

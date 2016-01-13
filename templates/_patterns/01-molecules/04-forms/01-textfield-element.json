@@ -1,0 +1,22 @@
+{
+    "type": "texfield",
+    "name": "name",
+    "title_display": "before",
+    "attributes": {
+        "Attribute()": {
+            "class": []
+        }
+    },
+    "label_display": "before",
+    "label": {
+        "include()": {
+            "pattern": "atoms-form-element-label.html",
+            "with": {
+                "title": "Textfield label"
+            }
+        }
+    },
+    "children": {
+        "join()": ["atoms-input.html"]
+    }
+}

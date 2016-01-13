@@ -1,0 +1,8 @@
+{
+    "attributes": {
+        "Attribute()": {
+            "class": ["nav", "nav--main"]
+        }
+    },
+    "content": "molecules-menu.html"
+}

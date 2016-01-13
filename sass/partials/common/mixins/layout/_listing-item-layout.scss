@@ -1,0 +1,30 @@
+/**
+ * @file
+ * sass/partials/common/mixins/layout/_listing-item-layout.scss
+ */
+
+@mixin listing-item-layout(
+  $outer-cols, $layout-type: 'top-down', $gutter: $gutter
+) {
+  $scaled-gutter: $gutter / ($outer-cols / 4);
+  .listing-item {
+    @include layout(4) {
+      @if ($layout-type == 'left-right') {
+        .listing-item__picture {
+          @include grid-span(1, 1, $gutter: $scaled-gutter);
+        }
+        .listing-item__body {
+          @include grid-span(3, 2, $gutter: $scaled-gutter);
+        }
+      }
+      @else {
+        .listing-item__picture {
+          @include grid-span(4, 1, $gutter: $scaled-gutter);
+        }
+        .listing-item__body {
+          @include isolation-span(4, 1, 'both', $gutter: $scaled-gutter);
+        }
+      }
+    }
+  }
+}

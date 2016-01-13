@@ -1,0 +1,16 @@
+/**
+ * @file
+ * sass/partials/components/atoms/_feed-icon.scss
+ *
+ * @see feed-icon.html.twig
+ */
+
+.feed-icon {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  margin: 1rem 0;
+  @include hide-text();
+  background-image: url('../images/feed.svg');
+  background-size: contain;
+}

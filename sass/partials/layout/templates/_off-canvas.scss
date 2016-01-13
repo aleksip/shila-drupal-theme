@@ -1,0 +1,151 @@
+/**
+ * @file
+ * sass/partials/layout/templates/_off-canvas.scss
+ *
+ * Pure CSS (no JavaScript required) implementation.
+ * Layout styles only in this file.
+ * Uses Neat grid framework media mixin.
+ *
+ * @see page.html.twig
+ */
+
+$off-canvas-in-use: $xs-break !default;
+$off-canvas-not-in-use: $s-break !default;
+$off-canvas-width: (80% 20rem 20rem 20rem) !default;
+$off-canvas-header-height: 4rem !default;
+$off-canvas-z-index: 500 !default;
+
+@mixin off-canvas-in-use-rules() {
+  .layout-container {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+  #off-canvas-checkbox {
+    display: block;
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  #off-canvas-label {
+    display: block;
+    position: fixed;
+    left: 0;
+    z-index: $off-canvas-z-index + 1;
+    width: 64px;
+    height: 64px;
+    padding: 10px;
+    background-position: 10px 10px;
+    background-size: 44px 44px;
+    background-repeat: no-repeat;
+    background-image: url('../images/menu.png');
+    background-image: url('../images/menu.svg');
+    cursor: pointer;
+    @extend %off-canvas-slide;
+  }
+  .page {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    @extend %off-canvas-slide;
+  }
+  .page__header {
+    position: fixed;
+    z-index: $off-canvas-z-index;
+    height: $off-canvas-header-height;
+  }
+  .off-canvas {
+    position: fixed;
+    min-height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    @extend %off-canvas-slide;
+    @for $i from 1 through 4 {
+      @include media(nth($breaks-list, $i)) {
+        left: -(nth($off-canvas-width, $i));
+        width: nth($off-canvas-width, $i);;
+      }
+    }
+  }
+  .off-canvas-hidden {
+    display: none;
+  }
+
+  // Off canvas in use and visible.
+  #off-canvas-checkbox:checked {
+    & ~ .page {
+      position: fixed;
+      height: 100%;
+      overflow: hidden;
+    }
+    & ~ #off-canvas-label,
+    & ~ .page {
+      @for $i from 1 through 4 {
+        @include media(nth($breaks-list, $i)) {
+          left: nth($off-canvas-width, $i);
+        }
+      }
+    }
+    & ~ .off-canvas {
+      left: 0;
+    }
+  }
+
+  // Fix for Firefox paint bug.
+  .page__middle {
+    margin-top: $off-canvas-header-height * 2;
+  }
+  #off-canvas-checkbox:checked {
+    & ~ .page {
+      .page__header {
+        position: static;
+      }
+      .page__middle {
+        margin-top: $off-canvas-header-height;
+      }
+    }
+  }
+  // End of fix for Firefox paint bug.
+}
+
+@mixin off-canvas-not-in-use-rules() {
+  #off-canvas-checkbox,
+  #off-canvas-label,
+  .off-canvas {
+    display: none;
+  }
+  .off-canvas-hidden {
+    display: block;
+  }
+}
+
+%off-canvas-slide {
+  -webkit-transition: left .4s;
+  -moz-transition: left .4s;
+  -o-transition: left .4s;
+  -ms-transition: left .4s;
+  transition: left .4s;
+}
+
+@if $off-canvas-in-use {
+  @if $off-canvas-in-use == true {
+    @include off-canvas-in-use-rules();
+  }
+  @else {
+    @include media($off-canvas-in-use) {
+      @include off-canvas-in-use-rules();
+    }
+  }
+}
+@if $off-canvas-not-in-use {
+  @if $off-canvas-not-in-use == true {
+    @include off-canvas-not-in-use-rules();
+  }
+  @else {
+    @include media($off-canvas-not-in-use) {
+      @include off-canvas-not-in-use-rules();
+    }
+  }
+}

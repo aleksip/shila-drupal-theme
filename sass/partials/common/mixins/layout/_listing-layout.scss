@@ -1,0 +1,10 @@
+/**
+ * @file
+ * sass/partials/common/mixins/layout/_listing-layout.scss
+ */
+
+@mixin listing-layout($outer-cols, $layout-type, $gutter: $gutter) {
+  .listing {
+    @include listing-item-layout($outer-cols, $layout-type, $gutter);
+  }
+}

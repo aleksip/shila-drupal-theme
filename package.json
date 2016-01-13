@@ -1,0 +1,19 @@
+{
+    "name": "shila-drupal-theme",
+    "version": "0.0.1",
+    "description": "Automation",
+    "dependencies": {},
+    "devDependencies": {
+        "browser-sync": "^2.10.0",
+        "gulp": "^3.9.0",
+        "gulp-run": "1.6.10",
+        "gulp-sass": "^2.1.1",
+        "gulp-sourcemaps": "^1.6.0",
+        "run-sequence": "^1.1.5"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/aleksip/shila-drupal-theme"
+    },
+    "license": "GPL-2.0"
+}

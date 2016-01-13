@@ -1,0 +1,18 @@
+{
+    "status_messages": {
+        "include()": {
+            "pattern": "molecules-status-messages.html",
+            "with": {
+                "attributes": {
+                    "Attribute()": {
+                        "class": ["messages"]
+                    }
+                },
+                "message_list": {
+                    "status": ["Homepage with a status message"]
+                }
+            },
+            "only": true
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "attributes": {
+        "Attribute()": {
+            "class": ["field", "field--comment"]
+        }
+    },
+    "title_attributes": {
+        "Attribute()": {
+            "class": ["field--comment__title"]
+        }
+    },
+    "label": "Comments",
+    "comments": {
+        "join()": [
+            "molecules-comment.html",
+            "<div class=\"indented\">",
+            "molecules-comment.html",
+            "</div>",
+            "molecules-comment.html"
+        ]
+    },
+    "comment_form": "molecules-comment-form"
+}

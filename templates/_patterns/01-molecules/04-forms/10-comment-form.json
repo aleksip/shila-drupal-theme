@@ -1,0 +1,77 @@
+{
+    "attributes": {
+        "Attribute()": {
+            "id": "comment-form",
+            "class": ["comment-comment-form", "comment-form"]
+        }
+    },
+    "children": {
+        "join()": [
+            {
+                "include()": {
+                    "pattern": "molecules-textfield-element",
+                    "with": {
+                        "label": {
+                            "include()": {
+                                "pattern": "atoms-form-element-label.html",
+                                "with": {
+                                    "title": "Your name"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "include()": {
+                    "pattern": "molecules-textfield-element",
+                    "with": {
+                        "label": {
+                            "include()": {
+                                "pattern": "atoms-form-element-label.html",
+                                "with": {
+                                    "title": "Email"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "include()": {
+                    "pattern": "molecules-textfield-element",
+                    "with": {
+                        "label": {
+                            "include()": {
+                                "pattern": "atoms-form-element-label.html",
+                                "with": {
+                                    "title": "Homepage"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "include()": {
+                    "pattern": "molecules-textarea-element",
+                    "with": {
+                        "label": {
+                            "include()": {
+                                "pattern": "atoms-form-element-label.html",
+                                "with": {
+                                    "title": "Comment"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "include()": {
+                    "pattern": "atoms-input-submit"
+                }
+            }
+        ]
+    }
+}

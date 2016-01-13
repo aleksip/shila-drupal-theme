@@ -1,0 +1,11 @@
+/**
+ * @file
+ * sass/layout.scss
+ *
+ * CSS rules that layout a page.
+ */
+
+@import "partials/common/imports";
+@import "partials/layout/templates/global";
+@import "partials/layout/templates/off-canvas";
+@import "partials/layout/templates/page--front";

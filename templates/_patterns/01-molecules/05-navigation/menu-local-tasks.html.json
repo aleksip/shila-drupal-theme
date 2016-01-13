@@ -1,0 +1,26 @@
+{
+    "primary": {
+        "include()": {
+            "pattern": "molecules-menu.html",
+            "with": {
+                "items": [
+                    { "title": "Primary task 1" },
+                    { "title": "Primary task 2" },
+                    { "title": "Primary task 3" }
+                ]
+            }
+        }
+    },
+    "secondary": {
+        "include()": {
+            "pattern": "molecules-menu.html",
+            "with": {
+                "items": [
+                    { "title": "Secondary task 1" },
+                    { "title": "Secondary task 2" },
+                    { "title": "Secondary task 3" }
+                ]
+            }
+        }
+    }
+}

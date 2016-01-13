@@ -1,0 +1,41 @@
+/**
+ * @file
+ * sass/partials/components/molecules/messaging/_messages.scss
+ *
+ * Based on http://refills.bourbon.io/components/
+ *
+ * @see status-messages.html.twig
+ */
+
+$base-spacing: 1.5em !default;
+$status-color: #e5edf8 !default;
+$warning-color: #fff6bf !default;
+$error-color: #fbe3e4 !default;
+$success-color: #e6efc2 !default;
+
+@mixin message($color) {
+  background-color: $color;
+  color: darken($color, 60%);
+  display: block;
+  margin-bottom: $base-spacing / 2;
+  padding: $base-spacing / 2;
+  text-align: center;
+  a {
+    color: darken($color, 70%);
+    text-decoration: underline;
+    &:focus,
+    &:hover {
+      color: darken($color, 90%);
+    }
+  }
+}
+
+.messages--status {
+  @include message($status-color);
+}
+.messages--warning {
+  @include message($warning-color);
+}
+.messages--error {
+  @include message($error-color);
+}

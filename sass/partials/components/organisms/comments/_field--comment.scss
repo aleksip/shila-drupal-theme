@@ -1,0 +1,19 @@
+/**
+ * @file
+ * sass/partials/components/organisms/comments/_field--comment.scss
+ *
+ * @see field--comment.html.twig
+ */
+
+.field--comment {
+  margin-top: 4rem;
+  .comment + .comment {
+    margin-top: 4rem;
+  }
+  .indented {
+    padding-left: 1rem;
+  }
+}
+.field--comment__title {
+  border-bottom: 1px solid $light-gray;
+}

@@ -1,0 +1,28 @@
+{
+    "sass": {
+        "srcFiles": "./sass/**/*.scss",
+        "options": {
+            "includePaths": [
+                "./sass",
+                "./bower_components/bourbon/app/assets/stylesheets",
+                "./bower_components/breakpoint-sass/stylesheets",
+                "./bower_components/compass-mixins/lib",
+                "./bower_components/neat/app/assets/stylesheets",
+                "./bower_components/sass-toolkit/stylesheets",
+                "./bower_components/sassy-maps/sass",
+                "./bower_components/singularity/stylesheets"
+            ],
+            "outputStyle": "expanded"
+        },
+        "destDir": "./css"
+    },
+    "templateFiles": "./templates/**/*.twig",
+    "patternFiles": "./templates/_patterns/**/*",
+    "patternLab": {
+        "sourcePatternsDir": "./starterkit/dist/_patterns",
+        "sourceCssDir": "./starterkit/dist/css"
+    },
+    "drush": {
+        "alias": ""
+    }
+}

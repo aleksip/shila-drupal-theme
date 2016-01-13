@@ -1,0 +1,18 @@
+/**
+ * @file
+ * sass/partials/base/_elements.scss
+ */
+
+html {
+  background-color: $base-background-color;
+}
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}
+picture source,
+picture img {
+  width: 100%;
+  height: auto;
+}

@@ -1,0 +1,14 @@
+{
+    "attributes": {
+        "Attribute()": {
+            "class": ["block", "block--powered-by"]
+        }
+    },
+    "title_attributes": {
+        "Attribute()": {
+            "class": ["block__title"]
+        }
+    },
+    "label": "",
+    "content": "<p>Powered by Pattern Lab</p>"
+}

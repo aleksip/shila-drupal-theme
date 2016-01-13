@@ -1,0 +1,38 @@
+/**
+ * @file
+ * sass/partials/components/organisms/comments/_comment.scss
+ *
+ * @see shila_theme_preprocess_comment()
+ * @see comment.html.twig
+ */
+
+.comment {
+  font-family: $helvetica;
+  font-size: smaller;
+}
+.comment__title {
+  display: none;
+}
+.comment__byline {
+  margin: 0.5em 0 0;
+  color: $medium-gray;
+  font-family: $base-font-family;
+  p {
+    margin: 0;
+  }
+}
+.comment__permalink {
+  display: none;
+}
+.comment__content {
+  .field--comment_body {
+    p:first-child {
+      margin-top: 0;
+    }
+  }
+  .links {
+    @include horizontal-list(0.5em);
+  }
+}
+.comment-reply {
+}

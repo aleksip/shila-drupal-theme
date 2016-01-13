@@ -1,0 +1,39 @@
+/**
+ * @file
+ * sass/partials/common/mixins/_layout-tools.scss
+ */
+
+@mixin do-multicol-layout($inner-cols: 1, $selector: &) {
+  @for $i from 1 through $inner-cols {
+    #{$selector}:nth-child(#{$inner-cols}n+#{$i}) {
+      @if ($i == 1) {
+        @include isolation-span(1, $i, both);
+      } @else {
+        @include isolation-span(1, $i, none);
+      }
+    }
+  }
+}
+
+@mixin multicol-layout($inner-cols, $outer-cols, $selector: &, $gutter: $gutter) {
+  $scaled-gutter: $gutter / ($outer-cols / $inner-cols);
+  @include layout($inner-cols, $scaled-gutter) {
+    @include do-multicol-layout($inner-cols, $selector);
+  }
+}
+
+@mixin multicol-breakpoint-layout(
+  $inner-cols, $outer-cols: $cols-list, $selector: &, $gutter: $gutter
+) {
+  $breakpoints: ($xs-break, $s-break, $m-break, $l-break);
+  @include multicol-layout(
+    nth($inner-cols, 1), nth($outer-cols, 1), $selector, $gutter
+  );
+  @for $i from 2 through 4 {
+    @include breakpoint(nth($breakpoints, $i)) {
+      @include multicol-layout(
+        nth($inner-cols, $i), nth($outer-cols, $i), $selector, $gutter
+      );
+    }
+  }
+}

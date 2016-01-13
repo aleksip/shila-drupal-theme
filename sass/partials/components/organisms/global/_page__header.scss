@@ -1,0 +1,14 @@
+/**
+ * @file
+ * sass/partials/components/organisms/global/_page__header.scss
+ *
+ * @see page.html.twig
+ */
+
+.page__header {
+  @extend %side-paddings;
+  background-color: $white;
+  .block--branding {
+    @include outer-container();
+  }
+}

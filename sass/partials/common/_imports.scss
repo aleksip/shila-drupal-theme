@@ -1,0 +1,13 @@
+/**
+ * @file
+ * sass/partials/common/_imports.scss
+ *
+ * Importing this file should not generate any CSS.
+ */
+
+@import "compass/utilities";
+@import "bourbon";
+@import "partials/common/variables";
+@import "partials/common/placeholders";
+@import "partials/common/grid-settings";
+@import "neat";

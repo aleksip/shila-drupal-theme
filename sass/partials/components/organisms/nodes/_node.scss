@@ -1,0 +1,29 @@
+/**
+ * @file
+ * sass/partials/components/organisms/nodes/_node.scss
+ *
+ * @see shila_theme_preprocess_node()
+ * @see node.html.twig
+ */
+
+.node {
+  font-family: $georgia;
+}
+.node__byline {
+  margin: 0.5em 0 1rem;
+  color: $medium-gray;
+  font-family: $base-font-family;
+  font-size: smaller;
+}
+.node__links {
+  font-family: $base-font-family;
+  @include horizontal-list(0.5em);
+}
+.node.teaser {
+  .node__title {
+    margin: 0;
+    a {
+      color: $base-font-color;
+    }
+  }
+}

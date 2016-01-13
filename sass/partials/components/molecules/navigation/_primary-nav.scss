@@ -1,0 +1,16 @@
+/**
+ * @file
+ * sass/partials/components/molecules/navigation/_primary-nav.scss
+ *
+ * @see shila_theme_preprocess_block()
+ * @see block--system-menu-block.html.twig
+ */
+
+.page__header .nav--main {
+  ul {
+    margin-top: 0;
+    @include horizontal-list(0.5em);
+  }
+}
+.off-canvas .nav--main {
+}

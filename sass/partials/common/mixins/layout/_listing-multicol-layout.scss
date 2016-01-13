@@ -1,0 +1,21 @@
+/**
+ * @file
+ * sass/partials/common/mixins/layout/_listing-multicol-layout.scss
+ */
+
+@mixin listing-multicol-layout(
+  $outer-cols, $inner-cols: 1, $gutter: $gutter
+) {
+  $scaled-gutter: $gutter / ($outer-cols / $inner-cols);
+  .listing--multicol {
+    @if ($inner-cols >= 2) {
+      @include multicol-layout($inner-cols, $outer-cols, '.listing-item', $gutter);
+      @for $i from 2 through $inner-cols {
+        .listing-item + .listing-item:nth-child(#{$i}) {
+          margin-top: 0;
+        }
+      }
+    }
+    @include listing-item-layout($outer-cols, 'top-down', $gutter);
+  }
+}

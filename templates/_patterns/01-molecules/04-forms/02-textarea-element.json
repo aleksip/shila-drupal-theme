@@ -1,0 +1,31 @@
+{
+    "type": "textarea",
+    "name": "name",
+    "title_display": "before",
+    "attributes": {
+        "Attribute()": {
+            "class": []
+        }
+    },
+    "label_display": "before",
+    "label": {
+        "include()": {
+            "pattern": "atoms-form-element-label.html",
+            "with": {
+                "title": "Textarea label"
+            }
+        }
+    },
+    "children": {
+        "include()": {
+            "pattern": "atoms-textarea.html",
+            "with": {
+                "attributes": {
+                    "Attribute()": {
+                        "rows": ["5"]
+                    }
+                }
+            }
+        }
+    }
+}

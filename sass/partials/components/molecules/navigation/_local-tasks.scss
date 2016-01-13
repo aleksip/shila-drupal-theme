@@ -1,0 +1,27 @@
+/**
+ * @file
+ * sass/partials/components/molecules/navigation/_local-tasks.scss
+ *
+ * @see shila_theme_preprocess_menu_local_task()
+ * @see menu-local-tasks.html.twig
+ */
+
+.block--local-tasks {
+  font-size: smaller;
+}
+.block--local-tasks__primary,
+.block--local-tasks__secondary {
+  clear: both;
+  @include horizontal-list(0.5em);
+}
+.block--local-tasks__task .is-active {
+  color: shade($action-color, 25%);
+}
+.block--local-tasks__task .is-active,
+.block--local-tasks__secondary {
+}
+.block--local-tasks__task {
+  a {
+    padding: 0 0.3em;
+  }
+}

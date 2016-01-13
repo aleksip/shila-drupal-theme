@@ -1,0 +1,16 @@
+/**
+ * @file
+ * sass/base.scss
+ *
+ * CSS rules that style HTML elements ("base" styles).
+ */
+
+@import "partials/common/imports";
+$border-box-sizing: true;
+@import "grid/box-sizing";
+@import "partials/base/buttons";
+@import "partials/base/elements";
+@import "partials/base/forms";
+@import "partials/base/lists";
+@import "partials/base/tables";
+@import "partials/base/typography";

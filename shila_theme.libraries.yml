@@ -1,0 +1,10 @@
+global-styling:
+  version: 1.x
+  css:
+    theme:
+      css/base.css: {}
+      css/components.css: {}
+      css/layout.css: {}
+      css/state.css: {}
+      css/theme.css: {}
+      css/print.css: { media: print }
