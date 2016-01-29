@@ -92,3 +92,7 @@ function shila_theme_preprocess_comment(&$variables) {
   $variables['permalink'] = \Drupal::l(t('Permalink'), $url);
   $variables['content_attributes']['class'][] = 'comment__content';
 }
+
+function shila_theme_preprocess_form(&$variables) {
+  $variables['attributes']['class'][] = 'form';
+}
