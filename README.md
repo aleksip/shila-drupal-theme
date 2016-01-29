@@ -2,6 +2,8 @@
 
 An [atomic design](http://bradfrost.com/blog/post/atomic-web-design/) and [Pattern Lab](http://patternlab.io/) friendly starting point for new Drupal 8 themes.
 
+A Pattern Lab generated style guide can be found [here](https://aleksip.github.io/styleguide-shila-drupal-theme/) (online style guide might not be up to date with the theme).
+
 Defines only four regions: Header, Main, Footer and Off Canvas. Other layout is expected to be implemented using Drupal blocks and a CSS grid framework.
 
 Tries to follow [Drupal CSS coding standards](https://www.drupal.org/coding-standards/css).
@@ -32,6 +34,8 @@ bower install
 
 
 ## Integrating Pattern Lab
+
+Prerequisites: Composer installed.
 
 While it is possible to use the theme on its own, it is designed to be used with the [Twig edition of Pattern Lab](https://github.com/pattern-lab/edition-php-twig-standard), [Shila Drupal Theme StarterKit](https://github.com/aleksip/starterkit-shila-drupal-theme) and [Data Transform Plugin](https://github.com/aleksip/plugin-data-transform). At the moment a forked version of Pattern Lab is required for Drupal template compatibility.
 
