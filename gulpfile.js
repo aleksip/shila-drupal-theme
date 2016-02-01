@@ -7,6 +7,7 @@ var runSequence = require('run-sequence');
 var sass        = require('gulp-sass');
 var sourcemaps  = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
+var fs          = require('fs');
 
 gulp.task('watch', ['sass-change'], function() {
     browserSync.init({
@@ -25,7 +26,7 @@ gulp.task('watch', ['sass-change'], function() {
 });
 
 gulp.task('sass', function() {
-    gulp.src(config.sass.srcFiles)
+    return gulp.src(config.sass.srcFiles)
         .pipe(sourcemaps.init())
         .pipe(sass(config.sass.options).on('error', sass.logError))
         .pipe(sourcemaps.write())
@@ -47,21 +48,41 @@ gulp.task('templates-change', function() {
 });
 
 gulp.task('pl:copy-css', function() {
-    gulp.src(config.sass.destDir + '/**/*')
-        .pipe(gulp.dest(config.patternLab.sourceCssDir))
-    ;
+    try {
+        if (fs.statSync(config.patternLab.sourceCssDir).isDir()) {
+            return gulp.src(config.sass.destDir + '/**/*')
+                .pipe(gulp.dest(config.patternLab.sourceCssDir))
+            ;
+        }
+    }
+    catch (err) {
+        return;
+    }
 });
 
 gulp.task('pl:copy-patterns', function() {
-    return gulp.src(config.patternFiles)
-        .pipe(gulp.dest(config.patternLab.sourcePatternsDir))
-    ;
+    try {
+        if (fs.statSync(config.patternLab.sourcePatternsDir).isDir()) {
+            return gulp.src(config.patternFiles)
+                .pipe(gulp.dest(config.patternLab.sourcePatternsDir))
+            ;
+        }
+    }
+    catch (err) {
+        return;
+    }
 });
 
 gulp.task('pl:copy', ['pl:copy-css', 'pl:copy-patterns']);
 
 gulp.task('pl:generate', function() {
-    run('php pattern-lab/core/console --generate').exec();
+    try {
+        if (fs.statSync(config.patternLab.sourcePatternsDir).isDir()) {
+            run('php pattern-lab/core/console --generate').exec();
+        }
+    }
+    catch (err) {
+    }
 });
 
 gulp.task('drush:cr', function() {
