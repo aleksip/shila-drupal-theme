@@ -133,7 +133,7 @@ $off-canvas-z-index: 500 !default;
   @if $off-canvas-in-use == true {
     @include off-canvas-in-use-rules();
   }
-  @else {
+  @else if $off-canvas-in-use != false {
     @include breakpoint($off-canvas-in-use) {
       @include off-canvas-in-use-rules();
     }
@@ -148,4 +148,7 @@ $off-canvas-z-index: 500 !default;
       @include off-canvas-not-in-use-rules();
     }
   }
+}
+@else {
+  @include off-canvas-not-in-use-rules();
 }
