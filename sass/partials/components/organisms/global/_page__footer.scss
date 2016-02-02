@@ -9,6 +9,6 @@
   @extend %side-paddings;
   padding-top: 4rem;
   .block {
-    @include outer-container();
+    @extend %outer-container;
   }
 }

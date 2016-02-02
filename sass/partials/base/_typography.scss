@@ -11,7 +11,7 @@ body {
   font-family: $base-font-family;
   line-height: $base-line-height;
   @for $i from 1 through 4 {
-    @include media(nth($breaks-list, $i)) {
+    @include breakpoint(nth($breaks-list, $i)) {
       font-size: nth($base-font-size, $i);
     }
   }

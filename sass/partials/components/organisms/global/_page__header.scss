@@ -9,6 +9,6 @@
   @extend %side-paddings;
   background-color: $white;
   .block--branding {
-    @include outer-container();
+    @extend %outer-container;
   }
 }

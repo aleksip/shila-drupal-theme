@@ -12,7 +12,7 @@
   padding-bottom: 1rem;
 }
 .page__header {
-  @include media($xs-break) {
+  @include breakpoint($xs-break) {
     padding-left: 64px;
   }
   width: 100%;
@@ -20,6 +20,6 @@
 .page__middle {
   @extend %side-paddings;
   main {
-    @include outer-container();
+    @extend %outer-container;
   }
 }

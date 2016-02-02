@@ -5,6 +5,20 @@
  * Based on http://bitters.bourbon.io/
  */
 
+// Columns
+$xs-cols: 4;
+$s-cols: 8;
+$m-cols: 12;
+$l-cols: 16;
+$cols-list: ($xs-cols $s-cols $m-cols $l-cols);
+
+// Breakpoints
+$xs-break: max-width 524px;
+$s-break: 525px;
+$m-break: 801px;
+$l-break: 1025px;
+$breaks-list: ($xs-break $s-break $m-break $l-break);
+
 // Typography
 $base-font-family: $helvetica;
 $heading-font-family: $base-font-family;
@@ -23,6 +37,7 @@ $base-spacing: $base-line-height * 1em;
 $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 $side-margin: 10;
+$max-width: 32rem;
 
 // Colors
 $white: #fefefe;

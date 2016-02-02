@@ -63,7 +63,7 @@ $off-canvas-z-index: 500 !default;
     overflow-y: auto;
     @extend %off-canvas-slide;
     @for $i from 1 through 4 {
-      @include media(nth($breaks-list, $i)) {
+      @include breakpoint(nth($breaks-list, $i)) {
         left: -(nth($off-canvas-width, $i));
         width: nth($off-canvas-width, $i);;
       }
@@ -83,7 +83,7 @@ $off-canvas-z-index: 500 !default;
     & ~ #off-canvas-label,
     & ~ .page {
       @for $i from 1 through 4 {
-        @include media(nth($breaks-list, $i)) {
+        @include breakpoint(nth($breaks-list, $i)) {
           left: nth($off-canvas-width, $i);
         }
       }
@@ -134,7 +134,7 @@ $off-canvas-z-index: 500 !default;
     @include off-canvas-in-use-rules();
   }
   @else {
-    @include media($off-canvas-in-use) {
+    @include breakpoint($off-canvas-in-use) {
       @include off-canvas-in-use-rules();
     }
   }
@@ -144,7 +144,7 @@ $off-canvas-z-index: 500 !default;
     @include off-canvas-not-in-use-rules();
   }
   @else {
-    @include media($off-canvas-not-in-use) {
+    @include breakpoint($off-canvas-not-in-use) {
       @include off-canvas-not-in-use-rules();
     }
   }

@@ -22,7 +22,7 @@
   font-weight: bold;
 }
 .block--branding__slogan {
-  @include media($xs-break) {
+  @include breakpoint($xs-break) {
     display: none;
   }
 }

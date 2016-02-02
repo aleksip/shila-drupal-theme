@@ -7,3 +7,8 @@
   padding-left: $side-margin / 2 * 1%;
   padding-right: $side-margin / 2 * 1%;
 }
+%outer-container {
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+}

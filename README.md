@@ -18,7 +18,7 @@ Please note that this theme is in early stages of development.
 - [Bower](http://bower.io/) package manager
 - [Composer](https://getcomposer.org/) dependency manager (for installing Pattern Lab)
 - [Bourbon](http://bourbon.io/) mixin library
-- [Neat](http://neat.bourbon.io/) grid framework
+- [Singularity](http://singularity.gs/) grid framework
 
 
 ## Installing development dependencies
@@ -35,9 +35,9 @@ bower install
 
 ## Integrating Pattern Lab
 
-Prerequisites: Composer installed.
+While it is possible to use Shila theme on its own, it is designed to be used with the [Twig edition of Pattern Lab](https://github.com/pattern-lab/edition-php-twig-standard), [Shila Drupal Theme StarterKit](https://github.com/aleksip/starterkit-shila-drupal-theme) and [Data Transform Plugin](https://github.com/aleksip/plugin-data-transform). At the moment a forked version of Pattern Lab is required for Drupal template compatibility.
 
-While it is possible to use the theme on its own, it is designed to be used with the [Twig edition of Pattern Lab](https://github.com/pattern-lab/edition-php-twig-standard), [Shila Drupal Theme StarterKit](https://github.com/aleksip/starterkit-shila-drupal-theme) and [Data Transform Plugin](https://github.com/aleksip/plugin-data-transform). At the moment a forked version of Pattern Lab is required for Drupal template compatibility.
+Prerequisites: Composer installed.
 
 In the theme root directory run:
 
