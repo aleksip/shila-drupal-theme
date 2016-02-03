@@ -49,7 +49,7 @@ gulp.task('templates-change', function() {
 
 gulp.task('pl:copy-css', function() {
     try {
-        if (fs.statSync(config.patternLab.sourceCssDir).isDir()) {
+        if (fs.statSync(config.patternLab.sourceCssDir).isDirectory()) {
             return gulp.src(config.sass.destDir + '/**/*')
                 .pipe(gulp.dest(config.patternLab.sourceCssDir))
             ;
@@ -62,7 +62,7 @@ gulp.task('pl:copy-css', function() {
 
 gulp.task('pl:copy-patterns', function() {
     try {
-        if (fs.statSync(config.patternLab.sourcePatternsDir).isDir()) {
+        if (fs.statSync(config.patternLab.sourcePatternsDir).isDirectory()) {
             return gulp.src(config.patternFiles)
                 .pipe(gulp.dest(config.patternLab.sourcePatternsDir))
             ;
@@ -77,7 +77,7 @@ gulp.task('pl:copy', ['pl:copy-css', 'pl:copy-patterns']);
 
 gulp.task('pl:generate', function() {
     try {
-        if (fs.statSync(config.patternLab.sourcePatternsDir).isDir()) {
+        if (fs.statSync(config.patternLab.sourcePatternsDir).isDirectory()) {
             run('php pattern-lab/core/console --generate').exec();
         }
     }
