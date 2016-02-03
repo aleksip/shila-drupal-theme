@@ -20,6 +20,7 @@
 .block--branding__name {
   font-size: 2.67rem;
   font-weight: bold;
+  line-height: $heading-line-height;
 }
 .block--branding__slogan {
   @include breakpoint($xs-break) {
