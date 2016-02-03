@@ -1,0 +1,28 @@
+shila_theme.xs:
+  label: XS
+  mediaQuery: 'all and (max-width: 524px)'
+  weight: 0
+  multipliers:
+    - 1x
+    - 2x
+shila_theme.s:
+  label: S
+  mediaQuery: 'all and (min-width: 525px) and (max-width: 800px)'
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+shila_theme.m:
+  label: M
+  mediaQuery: 'all and (min-width: 801px) and (max-width: 1024px)'
+  weight: 2
+  multipliers:
+    - 1x
+    - 2x
+shila_theme.l:
+  label: L
+  mediaQuery: 'all and (min-width: 1025px)'
+  weight: 3
+  multipliers:
+    - 1x
+    - 2x
