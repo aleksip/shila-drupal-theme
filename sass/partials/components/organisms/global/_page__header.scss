@@ -7,7 +7,7 @@
 
 .page__header {
   @extend %side-paddings;
-  background-color: $white;
+  background-color: $base-background-color;
   .block--branding {
     @extend %outer-container;
   }
