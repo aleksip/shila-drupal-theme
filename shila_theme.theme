@@ -5,6 +5,13 @@
  * Functions to support theming in the Shila theme.
  */
 
+function shila_theme_preprocess_region(&$variables) {
+  $variables['attributes']['class'][] = 'region';
+  $variables['attributes']['class'][] =
+    'region--' . $variables['elements']['#region']
+  ;
+}
+
 /**
  * Implements hook_preprocess_HOOK() for block.html.twig.
  */
