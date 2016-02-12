@@ -8,6 +8,6 @@ libraries:
   - shila_theme/global-styling
 regions:
   header: Header
-  content: Main
+  content: Content
   footer: Footer
   off_canvas: Off Canvas

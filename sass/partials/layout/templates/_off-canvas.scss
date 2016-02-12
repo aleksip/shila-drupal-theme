@@ -95,7 +95,7 @@ $off-canvas-z-index: 500 !default;
   }
 
   // Fix for Firefox paint bug.
-  .page__middle {
+  .page__content {
     margin-top: $off-canvas-header-height * 2;
   }
   #off-canvas-checkbox:checked {
@@ -103,7 +103,7 @@ $off-canvas-z-index: 500 !default;
       .page__header {
         position: static;
       }
-      .page__middle {
+      .page__content {
         margin-top: $off-canvas-header-height;
       }
     }
