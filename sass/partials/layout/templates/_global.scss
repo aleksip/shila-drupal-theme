@@ -8,10 +8,6 @@
 .page {
   padding-bottom: 4rem;
 }
-.page__header {
-  padding-left: 64px;
-  width: 100%;
-}
 .page__content {
   @extend %side-paddings;
   main {
