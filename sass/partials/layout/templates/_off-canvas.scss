@@ -14,6 +14,7 @@ $off-canvas-not-in-use: $s-break !default;
 $off-canvas-width: (80% 20rem 20rem 20rem) !default;
 $off-canvas-header-height: 4rem !default;
 $off-canvas-z-index: 500 !default;
+$off-canvas-side: left !default;
 
 @mixin off-canvas-in-use-rules() {
   .layout-container {
@@ -30,7 +31,7 @@ $off-canvas-z-index: 500 !default;
   #off-canvas-label {
     display: block;
     position: fixed;
-    left: 0;
+    #{$off-canvas-side}: 0;
     z-index: $off-canvas-z-index + 1;
     width: 64px;
     height: 64px;
@@ -52,7 +53,7 @@ $off-canvas-z-index: 500 !default;
     @extend %off-canvas-slide;
     @for $i from 1 through 4 {
       @include breakpoint(nth($breaks-list, $i)) {
-        left: -(nth($off-canvas-width, $i));
+        #{$off-canvas-side}: -(nth($off-canvas-width, $i));
         width: nth($off-canvas-width, $i);;
       }
     }
@@ -85,12 +86,12 @@ $off-canvas-z-index: 500 !default;
     & ~ .page {
       @for $i from 1 through 4 {
         @include breakpoint(nth($breaks-list, $i)) {
-          left: nth($off-canvas-width, $i);
+          #{$off-canvas-side}: nth($off-canvas-width, $i);
         }
       }
     }
     & ~ .off-canvas {
-      left: 0;
+      #{$off-canvas-side}: 0;
     }
   }
 
@@ -123,11 +124,8 @@ $off-canvas-z-index: 500 !default;
 }
 
 %off-canvas-slide {
-  -webkit-transition: left .4s;
-  -moz-transition: left .4s;
-  -o-transition: left .4s;
-  -ms-transition: left .4s;
-  transition: left .4s;
+  @include transition-property($off-canvas-side);
+  @include transition-duration(.4s);
 }
 
 @if $off-canvas-not-in-use {
