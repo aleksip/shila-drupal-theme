@@ -10,7 +10,7 @@
 }
 .page__content {
   @extend %side-paddings;
-  main {
-    @extend %outer-container;
-  }
+}
+.region--content {
+  @extend %outer-container;
 }

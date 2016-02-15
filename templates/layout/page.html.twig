@@ -48,14 +48,10 @@
         {{ page.header }}
       </header>
     {% endif %}
-    <div class="page__content">
-      {% if page.content %}
-        <main role="main" class="{{ main_classes }}">
-          <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-          {{ page.content }}
-        </main>
-      {% endif %}
-    </div>
+    <main role="main" class="main page__content">
+      <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+      {{ page.content }}
+    </main>
     {% if page.footer %}
       <footer role="contentinfo" class="footer page__footer">
         {{ page.footer }}
