@@ -12,7 +12,7 @@
 $off-canvas-in-use: $xs-break !default;
 $off-canvas-not-in-use: $s-break !default;
 $off-canvas-width: (80% 20rem 20rem 20rem) !default;
-$off-canvas-header-height: 4rem !default;
+$off-canvas-header-height: 64px !default;
 $off-canvas-z-index: 500 !default;
 $off-canvas-side: left !default;
 
@@ -63,7 +63,7 @@ $off-canvas-side: left !default;
   }
   .page {
     position: absolute;
-    left: 0;
+    #{$off-canvas-side}: 0;
     width: 100%;
     height: auto;
     overflow: visible;
@@ -74,6 +74,9 @@ $off-canvas-side: left !default;
     z-index: $off-canvas-z-index;
     height: $off-canvas-header-height;
   }
+  .page__content {
+    margin-top: $off-canvas-header-height;
+  }
 
   // Off canvas in use and visible.
   #off-canvas-checkbox:checked {
@@ -81,6 +84,12 @@ $off-canvas-side: left !default;
       position: fixed;
       height: 100%;
       overflow: hidden;
+      .page__header {
+        position: static;
+      }
+      .page__content {
+        margin-top: 0;
+      }
     }
     & ~ #off-canvas-label,
     & ~ .page {
@@ -94,22 +103,6 @@ $off-canvas-side: left !default;
       #{$off-canvas-side}: 0;
     }
   }
-
-  // Fix for Firefox paint bug.
-  .page__content {
-    margin-top: $off-canvas-header-height * 2;
-  }
-  #off-canvas-checkbox:checked {
-    & ~ .page {
-      .page__header {
-        position: static;
-      }
-      .page__content {
-        margin-top: $off-canvas-header-height;
-      }
-    }
-  }
-  // End of fix for Firefox paint bug.
 }
 
 @mixin off-canvas-not-in-use-rules() {
