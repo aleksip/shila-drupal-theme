@@ -49,6 +49,13 @@ function shila_theme_preprocess_block(&$variables) {
 }
 
 /**
+ * Implements hook_preprocess_HOOK() for page-title.html.twig.
+ */
+function shila_theme_preprocess_page_title(&$variables) {
+  $variables['title_attributes']['class'][] = 'page-title';
+}
+
+/**
  * Implements hook_preprocess_HOOK() for status-messages.html.twig.
  */
 function shila_theme_preprocess_status_messages(&$variables) {
