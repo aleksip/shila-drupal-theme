@@ -1,0 +1,15 @@
+{% extends "base.twig" %}
+
+{% block page__content %}
+  {{ block_page_title }}
+  {{ block_messages }}
+  {{ block_main }}
+{% endblock %}
+
+{% block page__footer %}
+  <footer role="contentinfo" class="footer page__footer">
+    <div class="region region--footer">
+      {% include "molecules-block-powered-by" %}
+    </div>
+  </footer>
+{% endblock %}

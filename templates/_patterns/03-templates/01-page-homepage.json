@@ -1,0 +1,10 @@
+{
+    "block_main": {
+        "include()": {
+            "pattern": "organisms-block-main",
+            "with": {
+                "content": "organisms-article-listing"
+            }
+        }
+    }
+}

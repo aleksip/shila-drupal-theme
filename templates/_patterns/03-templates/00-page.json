@@ -1,0 +1,25 @@
+{
+    "block_page_title": {
+        "include()": {
+            "pattern": "molecules-block-page-title",
+            "with": {
+                "content": {
+                    "include()": {
+                        "pattern": "molecules-page-title.html",
+                        "with": {
+                            "title": "Basic page"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "block_main": {
+        "include()": {
+            "pattern": "organisms-block-main",
+            "with": {
+                "content": "organisms-page-full"
+            }
+        }
+    }
+}

@@ -1,5 +1,7 @@
 {% extends "base.twig" %}
 
 {% block page__content %}
-  {% include "organisms-page-full" %}
+  {{ block_page_title }}
+  {{ block_messages }}
+  {{ block_main }}
 {% endblock %}
