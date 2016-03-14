@@ -3,13 +3,22 @@
  * sass/partials/common/mixins/layout/_listing-multicol-layout.scss
  */
 
+/// Multi-column listing layout.
+///
+/// @param {Number} $outer-cols
+///   Column span of parent element.
+/// @param {Number} $inner-cols [1]
+///   Number of columns.
+/// @param $selector [&]
+///   Selector to use if not targeting current parent selector.
+/// @param $gutter [$gutter]
+///   Gutter size.
 @mixin listing-multicol-layout(
   $outer-cols, $inner-cols: 1, $gutter: $gutter
 ) {
-  $scaled-gutter: $gutter / ($outer-cols / $inner-cols);
   .listing--multicol {
     @if ($inner-cols >= 2) {
-      @include multicol-layout($inner-cols, $outer-cols, '.listing-item', $gutter);
+      @include multicol-layout($outer-cols, $inner-cols, '.listing-item', $gutter);
       @for $i from 2 through $inner-cols {
         .listing-item + .listing-item:nth-child(#{$i}) {
           margin-top: 0;
@@ -17,5 +26,28 @@
       }
     }
     @include listing-item-layout($outer-cols, 'top-down', $gutter);
+  }
+}
+
+/// Multi-column listing layout with breakpoints.
+///
+/// @param {List} $inner-cols [(1 2 3 4)]
+///   Number of columns for each breakpoint.
+/// @param {List} $outer-cols [$cols-list]
+///   Column span of parent element in each breakpoint.
+/// @param $gutter [$gutter]
+///   Gutter size.
+@mixin listing-multicol-breakpoint-layout(
+  $inner-cols: (1 2 3 4), $outer-cols: $cols-list, $gutter: $gutter
+) {
+  @include listing-multicol-layout(
+    nth($outer-cols, 1), nth($inner-cols, 1), $gutter
+  );
+  @for $i from 2 through 4 {
+    @include breakpoint(nth($breaks-list, $i)) {
+      @include listing-multicol-layout(
+        nth($outer-cols, $i), nth($inner-cols, $i), $gutter
+      );
+    }
   }
 }
