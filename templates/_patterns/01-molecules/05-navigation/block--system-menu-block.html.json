@@ -4,5 +4,10 @@
             "class": ["nav", "nav--main"]
         }
     },
+    "title_attributes": {
+        "Attribute()": {
+            "class": ["block__title"]
+        }
+    },
     "content": "molecules-menu.html"
 }

@@ -6,7 +6,10 @@
     },
     "links": {
         "comment-reply": {
-            "link": "<a href=\"\">Reply</a>"
+            "link": "<a href=\"\">Reply</a>",
+            "attributes": {
+                "Attribute()": {}
+            }
         }
     }
 }
