@@ -1,0 +1,13 @@
+{
+    "label_hidden": true,
+    "attributes": {
+        "Attribute()": {
+            "class": ["field", "field--node_title"]
+        }
+    },
+    "items": [
+        {
+            "content": "<h2>Node title field</h2>"
+        }
+    ]
+}

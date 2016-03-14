@@ -1,0 +1,13 @@
+{
+    "attributes": {
+        "Attribute()": {
+            "class": ["block", "block--page-title"]
+        }
+    },
+    "title_attributes": {
+        "Attribute()": {
+            "class": ["block__title"]
+        }
+    },
+    "content": "molecules-page-title.html"
+}
