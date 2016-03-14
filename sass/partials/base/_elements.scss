@@ -3,6 +3,9 @@
  * sass/partials/base/_elements.scss
  */
 
+*, *::after, *::before {
+  box-sizing: border-box;
+}
 html {
   background-color: $base-background-color;
 }
