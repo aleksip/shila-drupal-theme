@@ -8,7 +8,7 @@
     "display_submitted": true,
     "content": {
         "join()": [
-            "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada quam at iaculis sodales. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum eu nulla porttitor, sagittis metus quis, sollicitudin tortor. Donec sit amet augue varius, lobortis libero ac, cursus quam. Fusce dolor lectus, vestibulum venenatis viverra ac, pulvinar eget eros. Etiam lectus sem, auctor eu posuere vel, pellentesque a tellus. Maecenas et commodo elit. Pellentesque luctus sapien elementum sapien rutrum pellentesque. Mauris molestie convallis sapien non dictum. Praesent tellus ipsum, suscipit sit amet tincidunt sit amet, condimentum et ante. Nulla laoreet euismod interdum. Aliquam erat volutpat.</p><p>Nam condimentum nisl ante, id convallis sem molestie in. Proin commodo tempus felis sit amet luctus. Aliquam eros tellus, pharetra ullamcorper mi id, tincidunt viverra justo. Sed ut dolor sed erat pulvinar accumsan. Pellentesque tristique sem enim, eu pharetra libero accumsan sit amet. Donec fringilla convallis aliquet. Vestibulum scelerisque nibh id ex pretium, finibus consectetur libero tristique. Donec purus elit, maximus ut eros eget, blandit pellentesque magna. Etiam lacinia mi sapien, tempor finibus est mattis ac. Curabitur et massa arcu.</p>",
+            "molecules-field--node_body",
             "organisms-field--comment.html"
         ]
     }
