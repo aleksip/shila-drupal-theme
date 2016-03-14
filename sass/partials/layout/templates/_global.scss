@@ -14,3 +14,4 @@
 .region--content {
   @extend %outer-container;
 }
+@include listing-multicol-breakpoint-layout((1 2 3 3));

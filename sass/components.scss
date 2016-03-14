@@ -9,6 +9,7 @@
 @import "partials/components/atoms/feed-icon";
 @import "partials/components/molecules/blocks/branding";
 @import "partials/components/molecules/blocks/powered-by";
+@import "partials/components/molecules/components/listing-item";
 @import "partials/components/molecules/forms/comment-form";
 @import "partials/components/molecules/forms/form";
 @import "partials/components/molecules/messaging/messages";
@@ -22,3 +23,4 @@
 @import "partials/components/organisms/global/page__header";
 @import "partials/components/organisms/nodes/node";
 @import "partials/components/organisms/nodes/article";
+@import "partials/components/organisms/sections/listing";

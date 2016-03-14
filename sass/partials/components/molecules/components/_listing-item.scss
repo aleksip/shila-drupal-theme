@@ -1,0 +1,35 @@
+/**
+ * @file
+ * sass/partials/components/molecules/components/_listing-item.scss
+ */
+
+.listing-item {
+  @extend %clearfix;
+}
+.listing-item__body {
+  .field--node_title h2,
+  .field--node_title h3 {
+    margin-top: 0
+  }
+  .field--node_title a {
+    color: $base-font-color;
+  }
+  .field--body,
+  .field--body p:last-child {
+    margin-bottom: 0;
+  }
+  .links {
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+}
+@include listing-item-layout($xs-cols, 'top-down');
+@include breakpoint($s-break) {
+  @include listing-item-layout($s-cols, 'left-right');
+}
+@include breakpoint($m-break) {
+  @include listing-item-layout($m-cols, 'left-right');
+}
+@include breakpoint($l-break) {
+  @include listing-item-layout($l-cols, 'left-right');
+}

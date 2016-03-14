@@ -1,0 +1,10 @@
+/**
+ * @file
+ * sass/partials/components/organisms/sections/_listing.scss
+ */
+
+.listing {
+  .listing-item + .listing-item {
+    margin-top: $base-spacing;
+  }
+}
