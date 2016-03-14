@@ -21,9 +21,8 @@
  *   - class: HTML classes.
  */
 #}
-{% set originalAttributes = attributes %}
 {% for type, messages in message_list %}
-  {% set attributes = originalAttributes.addClass('messages--' ~ type) %}
+  {% set attributes = attributes.addClass('messages--' ~ type) %}
   <div role="contentinfo" aria-label="{{ status_headings[type] }}"{{ attributes|without('role', 'aria-label') }}>
     {% if type == 'error' %}
       <div role="alert">
@@ -44,4 +43,5 @@
       </div>
     {% endif %}
   </div>
+  {% set attributes = attributes.removeClass('messages--' ~ type) %}
 {% endfor %}
