@@ -1,0 +1,13 @@
+{
+    "attributes": {
+        "Attribute()": {
+            "class": ["block", "block--main"]
+        }
+    },
+    "title_attributes": {
+        "Attribute()": {
+            "class": ["block__title"]
+        }
+    },
+    "content": ""
+}
