@@ -1,8 +1,0 @@
-{
-    "attributes": {
-        "Attribute()": {
-            "class": ["block--local-tasks__task"]
-        }
-    },
-    "link": "<a href=\"\">Local task</a>"
-}

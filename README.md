@@ -29,6 +29,12 @@ bower install
 ```
 
 
+## Files copied from the StarterKit
+
+Please note that the contents of the `css`, `images` and `templates/patterns` directories are copied from the StarterKit and should not be edited.
+
+
+
 ## Integrating with Pattern Lab
 
 At the moment a forked version of Pattern Lab is required for Drupal template compatibility.
