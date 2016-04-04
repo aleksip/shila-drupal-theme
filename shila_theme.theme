@@ -24,10 +24,12 @@ function shila_theme_preprocess_block(&$variables) {
   $map = array(
     // Site branding block.
     'system_branding_block' => 'block--branding',
+    // Search form block.
+    'search_form_block' => 'block--search-form',
     // Page title block.
     'page_title_block' => 'block--page-title',
     // Status messages block.
-    'system_messages_block' => 'block--system-messages',
+    'system_messages_block' => 'block--messages',
     // Tabs block.
     'local_tasks_block' => 'block--local-tasks',
     // Main page content block.
