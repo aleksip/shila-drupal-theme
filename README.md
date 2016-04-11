@@ -44,7 +44,7 @@ Prerequisites: Shila Drupal Theme StarterKit and [Composer](https://getcomposer.
 In the theme root directory run:
 
 ```sh
-git clone -b shila-drupal-theme http://github.com/aleksip/edition-php-twig-standard pattern-lab
+git clone https://github.com/aleksip/edition-php-drupal-standard pattern-lab
 ```
 
 In the `pattern-lab` directory run:
