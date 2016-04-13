@@ -37,14 +37,14 @@ Please note that the contents of the `css`, `images` and `templates/patterns` di
 
 ## Integrating with Pattern Lab
 
-At the moment a forked version of Pattern Lab is required for Drupal template compatibility.
+At the moment a development branch of Pattern Lab is required for Drupal template compatibility.
 
 Prerequisites: Shila Drupal Theme StarterKit and [Composer](https://getcomposer.org/) installed.
 
 In the theme root directory run:
 
 ```sh
-git clone https://github.com/aleksip/edition-php-drupal-standard pattern-lab
+git clone -b dev https://github.com/pattern-lab/edition-php-drupal-standard pattern-lab
 ```
 
 In the `pattern-lab` directory run:
