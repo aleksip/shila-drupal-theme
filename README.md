@@ -31,20 +31,18 @@ bower install
 
 ## Files copied from the StarterKit
 
-Please note that the contents of the `css`, `images` and `templates/patterns` directories are copied from the StarterKit and should not be edited.
+Please note that the contents of the `css`, `images` and `templates/patterns` directories are copied from the StarterKit and should not be edited. Copies are included in the theme repository for convenience only, so that it is possible to try out the theme on its own.
 
 
 
 ## Integrating with Pattern Lab
-
-At the moment a development branch of Pattern Lab is required for Drupal template compatibility.
 
 Prerequisites: Shila Drupal Theme StarterKit and [Composer](https://getcomposer.org/) installed.
 
 In the theme root directory run:
 
 ```sh
-git clone -b dev https://github.com/pattern-lab/edition-php-drupal-standard pattern-lab
+git clone https://github.com/pattern-lab/edition-php-drupal-standard pattern-lab
 ```
 
 In the `pattern-lab` directory run:
