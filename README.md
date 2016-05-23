@@ -56,11 +56,12 @@ In the `pattern-lab` directory run:
 composer install
 ```
 
-In the file `pattern-lab/config/config.yml` change `sourceDir` like so:
+In the file `pattern-lab/config/config.yml` change `sourceDir` and `twigAutoescape` like so:
 
-```yml
-sourceDir: ../starterkit/dist
-```
+ ```yml
+ sourceDir: ../starterkit/dist
+ twigAutoescape: false
+ ```
 
 If everything went well you should now be able to generate the static Pattern Lab site. In the `pattern-lab` directory run:
 
