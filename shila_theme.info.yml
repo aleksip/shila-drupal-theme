@@ -11,3 +11,13 @@ regions:
   content: Content
   footer: Footer
   off_canvas: Off Canvas
+component-libraries:
+  atoms:
+    paths:
+      - starterkit/dist/_patterns/00-atoms
+  molecules:
+    paths:
+      - starterkit/dist/_patterns/01-molecules
+  organisms:
+    paths:
+      - starterkit/dist/_patterns/02-organisms
