@@ -4,19 +4,17 @@ An [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/) and [Patte
 
 A Pattern Lab generated style guide can be found [here](https://aleksip.github.io/styleguide-shila-drupal-theme/) (online style guide might not be up to date).
 
-Please note that this theme is in early stages of development.
-
 
 ## Background
 
 This theme is not meant to be usable as is. It is meant to be a starting point for development of new themes.
 
-It is also meant to demonstrate Drupal template compatibility and Pattern Lab integration made possible by the [Drupal Edition of Pattern Lab](https://github.com/pattern-lab/edition-php-drupal-standard) and [Data Transform Plugin](https://github.com/aleksip/plugin-data-transform). For this reason most of the templates are actually unmodified Drupal [Stable base theme](https://www.drupal.org/node/2580687) templates.
+It is also meant to demonstrate Drupal template compatibility and Pattern Lab integration made possible by the [Drupal Edition of Pattern Lab](https://github.com/pattern-lab/edition-php-drupal-standard) and [Data Transform Plugin](https://github.com/aleksip/plugin-data-transform). For this reason most of the templates used by the theme are actually unmodified Drupal [Stable base theme](https://www.drupal.org/node/2580687) templates.
 
 
 ## Installing development dependencies
 
-While it is possible to use Shila theme on its own, [Shila Drupal Theme StarterKit](https://github.com/aleksip/starterkit-shila-drupal-theme) is required for development.
+[Shila Drupal Theme StarterKit](https://github.com/aleksip/starterkit-shila-drupal-theme) is required for development.
 
 Prerequisites: [npm](https://nodejs.org/) and [Bower](http://bower.io/) installed.
 
@@ -36,7 +34,7 @@ bower install
 
 ## Files copied from the StarterKit
 
-Please note that the contents of the `css`, `images` and `templates/patterns` directories are copied from the StarterKit and should not be edited. Copies are included in the theme repository to make it possible to try out and use the theme without installing development dependencies.
+Please note that the contents of the `css`, `images` and `templates/patterns` directories are copied from the StarterKit. The StarterKit contains a Gulp script that can be used to generate and copy these files.
 
 
 
