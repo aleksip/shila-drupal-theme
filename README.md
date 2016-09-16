@@ -9,40 +9,46 @@ A Pattern Lab generated style guide can be found [here](https://aleksip.github.i
 
 This theme is not meant to be usable as is. It is meant to be a starting point for development of new themes.
 
-It is also meant to demonstrate Drupal template compatibility and Pattern Lab integration made possible by the [Drupal Edition of Pattern Lab](https://github.com/pattern-lab/edition-php-drupal-standard) and [Data Transform Plugin](https://github.com/aleksip/plugin-data-transform). For this reason most of the templates used by the theme are actually unmodified Drupal [Stable base theme](https://www.drupal.org/node/2580687) templates.
+This theme is also meant to demonstrate Drupal template compatibility and Pattern Lab integration made possible by the [Drupal Edition of Pattern Lab](https://github.com/pattern-lab/edition-php-drupal-standard) and [Data Transform Plugin](https://github.com/aleksip/plugin-data-transform). For this reason many templates in the theme are actually unmodified Drupal [Stable base theme](https://www.drupal.org/node/2580687) templates.
 
 
-## Installing development dependencies
+## Installing required dependencies
 
-[Shila Drupal Theme StarterKit](https://github.com/aleksip/starterkit-shila-drupal-theme) is required for development.
+[Shila Drupal Theme StarterKit](https://github.com/aleksip/starterkit-shila-drupal-theme) and the Component Libraries Drupal module are required for the theme to function.
 
-Prerequisites: [npm](https://nodejs.org/) and [Bower](http://bower.io/) installed.
 
-In the theme root directory run:
+### Skila Drupal Theme StarteKit
+
+
+Prerequisites: [git](https://git-scm.com/) installed.
+
+In the **Shila theme root directory** run:
 
 ```sh
 git clone http://github.com/aleksip/starterkit-shila-drupal-theme starterkit
 ```
 
+
+### Component Libraries module
+
+Install and enable the [Component Libraries module](https://www.drupal.org/project/components). No configuration is needed.
+
+## Installing development dependencies
+
+Prerequisites: [npm](https://nodejs.org/) installed.
+
 In the `starterkit` directory run:
 
 ```sh
 npm install
-bower install
 ```
-
-
-## Files copied from the StarterKit
-
-Please note that the contents of the `css`, `images` and `templates/patterns` directories are copied from the StarterKit. The StarterKit contains a Gulp script that can be used to generate and copy these files.
-
 
 
 ## Integrating with Pattern Lab
 
-Prerequisites: Shila Drupal Theme StarterKit and [Composer](https://getcomposer.org/) installed.
+Prerequisites: git and [Composer](https://getcomposer.org/) installed.
 
-In the theme root directory run:
+In the **Shila theme root directory** run:
 
 ```sh
 git clone https://github.com/pattern-lab/edition-php-drupal-standard pattern-lab
