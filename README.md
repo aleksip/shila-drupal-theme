@@ -17,7 +17,7 @@ This theme is also meant to demonstrate Drupal template compatibility and Patter
 [Shila Drupal Theme StarterKit](https://github.com/aleksip/starterkit-shila-drupal-theme) and the Component Libraries Drupal module are required for the theme to function.
 
 
-### Skila Drupal Theme StarteKit
+### Shila Drupal Theme StarteKit
 
 
 Prerequisites: [git](https://git-scm.com/) installed.
