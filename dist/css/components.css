@@ -1,0 +1,623 @@
+/**
+ * @file
+ * sass/components.scss
+ *
+ * CSS rules that style design components (and their associated states and themes.)
+ */
+/**
+ * @file
+ * sass/partials/common/_imports.scss
+ *
+ * Importing this file should not generate any CSS.
+ */
+/**
+ * @file
+ * sass/partials/common/_variables.scss
+ *
+ * Based on http://bitters.bourbon.io/
+ */
+/**
+ * @file
+ * sass/partials/common/_placeholders.scss
+ */
+.page__footer, .page__header {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.list-item::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.page__header .nav ul {
+  margin-top: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.page__header .nav li {
+  display: inline-block;
+  padding-left: 0.8em;
+}
+
+.page__header .nav a {
+  color: #999;
+  text-decoration: none;
+}
+
+.page__header .nav a:active, .page__header .nav a:focus, .page__header .nav a:hover {
+  color: #333;
+}
+
+.page__header .nav .is-active {
+  color: #333;
+}
+
+/**
+ * @file
+ * sass/partials/common/mixins/layout/_list-item-layout.scss
+ */
+/**
+ * @file
+ * sass/partials/common/mixins/layout/_list-multicol-layout.scss
+ */
+/**
+ * @file
+ * sass/partials/common/mixins/layout/_multicol-layout.scss
+ */
+/**
+ * @file
+ * sass/partials/components/atoms/_feed-icon.scss
+ *
+ * @see feed-icon.html.twig
+ */
+.feed-icon {
+  overflow: hidden;
+  text-indent: 101%;
+  white-space: nowrap;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  margin: 1rem 0;
+  background-image: url("../images/feed.svg");
+  background-size: contain;
+}
+
+/**
+ * @file
+ * sass/partials/components/molecules/text/_page-title.scss
+ *
+ * @see shila_theme_preprocess_page_title()
+ * @see page-title.html.twig
+ */
+/**
+ * @file
+ * sass/partials/components/molecules/blocks/_branding.scss
+ *
+ * @see shila_theme_preprocess_block()
+ * @see block--system-branding-block.html.twig
+ */
+.block--branding a {
+  color: #333;
+}
+
+.block--branding__logo img {
+  max-height: 2.67rem;
+}
+
+.block--branding__name {
+  font-size: 2.67rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+@media (max-width: 524px) {
+  .block--branding__slogan {
+    display: none;
+  }
+}
+
+/**
+ * @file
+ * sass/partials/components/molecules/navigation/_primary-nav.scss
+ *
+ * @see shila_theme_preprocess_block()
+ * @see block--system-menu-block.html.twig
+ */
+/**
+ * @file
+ * sass/partials/components/molecules/blocks/_powered-by.scss
+ *
+ * @see shila_theme_preprocess_block()
+ * @see block.html.twig
+ */
+.block--powered-by {
+  text-align: center;
+  font-size: smaller;
+}
+
+.block--powered-by a {
+  color: #333;
+}
+
+/**
+ * @file
+ * sass/partials/components/molecules/blocks/_search-form.scss
+ *
+ * @see shila_theme_preprocess_block()
+ * @see block.html.twig
+ */
+/**
+ * @file
+ * sass/partials/components/molecules/forms/_comment-form.scss
+ */
+.comment-form #edit-field-homepage-0-uri--description,
+.comment-form #edit-preview {
+  display: none;
+}
+
+/**
+ * @file
+ * sass/partials/components/molecules/navigation/_local-tasks.scss
+ *
+ * @see shila_theme_preprocess_menu_local_task()
+ * @see menu-local-tasks.html.twig
+ */
+.block--local-tasks {
+  font-size: smaller;
+}
+
+.block--local-tasks__primary,
+.block--local-tasks__secondary {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  clear: both;
+}
+
+.block--local-tasks__primary::after,
+.block--local-tasks__secondary::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.block--local-tasks__primary li,
+.block--local-tasks__secondary li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.block--local-tasks__primary li:first-child, .block--local-tasks__primary li.first,
+.block--local-tasks__secondary li:first-child,
+.block--local-tasks__secondary li.first {
+  padding-left: 0;
+}
+
+.block--local-tasks__primary li:last-child,
+.block--local-tasks__secondary li:last-child {
+  padding-opposite-position(left): 0;
+}
+
+.block--local-tasks__primary li.last,
+.block--local-tasks__secondary li.last {
+  padding-opposite-position(left): 0;
+}
+
+.block--local-tasks__task .is-active {
+  color: #104c90;
+}
+
+.block--local-tasks__task a {
+  padding: 0 0.3em;
+}
+
+/**
+ * @file
+ * sass/partials/components/organisms/comments/_comment.scss
+ *
+ * @see shila_theme_preprocess_comment()
+ * @see comment.html.twig
+ */
+.comment {
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: smaller;
+}
+
+.comment__title {
+  display: none;
+}
+
+.comment__byline {
+  margin: 0.5em 0 0;
+  color: #999;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+}
+
+.comment__byline p {
+  margin: 0;
+}
+
+.comment__permalink {
+  display: none;
+}
+
+.comment__content .field--comment_body p:first-child {
+  margin-top: 0;
+}
+
+.comment__content .links {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.comment__content .links::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.comment__content .links li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.comment__content .links li:first-child, .comment__content .links li.first {
+  padding-left: 0;
+}
+
+.comment__content .links li:last-child {
+  padding-opposite-position(left): 0;
+}
+
+.comment__content .links li.last {
+  padding-opposite-position(left): 0;
+}
+
+/**
+ * @file
+ * sass/partials/components/molecules/components/_list-item.scss
+ */
+.list-item__body .field--node_title h2,
+.list-item__body .field--node_title h3 {
+  margin-top: 0;
+}
+
+.list-item__body .field--node_title a {
+  color: #333;
+}
+
+.list-item__body .field--body,
+.list-item__body .field--body p:last-child {
+  margin-bottom: 0;
+}
+
+.list-item__body .links {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.list-item .list-item__image {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  margin-bottom: 0.8em;
+}
+
+.list-item .list-item__body {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: both;
+}
+
+@media (min-width: 525px) {
+  .list-item .list-item__image {
+    width: 22.22222%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none;
+  }
+  .list-item .list-item__body {
+    width: 74.07407%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+}
+
+@media (min-width: 801px) {
+  .list-item .list-item__image {
+    width: 23.07692%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none;
+  }
+  .list-item .list-item__body {
+    width: 74.35897%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+}
+
+@media (min-width: 1025px) {
+  .list-item .list-item__image {
+    width: 23.52941%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none;
+  }
+  .list-item .list-item__body {
+    width: 74.5098%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+}
+
+/**
+ * @file
+ * sass/partials/components/molecules/messaging/_messages.scss
+ *
+ * Based on http://refills.bourbon.io/components/
+ *
+ * @see status-messages.html.twig
+ */
+.messages--status {
+  background-color: #e5edf8;
+  color: #244e87;
+  display: block;
+  margin-bottom: 0.8em;
+  padding: 0.8em;
+  text-align: center;
+}
+
+.messages--status a {
+  color: #19375f;
+  text-decoration: underline;
+}
+
+.messages--status a:focus, .messages--status a:hover {
+  color: #04080e;
+}
+
+.messages--warning {
+  background-color: #fff6bf;
+  color: #8c7800;
+  display: block;
+  margin-bottom: 0.8em;
+  padding: 0.8em;
+  text-align: center;
+}
+
+.messages--warning a {
+  color: #594c00;
+  text-decoration: underline;
+}
+
+.messages--warning a:focus, .messages--warning a:hover {
+  color: black;
+}
+
+.messages--error {
+  background-color: #fbe3e4;
+  color: #97161b;
+  display: block;
+  margin-bottom: 0.8em;
+  padding: 0.8em;
+  text-align: center;
+}
+
+.messages--error a {
+  color: #6a0f13;
+  text-decoration: underline;
+}
+
+.messages--error a:focus, .messages--error a:hover {
+  color: #110203;
+}
+
+/**
+ * @file
+ * sass/partials/components/molecules/forms/_form.scss
+ *
+ * @see shila_theme_preprocess_form()
+ */
+.form input[type="color"], .form input[type="date"], .form input[type="datetime"], .form input[type="datetime-local"], .form input[type="email"], .form input[type="month"], .form input[type="number"], .form input[type="password"], .form input[type="search"], .form input[type="tel"], .form input[type="text"], .form input[type="time"], .form input[type="url"], .form input[type="week"], .form input:not([type]), .form textarea,
+.form select[multiple=multiple] {
+  margin-bottom: 0;
+}
+
+.form .form-item {
+  margin-bottom: 0.8em;
+}
+
+.form .description {
+  font-size: smaller;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  color: #999;
+}
+
+/**
+ * @file
+ * sass/partials/components/organisms/global/_page__footer.scss
+ *
+ * @see page.html.twig
+ */
+.page__footer {
+  padding-bottom: 1.6em;
+}
+
+/**
+ * @file
+ * sass/partials/components/organisms/global/_page__header.scss
+ *
+ * @see page.html.twig
+ */
+.page__header {
+  width: 100%;
+  background-color: #fefefe;
+}
+
+@media (max-width: 524px) {
+  .page__header {
+    box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.page__header .nav {
+  display: none;
+}
+
+.page__header .nav--main {
+  padding-top: 0.92rem;
+}
+
+@media (min-width: 525px) {
+  .page__header .nav {
+    display: block;
+  }
+}
+
+/**
+ * @file
+ * sass/partials/components/organisms/nodes/_article.scss
+ *
+ * @see shila_theme_preprocess_node()
+ * @see node.html.twig
+ */
+.node--article .field--field_info {
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  padding: 0.5rem 1rem;
+  color: #999;
+  font-size: smaller;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+}
+
+.node--article .field--field_info p:last-child {
+  margin-bottom: 0;
+}
+
+.node--article .filter-wrapper {
+  display: none;
+}
+
+/**
+ * @file
+ * sass/partials/components/organisms/comments/_field--comment.scss
+ *
+ * @see field--comment.html.twig
+ */
+.field--comment {
+  margin-top: 3.2em;
+}
+
+.field--comment .comment + .comment {
+  margin-top: 3.2em;
+}
+
+.field--comment .indented {
+  padding-left: 1.6em;
+}
+
+.field--comment__title {
+  border-bottom: 1px solid #ddd;
+}
+
+/**
+ * @file
+ * sass/partials/components/organisms/sections/_list.scss
+ */
+.list .list-item + .list-item {
+  margin-top: 1.6em;
+}
+
+/**
+ * @file
+ * sass/partials/components/organisms/nodes/_node.scss
+ *
+ * @see shila_theme_preprocess_node()
+ * @see node.html.twig
+ */
+.node {
+  font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif;
+}
+
+.node__byline {
+  margin: 0.5em 0 1rem;
+  color: #999;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: smaller;
+}
+
+.node__links {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+}
+
+.node__links::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.node__links li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.node__links li:first-child, .node__links li.first {
+  padding-left: 0;
+}
+
+.node__links li:last-child {
+  padding-opposite-position(left): 0;
+}
+
+.node__links li.last {
+  padding-opposite-position(left): 0;
+}
+
+.node.teaser .node__title {
+  margin: 0;
+}
+
+.node.teaser .node__title a {
+  color: #333;
+}
+
+/*# sourceMappingURL=components.css.map */

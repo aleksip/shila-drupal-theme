@@ -1,0 +1,58 @@
+/**
+ * @file
+ * sass/partials/common/mixins/layout/_multicol-layout.scss
+ */
+
+@mixin do-multicol-layout($inner-cols: 1, $selector: &) {
+  @for $i from 1 through $inner-cols {
+    #{$selector}:nth-child(#{$inner-cols}n+#{$i}) {
+      @if ($i == 1) {
+        @include isolation-span(1, $i, both);
+      } @else {
+        @include isolation-span(1, $i, none);
+      }
+    }
+  }
+}
+
+/// Multi-column layout.
+///
+/// @param {Number} $inner-cols
+///   Number of columns.
+/// @param {Number} $outer-cols
+///   Column span of parent element.
+/// @param $selector [&]
+///   Selector to use if not targeting current parent selector.
+/// @param $gutter [$gutter]
+///   Gutter size.
+@mixin multicol-layout($outer-cols, $inner-cols: 1, $selector: &, $gutter: $gutter) {
+  $scaled-gutter: $gutter / ($outer-cols / $inner-cols);
+  @include layout($inner-cols, $scaled-gutter) {
+    @include do-multicol-layout($inner-cols, $selector);
+  }
+}
+
+/// Multi-column layout with breakpoints.
+///
+/// @param {List} $inner-cols [(1 2 3 4)]
+///   Number of columns for each breakpoint.
+/// @param {List} $outer-cols [$cols-list]
+///   Column span of parent element in each breakpoint.
+/// @param $selector [&]
+///   Selector to use if not targeting current parent selector.
+/// @param $gutter [$gutter]
+///   Gutter size.
+@mixin multicol-breakpoint-layout(
+  $inner-cols: (1 2 3 4), $outer-cols: $cols-list, $selector: &, $gutter: $gutter
+) {
+  @include multicol-layout(
+    nth($outer-cols, 1), nth($inner-cols, 1), $selector, $gutter
+  );
+  @for $i from 2 through 4 {
+    @include breakpoint(nth($breaks-list, $i)) {
+      @include multicol-layout(
+        nth($outer-cols, $i), nth($inner-cols, $i), $selector, $gutter
+      );
+    }
+  }
+}

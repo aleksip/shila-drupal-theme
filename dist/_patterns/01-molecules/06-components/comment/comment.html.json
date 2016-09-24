@@ -1,0 +1,25 @@
+{
+    "attributes": {
+        "Attribute()": {
+            "class": ["comment"]
+        }
+    },
+    "submitted": "Submitted by Shila (not verified) on Mon, 01/04/2016 - 12:08",
+    "title_attributes": {
+        "Attribute()": {
+            "class": ["comment__title"]
+        }
+    },
+    "title": "Comment Title",
+    "content_attributes": {
+        "Attribute()": {
+            "class": ["comment__content"]
+        }
+    },
+    "content": {
+        "join()": [
+            "molecules-field--comment-body",
+            "molecules-links.html"
+        ]
+    }
+}

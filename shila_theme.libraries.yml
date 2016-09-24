@@ -2,9 +2,9 @@ global-styling:
   version: 1.x
   css:
     theme:
-      starterkit/dist/css/base.css: {}
-      starterkit/dist/css/components.css: {}
-      starterkit/dist/css/layout.css: {}
-      starterkit/dist/css/state.css: {}
-      starterkit/dist/css/theme.css: {}
-      starterkit/dist/css/print.css: { media: print }
+      dist/css/base.css: {}
+      dist/css/components.css: {}
+      dist/css/layout.css: {}
+      dist/css/state.css: {}
+      dist/css/theme.css: {}
+      dist/css/print.css: { media: print }

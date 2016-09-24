@@ -1,0 +1,12 @@
+{
+    "attributes": {
+        "Attribute()": {
+            "class": ["messages"]
+        }
+    },
+    "message_list": {
+        "status": ["First status", "Second status"],
+        "warning": ["Warning"],
+        "error": ["Error"]
+    }
+}

@@ -1,0 +1,23 @@
+/**
+ * @file
+ * sass/partials/base/_lists.scss
+ *
+ * Based on http://bitters.bourbon.io/
+ */
+
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+dl {
+  margin-bottom: $small-spacing;
+  dt {
+    font-weight: 600;
+    margin-top: $small-spacing;
+  }
+  dd {
+    margin: 0;
+  }
+}

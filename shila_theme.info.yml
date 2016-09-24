@@ -14,10 +14,10 @@ regions:
 component-libraries:
   atoms:
     paths:
-      - starterkit/dist/_patterns/00-atoms
+      - dist/_patterns/00-atoms
   molecules:
     paths:
-      - starterkit/dist/_patterns/01-molecules
+      - dist/_patterns/01-molecules
   organisms:
     paths:
-      - starterkit/dist/_patterns/02-organisms
+      - dist/_patterns/02-organisms

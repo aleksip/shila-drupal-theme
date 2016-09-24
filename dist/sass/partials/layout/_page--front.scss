@@ -1,0 +1,17 @@
+/**
+ * @file
+ * sass/partials/layout/templates/_page--front.scss
+ *
+ * @see page.html.twig
+ */
+
+.page--front {
+  .comment-add {
+    display: none;
+  }
+}
+.view--frontpage {
+  .views-row + .views-row {
+    margin-top: $large-spacing;
+  }
+}

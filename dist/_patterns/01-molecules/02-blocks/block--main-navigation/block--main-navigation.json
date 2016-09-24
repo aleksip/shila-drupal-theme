@@ -1,0 +1,37 @@
+{
+    "attributes": {
+        "Attribute()": {
+            "class": ["nav", "nav--main"]
+        }
+    },
+    "configuration": {
+        "label_display": false,
+        "label": "Main navigation"
+    },
+    "title_attributes": {
+        "Attribute()": {
+            "class": ["block__title"]
+        }
+    },
+    "content": {
+        "include()": {
+            "pattern": "molecules-menu.html",
+            "with": {
+                "items": [
+                    {
+                        "title": "Main nav 1",
+                        "url": ""
+                    },
+                    {
+                        "title": "Main nav 2",
+                        "url": ""
+                    },
+                    {
+                        "title": "Main nav 3",
+                        "url": ""
+                    }
+                ]
+            }
+        }
+    }
+}

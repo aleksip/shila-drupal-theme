@@ -1,0 +1,21 @@
+/**
+ * @file
+ * sass/partials/components/molecules/forms/_form.scss
+ *
+ * @see shila_theme_preprocess_form()
+ */
+
+.form {
+  #{$all-text-inputs},
+  select[multiple=multiple] {
+    margin-bottom: 0;
+  }
+  .form-item {
+    margin-bottom: $small-spacing;
+  }
+  .description {
+    font-size: smaller;
+    font-family: $helvetica;
+    color: $medium-gray;
+  }
+}

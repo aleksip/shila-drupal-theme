@@ -1,6 +1,4 @@
-.idea
-css
-images
+dist/css/*.map
+node_modules
 pattern-lab
-starterkit
-templates/patterns
+wiki

@@ -1,0 +1,48 @@
+{
+    "attributes": {
+        "Attribute()": {
+            "id": "search-block-form",
+            "class": ["form"]
+        }
+    },
+    "children": {
+        "join()": [
+            {
+                "include()": {
+                    "pattern": "molecules-textfield-element",
+                    "with": {
+                        "label": {
+                            "include()": {
+                                "pattern": "atoms-form-element-label.html",
+                                "with": {
+                                    "attributes": {
+                                        "Attribute()": {
+                                            "class": []
+                                        }
+                                    },
+                                    "title_display": "invisible",
+                                    "title": "Search"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "include()": {
+                    "pattern": "atoms-input--submit",
+                    "with": {
+                        "attributes": {
+                            "Attribute()": {
+                                "id": ["edit-submit"],
+                                "type": ["submit"],
+                                "value": ["Search"],
+                                "class": ["button"]
+                            }
+                        }
+                    }
+                }
+            }
+        ]
+    }
+}

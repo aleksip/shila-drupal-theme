@@ -1,0 +1,23 @@
+{
+    "links": {
+        "include()": {
+            "pattern": "molecules-links.html",
+            "with": {
+                "attributes": {
+                    "Attribute()": {
+                        "class": ["links", "inline"]
+                    }
+                },
+                "links": {
+                    "node-readmore": {
+                        "link": "<a href=\"\">Read more link</a>",
+                        "attributes": {
+                            "Attribute()": {}
+                        }
+                    }
+                }
+            },
+            "only": true
+        }
+    }
+}

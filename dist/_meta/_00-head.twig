@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html class="{{ htmlClass }}">
+	<head>
+		<title>{{ title }}</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width" />
+
+		<!-- From Drupal core -->
+		<link rel="stylesheet" href="../../css/normalize.css?{{ cacheBuster }}" media="all" />
+		<link rel="stylesheet" href="../../css/hidden.module.css?{{ cacheBuster }}" media="all" />
+		<!-- Shila Drupal theme CSS -->
+		<link rel="stylesheet" href="../../css/base.css?{{ cacheBuster }}" media="all" />
+		<link rel="stylesheet" href="../../css/layout.css?{{ cacheBuster }}" media="all" />
+		<link rel="stylesheet" href="../../css/components.css?{{ cacheBuster }}" media="all" />
+		<link rel="stylesheet" href="../../css/state.css?{{ cacheBuster }}" media="all" />
+		<link rel="stylesheet" href="../../css/theme.css?{{ cacheBuster }}" media="all" />
+		<link rel="stylesheet" href="../../css/print.css?{{ cacheBuster }}" media="all" />
+
+		<!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+		{{ patternLabHead | raw }}
+		<!-- End Pattern Lab -->
+		
+	</head>
+	<body class="{{ bodyClass }}">

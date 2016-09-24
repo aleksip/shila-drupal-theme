@@ -1,0 +1,11 @@
+/**
+ * @file
+ * sass/partials/components/organisms/global/_page__footer.scss
+ *
+ * @see page.html.twig
+ */
+
+.page__footer {
+  @extend %side-paddings;
+  padding-bottom: $base-spacing;
+}

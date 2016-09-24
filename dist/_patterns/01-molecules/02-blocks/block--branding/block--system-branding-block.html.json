@@ -1,0 +1,13 @@
+{
+    "attributes": {
+        "Attribute()": {
+            "class": ["block", "block--branding"]
+        }
+    },
+    "title_attributes": {
+        "Attribute()": {
+            "class": ["block__title"]
+        }
+    },
+    "site_name": "Site name"
+}

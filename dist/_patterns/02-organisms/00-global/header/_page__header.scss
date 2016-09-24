@@ -1,0 +1,27 @@
+/**
+ * @file
+ * sass/partials/components/organisms/global/_page__header.scss
+ *
+ * @see page.html.twig
+ */
+
+.page__header {
+  @extend %side-paddings;
+  width: 100%;
+  background-color: $base-background-color;
+  @include breakpoint($xs-break) {
+    box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  .nav {
+    @extend %horizontal-nav;
+    display: none;
+  }
+  .nav--main {
+    padding-top: 0.92rem;
+  }
+  @include breakpoint($s-break) {
+    .nav {
+      display: block;
+    }
+  }
+}

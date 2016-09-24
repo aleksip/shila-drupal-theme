@@ -1,0 +1,10 @@
+{
+    "attributes": {
+        "Attribute()": {
+            "id": ["edit-submit"],
+            "type": ["submit"],
+            "value": ["Submit"],
+            "class": ["button", "button-primary"]
+        }
+    }
+}

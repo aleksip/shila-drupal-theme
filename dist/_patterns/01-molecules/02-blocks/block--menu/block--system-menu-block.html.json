@@ -1,0 +1,17 @@
+{
+    "attributes": {
+        "Attribute()": {
+            "class": ["nav"]
+        }
+    },
+    "configuration": {
+        "label_display": true,
+        "label": "Menu Block Title"
+    },
+    "title_attributes": {
+        "Attribute()": {
+            "class": ["block__title"]
+        }
+    },
+    "content": "molecules-menu.html"
+}

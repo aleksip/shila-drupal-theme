@@ -1,0 +1,10 @@
+{
+    "attributes": {
+        "Attribute()": {
+            "class": ["node", "node--page"]
+        }
+    },
+    "page": true,
+    "display_submitted": false,
+    "content": "molecules-field--node-body"
+}

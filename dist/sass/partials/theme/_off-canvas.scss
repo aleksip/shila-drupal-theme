@@ -1,0 +1,14 @@
+/**
+ * @file
+ * sass/partials/theme/_off-canvas.scss
+ *
+ * @see page.html.twig
+ */
+
+.off-canvas {
+  background-color: $light-gray;
+  padding: 1rem;
+  a {
+    color: $base-font-color;
+  }
+}

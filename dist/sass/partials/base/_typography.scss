@@ -1,0 +1,80 @@
+/**
+ * @file
+ * sass/partials/base/_typography.scss
+ *
+ * Based on http://bitters.bourbon.io/
+ */
+
+html,
+body {
+  color: $base-font-color;
+  font-family: $base-font-family;
+  line-height: $base-line-height;
+  @for $i from 1 through 4 {
+    @include breakpoint(nth($breaks-list, $i)) {
+      font-size: nth($base-font-size, $i);
+    }
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+  line-height: $heading-line-height;
+}
+h1 {
+  font-size: 2rem;
+  margin: 0 0 1rem;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 1.5rem 0 1rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.17rem;
+}
+h4 {
+  font-size: 1rem;
+}
+h5 {
+  font-size: 0.83rem;
+}
+h6 {
+  font-size: 0.67rem;
+}
+p {
+  margin: 0 0 1rem;
+}
+a {
+  color: $action-color;
+  text-decoration: none;
+  transition: color $base-duration $base-timing;
+  &:active,
+  &:focus,
+  &:hover {
+    color: shade($action-color, 25%);
+    text-decoration: underline;
+  }
+}
+hr {
+  border-bottom: $base-border;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  margin: $base-spacing 0;
+}
+blockquote {
+  color: $medium-gray;
+  margin-left: 0;
+  border-left: 0.33rem solid $light-gray;
+  padding-left: 1rem;
+}

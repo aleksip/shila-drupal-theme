@@ -1,0 +1,44 @@
+/**
+ * @file
+ * sass/partials/common/_placeholders.scss
+ */
+
+%side-paddings {
+  padding-left: $side-margin / 2 * 1%;
+  padding-right: $side-margin / 2 * 1%;
+}
+%outer-container {
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+%clearfix {
+  &::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}
+%horizontal-nav {
+  ul {
+    margin-top: 0;
+    width: 100%;
+    text-align: center;
+  }
+  li {
+    display: inline-block;
+    padding-left: $small-spacing;
+  }
+  a {
+    color: $medium-gray;
+    text-decoration: none;
+    &:active,
+    &:focus,
+    &:hover {
+      color: $dark-gray;
+    }
+  }
+  .is-active {
+    color: $dark-gray;
+  }
+}

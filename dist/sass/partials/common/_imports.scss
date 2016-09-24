@@ -1,0 +1,16 @@
+/**
+ * @file
+ * sass/partials/common/_imports.scss
+ *
+ * Importing this file should not generate any CSS.
+ */
+
+@import 'compass/utilities';
+@import 'bourbon';
+@import 'singularitygs';
+@import 'breakpoint';
+@import 'partials/common/variables';
+@import 'partials/common/placeholders';
+@import 'partials/common/mixins/layout/list-item-layout';
+@import 'partials/common/mixins/layout/list-multicol-layout';
+@import 'partials/common/mixins/layout/multicol-layout';

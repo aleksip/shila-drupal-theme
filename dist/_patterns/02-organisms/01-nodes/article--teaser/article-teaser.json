@@ -1,0 +1,37 @@
+{
+    "attributes": {
+        "Attribute()": {
+            "class": ["node", "node--article", "teaser"]
+        }
+    },
+    "title_attributes": {
+        "Attribute()": {
+            "class": ["node__title"]
+        }
+    },
+    "label": "Article Title",
+    "display_submitted": true,
+    "content": {
+        "join()": [
+            "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+            {
+                "include()": {
+                    "pattern": "molecules-links.html",
+                    "with": {
+                        "attributes": {
+                            "Attribute()": {
+                                "class": ["links", "inline", "node__links"]
+                            }
+                        },
+                        "links": {
+                            "node-readmore": {
+                                "link": "<a href=\"\">Read more</a>"
+                            }
+                        }
+                    },
+                    "only": true
+                }
+            }
+        ]
+    }
+}

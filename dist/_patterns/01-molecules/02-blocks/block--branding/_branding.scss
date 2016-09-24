@@ -1,0 +1,28 @@
+/**
+ * @file
+ * sass/partials/components/molecules/blocks/_branding.scss
+ *
+ * @see shila_theme_preprocess_block()
+ * @see block--system-branding-block.html.twig
+ */
+
+.block--branding {
+  a {
+    color: $base-font-color;
+  }
+}
+.block--branding__logo {
+  img {
+    max-height: 2.67rem;
+  }
+}
+.block--branding__name {
+  font-size: 2.67rem;
+  font-weight: bold;
+  line-height: $heading-line-height;
+}
+.block--branding__slogan {
+  @include breakpoint($xs-break) {
+    display: none;
+  }
+}

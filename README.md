@@ -14,21 +14,6 @@ This theme is also meant to demonstrate Drupal template compatibility and Patter
 
 ## Installing required dependencies
 
-[Shila Drupal Theme StarterKit](https://github.com/aleksip/starterkit-shila-drupal-theme) and the Component Libraries Drupal module are required for the theme to function.
-
-
-### Shila Drupal Theme StarteKit
-
-
-Prerequisites: [git](https://git-scm.com/) installed.
-
-In the **Shila theme root directory** run:
-
-```sh
-git clone http://github.com/aleksip/starterkit-shila-drupal-theme starterkit
-```
-
-
 ### Component Libraries module
 
 Install and enable the [Component Libraries module](https://www.drupal.org/project/components). No configuration is needed.
@@ -37,7 +22,7 @@ Install and enable the [Component Libraries module](https://www.drupal.org/proje
 
 Prerequisites: [npm](https://nodejs.org/) installed.
 
-In the `starterkit` directory run:
+In the Shila theme root directory run:
 
 ```sh
 npm install
@@ -46,9 +31,9 @@ npm install
 
 ## Integrating with Pattern Lab
 
-Prerequisites: git and [Composer](https://getcomposer.org/) installed.
+Prerequisites: [git](https://git-scm.com/) and [Composer](https://getcomposer.org/) installed.
 
-In the **Shila theme root directory** run:
+In the Shila theme root directory run:
 
 ```sh
 git clone https://github.com/pattern-lab/edition-php-drupal-standard pattern-lab
@@ -63,7 +48,7 @@ composer install
 In the file `pattern-lab/config/config.yml` change `sourceDir` and `twigAutoescape` like so:
 
  ```yml
- sourceDir: ../starterkit/dist
+ sourceDir: ../dist
  twigAutoescape: false
  ```
 

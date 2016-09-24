@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="{{ htmlClass }}">
+  <head>
+    <title>{{ title }}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <!-- From Drupal core -->
+    <link rel="stylesheet" href="../../css/normalize.css?{{ cacheBuster }}" media="all" />
+    <link rel="stylesheet" href="../../css/hidden.module.css?{{ cacheBuster }}" media="all" />
+    <!-- Shila Drupal theme CSS -->
+    <link rel="stylesheet" href="../../css/base.css?{{ cacheBuster }}" media="all" />
+    <link rel="stylesheet" href="../../css/layout.css?{{ cacheBuster }}" media="all" />
+    <link rel="stylesheet" href="../../css/components.css?{{ cacheBuster }}" media="all" />
+    <link rel="stylesheet" href="../../css/state.css?{{ cacheBuster }}" media="all" />
+    <link rel="stylesheet" href="../../css/theme.css?{{ cacheBuster }}" media="all" />
+    <link rel="stylesheet" href="../../css/print.css?{{ cacheBuster }}" media="all" />
+  </head>
+  <body class="{{ bodyClass }}">
+    <div class="layout-container">
+      <input id="off-canvas-checkbox" type="checkbox">
+      <label for="off-canvas-checkbox" id="off-canvas-label" onclick=""></label>
+      <div class="page{% block is_front %}{% endblock %}">
+        {% block page__header %}
+          {% include "organisms-header" %}
+        {% endblock %}
+        <main role="main" class="main page__content">
+          <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+          <div class="region region--content">
+            {% block page__content %}
+              {{ block_page_title }}
+              {{ block_messages }}
+              {{ block_main }}
+            {% endblock %}
+          </div>
+        </main>
+        {% block page__footer %}
+          {% include "organisms-footer" %}
+        {% endblock %}
+      </div>
+      {% block off_canvas %}
+        {% include "organisms-off-canvas" %}
+      {% endblock %}
+    </div>{# /.layout-container #}
+  </body>
+</html>

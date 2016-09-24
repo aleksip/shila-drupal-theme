@@ -1,0 +1,24 @@
+/**
+ * @file
+ * sass/partials/components/organisms/nodes/_article.scss
+ *
+ * @see shila_theme_preprocess_node()
+ * @see node.html.twig
+ */
+
+.node--article {
+  .field--field_info {
+    margin-bottom: 1rem;
+    border: 1px solid $light-gray;
+    padding: 0.5rem 1rem;
+    color: $medium-gray;
+    font-size: smaller;
+    font-family: $helvetica;
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .filter-wrapper {
+    display: none;
+  }
+}

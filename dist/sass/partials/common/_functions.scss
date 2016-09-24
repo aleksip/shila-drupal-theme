@@ -1,0 +1,12 @@
+/**
+ * @file
+ * sass/partials/common/_functions.scss
+ */
+
+// http://hugogiraudel.com/2013/08/08/advanced-sass-list-functions/
+@function first($list) {
+  @return nth($list, 1);
+}
+@function last($list) {
+  @return nth($list, length($list));
+}

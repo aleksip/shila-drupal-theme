@@ -1,0 +1,42 @@
+{
+    "list_item_1": {
+        "include()": {
+            "pattern": "molecules-list-item",
+            "with": {
+                "title": {
+                    "include()": {
+                        "pattern": "molecules-field--node_title",
+                        "with": {
+                            "items": [
+                                {
+                                    "content": "<h2>List item 1 title</h2>"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "body": "molecules-field--node_body"
+            }
+        }
+    },
+    "list_item_2": {
+        "include()": {
+            "pattern": "molecules-list-item",
+            "with": {
+                "title": {
+                    "include()": {
+                        "pattern": "molecules-field--node_title",
+                        "with": {
+                            "items": [
+                                {
+                                    "content": "<h2>List item 2 title</h2>"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "body": "molecules-field--node_body"
+            }
+        }
+    }
+}

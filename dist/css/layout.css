@@ -1,0 +1,394 @@
+/**
+ * @file
+ * sass/layout.scss
+ *
+ * CSS rules that layout a page.
+ */
+/**
+ * @file
+ * sass/partials/common/_imports.scss
+ *
+ * Importing this file should not generate any CSS.
+ */
+/**
+ * @file
+ * sass/partials/common/_variables.scss
+ *
+ * Based on http://bitters.bourbon.io/
+ */
+/**
+ * @file
+ * sass/partials/common/_placeholders.scss
+ */
+.page__content {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.region--header,
+.region--content,
+.region--footer {
+  max-width: 32rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.layout-container::after,
+.page::after,
+.page__header::after,
+.page__content::after,
+.page__footer::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+/**
+ * @file
+ * sass/partials/common/mixins/layout/_list-item-layout.scss
+ */
+/**
+ * @file
+ * sass/partials/common/mixins/layout/_list-multicol-layout.scss
+ */
+/**
+ * @file
+ * sass/partials/common/mixins/layout/_multicol-layout.scss
+ */
+/**
+ * @file
+ * sass/partials/layout/templates/_global.scss
+ *
+ * @see page.html.twig
+ */
+.page__content {
+  padding-top: 3.2em;
+  margin-bottom: 3.2em;
+}
+
+.list--multicol .list-item .list-item__image {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  margin-bottom: 0.8em;
+}
+
+.list--multicol .list-item .list-item__body {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: both;
+}
+
+@media (min-width: 525px) {
+  .list--multicol .list-item:nth-child(2n+1) {
+    width: 48%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: both;
+  }
+  .list--multicol .list-item:nth-child(2n+2) {
+    width: 48%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+  .list--multicol .list-item + .list-item:nth-child(2) {
+    margin-top: 0;
+  }
+  .list--multicol .list-item .list-item__image {
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+    margin-bottom: 0.8em;
+  }
+  .list--multicol .list-item .list-item__body {
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: both;
+  }
+}
+
+@media (min-width: 801px) {
+  .list--multicol .list-item:nth-child(3n+1) {
+    width: 31.57895%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: both;
+  }
+  .list--multicol .list-item:nth-child(3n+2) {
+    width: 31.57895%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 34.21053%;
+    clear: none;
+  }
+  .list--multicol .list-item:nth-child(3n+3) {
+    width: 31.57895%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+  .list--multicol .list-item + .list-item:nth-child(2) {
+    margin-top: 0;
+  }
+  .list--multicol .list-item + .list-item:nth-child(3) {
+    margin-top: 0;
+  }
+  .list--multicol .list-item .list-item__image {
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+    margin-bottom: 0.8em;
+  }
+  .list--multicol .list-item .list-item__body {
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: both;
+  }
+}
+
+@media (min-width: 1025px) {
+  .list--multicol .list-item:nth-child(3n+1) {
+    width: 32%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: both;
+  }
+  .list--multicol .list-item:nth-child(3n+2) {
+    width: 32%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 34%;
+    clear: none;
+  }
+  .list--multicol .list-item:nth-child(3n+3) {
+    width: 32%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+  .list--multicol .list-item + .list-item:nth-child(2) {
+    margin-top: 0;
+  }
+  .list--multicol .list-item + .list-item:nth-child(3) {
+    margin-top: 0;
+  }
+  .list--multicol .list-item .list-item__image {
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+    margin-bottom: 0.8em;
+  }
+  .list--multicol .list-item .list-item__body {
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: both;
+  }
+}
+
+/**
+ * @file
+ * sass/partials/layout/templates/_off-canvas.scss
+ *
+ * Pure CSS (no JavaScript required) implementation.
+ * Layout styles only in this file.
+ * Uses Neat grid framework media mixin.
+ *
+ * @see page.html.twig
+ */
+@media (min-width: 525px) {
+  #off-canvas-checkbox,
+  #off-canvas-label,
+  .off-canvas {
+    display: none;
+  }
+  .off-canvas-hidden {
+    display: block;
+  }
+}
+
+@media (max-width: 524px) {
+  .layout-container {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+  #off-canvas-checkbox {
+    display: block;
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  #off-canvas-label {
+    -webkit-transition-property: right;
+    -moz-transition-property: right;
+    transition-property: right;
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    display: block;
+    position: fixed;
+    right: 0;
+    z-index: 501;
+    width: 64px;
+    height: 64px;
+    padding: 10px;
+    background-position: 10px 10px;
+    background-size: 44px 44px;
+    background-repeat: no-repeat;
+    background-image: url("../images/menu.png");
+    background-image: url("../images/menu.svg");
+    cursor: pointer;
+  }
+  .off-canvas {
+    -webkit-transition-property: right;
+    -moz-transition-property: right;
+    transition-property: right;
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    display: block;
+    position: fixed;
+    min-height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 524px) and (max-width: 524px) {
+  .off-canvas {
+    right: -80%;
+    width: 80%;
+  }
+}
+
+@media (max-width: 524px) and (min-width: 525px) {
+  .off-canvas {
+    right: -20rem;
+    width: 20rem;
+  }
+}
+
+@media (max-width: 524px) and (min-width: 801px) {
+  .off-canvas {
+    right: -20rem;
+    width: 20rem;
+  }
+}
+
+@media (max-width: 524px) and (min-width: 1025px) {
+  .off-canvas {
+    right: -20rem;
+    width: 20rem;
+  }
+}
+
+@media (max-width: 524px) {
+  .off-canvas-hidden {
+    display: none;
+  }
+  .page {
+    -webkit-transition-property: right;
+    -moz-transition-property: right;
+    transition-property: right;
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+  .page__header {
+    position: fixed;
+    z-index: 500;
+    height: 64px;
+  }
+  .page__content {
+    margin-top: 64px;
+  }
+  #off-canvas-checkbox:checked ~ .page {
+    position: fixed;
+    height: 100%;
+    overflow: hidden;
+  }
+  #off-canvas-checkbox:checked ~ .page .page__header {
+    position: static;
+  }
+  #off-canvas-checkbox:checked ~ .page .page__content {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 524px) and (max-width: 524px) {
+  #off-canvas-checkbox:checked ~ #off-canvas-label,
+  #off-canvas-checkbox:checked ~ .page {
+    right: 80%;
+  }
+}
+
+@media (max-width: 524px) and (min-width: 525px) {
+  #off-canvas-checkbox:checked ~ #off-canvas-label,
+  #off-canvas-checkbox:checked ~ .page {
+    right: 20rem;
+  }
+}
+
+@media (max-width: 524px) and (min-width: 801px) {
+  #off-canvas-checkbox:checked ~ #off-canvas-label,
+  #off-canvas-checkbox:checked ~ .page {
+    right: 20rem;
+  }
+}
+
+@media (max-width: 524px) and (min-width: 1025px) {
+  #off-canvas-checkbox:checked ~ #off-canvas-label,
+  #off-canvas-checkbox:checked ~ .page {
+    right: 20rem;
+  }
+}
+
+@media (max-width: 524px) {
+  #off-canvas-checkbox:checked ~ .off-canvas {
+    right: 0;
+  }
+}
+
+/**
+ * @file
+ * sass/partials/layout/templates/_page--front.scss
+ *
+ * @see page.html.twig
+ */
+.page--front .comment-add {
+  display: none;
+}
+
+.view--frontpage .views-row + .views-row {
+  margin-top: 3.2em;
+}
+
+/*# sourceMappingURL=layout.css.map */

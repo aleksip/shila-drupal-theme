@@ -1,0 +1,35 @@
+{
+  "name": "aleksip/shila-drupal-theme",
+  "description": "Shila theme for Drupal 8",
+  "keywords": [
+    "drupal",
+    "theme",
+    "twig",
+    "pattern lab",
+    "starterkit"
+  ],
+  "homepage": "https://github.com/aleksip/shila-drupal-theme",
+  "license": "GPL-2.0",
+  "type": "drupal-theme",
+  "authors": [
+    {
+      "name": "Aleksi Peebles"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/aleksip/shila-drupal-theme/issues",
+    "source": "https://github.com/aleksip/shila-drupal-theme/releases"
+  },
+  "minimum-stability": "dev",
+  "extra": {
+    "patternlab": {
+      "dist": {
+        "sourceDir": [
+          {
+            "*": "*"
+          }
+        ]
+      }
+    }
+  }
+}
