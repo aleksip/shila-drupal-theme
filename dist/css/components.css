@@ -87,13 +87,6 @@
 
 /**
  * @file
- * sass/partials/components/molecules/text/_page-title.scss
- *
- * @see shila_theme_preprocess_page_title()
- * @see page-title.html.twig
- */
-/**
- * @file
  * sass/partials/components/molecules/blocks/_branding.scss
  *
  * @see shila_theme_preprocess_block()
@@ -149,77 +142,6 @@
  * @see shila_theme_preprocess_block()
  * @see block.html.twig
  */
-/**
- * @file
- * sass/partials/components/molecules/forms/_comment-form.scss
- */
-.comment-form #edit-field-homepage-0-uri--description,
-.comment-form #edit-preview {
-  display: none;
-}
-
-/**
- * @file
- * sass/partials/components/molecules/navigation/_local-tasks.scss
- *
- * @see shila_theme_preprocess_menu_local_task()
- * @see menu-local-tasks.html.twig
- */
-.block--local-tasks {
-  font-size: smaller;
-}
-
-.block--local-tasks__primary,
-.block--local-tasks__secondary {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  clear: both;
-}
-
-.block--local-tasks__primary::after,
-.block--local-tasks__secondary::after {
-  clear: both;
-  content: "";
-  display: table;
-}
-
-.block--local-tasks__primary li,
-.block--local-tasks__secondary li {
-  list-style-image: none;
-  list-style-type: none;
-  margin-left: 0;
-  white-space: nowrap;
-  display: inline;
-  float: left;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-}
-
-.block--local-tasks__primary li:first-child, .block--local-tasks__primary li.first,
-.block--local-tasks__secondary li:first-child,
-.block--local-tasks__secondary li.first {
-  padding-left: 0;
-}
-
-.block--local-tasks__primary li:last-child,
-.block--local-tasks__secondary li:last-child {
-  padding-opposite-position(left): 0;
-}
-
-.block--local-tasks__primary li.last,
-.block--local-tasks__secondary li.last {
-  padding-opposite-position(left): 0;
-}
-
-.block--local-tasks__task .is-active {
-  color: #104c90;
-}
-
-.block--local-tasks__task a {
-  padding: 0 0.3em;
-}
-
 /**
  * @file
  * sass/partials/components/organisms/comments/_comment.scss
@@ -382,6 +304,15 @@
 
 /**
  * @file
+ * sass/partials/components/molecules/forms/_comment-form.scss
+ */
+.comment-form #edit-field-homepage-0-uri--description,
+.comment-form #edit-preview {
+  display: none;
+}
+
+/**
+ * @file
  * sass/partials/components/molecules/messaging/_messages.scss
  *
  * Based on http://refills.bourbon.io/components/
@@ -465,6 +396,97 @@
 
 /**
  * @file
+ * sass/partials/components/molecules/navigation/_local-tasks.scss
+ *
+ * @see shila_theme_preprocess_menu_local_task()
+ * @see menu-local-tasks.html.twig
+ */
+.block--local-tasks {
+  font-size: smaller;
+}
+
+.block--local-tasks__primary,
+.block--local-tasks__secondary {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  clear: both;
+}
+
+.block--local-tasks__primary::after,
+.block--local-tasks__secondary::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.block--local-tasks__primary li,
+.block--local-tasks__secondary li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.block--local-tasks__primary li:first-child, .block--local-tasks__primary li.first,
+.block--local-tasks__secondary li:first-child,
+.block--local-tasks__secondary li.first {
+  padding-left: 0;
+}
+
+.block--local-tasks__primary li:last-child,
+.block--local-tasks__secondary li:last-child {
+  padding-opposite-position(left): 0;
+}
+
+.block--local-tasks__primary li.last,
+.block--local-tasks__secondary li.last {
+  padding-opposite-position(left): 0;
+}
+
+.block--local-tasks__task .is-active {
+  color: #104c90;
+}
+
+.block--local-tasks__task a {
+  padding: 0 0.3em;
+}
+
+/**
+ * @file
+ * sass/partials/components/molecules/text/_page-title.scss
+ *
+ * @see shila_theme_preprocess_page_title()
+ * @see page-title.html.twig
+ */
+/**
+ * @file
+ * sass/partials/components/organisms/comments/_field--comment.scss
+ *
+ * @see field--comment.html.twig
+ */
+.field--comment {
+  margin-top: 3.2em;
+}
+
+.field--comment .comment + .comment {
+  margin-top: 3.2em;
+}
+
+.field--comment .indented {
+  padding-left: 1.6em;
+}
+
+.field--comment__title {
+  border-bottom: 1px solid #ddd;
+}
+
+/**
+ * @file
  * sass/partials/components/organisms/global/_page__footer.scss
  *
  * @see page.html.twig
@@ -502,60 +524,6 @@
   .page__header .nav {
     display: block;
   }
-}
-
-/**
- * @file
- * sass/partials/components/organisms/nodes/_article.scss
- *
- * @see shila_theme_preprocess_node()
- * @see node.html.twig
- */
-.node--article .field--field_info {
-  margin-bottom: 1rem;
-  border: 1px solid #ddd;
-  padding: 0.5rem 1rem;
-  color: #999;
-  font-size: smaller;
-  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-}
-
-.node--article .field--field_info p:last-child {
-  margin-bottom: 0;
-}
-
-.node--article .filter-wrapper {
-  display: none;
-}
-
-/**
- * @file
- * sass/partials/components/organisms/comments/_field--comment.scss
- *
- * @see field--comment.html.twig
- */
-.field--comment {
-  margin-top: 3.2em;
-}
-
-.field--comment .comment + .comment {
-  margin-top: 3.2em;
-}
-
-.field--comment .indented {
-  padding-left: 1.6em;
-}
-
-.field--comment__title {
-  border-bottom: 1px solid #ddd;
-}
-
-/**
- * @file
- * sass/partials/components/organisms/sections/_list.scss
- */
-.list .list-item + .list-item {
-  margin-top: 1.6em;
 }
 
 /**
@@ -618,6 +586,38 @@
 
 .node.teaser .node__title a {
   color: #333;
+}
+
+/**
+ * @file
+ * sass/partials/components/organisms/nodes/_article.scss
+ *
+ * @see shila_theme_preprocess_node()
+ * @see node.html.twig
+ */
+.node--article .field--field_info {
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  padding: 0.5rem 1rem;
+  color: #999;
+  font-size: smaller;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+}
+
+.node--article .field--field_info p:last-child {
+  margin-bottom: 0;
+}
+
+.node--article .filter-wrapper {
+  display: none;
+}
+
+/**
+ * @file
+ * sass/partials/components/organisms/sections/_list.scss
+ */
+.list .list-item + .list-item {
+  margin-top: 1.6em;
 }
 
 /*# sourceMappingURL=components.css.map */

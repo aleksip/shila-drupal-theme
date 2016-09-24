@@ -6,6 +6,4 @@
  */
 
 @import 'partials/common/imports';
-@import 'partials/layout/global';
-@import 'partials/layout/off-canvas';
-@import 'partials/layout/page--front';
+@import 'partials/layout/**/*.scss';

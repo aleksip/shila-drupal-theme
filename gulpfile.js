@@ -16,8 +16,7 @@ config.drush = {
 };
 config.sass = {
   srcFiles: [
-    './dist/sass/**/*.scss',
-    './dist/_patterns/**/*.scss'
+    './dist/sass/*.scss'
   ],
   options: {
     includePaths: [
@@ -52,6 +51,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
 var fs = require('fs');
 var sassLint = require('gulp-sass-lint');
+var sassGlob = require('gulp-sass-glob');
 
 // Helper functions.
 
@@ -85,6 +85,7 @@ gulp.task('watch', ['sass-change'], function () {
  */
 gulp.task('sass', function () {
   return gulp.src(config.sass.srcFiles)
+    .pipe(sassGlob())
     .pipe(sourcemaps.init())
     .pipe(sass(config.sass.options).on('error', sass.logError))
     .pipe(sourcemaps.write('./'))

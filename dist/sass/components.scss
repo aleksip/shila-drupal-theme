@@ -6,22 +6,6 @@
  */
 
 @import 'partials/common/imports';
-@import '../_patterns/00-atoms/images/feed-icon/feed-icon';
-@import '../_patterns/01-molecules/text/page-title/page-title';
-@import '../_patterns/01-molecules/blocks/block--branding/branding';
-@import '../_patterns/01-molecules/blocks/block--menu/primary-nav';
-@import '../_patterns/01-molecules/blocks/block--powered-by/powered-by';
-@import '../_patterns/01-molecules/blocks/block--search-form/search-form';
-@import '../_patterns/01-molecules/forms/comment-form/comment-form';
-@import '../_patterns/01-molecules/navigation/links/links';
-@import '../_patterns/01-molecules/navigation/local-tasks/local-tasks';
-@import '../_patterns/01-molecules/components/comment/comment';
-@import '../_patterns/01-molecules/components/list-item/list-item';
-@import '../_patterns/01-molecules/messaging/messages/messages';
-@import '../_patterns/01-molecules/meta/form';
-@import '../_patterns/02-organisms/global/footer/page__footer';
-@import '../_patterns/02-organisms/global/header/page__header';
-@import '../_patterns/02-organisms/nodes/article/article';
-@import '../_patterns/02-organisms/comments/field--comment';
-@import '../_patterns/02-organisms/sections/list/list';
-@import '../_patterns/02-organisms/meta/node';
+@import '../_patterns/00-atoms/**/*.scss';
+@import '../_patterns/01-molecules/**/*.scss';
+@import '../_patterns/02-organisms/**/*.scss';
