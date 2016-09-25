@@ -6,19 +6,23 @@
  */
 /**
  * @file
- * sass/partials/common/_imports.scss
+ * sass/partials/_imports.scss
  *
  * Importing this file should not generate any CSS.
  */
 /**
  * @file
- * sass/partials/common/_variables.scss
+ * sass/partials/_variables.scss
  *
  * Based on http://bitters.bourbon.io/
+ *
+ * Importing this file should not generate any CSS.
  */
 /**
  * @file
- * sass/partials/common/_placeholders.scss
+ * sass/partials/_placeholders.scss
+ *
+ * Importing this file should not generate any CSS.
  */
 .page__content {
   padding-left: 5%;
@@ -45,7 +49,27 @@
 
 /**
  * @file
+ * sass/partials/_functions.scss
+ *
+ * Importing this file should not generate any CSS.
+ */
+/**
+ * @file
+ * sass/partials/_mixins.scss
+ *
+ * Importing this file should not generate any CSS.
+ */
+/**
+ * @file
  * sass/partials/common/mixins/layout/_list-item-layout.scss
+ */
+/**
+ * @file
+ * sass/partials/layout/templates/_off-canvas.scss
+ *
+ * Pure CSS (no JavaScript required) implementation.
+ *
+ * @see page.html.twig
  */
 /**
  * @file
@@ -208,16 +232,6 @@
   }
 }
 
-/**
- * @file
- * sass/partials/layout/templates/_off-canvas.scss
- *
- * Pure CSS (no JavaScript required) implementation.
- * Layout styles only in this file.
- * Uses Neat grid framework media mixin.
- *
- * @see page.html.twig
- */
 @media (min-width: 525px) {
   #off-canvas-checkbox,
   #off-canvas-label,

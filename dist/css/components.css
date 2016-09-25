@@ -6,19 +6,23 @@
  */
 /**
  * @file
- * sass/partials/common/_imports.scss
+ * sass/partials/_imports.scss
  *
  * Importing this file should not generate any CSS.
  */
 /**
  * @file
- * sass/partials/common/_variables.scss
+ * sass/partials/_variables.scss
  *
  * Based on http://bitters.bourbon.io/
+ *
+ * Importing this file should not generate any CSS.
  */
 /**
  * @file
- * sass/partials/common/_placeholders.scss
+ * sass/partials/_placeholders.scss
+ *
+ * Importing this file should not generate any CSS.
  */
 .page__footer, .page__header {
   padding-left: 5%;
@@ -57,15 +61,15 @@
 
 /**
  * @file
- * sass/partials/common/mixins/layout/_list-item-layout.scss
+ * sass/partials/_functions.scss
+ *
+ * Importing this file should not generate any CSS.
  */
 /**
  * @file
- * sass/partials/common/mixins/layout/_list-multicol-layout.scss
- */
-/**
- * @file
- * sass/partials/common/mixins/layout/_multicol-layout.scss
+ * sass/partials/_mixins.scss
+ *
+ * Importing this file should not generate any CSS.
  */
 /**
  * @file
@@ -211,6 +215,10 @@
   padding-opposite-position(left): 0;
 }
 
+/**
+ * @file
+ * sass/partials/common/mixins/layout/_list-item-layout.scss
+ */
 /**
  * @file
  * sass/partials/components/molecules/components/_list-item.scss
@@ -528,6 +536,14 @@
 
 /**
  * @file
+ * sass/partials/layout/templates/_off-canvas.scss
+ *
+ * Pure CSS (no JavaScript required) implementation.
+ *
+ * @see page.html.twig
+ */
+/**
+ * @file
  * sass/partials/components/organisms/nodes/_node.scss
  *
  * @see shila_theme_preprocess_node()
@@ -614,10 +630,19 @@
 
 /**
  * @file
+ * sass/partials/common/mixins/layout/_list-multicol-layout.scss
+ */
+/**
+ * @file
  * sass/partials/components/organisms/sections/_list.scss
  */
 .list .list-item + .list-item {
   margin-top: 1.6em;
 }
+
+/**
+ * @file
+ * sass/partials/common/mixins/layout/_multicol-layout.scss
+ */
 
 /*# sourceMappingURL=components.css.map */

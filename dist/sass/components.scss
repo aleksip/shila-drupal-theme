@@ -5,7 +5,7 @@
  * CSS rules that style design components (and their associated states and themes.)
  */
 
-@import 'partials/common/imports';
-@import '../_patterns/00-atoms/**/*.scss';
+@import 'partials/imports';
+@import '../_patterns/00-atoms/images/feed-icon/feed-icon';
 @import '../_patterns/01-molecules/**/*.scss';
 @import '../_patterns/02-organisms/**/*.scss';

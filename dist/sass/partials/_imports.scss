@@ -1,0 +1,15 @@
+/**
+ * @file
+ * sass/partials/_imports.scss
+ *
+ * Importing this file should not generate any CSS.
+ */
+
+@import 'compass/utilities';
+@import 'bourbon';
+@import 'singularitygs';
+@import 'breakpoint';
+@import 'partials/variables';
+@import 'partials/placeholders';
+@import 'partials/functions';
+@import 'partials/mixins';

@@ -6,31 +6,35 @@
  */
 /**
  * @file
- * sass/partials/common/_imports.scss
+ * sass/partials/_imports.scss
  *
  * Importing this file should not generate any CSS.
  */
 /**
  * @file
- * sass/partials/common/_variables.scss
+ * sass/partials/_variables.scss
  *
  * Based on http://bitters.bourbon.io/
+ *
+ * Importing this file should not generate any CSS.
  */
 /**
  * @file
- * sass/partials/common/_placeholders.scss
+ * sass/partials/_placeholders.scss
+ *
+ * Importing this file should not generate any CSS.
  */
 /**
  * @file
- * sass/partials/common/mixins/layout/_list-item-layout.scss
+ * sass/partials/_functions.scss
+ *
+ * Importing this file should not generate any CSS.
  */
 /**
  * @file
- * sass/partials/common/mixins/layout/_list-multicol-layout.scss
- */
-/**
- * @file
- * sass/partials/common/mixins/layout/_multicol-layout.scss
+ * sass/partials/_mixins.scss
+ *
+ * Importing this file should not generate any CSS.
  */
 /**
  * @file

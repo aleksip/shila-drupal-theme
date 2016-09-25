@@ -6,45 +6,35 @@
  */
 /**
  * @file
- * sass/partials/common/_imports.scss
+ * sass/partials/_imports.scss
  *
  * Importing this file should not generate any CSS.
  */
 /**
  * @file
- * sass/partials/common/_variables.scss
+ * sass/partials/_variables.scss
  *
  * Based on http://bitters.bourbon.io/
- */
-/**
- * @file
- * sass/partials/common/_placeholders.scss
- */
-/**
- * @file
- * sass/partials/common/mixins/layout/_list-item-layout.scss
- */
-/**
- * @file
- * sass/partials/common/mixins/layout/_list-multicol-layout.scss
- */
-/**
- * @file
- * sass/partials/common/mixins/layout/_multicol-layout.scss
- */
-/**
- * @file
- * sass/partials/theme/_off-canvas.scss
  *
- * @see page.html.twig
+ * Importing this file should not generate any CSS.
  */
-.off-canvas {
-  background-color: #ddd;
-  padding: 1rem;
-}
-
-.off-canvas a {
-  color: #333;
-}
+/**
+ * @file
+ * sass/partials/_placeholders.scss
+ *
+ * Importing this file should not generate any CSS.
+ */
+/**
+ * @file
+ * sass/partials/_functions.scss
+ *
+ * Importing this file should not generate any CSS.
+ */
+/**
+ * @file
+ * sass/partials/_mixins.scss
+ *
+ * Importing this file should not generate any CSS.
+ */
 
 /*# sourceMappingURL=theme.css.map */

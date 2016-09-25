@@ -5,5 +5,10 @@
  * CSS rules that style HTML elements ("base" styles).
  */
 
-@import 'partials/common/imports';
-@import 'partials/base/**/*.scss';
+@import 'partials/imports';
+@import '../_patterns/00-atoms/buttons/buttons';
+@import '../_patterns/00-atoms/elements/elements';
+@import '../_patterns/00-atoms/forms/forms';
+@import '../_patterns/00-atoms/lists/lists';
+@import '../_patterns/00-atoms/tables/tables';
+@import '../_patterns/00-atoms/typography/typography';

@@ -3,8 +3,6 @@
  * sass/partials/layout/templates/_off-canvas.scss
  *
  * Pure CSS (no JavaScript required) implementation.
- * Layout styles only in this file.
- * Uses Neat grid framework media mixin.
  *
  * @see page.html.twig
  */
@@ -119,25 +117,4 @@ $off-canvas-side: right !default;
 @mixin off-canvas-slide {
   @include transition-property($off-canvas-side);
   @include transition-duration(.4s);
-}
-
-@if $off-canvas-not-in-use {
-  @if $off-canvas-not-in-use == true {
-    @include off-canvas-not-in-use-rules;
-  } @else {
-    @include breakpoint($off-canvas-not-in-use) {
-      @include off-canvas-not-in-use-rules;
-    }
-  }
-} @else {
-  @include off-canvas-not-in-use-rules;
-}
-@if $off-canvas-in-use {
-  @if $off-canvas-in-use == true {
-    @include off-canvas-in-use-rules;
-  } @else if $off-canvas-in-use != false {
-    @include breakpoint($off-canvas-in-use) {
-      @include off-canvas-in-use-rules;
-    }
-  }
 }
