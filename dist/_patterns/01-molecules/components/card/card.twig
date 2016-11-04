@@ -1,0 +1,13 @@
+<section class="card">
+  {% spaceless %}
+  <div class="card__image">
+    {{ card_image }}
+  </div>
+  {% endspaceless %}
+  <div class="card__body">
+    {% if card_title %}
+      <h1 class="card__title">{{ card_title }}</h1>
+    {% endif %}
+    {{ card_body }}
+  </div>
+</section>

@@ -1,9 +1,16 @@
 /**
  * @file
- * sass/partials/common/mixins/layout/_list-multicol-layout.scss
+ * @organisms/sections/card-list/_card-list-layout.scss
  */
 
-/// Multi-column list layout.
+/// Basic full-width stacked card layout.
+@mixin card-list-layout {
+  .card {
+    @include card-breakpoint-layout;
+  }
+}
+
+/// Multi-column card list layout.
 ///
 /// @param {Number} $outer-cols
 ///   Column span of parent element.
@@ -12,40 +19,40 @@
 /// @param $selector [&]
 ///   Selector to use if not targeting current parent selector.
 /// @param $gutter [$gutter]
-///   Gutter size.
-@mixin list-multicol-layout(
+///   Gutter size of parent element.
+@mixin card-list-multicol-layout(
   $outer-cols, $inner-cols: 1, $gutter: $gutter
 ) {
-  .list--multicol {
-    @if ($inner-cols >= 2) {
-      @include multicol-layout($outer-cols, $inner-cols, '.list-item', $gutter);
-      @for $i from 2 through $inner-cols {
-        .list-item + .list-item:nth-child(#{$i}) {
-          margin-top: 0;
-        }
+  @if ($inner-cols >= 2) {
+    @include multicol-layout($outer-cols, $inner-cols, '.card', $gutter);
+    @for $i from 2 through $inner-cols {
+      .card + .card:nth-child(#{$i}) {
+        margin-top: 0;
       }
     }
-    @include list-item-layout($outer-cols, 'top-down', $gutter);
+  }
+  .card {
+    @include card-layout($outer-cols, 'top-down', $gutter);
   }
 }
 
-/// Multi-column list layout with breakpoints.
+/// Multi-column card list layout with breakpoints.
 ///
 /// @param {List} $inner-cols [(1 2 3 4)]
 ///   Number of columns for each breakpoint.
 /// @param {List} $outer-cols [$cols-list]
 ///   Column span of parent element in each breakpoint.
 /// @param $gutter [$gutter]
-///   Gutter size.
-@mixin list-multicol-breakpoint-layout(
+///   Gutter size of parent element.
+@mixin card-list-multicol-breakpoint-layout(
   $inner-cols: (1 2 3 4), $outer-cols: $cols-list, $gutter: $gutter
 ) {
-  @include list-multicol-layout(
+  @include card-list-multicol-layout(
     nth($outer-cols, 1), nth($inner-cols, 1), $gutter
   );
   @for $i from 2 through 4 {
     @include breakpoint(nth($breaks-list, $i)) {
-      @include list-multicol-layout(
+      @include card-list-multicol-layout(
         nth($outer-cols, $i), nth($inner-cols, $i), $gutter
       );
     }

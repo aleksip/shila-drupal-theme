@@ -61,7 +61,7 @@
  */
 /**
  * @file
- * sass/partials/common/mixins/layout/_list-item-layout.scss
+ * @molecules/components/card/_card-layout.scss
  */
 /**
  * @file
@@ -73,163 +73,17 @@
  */
 /**
  * @file
- * sass/partials/common/mixins/layout/_list-multicol-layout.scss
+ * @organisms/sections/card-list/_card-list-layout.scss
  */
 /**
  * @file
- * sass/partials/common/mixins/layout/_multicol-layout.scss
- */
-/**
- * @file
- * sass/partials/layout/templates/_global.scss
+ * dist/_patterns/03-templates/_global.scss
  *
  * @see page.html.twig
  */
 .page__content {
   padding-top: 3.2em;
   margin-bottom: 3.2em;
-}
-
-.list--multicol .list-item .list-item__image {
-  width: 100%;
-  float: right;
-  margin-left: 0;
-  margin-right: 0;
-  clear: none;
-  margin-bottom: 0.8em;
-}
-
-.list--multicol .list-item .list-item__body {
-  width: 100%;
-  float: right;
-  margin-left: 0;
-  margin-right: 0;
-  clear: both;
-}
-
-@media (min-width: 525px) {
-  .list--multicol .list-item:nth-child(2n+1) {
-    width: 48%;
-    float: left;
-    margin-right: -100%;
-    margin-left: 0;
-    clear: both;
-  }
-  .list--multicol .list-item:nth-child(2n+2) {
-    width: 48%;
-    float: right;
-    margin-left: 0;
-    margin-right: 0;
-    clear: none;
-  }
-  .list--multicol .list-item + .list-item:nth-child(2) {
-    margin-top: 0;
-  }
-  .list--multicol .list-item .list-item__image {
-    width: 100%;
-    float: right;
-    margin-left: 0;
-    margin-right: 0;
-    clear: none;
-    margin-bottom: 0.8em;
-  }
-  .list--multicol .list-item .list-item__body {
-    width: 100%;
-    float: right;
-    margin-left: 0;
-    margin-right: 0;
-    clear: both;
-  }
-}
-
-@media (min-width: 801px) {
-  .list--multicol .list-item:nth-child(3n+1) {
-    width: 31.57895%;
-    float: left;
-    margin-right: -100%;
-    margin-left: 0;
-    clear: both;
-  }
-  .list--multicol .list-item:nth-child(3n+2) {
-    width: 31.57895%;
-    float: left;
-    margin-right: -100%;
-    margin-left: 34.21053%;
-    clear: none;
-  }
-  .list--multicol .list-item:nth-child(3n+3) {
-    width: 31.57895%;
-    float: right;
-    margin-left: 0;
-    margin-right: 0;
-    clear: none;
-  }
-  .list--multicol .list-item + .list-item:nth-child(2) {
-    margin-top: 0;
-  }
-  .list--multicol .list-item + .list-item:nth-child(3) {
-    margin-top: 0;
-  }
-  .list--multicol .list-item .list-item__image {
-    width: 100%;
-    float: right;
-    margin-left: 0;
-    margin-right: 0;
-    clear: none;
-    margin-bottom: 0.8em;
-  }
-  .list--multicol .list-item .list-item__body {
-    width: 100%;
-    float: right;
-    margin-left: 0;
-    margin-right: 0;
-    clear: both;
-  }
-}
-
-@media (min-width: 1025px) {
-  .list--multicol .list-item:nth-child(3n+1) {
-    width: 32%;
-    float: left;
-    margin-right: -100%;
-    margin-left: 0;
-    clear: both;
-  }
-  .list--multicol .list-item:nth-child(3n+2) {
-    width: 32%;
-    float: left;
-    margin-right: -100%;
-    margin-left: 34%;
-    clear: none;
-  }
-  .list--multicol .list-item:nth-child(3n+3) {
-    width: 32%;
-    float: right;
-    margin-left: 0;
-    margin-right: 0;
-    clear: none;
-  }
-  .list--multicol .list-item + .list-item:nth-child(2) {
-    margin-top: 0;
-  }
-  .list--multicol .list-item + .list-item:nth-child(3) {
-    margin-top: 0;
-  }
-  .list--multicol .list-item .list-item__image {
-    width: 100%;
-    float: right;
-    margin-left: 0;
-    margin-right: 0;
-    clear: none;
-    margin-bottom: 0.8em;
-  }
-  .list--multicol .list-item .list-item__body {
-    width: 100%;
-    float: right;
-    margin-left: 0;
-    margin-right: 0;
-    clear: both;
-  }
 }
 
 @media (min-width: 525px) {

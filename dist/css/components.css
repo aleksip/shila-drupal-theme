@@ -29,7 +29,7 @@
   padding-right: 5%;
 }
 
-.list-item::after {
+.card::after {
   clear: both;
   content: '';
   display: table;
@@ -148,6 +148,98 @@
  */
 /**
  * @file
+ * @molecules/components/card/_card-layout.scss
+ */
+/**
+ * @file
+ * @molecules/components/card/_card.scss
+ */
+.card__title {
+  margin-top: 0;
+}
+
+.card__title a {
+  color: #333;
+}
+
+.card__body {
+  margin-bottom: 0;
+}
+
+.card__body:last-child {
+  margin-bottom: 0;
+}
+
+.card--horizontal .card__image {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  margin-bottom: 0.8em;
+}
+
+.card--horizontal .card__body {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: both;
+}
+
+@media (min-width: 525px) {
+  .card--horizontal .card__image {
+    width: 22.22222%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none;
+  }
+  .card--horizontal .card__body {
+    width: 74.07407%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+}
+
+@media (min-width: 801px) {
+  .card--horizontal .card__image {
+    width: 23.07692%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none;
+  }
+  .card--horizontal .card__body {
+    width: 74.35897%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+}
+
+@media (min-width: 1025px) {
+  .card--horizontal .card__image {
+    width: 23.52941%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none;
+  }
+  .card--horizontal .card__body {
+    width: 74.5098%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+}
+
+/**
+ * @file
  * sass/partials/components/organisms/comments/_comment.scss
  *
  * @see shila_theme_preprocess_comment()
@@ -213,101 +305,6 @@
 
 .comment__content .links li.last {
   padding-opposite-position(left): 0;
-}
-
-/**
- * @file
- * sass/partials/common/mixins/layout/_list-item-layout.scss
- */
-/**
- * @file
- * sass/partials/components/molecules/components/_list-item.scss
- */
-.list-item__body .field--node_title h2,
-.list-item__body .field--node_title h3 {
-  margin-top: 0;
-}
-
-.list-item__body .field--node_title a {
-  color: #333;
-}
-
-.list-item__body .field--body,
-.list-item__body .field--body p:last-child {
-  margin-bottom: 0;
-}
-
-.list-item__body .links {
-  margin-top: 1rem;
-  margin-bottom: 0;
-}
-
-.list-item .list-item__image {
-  width: 100%;
-  float: right;
-  margin-left: 0;
-  margin-right: 0;
-  clear: none;
-  margin-bottom: 0.8em;
-}
-
-.list-item .list-item__body {
-  width: 100%;
-  float: right;
-  margin-left: 0;
-  margin-right: 0;
-  clear: both;
-}
-
-@media (min-width: 525px) {
-  .list-item .list-item__image {
-    width: 22.22222%;
-    float: left;
-    margin-right: -100%;
-    margin-left: 0;
-    clear: none;
-  }
-  .list-item .list-item__body {
-    width: 74.07407%;
-    float: right;
-    margin-left: 0;
-    margin-right: 0;
-    clear: none;
-  }
-}
-
-@media (min-width: 801px) {
-  .list-item .list-item__image {
-    width: 23.07692%;
-    float: left;
-    margin-right: -100%;
-    margin-left: 0;
-    clear: none;
-  }
-  .list-item .list-item__body {
-    width: 74.35897%;
-    float: right;
-    margin-left: 0;
-    margin-right: 0;
-    clear: none;
-  }
-}
-
-@media (min-width: 1025px) {
-  .list-item .list-item__image {
-    width: 23.52941%;
-    float: left;
-    margin-right: -100%;
-    margin-left: 0;
-    clear: none;
-  }
-  .list-item .list-item__body {
-    width: 74.5098%;
-    float: right;
-    margin-left: 0;
-    margin-right: 0;
-    clear: none;
-  }
 }
 
 /**
@@ -630,19 +627,82 @@
 
 /**
  * @file
- * sass/partials/common/mixins/layout/_list-multicol-layout.scss
+ * @organisms/sections/card-list/_card-list-layout.scss
  */
 /**
  * @file
- * sass/partials/components/organisms/sections/_list.scss
+ * @organisms/sections/card-list/_card-list.scss
  */
-.list .list-item + .list-item {
+.card-list .card + .card {
   margin-top: 1.6em;
 }
 
-/**
- * @file
- * sass/partials/common/mixins/layout/_multicol-layout.scss
- */
+.card-list .card .card__image {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  margin-bottom: 0.8em;
+}
+
+.card-list .card .card__body {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: both;
+}
+
+@media (min-width: 525px) {
+  .card-list .card .card__image {
+    width: 22.22222%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none;
+  }
+  .card-list .card .card__body {
+    width: 74.07407%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+}
+
+@media (min-width: 801px) {
+  .card-list .card .card__image {
+    width: 23.07692%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none;
+  }
+  .card-list .card .card__body {
+    width: 74.35897%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+}
+
+@media (min-width: 1025px) {
+  .card-list .card .card__image {
+    width: 23.52941%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none;
+  }
+  .card-list .card .card__body {
+    width: 74.5098%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+}
 
 /*# sourceMappingURL=components.css.map */

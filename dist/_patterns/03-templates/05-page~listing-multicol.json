@@ -18,7 +18,7 @@
         "include()": {
             "pattern": "organisms-block--main",
             "with": {
-                "content": "organisms-list--multicol"
+                "content": "organisms-card-list--multicol"
             }
         }
     }

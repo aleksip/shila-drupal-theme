@@ -1,6 +1,6 @@
 /**
  * @file
- * sass/partials/layout/templates/_global.scss
+ * dist/_patterns/03-templates/_global.scss
  *
  * @see page.html.twig
  */
@@ -22,7 +22,6 @@
   padding-top: $large-spacing;
   margin-bottom: $large-spacing;
 }
-@include list-multicol-breakpoint-layout((1 2 3 3));
 @if $off-canvas-not-in-use {
   @if $off-canvas-not-in-use == true {
     @include off-canvas-not-in-use-rules;

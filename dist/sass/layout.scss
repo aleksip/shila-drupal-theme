@@ -6,8 +6,7 @@
  */
 
 @import 'partials/imports';
-@import '../_patterns/01-molecules/components/list-item/list-item-layout';
+@import '../_patterns/01-molecules/components/card/card-layout';
 @import '../_patterns/02-organisms/global/off-canvas/off-canvas-layout';
-@import '../_patterns/02-organisms/sections/list/list-multicol-layout';
-@import '../_patterns/02-organisms/sections/list/multicol-layout';
+@import '../_patterns/02-organisms/sections/card-list/card-list-layout';
 @import '../_patterns/03-templates/**/*.scss';
