@@ -115,6 +115,6 @@ $off-canvas-side: right !default;
 }
 
 @mixin off-canvas-slide {
-  @include transition-property($off-canvas-side);
-  @include transition-duration(.4s);
+  transition-property: $off-canvas-side;
+  transition-duration: .4s;
 }

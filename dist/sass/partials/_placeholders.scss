@@ -44,3 +44,18 @@
     color: $dark-gray;
   }
 }
+%hide-text {
+  overflow: hidden;
+  text-indent: 101%;
+  white-space: nowrap;
+}
+%reset-box-model {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+%no-bullet {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+}

@@ -6,7 +6,7 @@
  */
 
 .feed-icon {
-  @include hide-text;
+  @extend %hide-text;
   display: block;
   width: 1rem;
   height: 1rem;

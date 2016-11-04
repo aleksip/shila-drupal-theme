@@ -12,9 +12,9 @@
  */
 /**
  * @file
- * sass/partials/_variables.scss
+ * dist/sass/partials/_variables.scss
  *
- * Based on http://bitters.bourbon.io/
+ * Originally based on http://bitters.bourbon.io/
  *
  * Importing this file should not generate any CSS.
  */
@@ -110,12 +110,8 @@
     left: -9999px;
   }
   #off-canvas-label {
-    -webkit-transition-property: right;
-    -moz-transition-property: right;
     transition-property: right;
-    -webkit-transition-duration: 0.4s;
-    -moz-transition-duration: 0.4s;
-    transition-duration: 0.4s;
+    transition-duration: .4s;
     display: block;
     position: fixed;
     right: 0;
@@ -131,12 +127,8 @@
     cursor: pointer;
   }
   .off-canvas {
-    -webkit-transition-property: right;
-    -moz-transition-property: right;
     transition-property: right;
-    -webkit-transition-duration: 0.4s;
-    -moz-transition-duration: 0.4s;
-    transition-duration: 0.4s;
+    transition-duration: .4s;
     display: block;
     position: fixed;
     min-height: 100%;
@@ -178,12 +170,8 @@
     display: none;
   }
   .page {
-    -webkit-transition-property: right;
-    -moz-transition-property: right;
     transition-property: right;
-    -webkit-transition-duration: 0.4s;
-    -moz-transition-duration: 0.4s;
-    transition-duration: 0.4s;
+    transition-duration: .4s;
     position: absolute;
     right: 0;
     width: 100%;

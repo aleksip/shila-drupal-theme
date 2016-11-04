@@ -12,9 +12,9 @@
  */
 /**
  * @file
- * sass/partials/_variables.scss
+ * dist/sass/partials/_variables.scss
  *
- * Based on http://bitters.bourbon.io/
+ * Originally based on http://bitters.bourbon.io/
  *
  * Importing this file should not generate any CSS.
  */
@@ -29,7 +29,8 @@
   padding-right: 5%;
 }
 
-.card::after {
+.card::after, .comment__content .links::after, .block--local-tasks__primary::after,
+.block--local-tasks__secondary::after, .node__links::after {
   clear: both;
   content: '';
   display: table;
@@ -59,6 +60,26 @@
   color: #333;
 }
 
+.feed-icon {
+  overflow: hidden;
+  text-indent: 101%;
+  white-space: nowrap;
+}
+
+.comment__content .links, .block--local-tasks__primary,
+.block--local-tasks__secondary, .node__links {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.comment__content .links li, .block--local-tasks__primary li,
+.block--local-tasks__secondary li, .node__links li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+}
+
 /**
  * @file
  * sass/partials/_functions.scss
@@ -78,9 +99,6 @@
  * @see feed-icon.html.twig
  */
 .feed-icon {
-  overflow: hidden;
-  text-indent: 101%;
-  white-space: nowrap;
   display: block;
   width: 1rem;
   height: 1rem;
@@ -246,7 +264,7 @@
  * @see comment.html.twig
  */
 .comment {
-  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: smaller;
 }
 
@@ -257,7 +275,7 @@
 .comment__byline {
   margin: 0.5em 0 0;
   color: #999;
-  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 .comment__byline p {
@@ -272,22 +290,7 @@
   margin-top: 0;
 }
 
-.comment__content .links {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-
-.comment__content .links::after {
-  clear: both;
-  content: "";
-  display: table;
-}
-
 .comment__content .links li {
-  list-style-image: none;
-  list-style-type: none;
-  margin-left: 0;
   white-space: nowrap;
   display: inline;
   float: left;
@@ -300,11 +303,11 @@
 }
 
 .comment__content .links li:last-child {
-  padding-opposite-position(left): 0;
+  padding-right: 0;
 }
 
 .comment__content .links li.last {
-  padding-opposite-position(left): 0;
+  padding-right: 0;
 }
 
 /**
@@ -384,7 +387,7 @@
  *
  * @see shila_theme_preprocess_form()
  */
-.form input[type="color"], .form input[type="date"], .form input[type="datetime"], .form input[type="datetime-local"], .form input[type="email"], .form input[type="month"], .form input[type="number"], .form input[type="password"], .form input[type="search"], .form input[type="tel"], .form input[type="text"], .form input[type="time"], .form input[type="url"], .form input[type="week"], .form input:not([type]), .form textarea,
+.form input[type='color'], .form input[type='date'], .form input[type='datetime'], .form input[type='datetime-local'], .form input[type='email'], .form input[type='month'], .form input[type='number'], .form input[type='password'], .form input[type='search'], .form input[type='tel'], .form input[type='text'], .form input[type='time'], .form input[type='url'], .form input[type='week'], .form input:not([type]), .form textarea,
 .form select[multiple=multiple] {
   margin-bottom: 0;
 }
@@ -395,7 +398,7 @@
 
 .form .description {
   font-size: smaller;
-  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   color: #999;
 }
 
@@ -412,24 +415,11 @@
 
 .block--local-tasks__primary,
 .block--local-tasks__secondary {
-  margin: 0;
-  padding: 0;
-  border: 0;
   clear: both;
-}
-
-.block--local-tasks__primary::after,
-.block--local-tasks__secondary::after {
-  clear: both;
-  content: "";
-  display: table;
 }
 
 .block--local-tasks__primary li,
 .block--local-tasks__secondary li {
-  list-style-image: none;
-  list-style-type: none;
-  margin-left: 0;
   white-space: nowrap;
   display: inline;
   float: left;
@@ -445,12 +435,12 @@
 
 .block--local-tasks__primary li:last-child,
 .block--local-tasks__secondary li:last-child {
-  padding-opposite-position(left): 0;
+  padding-right: 0;
 }
 
 .block--local-tasks__primary li.last,
 .block--local-tasks__secondary li.last {
-  padding-opposite-position(left): 0;
+  padding-right: 0;
 }
 
 .block--local-tasks__task .is-active {
@@ -547,33 +537,21 @@
  * @see node.html.twig
  */
 .node {
-  font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif;
+  font-family: "Georgia", "Times", "Times New Roman", serif;
 }
 
 .node__byline {
   margin: 0.5em 0 1rem;
   color: #999;
-  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: smaller;
 }
 
 .node__links {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-}
-
-.node__links::after {
-  clear: both;
-  content: "";
-  display: table;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 .node__links li {
-  list-style-image: none;
-  list-style-type: none;
-  margin-left: 0;
   white-space: nowrap;
   display: inline;
   float: left;
@@ -586,11 +564,11 @@
 }
 
 .node__links li:last-child {
-  padding-opposite-position(left): 0;
+  padding-right: 0;
 }
 
 .node__links li.last {
-  padding-opposite-position(left): 0;
+  padding-right: 0;
 }
 
 .node.teaser .node__title {
@@ -614,7 +592,7 @@
   padding: 0.5rem 1rem;
   color: #999;
   font-size: smaller;
-  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 .node--article .field--field_info p:last-child {

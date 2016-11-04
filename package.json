@@ -4,10 +4,8 @@
   "description": "Shila theme for Drupal 8",
   "dependencies": {},
   "devDependencies": {
-    "bourbon": "^4.2.7",
     "breakpoint-sass": "^2.7.0",
     "browser-sync": "^2.10.0",
-    "compass-mixins": "^0.12.10",
     "gulp": "^3.9.0",
     "gulp-run": "1.6.10",
     "gulp-sass": "^2.1.1",

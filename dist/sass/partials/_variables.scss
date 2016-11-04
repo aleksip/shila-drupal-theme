@@ -1,8 +1,8 @@
 /**
  * @file
- * sass/partials/_variables.scss
+ * dist/sass/partials/_variables.scss
  *
- * Based on http://bitters.bourbon.io/
+ * Originally based on http://bitters.bourbon.io/
  *
  * Importing this file should not generate any CSS.
  */
@@ -22,7 +22,19 @@ $l-break: 1025px;
 $breaks-list: ($xs-break $s-break $m-break $l-break);
 
 // Typography
-$base-font-family: $helvetica;
+$font-stack-helvetica: (
+  "Helvetica Neue",
+  "Helvetica",
+  "Arial",
+  sans-serif,
+);
+$font-stack-georgia: (
+  "Georgia",
+  "Times",
+  "Times New Roman",
+  serif,
+);
+$base-font-family: $font-stack-helvetica;
 $heading-font-family: $base-font-family;
 
 // Font Sizes
@@ -65,7 +77,33 @@ $secondary-background-color: tint($base-border-color, 75%);
 // Forms
 $form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
 $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+$all-text-inputs: (
+  "input[type='color']",
+  "input[type='date']",
+  "input[type='datetime']",
+  "input[type='datetime-local']",
+  "input[type='email']",
+  "input[type='month']",
+  "input[type='number']",
+  "input[type='password']",
+  "input[type='search']",
+  "input[type='tel']",
+  "input[type='text']",
+  "input[type='time']",
+  "input[type='url']",
+  "input[type='week']",
+  "input:not([type])",
+  "textarea",
+);
 
 // Animations
 $base-duration: 150ms;
 $base-timing: ease;
+
+// Buttons
+$all-buttons: (
+  "button",
+  "input[type='button']",
+  "input[type='reset']",
+  "input[type='submit']",
+);
