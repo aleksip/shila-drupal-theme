@@ -21,9 +21,7 @@ config.sass = {
   options: {
     includePaths: [
       './dist/sass',
-      './node_modules/bourbon/app/assets/stylesheets',
       './node_modules/breakpoint-sass/stylesheets',
-      './node_modules/compass-mixins/lib',
       './node_modules/sass-toolkit/stylesheets',
       './node_modules/sassy-maps/sass',
       './node_modules/singularitygs/stylesheets'
