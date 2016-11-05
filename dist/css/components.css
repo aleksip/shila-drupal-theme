@@ -543,6 +543,21 @@
  */
 /**
  * @file
+ * dist/_patterns/02-organisms/global/off-canvas/_off-canvas.scss
+ *
+ * @see page.html.twig
+ */
+.off-canvas {
+  background-color: #ddd;
+  padding: 1rem;
+}
+
+.off-canvas a {
+  color: #333;
+}
+
+/**
+ * @file
  * sass/partials/components/organisms/nodes/_node.scss
  *
  * @see shila_theme_preprocess_node()
