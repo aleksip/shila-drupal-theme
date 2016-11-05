@@ -13,13 +13,21 @@
 }
 .block--branding__logo {
   img {
-    max-height: 2.67rem;
+    max-height: 2.56rem;
+  }
+  @include breakpoint($s-break) {
+    img {
+      max-height: 2.67rem;
+    }
   }
 }
 .block--branding__name {
-  font-size: 2.67rem;
+  font-size: 2.56rem;
   font-weight: bold;
   line-height: $heading-line-height;
+  @include breakpoint($s-break) {
+    font-size: 2.67rem;
+  }
 }
 .block--branding__slogan {
   @include breakpoint($xs-break) {

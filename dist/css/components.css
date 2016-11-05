@@ -119,13 +119,25 @@
 }
 
 .block--branding__logo img {
-  max-height: 2.67rem;
+  max-height: 2.56rem;
+}
+
+@media (min-width: 525px) {
+  .block--branding__logo img {
+    max-height: 2.67rem;
+  }
 }
 
 .block--branding__name {
-  font-size: 2.67rem;
+  font-size: 2.56rem;
   font-weight: bold;
   line-height: 1.2;
+}
+
+@media (min-width: 525px) {
+  .block--branding__name {
+    font-size: 2.67rem;
+  }
 }
 
 @media (max-width: 524px) {
