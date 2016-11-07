@@ -2,7 +2,9 @@
  * @file
  * sass/partials/_functions.scss
  *
- * Importing this file should not generate any CSS.
+ * Importing this file must not generate any CSS.
+ *
+ * Functions must not use global variables.
  */
 
 // http://hugogiraudel.com/2013/08/08/advanced-sass-list-functions/
@@ -67,5 +69,37 @@
            "the `shade` mixin.";
   } @else {
     @return mix(#000, $color, $percent);
+  }
+}
+
+/// Mixes a color with white.
+///
+/// @argument {color} $color
+///
+/// @argument {number (percentage)} $percent
+///   The amount of white to be mixed in.
+///
+/// @return {color}
+///
+/// @example scss
+///   .element {
+///     background-color: tint(#6ecaa6, 40%);
+///   }
+///
+///   // CSS Output
+///   .element {
+///     background-color: #a8dfc9;
+///   }
+
+@function tint(
+  $color,
+  $percent
+) {
+
+  @if not _is-color($color) {
+    @error "`#{$color}` is not a valid color for the `$color` argument in " +
+           "the `tint` mixin.";
+  } @else {
+    @return mix(#fff, $color, $percent);
   }
 }

@@ -2,12 +2,14 @@
  * @file
  * sass/partials/_imports.scss
  *
- * Importing this file should not generate any CSS.
+ * Global imports.
+ *
+ * Importing this file must not generate any CSS.
  */
 
 @import 'singularitygs';
 @import 'breakpoint';
+@import 'partials/functions';
 @import 'partials/variables';
 @import 'partials/placeholders';
-@import 'partials/functions';
 @import 'partials/mixins';
