@@ -9,3 +9,6 @@
   }
   @include card-list-layout;
 }
+.card-list--multicol {
+  @include card-list-multicol-breakpoint-layout;
+}
