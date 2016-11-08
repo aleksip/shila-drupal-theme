@@ -1,7 +1,7 @@
 <div class="card-list card-list--multicol">
   {% block cards %}
     {% for card in cards %}
-      {% include '@molecules/components/card/card.twig'
+      {% include '@molecules/components/card/card.html.twig'
         with {
           'card_image': card.card_image,
           'card_body': card.card_body

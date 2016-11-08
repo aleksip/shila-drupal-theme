@@ -8,6 +8,8 @@
     {% if card_title %}
       <h1 class="card__title">{{ card_title }}</h1>
     {% endif %}
-    {{ card_body }}
+    {% block card_body %}
+      {{ card_body }}
+    {% endblock %}
   </div>
 </section>
