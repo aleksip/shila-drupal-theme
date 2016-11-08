@@ -1,15 +1,28 @@
 <section class="card">
   {% spaceless %}
-  <div class="card__image">
-    {{ card_image }}
-  </div>
+    <div class="card__image">
+      {{ card_image }}
+    </div>
   {% endspaceless %}
   <div class="card__body">
     {% if card_title %}
-      <h1 class="card__title">{{ card_title }}</h1>
+      {% spaceless %}
+        <h1 class="card__title">
+          {% if card_link %}
+          <a href="{{ card_link }}">
+            {% endif %}
+            {{ card_title }}
+            {% if card_link %}
+          </a>
+          {% endif %}
+        </h1>
+      {% endspaceless %}
     {% endif %}
     {% block card_body %}
       {{ card_body }}
     {% endblock %}
+    {% if card_link and card_link_text %}
+      <p class="card__link"><a href="{{ card_link }}">{{ card_link_text }}</a></p>
+    {% endif %}
   </div>
 </section>
