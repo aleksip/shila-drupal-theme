@@ -18,12 +18,15 @@ config.sass = {
   srcFiles: [
     './dist/sass/*.scss'
   ],
+  watchFiles: [
+    './dist/sass/**/*.scss',
+    './dist/_patterns/**/*.scss'
+  ],
   options: {
     includePaths: [
       './dist/sass',
       './node_modules/breakpoint-sass/stylesheets',
       './node_modules/sass-toolkit/stylesheets',
-      './node_modules/sassy-maps/sass',
       './node_modules/singularitygs/stylesheets'
     ],
     outputStyle: 'expanded'
@@ -74,7 +77,7 @@ gulp.task('watch', ['sass-change'], function () {
       reqHeaders: config.browserSync.proxyReqHeaders
     }
   });
-  gulp.watch(config.sass.srcFiles, ['sass-change']);
+  gulp.watch(config.sass.watchFiles, ['sass-change']);
   gulp.watch(config.patternsDir + '/**/*.twig', ['patterns-change']);
 });
 
