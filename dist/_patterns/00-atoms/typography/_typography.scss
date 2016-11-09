@@ -26,7 +26,7 @@ h6 {
   line-height: $heading-line-height;
 }
 h1 {
-  font-size: 2rem;
+  font-size: $h1-font-size;
   margin: 0 0 1rem;
 }
 h2,
@@ -37,19 +37,19 @@ h6 {
   margin: 1.5rem 0 1rem;
 }
 h2 {
-  font-size: 1.5rem;
+  font-size: $h2-font-size;
 }
 h3 {
-  font-size: 1.17rem;
+  font-size: $h3-font-size;
 }
 h4 {
-  font-size: 1rem;
+  font-size: $h4-font-size;
 }
 h5 {
-  font-size: 0.83rem;
+  font-size: $h5-font-size;
 }
 h6 {
-  font-size: 0.67rem;
+  font-size: $h6-font-size;
 }
 p {
   margin: 0 0 1rem;
