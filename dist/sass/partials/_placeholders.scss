@@ -6,8 +6,8 @@
  */
 
 %side-paddings {
-  padding-left: $side-margin / 2 * 1%;
-  padding-right: $side-margin / 2 * 1%;
+  padding-left: $side-padding;
+  padding-right: $side-padding;
 }
 %outer-container {
   max-width: $max-width;
