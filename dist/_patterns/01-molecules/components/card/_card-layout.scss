@@ -24,7 +24,9 @@
     } @else {
       .card__image {
         @include grid-span(4, 1, $gutter: $scaled-gutter);
-        margin-bottom: $small-spacing;
+        &:not(:empty) {
+          margin-bottom: $small-spacing;
+        }
       }
       .card__body {
         @include isolation-span(4, 1, 'both', $gutter: $scaled-gutter);
