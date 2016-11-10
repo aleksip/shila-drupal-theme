@@ -1,0 +1,16 @@
+{
+    "breadcrumb_trail_heading": "Breadcrumb",
+    "breadcrumb_trail": [
+        {
+            "text": "Home",
+            "url": "/"
+        },
+        {
+            "text": "Crumb 1",
+            "url": "/"
+        },
+        {
+            "text": "Crumb 2"
+        }
+    ]
+}

@@ -39,7 +39,7 @@
   padding-right: 5%;
 }
 
-.card::after, .comment__content .links::after, .block--local-tasks__primary::after,
+.card::after, .comment__content .links::after, .breadcrumb-trail ol::after, .block--local-tasks__primary::after,
 .block--local-tasks__secondary::after, .node__links::after {
   clear: both;
   content: '';
@@ -76,14 +76,14 @@
   white-space: nowrap;
 }
 
-.comment__content .links, .block--local-tasks__primary,
+.comment__content .links, .breadcrumb-trail ol, .block--local-tasks__primary,
 .block--local-tasks__secondary, .node__links {
   margin: 0;
   padding: 0;
   border: 0;
 }
 
-.comment__content .links li, .block--local-tasks__primary li,
+.comment__content .links li, .breadcrumb-trail ol li, .block--local-tasks__primary li,
 .block--local-tasks__secondary li, .node__links li {
   list-style-image: none;
   list-style-type: none;
@@ -419,6 +419,37 @@
   font-size: smaller;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   color: #999;
+}
+
+/**
+ * @file
+ * molecules/navigation/breadcrumb-trail/_breadcrumb-trail.scss
+ *
+ * @see breadcrumb.html.twig
+ * @see breadcrumb-trail.html.twig
+ */
+.breadcrumb-trail ol li {
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.breadcrumb-trail ol li:first-child, .breadcrumb-trail ol li.first {
+  padding-left: 0;
+}
+
+.breadcrumb-trail ol li:last-child {
+  padding-right: 0;
+}
+
+.breadcrumb-trail ol li.last {
+  padding-right: 0;
+}
+
+.breadcrumb-trail li + li::before {
+  content: '>';
 }
 
 /**

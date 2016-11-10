@@ -1,0 +1,16 @@
+/**
+ * @file
+ * molecules/navigation/breadcrumb-trail/_breadcrumb-trail.scss
+ *
+ * @see breadcrumb.html.twig
+ * @see breadcrumb-trail.html.twig
+ */
+
+.breadcrumb-trail {
+  ol {
+    @include horizontal-list;
+  }
+  li + li::before {
+    content: '>';
+  }
+}

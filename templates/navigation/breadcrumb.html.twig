@@ -1,0 +1,17 @@
+{#
+/**
+ * @file
+ * Theme override for a breadcrumb trail.
+ *
+ * Available variables:
+ * - breadcrumb: Breadcrumb trail items.
+ */
+#}
+{% if breadcrumb %}
+  {% include "@molecules/navigation/breadcrumb-trail/breadcrumb-trail.html.twig"
+    with {
+      'breadcrumb_trail_heading': 'Breadcrumb'|t,
+      'breadcrumb_trail': breadcrumb
+    }
+  %}
+{% endif %}
