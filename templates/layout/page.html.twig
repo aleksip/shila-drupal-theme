@@ -44,7 +44,7 @@
   {% endif %}
   <div class="page{% if is_front %} page--front{% endif %}">
     {% if page.header %}
-      {% include base_path ~ directory ~ "/dist/_patterns/02-organisms/global/page-header/page-header.html.twig"
+      {% include "@organisms/global/page-header/page-header.html.twig"
         with {
           'page_header_content': page.header
         }
@@ -55,7 +55,7 @@
       {{ page.content }}
     </main>
     {% if page.footer %}
-      {% include base_path ~ directory ~ "/dist/_patterns/02-organisms/global/page-footer/page-footer.html.twig"
+      {% include "@organisms/global/page-footer/page-footer.html.twig"
         with {
           'page_footer_content': page.footer
         }
@@ -63,7 +63,7 @@
     {% endif %}
   </div>
   {% if page.off_canvas %}
-    {% include base_path ~ directory ~ "/dist/_patterns/02-organisms/global/off-canvas/off-canvas.html.twig"
+    {% include "@organisms/global/off-canvas/off-canvas.html.twig"
       with {
         'off_canvas_content': page.off_canvas
       }
