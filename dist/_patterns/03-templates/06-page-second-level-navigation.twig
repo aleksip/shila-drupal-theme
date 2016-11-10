@@ -1,11 +1,9 @@
 {% extends "base.twig" %}
 
-{% block page__header %}
-  <header role="banner" class="header page__header">
-    <div class="region region--header">
-      {% include "molecules-block--system-branding-block.html" %}
-      {% include "molecules-block--main-navigation" %}
-      {{ block_second_level_navigation }}
-    </div>
-  </header>
+{% block page_header %}
+  {% include "organisms-page-header.html"
+    with {
+      'page_header_content': page_header_content
+    }
+  %}
 {% endblock %}

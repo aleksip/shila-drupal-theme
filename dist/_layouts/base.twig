@@ -22,25 +22,25 @@
       <input id="off-canvas-checkbox" type="checkbox">
       <label for="off-canvas-checkbox" id="off-canvas-label" onclick=""></label>
       <div class="page{% block is_front %}{% endblock %}">
-        {% block page__header %}
-          {% include "organisms-header" %}
+        {% block page_header %}
+          {% include "organisms-page-header.html" %}
         {% endblock %}
         <main role="main" class="main page__content">
           <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
           <div class="region region--content">
-            {% block page__content %}
+            {% block page_content %}
               {{ block_page_title }}
               {{ block_messages }}
               {{ block_main }}
             {% endblock %}
           </div>
         </main>
-        {% block page__footer %}
-          {% include "organisms-footer" %}
+        {% block page_footer %}
+          {% include "organisms-page-footer.html" %}
         {% endblock %}
       </div>
       {% block off_canvas %}
-        {% include "organisms-off-canvas" %}
+        {% include "organisms-off-canvas.html" %}
       {% endblock %}
     </div>{# /.layout-container #}
   </body>

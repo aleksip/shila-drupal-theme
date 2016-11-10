@@ -6,5 +6,19 @@
                 "content": "organisms-article-listing"
             }
         }
+    },
+    "page_footer": {
+        "include()": {
+            "pattern": "organisms-page-footer.html",
+            "with": {
+                "page_footer_content": {
+                    "join()": [
+                        "<div class=\"region region--footer\">",
+                        "molecules-block--powered-by",
+                        "</div>"
+                    ]
+                }
+            }
+        }
     }
 }

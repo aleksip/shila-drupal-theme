@@ -501,7 +501,30 @@
 
 /**
  * @file
- * sass/partials/components/organisms/global/_page__footer.scss
+ * organisms/global/off-canvas/_off-canvas-layout.scss
+ *
+ * Pure CSS (no JavaScript required) implementation.
+ *
+ * @see page.html.twig
+ */
+/**
+ * @file
+ * organisms/global/off-canvas/_off-canvas.scss
+ *
+ * @see page.html.twig
+ */
+.off-canvas {
+  background-color: #ddd;
+  padding: 1rem;
+}
+
+.off-canvas a {
+  color: #333;
+}
+
+/**
+ * @file
+ * organisms/global/page-footer/_page-footer.scss
  *
  * @see page.html.twig
  */
@@ -511,7 +534,7 @@
 
 /**
  * @file
- * sass/partials/components/organisms/global/_page__header.scss
+ * organisms/global/page-header/_page-header.scss
  *
  * @see page.html.twig
  */
@@ -538,29 +561,6 @@
   .page__header .nav {
     display: block;
   }
-}
-
-/**
- * @file
- * sass/partials/layout/templates/_off-canvas.scss
- *
- * Pure CSS (no JavaScript required) implementation.
- *
- * @see page.html.twig
- */
-/**
- * @file
- * dist/_patterns/02-organisms/global/off-canvas/_off-canvas.scss
- *
- * @see page.html.twig
- */
-.off-canvas {
-  background-color: #ddd;
-  padding: 1rem;
-}
-
-.off-canvas a {
-  color: #333;
 }
 
 /**

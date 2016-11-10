@@ -1,0 +1,9 @@
+{
+    "off_canvas_content": {
+        "join()": [
+            "<div class=\"region region--off_canvas\">",
+            "molecules-block--main-navigation",
+            "</div>"
+        ]
+    }
+}

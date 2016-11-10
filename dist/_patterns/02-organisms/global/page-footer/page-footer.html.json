@@ -1,0 +1,8 @@
+{
+  "page_footer_content": {
+    "join()": [
+      "<div class=\"region region--footer\">",
+      "</div"
+    ]
+  }
+}
