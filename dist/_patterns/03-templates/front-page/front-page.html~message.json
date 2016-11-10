@@ -13,7 +13,7 @@
                                 }
                             },
                             "message_list": {
-                                "status": ["Homepage with a status message"]
+                                "status": ["Front page with a status message"]
                             }
                         },
                         "only": true
