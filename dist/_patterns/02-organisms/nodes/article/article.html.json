@@ -1,0 +1,15 @@
+{
+    "attributes": {
+        "Attribute()": {
+            "class": ["node", "node--article"]
+        }
+    },
+    "page": true,
+    "display_submitted": true,
+    "content": {
+        "join()": [
+            "molecules-node-body-field.html",
+            "organisms-comments.html"
+        ]
+    }
+}

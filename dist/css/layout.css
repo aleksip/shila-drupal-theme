@@ -65,25 +65,21 @@
  */
 /**
  * @file
- * @molecules/components/card/_card-layout.scss
+ * molecules/components/card/_card-layout.scss
  */
 /**
  * @file
  * organisms/global/off-canvas/_off-canvas-layout.scss
  *
- * Pure CSS (no JavaScript required) implementation.
- *
- * @see page.html.twig
+ * Pure CSS implementation (no JavaScript required).
  */
 /**
  * @file
- * @organisms/sections/card-list/_card-list-layout.scss
+ * organisms/sections/card-list/_card-list-layout.scss
  */
 /**
  * @file
  * templates/_global-layout.scss
- *
- * @see page.html.twig
  */
 .page__content {
   padding-top: 3.2em;
@@ -235,20 +231,6 @@
   #off-canvas-checkbox:checked ~ .off-canvas {
     right: 0;
   }
-}
-
-/**
- * @file
- * templates/front-page/_front-page.scss
- *
- * @see page.html.twig
- */
-.page--front .comment-add {
-  display: none;
-}
-
-.view--frontpage .views-row + .views-row {
-  margin-top: 3.2em;
 }
 
 /*# sourceMappingURL=layout.css.map */

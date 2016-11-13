@@ -1,0 +1,10 @@
+/**
+ * @file
+ * organisms/sections/front-page-listing/_front-page-listing.scss
+ */
+
+.front-page-listing__row {
+  & + & {
+    margin-top: $large-spacing;
+  }
+}

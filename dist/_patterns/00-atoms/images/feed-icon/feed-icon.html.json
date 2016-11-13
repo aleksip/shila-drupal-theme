@@ -1,7 +1,7 @@
 {
     "attributes": {
         "Attribute()": {
-            "class": []
+            "class": ["feed-icon"]
         }
     }
 }

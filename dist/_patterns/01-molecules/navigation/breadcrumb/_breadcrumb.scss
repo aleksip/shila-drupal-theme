@@ -1,0 +1,13 @@
+/**
+ * @file
+ * molecules/navigation/breadcrumb/_breadcrumb.scss
+ */
+
+.breadcrumb {
+  ol {
+    @include horizontal-list;
+  }
+  li + li::before {
+    content: '>';
+  }
+}

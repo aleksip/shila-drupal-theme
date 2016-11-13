@@ -1,9 +1,9 @@
 {
-    "page_header_content": {
+    "content": {
         "join()" : [
             "<div class=\"region region--header\">",
-            "molecules-block--system-branding-block.html",
-            "molecules-block--main-navigation",
+            "organisms-branding-block.html",
+            "organisms-main-navigation-block.html",
             "</div>"
         ]
     }

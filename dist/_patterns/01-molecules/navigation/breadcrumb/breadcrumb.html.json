@@ -1,0 +1,16 @@
+{
+    "title": "Breadcrumb",
+    "breadcrumb": [
+        {
+            "text": "Home",
+            "url": "/"
+        },
+        {
+            "text": "Crumb 1",
+            "url": "/"
+        },
+        {
+            "text": "Crumb 2"
+        }
+    ]
+}

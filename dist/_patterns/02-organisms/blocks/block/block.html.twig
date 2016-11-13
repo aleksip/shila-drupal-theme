@@ -1,0 +1,15 @@
+{#
+/**
+ * @see templates/blocks/block.html.twig
+ */
+#}
+<div{{ attributes }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+</div>

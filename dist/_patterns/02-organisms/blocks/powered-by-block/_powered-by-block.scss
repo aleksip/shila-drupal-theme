@@ -1,0 +1,12 @@
+/**
+ * @file
+ * organisms/blocks/powered-by-block/_powered-by-block.scss
+ */
+
+.block--powered-by {
+  text-align: center;
+  font-size: smaller;
+  a {
+    color: $base-font-color;
+  }
+}

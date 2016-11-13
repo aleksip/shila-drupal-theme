@@ -1,0 +1,21 @@
+/**
+ * @file
+ * atoms/_lists.scss
+ *
+ * Originally based on http://bitters.bourbon.io/
+ */
+
+ul,
+ol {
+  margin: 0 0 1rem;
+}
+dl {
+  margin-bottom: $small-spacing;
+  dt {
+    font-weight: 600;
+    margin-top: $small-spacing;
+  }
+  dd {
+    margin: 0;
+  }
+}

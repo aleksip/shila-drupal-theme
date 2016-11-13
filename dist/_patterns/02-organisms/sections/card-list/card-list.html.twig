@@ -3,9 +3,9 @@
     {% for card in cards %}
       {% include '@molecules/components/card/card.html.twig'
         with {
-          'card_image': card.card_image,
-          'card_title': card.card_title,
-          'card_body': card.card_body
+          'image': card.image,
+          'title': card.title,
+          'content': card.content
         }
       %}
     {% endfor %}

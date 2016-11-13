@@ -1,0 +1,27 @@
+{% extends "block.html.twig" %}
+{#
+/**
+ * @file
+ * Theme override for a branding block.
+ *
+ * Each branding element variable (logo, name, slogan) is only available if
+ * enabled in the block configuration.
+ *
+ * Available variables:
+ * - site_logo: Logo for site as defined in Appearance or theme settings.
+ * - site_name: Name for site as defined in Site information settings.
+ * - site_slogan: Slogan for site as defined in Site information settings.
+ */
+#}
+{% set attributes = attributes.addClass('block--branding') %}
+{% block template %}
+  {% block content %}
+    {% embed "@organisms/blocks/branding-block/branding-block.html.twig"
+      with {
+        'site_home_url': path('<front>'),
+        'site_home_title': 'Home'|t
+      }
+    %}
+    {% endembed %}
+  {% endblock %}
+{% endblock %}

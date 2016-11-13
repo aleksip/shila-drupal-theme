@@ -18,7 +18,7 @@
     },
     "content": {
         "join()": [
-            "molecules-field--comment-body",
+            "molecules-comment-body-field.html",
             "molecules-links.html"
         ]
     }

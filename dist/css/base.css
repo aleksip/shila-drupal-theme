@@ -42,7 +42,7 @@
  */
 /**
  * @file
- * dist/_patterns/00-atoms/buttons/_buttons.scss
+ * atoms/_buttons.scss
  *
  * Originally based on http://bitters.bourbon.io/
  */
@@ -83,7 +83,7 @@ button:disabled:hover, input[type='button']:disabled:hover, input[type='reset']:
 
 /**
  * @file
- * sass/partials/base/_elements.scss
+ * atoms/_elements.scss
  */
 *,
 *::after,
@@ -110,7 +110,7 @@ picture img {
 
 /**
  * @file
- * dist/_patterns/00-atoms/forms/_forms.scss
+ * atoms/_forms.scss
  *
  * Originally based on http://bitters.bourbon.io/
  */
@@ -218,7 +218,7 @@ select {
 
 /**
  * @file
- * dist/_patterns/00-atoms/lists/_lists.scss
+ * atoms/_lists.scss
  *
  * Originally based on http://bitters.bourbon.io/
  */
@@ -242,7 +242,7 @@ dl dd {
 
 /**
  * @file
- * dist/_patterns/00-atoms/tables/_tables.scss
+ * atoms/_tables.scss
  *
  * Originally based on http://bitters.bourbon.io/
  */
@@ -273,7 +273,7 @@ th {
 
 /**
  * @file
- * dist/_patterns/00-atoms/typography/_typography.scss
+ * atoms/_typography.scss
  *
  * Originally based on http://bitters.bourbon.io/
  */

@@ -1,0 +1,42 @@
+{
+    "page_header": {
+        "include()": {
+            "pattern": "organisms-page-header.html",
+            "with": {
+                "content": {
+                    "join()": [
+                        "<div class=\"region region--header\">",
+                        "organisms-branding-block.html",
+                        "organisms-main-navigation-block.html",
+                        {
+                            "include()": {
+                                "pattern": "organisms-menu-block.html",
+                                "with": {
+                                    "configuration": {
+                                        "label_display": false
+                                    }
+                                }
+                            }
+                        },
+                        "</div>"
+                    ]
+                }
+            }
+        }
+    },
+    "block_page_title": {
+        "include()": {
+            "pattern": "organisms-page-title-block.html",
+            "with": {
+                "content": {
+                    "include()": {
+                        "pattern": "molecules-page-title.html",
+                        "with": {
+                            "title": "Page with second level navigation"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

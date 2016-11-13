@@ -1,0 +1,26 @@
+/**
+ * @file
+ * organisms/nodes/node/_node.scss
+ */
+
+.node {
+  font-family: $font-stack-georgia;
+}
+.node__byline {
+  margin: .5em 0 1rem;
+  color: $medium-gray;
+  font-family: $base-font-family;
+  font-size: smaller;
+}
+.node__links {
+  @include horizontal-list(.5em);
+  font-family: $base-font-family;
+}
+.node.teaser {
+  .node__title {
+    margin: 0;
+    a {
+      color: $base-font-color;
+    }
+  }
+}

@@ -1,32 +1,32 @@
 {% set classes = 'card' %}
-{% if card_additional_classes is iterable %}
-  {% set classes = [classes]|merge(card_additional_classes)|join(' ') %}
+{% if additional_classes is iterable %}
+  {% set classes = [classes]|merge(additional_classes)|join(' ') %}
 {% endif %}
 <section class="{{ classes }}">
   {% spaceless %}
     <div class="card__image">
-      {{ card_image }}
+      {{ image }}
     </div>
   {% endspaceless %}
   <div class="card__body">
-    {% if card_title %}
+    {% if title %}
       {% spaceless %}
         <h1 class="card__title">
-          {% if card_link %}
-            <a href="{{ card_link }}">
+          {% if link_url %}
+            <a href="{{ link_url }}">
           {% endif %}
-          {{ card_title }}
-          {% if card_link %}
+          {{ title }}
+          {% if link_url %}
             </a>
           {% endif %}
         </h1>
       {% endspaceless %}
     {% endif %}
-    {% block card_body %}
-      {{ card_body }}
+    {% block content %}
+      {{ content }}
     {% endblock %}
-    {% if card_link and card_link_text %}
-      <p class="card__link"><a href="{{ card_link }}">{{ card_link_text }}</a></p>
+    {% if link_url and link_text %}
+      <p class="card__link"><a href="{{ link_url }}">{{ link_text }}</a></p>
     {% endif %}
   </div>
 </section>

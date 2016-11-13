@@ -39,8 +39,8 @@
   padding-right: 5%;
 }
 
-.card::after, .comment__content .links::after, .breadcrumb-trail ol::after, .block--local-tasks__primary::after,
-.block--local-tasks__secondary::after, .node__links::after {
+.card::after, .comment__content .links::after, .breadcrumb ol::after, .local-tasks__primary::after,
+.local-tasks__secondary::after, .node__links::after {
   clear: both;
   content: '';
   display: table;
@@ -76,15 +76,15 @@
   white-space: nowrap;
 }
 
-.comment__content .links, .breadcrumb-trail ol, .block--local-tasks__primary,
-.block--local-tasks__secondary, .node__links {
+.comment__content .links, .breadcrumb ol, .local-tasks__primary,
+.local-tasks__secondary, .node__links {
   margin: 0;
   padding: 0;
   border: 0;
 }
 
-.comment__content .links li, .breadcrumb-trail ol li, .block--local-tasks__primary li,
-.block--local-tasks__secondary li, .node__links li {
+.comment__content .links li, .breadcrumb ol li, .local-tasks__primary li,
+.local-tasks__secondary li, .node__links li {
   list-style-image: none;
   list-style-type: none;
   margin-left: 0;
@@ -98,9 +98,7 @@
  */
 /**
  * @file
- * sass/partials/components/atoms/_feed-icon.scss
- *
- * @see feed-icon.html.twig
+ * atoms/images/feed-icon/_feed-icon.scss
  */
 .feed-icon {
   display: block;
@@ -113,80 +111,11 @@
 
 /**
  * @file
- * sass/partials/components/molecules/blocks/_branding.scss
- *
- * @see shila_theme_preprocess_block()
- * @see block--system-branding-block.html.twig
- */
-.block--branding a {
-  color: #333;
-}
-
-.block--branding__logo img {
-  max-height: 2.56rem;
-}
-
-@media (min-width: 525px) {
-  .block--branding__logo img {
-    max-height: 2.67rem;
-  }
-}
-
-.block--branding__name {
-  font-size: 2.56rem;
-  font-weight: bold;
-  line-height: 1.2;
-}
-
-@media (min-width: 525px) {
-  .block--branding__name {
-    font-size: 2.67rem;
-  }
-}
-
-@media (max-width: 524px) {
-  .block--branding__slogan {
-    display: none;
-  }
-}
-
-/**
- * @file
- * sass/partials/components/molecules/navigation/_primary-nav.scss
- *
- * @see shila_theme_preprocess_block()
- * @see block--system-menu-block.html.twig
+ * molecules/components/card/_card-layout.scss
  */
 /**
  * @file
- * sass/partials/components/molecules/blocks/_powered-by.scss
- *
- * @see shila_theme_preprocess_block()
- * @see block.html.twig
- */
-.block--powered-by {
-  text-align: center;
-  font-size: smaller;
-}
-
-.block--powered-by a {
-  color: #333;
-}
-
-/**
- * @file
- * sass/partials/components/molecules/blocks/_search-form.scss
- *
- * @see shila_theme_preprocess_block()
- * @see block.html.twig
- */
-/**
- * @file
- * @molecules/components/card/_card-layout.scss
- */
-/**
- * @file
- * @molecules/components/card/_card.scss
+ * molecules/components/card/_card.scss
  */
 .card__title {
   margin-top: 0;
@@ -277,10 +206,7 @@
 
 /**
  * @file
- * sass/partials/components/organisms/comments/_comment.scss
- *
- * @see shila_theme_preprocess_comment()
- * @see comment.html.twig
+ * molecules/components/comment/_comment.scss
  */
 .comment {
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -329,9 +255,13 @@
   padding-right: 0;
 }
 
+.page--front .comment-add {
+  display: none;
+}
+
 /**
  * @file
- * sass/partials/components/molecules/forms/_comment-form.scss
+ * molecules/forms/comment-form/_comment-form.scss
  */
 .comment-form #edit-field-homepage-0-uri--description,
 .comment-form #edit-preview {
@@ -340,11 +270,30 @@
 
 /**
  * @file
- * sass/partials/components/molecules/messaging/_messages.scss
+ * molecules/forms/form/_form.scss
  *
- * Based on http://refills.bourbon.io/components/
+ * @see shila_theme_preprocess_form()
+ */
+.form input[type='color'], .form input[type='date'], .form input[type='datetime'], .form input[type='datetime-local'], .form input[type='email'], .form input[type='month'], .form input[type='number'], .form input[type='password'], .form input[type='search'], .form input[type='tel'], .form input[type='text'], .form input[type='time'], .form input[type='url'], .form input[type='week'], .form input:not([type]), .form textarea,
+.form select[multiple=multiple] {
+  margin-bottom: 0;
+}
+
+.form .form-item {
+  margin-bottom: 0.8em;
+}
+
+.form .description {
+  font-size: smaller;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  color: #999;
+}
+
+/**
+ * @file
+ * molecules/messaging/messages/_messages.scss
  *
- * @see status-messages.html.twig
+ * Originally based on http://refills.bourbon.io/components/
  */
 .messages--status {
   background-color: #e5edf8;
@@ -402,33 +351,9 @@
 
 /**
  * @file
- * sass/partials/components/molecules/forms/_form.scss
- *
- * @see shila_theme_preprocess_form()
+ * molecules/navigation/breadcrumb/_breadcrumb.scss
  */
-.form input[type='color'], .form input[type='date'], .form input[type='datetime'], .form input[type='datetime-local'], .form input[type='email'], .form input[type='month'], .form input[type='number'], .form input[type='password'], .form input[type='search'], .form input[type='tel'], .form input[type='text'], .form input[type='time'], .form input[type='url'], .form input[type='week'], .form input:not([type]), .form textarea,
-.form select[multiple=multiple] {
-  margin-bottom: 0;
-}
-
-.form .form-item {
-  margin-bottom: 0.8em;
-}
-
-.form .description {
-  font-size: smaller;
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  color: #999;
-}
-
-/**
- * @file
- * molecules/navigation/breadcrumb-trail/_breadcrumb-trail.scss
- *
- * @see breadcrumb.html.twig
- * @see breadcrumb-trail.html.twig
- */
-.breadcrumb-trail ol li {
+.breadcrumb ol li {
   white-space: nowrap;
   display: inline;
   float: left;
@@ -436,40 +361,37 @@
   padding-right: 4px;
 }
 
-.breadcrumb-trail ol li:first-child, .breadcrumb-trail ol li.first {
+.breadcrumb ol li:first-child, .breadcrumb ol li.first {
   padding-left: 0;
 }
 
-.breadcrumb-trail ol li:last-child {
+.breadcrumb ol li:last-child {
   padding-right: 0;
 }
 
-.breadcrumb-trail ol li.last {
+.breadcrumb ol li.last {
   padding-right: 0;
 }
 
-.breadcrumb-trail li + li::before {
+.breadcrumb li + li::before {
   content: '>';
 }
 
 /**
  * @file
- * sass/partials/components/molecules/navigation/_local-tasks.scss
- *
- * @see shila_theme_preprocess_menu_local_task()
- * @see menu-local-tasks.html.twig
+ * molecules/navigation/local-tasks/_local-tasks.scss
  */
-.block--local-tasks {
+.local-tasks {
   font-size: smaller;
 }
 
-.block--local-tasks__primary,
-.block--local-tasks__secondary {
+.local-tasks__primary,
+.local-tasks__secondary {
   clear: both;
 }
 
-.block--local-tasks__primary li,
-.block--local-tasks__secondary li {
+.local-tasks__primary li,
+.local-tasks__secondary li {
   white-space: nowrap;
   display: inline;
   float: left;
@@ -477,72 +399,96 @@
   padding-right: 0.5em;
 }
 
-.block--local-tasks__primary li:first-child, .block--local-tasks__primary li.first,
-.block--local-tasks__secondary li:first-child,
-.block--local-tasks__secondary li.first {
+.local-tasks__primary li:first-child, .local-tasks__primary li.first,
+.local-tasks__secondary li:first-child,
+.local-tasks__secondary li.first {
   padding-left: 0;
 }
 
-.block--local-tasks__primary li:last-child,
-.block--local-tasks__secondary li:last-child {
+.local-tasks__primary li:last-child,
+.local-tasks__secondary li:last-child {
   padding-right: 0;
 }
 
-.block--local-tasks__primary li.last,
-.block--local-tasks__secondary li.last {
+.local-tasks__primary li.last,
+.local-tasks__secondary li.last {
   padding-right: 0;
 }
 
-.block--local-tasks__task .is-active {
+.local-tasks__task .is-active {
   color: #104c90;
 }
 
-.block--local-tasks__task a {
+.local-tasks__task a {
   padding: 0 0.3em;
 }
 
 /**
  * @file
- * sass/partials/components/molecules/text/_page-title.scss
- *
- * @see shila_theme_preprocess_page_title()
- * @see page-title.html.twig
+ * molecules/text/page-title/_page-title.scss
  */
 /**
  * @file
- * sass/partials/components/organisms/comments/_field--comment.scss
- *
- * @see field--comment.html.twig
+ * organisms/blocks/branding-block/_branding-block.scss
  */
-.field--comment {
-  margin-top: 3.2em;
+.block--branding a {
+  color: #333;
 }
 
-.field--comment .comment + .comment {
-  margin-top: 3.2em;
+.block--branding__logo img {
+  max-height: 2.56rem;
 }
 
-.field--comment .indented {
-  padding-left: 1.6em;
+@media (min-width: 525px) {
+  .block--branding__logo img {
+    max-height: 2.67rem;
+  }
 }
 
-.field--comment__title {
-  border-bottom: 1px solid #ddd;
+.block--branding__name {
+  font-size: 2.56rem;
+  font-weight: bold;
+  line-height: 1.2;
 }
 
+@media (min-width: 525px) {
+  .block--branding__name {
+    font-size: 2.67rem;
+  }
+}
+
+@media (max-width: 524px) {
+  .block--branding__slogan {
+    display: none;
+  }
+}
+
+/**
+ * @file
+ * organisms/blocks/powered-by-block/_powered-by-block.scss
+ */
+.block--powered-by {
+  text-align: center;
+  font-size: smaller;
+}
+
+.block--powered-by a {
+  color: #333;
+}
+
+/**
+ * @file
+ * organisms/blocks/search-form-block/_search-form-block.scss
+ */
 /**
  * @file
  * organisms/global/off-canvas/_off-canvas-layout.scss
  *
- * Pure CSS (no JavaScript required) implementation.
- *
- * @see page.html.twig
+ * Pure CSS implementation (no JavaScript required).
  */
 /**
  * @file
  * organisms/global/off-canvas/_off-canvas.scss
- *
- * @see page.html.twig
  */
 .off-canvas {
   background-color: #ddd;
@@ -556,8 +502,6 @@
 /**
  * @file
  * organisms/global/page-footer/_page-footer.scss
- *
- * @see page.html.twig
  */
 .page__footer {
   padding-bottom: 1.6em;
@@ -566,8 +510,6 @@
 /**
  * @file
  * organisms/global/page-header/_page-header.scss
- *
- * @see page.html.twig
  */
 .page__header {
   width: 100%;
@@ -596,17 +538,35 @@
 
 /**
  * @file
- * sass/partials/components/organisms/nodes/_node.scss
- *
- * @see shila_theme_preprocess_node()
- * @see node.html.twig
+ * organisms/nodes/article/_article.scss
+ */
+.node--article .field--field_info {
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  padding: 0.5rem 1rem;
+  color: #999;
+  font-size: smaller;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+.node--article .field--field_info p:last-child {
+  margin-bottom: 0;
+}
+
+.node--article .filter-wrapper {
+  display: none;
+}
+
+/**
+ * @file
+ * organisms/nodes/node/_node.scss
  */
 .node {
   font-family: "Georgia", "Times", "Times New Roman", serif;
 }
 
 .node__byline {
-  margin: 0.5em 0 1rem;
+  margin: .5em 0 1rem;
   color: #999;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: smaller;
@@ -646,35 +606,11 @@
 
 /**
  * @file
- * sass/partials/components/organisms/nodes/_article.scss
- *
- * @see shila_theme_preprocess_node()
- * @see node.html.twig
- */
-.node--article .field--field_info {
-  margin-bottom: 1rem;
-  border: 1px solid #ddd;
-  padding: 0.5rem 1rem;
-  color: #999;
-  font-size: smaller;
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-}
-
-.node--article .field--field_info p:last-child {
-  margin-bottom: 0;
-}
-
-.node--article .filter-wrapper {
-  display: none;
-}
-
-/**
- * @file
- * @organisms/sections/card-list/_card-list-layout.scss
+ * organisms/sections/card-list/_card-list-layout.scss
  */
 /**
  * @file
- * @organisms/sections/card-list/_card-list.scss
+ * organisms/sections/card-list/_card-list.scss
  */
 .card-list .card + .card {
   margin-top: 1.6em;
@@ -910,6 +846,34 @@
     margin-right: 0;
     clear: both;
   }
+}
+
+/**
+ * @file
+ * organisms/sections/comments/_comments.scss
+ */
+.comments {
+  margin-top: 3.2em;
+}
+
+.comments .comment + .comment {
+  margin-top: 3.2em;
+}
+
+.comments .indented {
+  padding-left: 1.6em;
+}
+
+.comments__title {
+  border-bottom: 1px solid #ddd;
+}
+
+/**
+ * @file
+ * organisms/sections/front-page-listing/_front-page-listing.scss
+ */
+.front-page-listing__row + .front-page-listing__row {
+  margin-top: 3.2em;
 }
 
 /*# sourceMappingURL=components.css.map */

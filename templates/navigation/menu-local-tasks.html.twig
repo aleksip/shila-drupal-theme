@@ -1,0 +1,16 @@
+{#
+/**
+ * @file
+ * Theme override to display primary and secondary local tasks.
+ *
+ * Available variables:
+ * - primary: HTML list items representing primary tasks.
+ * - secondary: HTML list items representing primary tasks.
+ *
+ * Each item in these variables (primary and secondary) can be individually
+ * themed in menu-local-task.html.twig.
+ */
+#}
+{% set primary_tabs_title = 'Primary tabs'|t %}
+{% set secondary_tabs_title = 'Secondary tabs'|t %}
+{% include "@molecules/navigation/local-tasks/local-tasks.html.twig" %}

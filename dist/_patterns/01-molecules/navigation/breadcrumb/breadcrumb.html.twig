@@ -1,0 +1,19 @@
+{#
+/**
+ * @see templates/navigation/breadcrumb.html.twig
+ */
+#}
+<nav role="navigation" aria-labelledby="system-breadcrumb" class="breadcrumb">
+  <h2 id="system-breadcrumb" class="visually-hidden">{{ title }}</h2>
+  <ol>
+  {% for item in breadcrumb %}
+    <li>
+      {% if item.url %}
+        <a href="{{ item.url }}">{{ item.text }}</a>
+      {% else %}
+        {{ item.text }}
+      {% endif %}
+    </li>
+  {% endfor %}
+  </ol>
+</nav>

@@ -1,9 +1,6 @@
 /**
  * @file
- * sass/partials/components/organisms/comments/_comment.scss
- *
- * @see shila_theme_preprocess_comment()
- * @see comment.html.twig
+ * molecules/components/comment/_comment.scss
  */
 
 .comment {
@@ -35,4 +32,9 @@
   }
 }
 .comment-reply {
+}
+.comment-add {
+  .page--front & {
+    display: none;
+  }
 }
