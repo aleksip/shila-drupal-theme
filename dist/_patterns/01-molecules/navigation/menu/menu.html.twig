@@ -1,8 +1,6 @@
 {#
 /**
  * @see templates/navigation/menu.html.twig
- *
- * @todo Remove link function calls.
  */
 #}
 {% import _self as menus %}
@@ -23,7 +21,7 @@
     {% endif %}
     {% for item in items %}
       <li{{ item.attributes }}>
-        {{ link(item.title, item.url) }}
+        <a href="{{ item.url }}">{{ item.title }}</a>
         {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
         {% endif %}

@@ -1,17 +1,18 @@
 {#
 /**
  * @see templates/block/block--system-menu-block.html.twig
- *
- * @todo Remove addClass function call.
  */
 #}
 <nav role="navigation" aria-labelledby="{{ heading_id }}"{{ attributes }}>
+  {{ title_prefix }}
   {# Label. If not displayed, we still provide it for screen readers. #}
   {% if not configuration.label_display %}
-    {% set title_attributes = title_attributes.addClass('visually-hidden') %}
+    <div class="visually-hidden">
   {% endif %}
-  {{ title_prefix }}
   <h2{{ title_attributes }}>{{ configuration.label }}</h2>
+  {% if not configuration.label_display %}
+    </div>
+  {% endif %}
   {{ title_suffix }}
 
   {# Menu. #}
