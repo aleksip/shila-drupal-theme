@@ -22,9 +22,11 @@
         </h1>
       {% endspaceless %}
     {% endif %}
-    {% block content %}
-      {{ content }}
-    {% endblock %}
+    <div class="card__content">
+      {% block content %}
+        {{ content }}
+      {% endblock %}
+    </div>
     {% if link_url and link_text %}
       <p class="card__link"><a href="{{ link_url }}">{{ link_text }}</a></p>
     {% endif %}
