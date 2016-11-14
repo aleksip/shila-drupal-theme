@@ -34,6 +34,6 @@
 {% set heading_id = attributes.id ~ '-menu'|clean_id %}
 {% set attributes = attributes|without('role', 'aria-labelledby') %}
 {% set attributes = attributes.addClass('nav') %}
-{% block content %}
+{% block template %}
   {% include "@organisms/blocks/menu-block/menu-block.html.twig" %}
 {% endblock %}
