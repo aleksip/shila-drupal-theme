@@ -51,7 +51,10 @@
 .page::after,
 .page__header::after,
 .page__content::after,
-.page__footer::after {
+.page__footer::after,
+.region--header::after,
+.region--content::after,
+.region--footer::after {
   clear: both;
   content: '';
   display: table;

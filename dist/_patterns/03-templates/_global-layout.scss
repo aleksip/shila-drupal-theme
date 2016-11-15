@@ -7,13 +7,17 @@
 .page,
 .page__header,
 .page__content,
-.page__footer {
+.page__footer,
+.region--header,
+.region--content,
+.region--footer {
   @extend %clearfix;
 }
 .region--header,
 .region--content,
 .region--footer {
   @extend %outer-container;
+  @include background-grid($color: $background-grid-color);
 }
 .page__content {
   @extend %side-paddings;
