@@ -42,7 +42,7 @@
     <input id="off-canvas-checkbox" type="checkbox">
     <label for="off-canvas-checkbox" id="off-canvas-label" onclick=""></label>
   {% endif %}
-  <div class="page{% if is_front %} page--front{% endif %}">
+  <div class="page">
     {% if page.header %}
       {% include "@organisms/global/page-header/page-header.html.twig"
         with {
