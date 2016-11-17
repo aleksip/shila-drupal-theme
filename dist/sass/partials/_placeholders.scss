@@ -1,10 +1,15 @@
 /**
  * @file
  * sass/partials/_placeholders.scss
- *
- * Importing this file must not generate any CSS.
  */
 
+%base-font-size {
+  @for $i from 1 through length($breaks-list) {
+    @include breakpoint(nth($breaks-list, $i)) {
+      font-size: nth($base-font-size, $i);
+    }
+  }
+}
 %side-paddings {
   padding-left: $side-padding;
   padding-right: $side-padding;

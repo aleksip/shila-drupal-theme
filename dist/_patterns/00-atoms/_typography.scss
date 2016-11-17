@@ -7,14 +7,10 @@
 
 html,
 body {
+  @extend %base-font-size;
   color: $base-font-color;
   font-family: $base-font-family;
   line-height: $base-line-height;
-  @for $i from 1 through 4 {
-    @include breakpoint(nth($breaks-list, $i)) {
-      font-size: nth($base-font-size, $i);
-    }
-  }
 }
 h1,
 h2,

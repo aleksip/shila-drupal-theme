@@ -19,9 +19,9 @@ legend {
 input,
 label,
 select {
+  @extend %base-font-size;
   display: block;
   font-family: $base-font-family;
-  font-size: $base-font-size;
 }
 label {
   font-weight: 600;
@@ -35,13 +35,13 @@ label {
 }
 #{$all-text-inputs},
 select[multiple=multiple] {
+  @extend %base-font-size;
   background-color: $base-background-color;
   border: $base-border;
   border-radius: $base-border-radius;
   box-shadow: $form-box-shadow;
   box-sizing: border-box;
   font-family: $base-font-family;
-  font-size: $base-font-size;
   margin-bottom: $small-spacing;
   padding: $base-spacing / 3;
   transition: border-color $base-duration $base-timing;

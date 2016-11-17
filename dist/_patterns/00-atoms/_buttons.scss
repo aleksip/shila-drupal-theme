@@ -6,6 +6,7 @@
  */
 
 #{$all-buttons} {
+  @extend %base-font-size;
   appearance: none;
   background-color: $action-color;
   border: 0;
@@ -14,7 +15,6 @@
   cursor: pointer;
   display: inline-block;
   font-family: $base-font-family;
-  font-size: $base-font-size;
   -webkit-font-smoothing: antialiased;
   font-weight: 600;
   line-height: 1;
