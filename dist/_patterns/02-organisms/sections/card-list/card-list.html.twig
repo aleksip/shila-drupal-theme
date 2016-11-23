@@ -3,9 +3,12 @@
     {% for card in cards %}
       {% include '@molecules/components/card/card.html.twig'
         with {
+          'additional_classes': card.additional_classes,
           'image': card.image,
           'title': card.title,
-          'content': card.content
+          'content': card.content,
+          'link_url': card.link_url,
+          'link_text': card.link_text
         }
       %}
     {% endfor %}
