@@ -39,7 +39,7 @@
 {%
   set classes = [
     'field',
-    'field--' ~ field_name,
+    'field--' ~ field_name|clean_class,
   ]
 %}
 {% set attributes = attributes.addClass(classes) %}
