@@ -2,7 +2,7 @@
     "label_hidden": true,
     "attributes": {
         "Attribute()": {
-            "class": ["field", "field--node_body"]
+            "class": ["field", "field--node-body"]
         }
     },
     "items": [

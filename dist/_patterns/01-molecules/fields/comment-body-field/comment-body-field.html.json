@@ -2,7 +2,7 @@
     "label_hidden": true,
     "attributes": {
         "Attribute()": {
-            "class": ["field", "field--comment_body"]
+            "class": ["field", "field--comment-body"]
         }
     },
     "items": [

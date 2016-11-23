@@ -229,7 +229,7 @@
   display: none;
 }
 
-.comment__content .field--comment_body p:first-child {
+.comment__content .field--comment-body p:first-child {
   margin-top: 0;
 }
 
@@ -538,7 +538,7 @@
  * @file
  * organisms/nodes/article/_article.scss
  */
-.node--article .field--field_info {
+.node--article .field--field-info {
   margin-bottom: 1rem;
   border: 1px solid #ddd;
   padding: 0.5rem 1rem;
@@ -547,7 +547,7 @@
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
-.node--article .field--field_info p:last-child {
+.node--article .field--field-info p:last-child {
   margin-bottom: 0;
 }
 
