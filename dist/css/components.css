@@ -296,7 +296,11 @@
   line-height: normal;
 }
 
-.image img {
+.image__image {
+  margin: 0;
+}
+
+.image__image img {
   vertical-align: bottom;
 }
 
