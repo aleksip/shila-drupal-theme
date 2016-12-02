@@ -1,0 +1,19 @@
+/**
+ * @file
+ * molecules/media/image/_image.scss
+ */
+
+.image {
+  margin: 0 0 1rem;
+  line-height: normal;
+  img {
+    vertical-align: bottom;
+  }
+}
+.image__caption,
+.image__credit {
+  display: inline;
+  font-family: $font-stack-helvetica;
+  font-size: smaller;
+  color: $medium-gray;
+}

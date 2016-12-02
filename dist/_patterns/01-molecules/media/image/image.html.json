@@ -1,0 +1,10 @@
+{
+    "attributes": {
+        "Attribute()": {
+            "class": ["image"]
+        }
+    },
+    "image": "atoms-landscape-3x2",
+    "caption": "Image caption. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "credit": "Photograph: Lorem Ipsum"
+}

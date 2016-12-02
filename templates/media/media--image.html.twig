@@ -1,0 +1,28 @@
+{#
+/**
+ * @file
+ * Default theme implementation to present a media entity.
+ *
+ * Available variables:
+ * - name: Name of the media.
+ * - content: Media content.
+ *
+ * @see template_preprocess_media()
+ *
+ * @ingroup themeable
+ */
+#}
+{% set attributes = attributes.addClass('image') %}
+{% set photographer = content.field_photographer|render|striptags|trim %}
+{% set photo_agency = content.field_photo_agency|render|striptags|trim %}
+{% if photographer and photo_agency %}
+  {% set credit %}{{ 'Photograph'|t }}: {{ photographer ~ ' / ' ~ photo_agency }}.{% endset %}
+{% elseif photographer or photo_agency %}
+  {% set credit %}{{ 'Photograph'|t }}: {{ photographer }}{{ photo_agency }}.{% endset %}
+{% endif %}
+{% include "@molecules/media/image/image.html.twig"
+  with {
+    'image': content.field_image,
+    'caption': content.field_caption['#items'].0.value
+  }
+%}

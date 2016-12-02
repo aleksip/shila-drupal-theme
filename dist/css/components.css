@@ -289,6 +289,27 @@
 
 /**
  * @file
+ * molecules/media/image/_image.scss
+ */
+.image {
+  margin: 0 0 1rem;
+  line-height: normal;
+}
+
+.image img {
+  vertical-align: bottom;
+}
+
+.image__caption,
+.image__credit {
+  display: inline;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: smaller;
+  color: #999;
+}
+
+/**
+ * @file
  * molecules/messaging/messages/_messages.scss
  *
  * Originally based on http://refills.bourbon.io/components/
@@ -419,6 +440,22 @@
 
 .local-tasks__task a {
   padding: 0 0.3em;
+}
+
+/**
+ * @file
+ * molecules/text/formatted-text/_formatted-text.scss
+ */
+.formatted-text {
+  margin: 0 0 1rem;
+}
+
+/**
+ * @file
+ * molecules/text/lead/_lead.scss
+ */
+.lead {
+  margin: 0 0 1rem;
 }
 
 /**
