@@ -5,6 +5,10 @@
 #}
 <dl{{ attributes }}>
   <dt class="image__image">{{ image }}</dt>
-  <dd class="image__caption">{{ caption }}</dd>
-  <dd class="image__credit">{{ credit }}</dd>
+  {% if caption %}
+    <dd class="image__caption">{{ caption }}</dd>
+  {% endif %}
+  {% if credit %}
+    <dd class="image__credit">{{ credit }}</dd>
+  {% endif %}
 </dl>
