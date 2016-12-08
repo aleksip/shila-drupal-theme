@@ -5,6 +5,19 @@
  * Importing this file must not generate any CSS.
  */
 
+@mixin font-size($px-sizes) {
+  @if length($px-sizes) == 1 {
+    $px-sizes: ($px-sizes $px-sizes $px-sizes $px-sizes)
+  }
+  @for $i from 1 through 4 {
+    $px-size: nth($px-sizes, $i);
+    @include breakpoint(nth($breaks-list, $i)) {
+      font-size: $px-size;
+      font-size: #{$px-size/nth($base-font-size, $i)}rem;
+    }
+  }
+}
+
 // Direction independent float mixin that fixes the
 // [double-margin bug in IE5/6](http://www.positioniseverything.net/explorer/doubled-margin.html)
 @mixin float($side: left) {
