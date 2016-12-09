@@ -1,10 +1,12 @@
 {#
 /**
- * @see templates/layout/page.html.twig
+ * @see templates/layout/region--header.html.twig
  */
 #}
 <header role="banner" class="header page__header">
-  {% block page_header %}
-    {{ content }}
-  {% endblock %}
+  <div{{ attributes }}>
+    {% block page_header %}
+      {{ content }}
+    {% endblock %}
+  </div>
 </header>

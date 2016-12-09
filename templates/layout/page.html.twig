@@ -44,29 +44,17 @@
   {% endif %}
   <div class="page">
     {% if page.header %}
-      {% include "@organisms/global/page-header/page-header.html.twig"
-        with {
-          'content': page.header
-        }
-      %}
+      {{ page.header }}
     {% endif %}
     <main role="main" class="main page__content">
       <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
       {{ page.content }}
     </main>
     {% if page.footer %}
-      {% include "@organisms/global/page-footer/page-footer.html.twig"
-        with {
-          'content': page.footer
-        }
-      %}
+      {{ page.footer }}
     {% endif %}
   </div>
   {% if page.off_canvas %}
-    {% include "@organisms/global/off-canvas/off-canvas.html.twig"
-      with {
-        'content': page.off_canvas
-      }
-    %}
+    {{ page.off_canvas }}
   {% endif %}
 </div>{# /.layout-container #}

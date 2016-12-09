@@ -20,7 +20,9 @@
     ]
   %}
   {% set attributes = attributes.addClass(classes) %}
-  <div{{ attributes }}>
-    {{ content }}
-  </div>
+  {% block template %}
+    <div{{ attributes }}>
+      {{ content }}
+    </div>
+  {% endblock %}
 {% endif %}

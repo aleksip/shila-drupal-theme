@@ -1,10 +1,12 @@
 {#
 /**
- * @see templates/layout/page.html.twig
+ * @see templates/layout/region--off-canvas.html.twig
  */
 #}
 <div class="off-canvas">
-  {% block off_canvas %}
-    {{ content }}
-  {% endblock %}
+  <div{{ attributes }}>
+    {% block off_canvas %}
+      {{ content }}
+    {% endblock %}
+  </div>
 </div>
