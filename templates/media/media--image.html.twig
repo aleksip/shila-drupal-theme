@@ -13,12 +13,13 @@
  */
 #}
 {% set attributes = attributes.addClass('image') %}
-{% set photographer = content.field_photographer|render|striptags|trim %}
-{% set photo_agency = content.field_photo_agency|render|striptags|trim %}
-{% if photographer and photo_agency %}
-  {% set credit %}{{ 'Photograph'|t }}: {{ photographer ~ ' / ' ~ photo_agency }}.{% endset %}
+{% set image_type = content.field_image_type|render|striptags|trim %}
+{% set credit_people = content.field_credit_people|render|striptags|trim %}
+{% set credit_organizations = content.field_credit_organizations|render|striptags|trim %}
+{% if credit_people and credit_organizations %}
+  {% set credit %}{{ image_type }} {{ credit_people ~ ' / ' ~ credit_organizations }}.{% endset %}
 {% elseif photographer or photo_agency %}
-  {% set credit %}{{ 'Photograph'|t }}: {{ photographer }}{{ photo_agency }}.{% endset %}
+  {% set credit %}{{ image_type }} {{ credit_people }}{{ credit_organizations }}.{% endset %}
 {% endif %}
 {% include "@molecules/media/image/image.html.twig"
   with {
