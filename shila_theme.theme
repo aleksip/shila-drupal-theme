@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in Shila theme.
+ */
+
+/**
+ * Implements hook_preprocess_HOOK() for menu.html.twig.
+ */
+function shila_theme_preprocess_menu(&$variables) {
+  _menu_links($variables['items'], 0);
+}
+
+function _menu_links(&$items, $menu_level) {
+  foreach ($items as $item) {
+    $classes = ['menu-item'];
+    if ($item['is_expanded']) {
+      $classes[] = 'menu-item--expanded';
+    }
+    if ($item['is_collapsed']) {
+      $classes[] = 'menu-item--collapsed';
+    }
+    if ($item['in_active_trail']) {
+      $classes[] = 'menu-item--active-trail';
+    }
+    $item['attributes']->addClass($classes);
+    if ($item['below']) {
+      _menu_links($item['below'], $menu_level + 1);
+    }
+  }
+}
