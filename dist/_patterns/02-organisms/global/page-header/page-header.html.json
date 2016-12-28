@@ -1,10 +1,13 @@
 {
+    "attributes": {
+        "Attribute()": {
+            "class": ["region", "region--header"]
+        }
+    },
     "content": {
-        "join()" : [
-            "<div class=\"region region--header\">",
+        "join()": [
             "organisms-branding-block.html",
-            "organisms-main-navigation-block.html",
-            "</div>"
+            "organisms-main-navigation-block.html"
         ]
     }
 }

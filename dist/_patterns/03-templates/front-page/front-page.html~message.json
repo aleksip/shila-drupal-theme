@@ -34,13 +34,7 @@
         "include()": {
             "pattern": "organisms-page-footer.html",
             "with": {
-                "page_footer_content": {
-                    "join()": [
-                        "<div class=\"region region--footer\">",
-                        "organisms-powered-by-block.html",
-                        "</div>"
-                    ]
-                }
+                "page_footer_content": "organisms-powered-by-block.html"
             }
         }
     }

@@ -12,13 +12,7 @@
         "include()": {
             "pattern": "organisms-page-footer.html",
             "with": {
-                "content": {
-                    "join()": [
-                        "<div class=\"region region--footer\">",
-                        "organisms-powered-by-block.html",
-                        "</div>"
-                    ]
-                }
+                "content": "organisms-powered-by-block.html"
             }
         }
     },

@@ -1,8 +1,8 @@
 {
-  "content": {
-    "join()": [
-      "<div class=\"region region--footer\">",
-      "</div>"
-    ]
-  }
+    "attributes": {
+        "Attribute()": {
+            "class": ["region", "region--footer"]
+        }
+    },
+    "content": ""
 }
