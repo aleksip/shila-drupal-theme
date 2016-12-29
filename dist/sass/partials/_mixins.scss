@@ -12,7 +12,7 @@
   @for $i from 1 through 4 {
     $px-size: nth($px-sizes, $i);
     @include breakpoint(nth($breaks-list, $i)) {
-      font-size: $px-size;
+      font-size: #{$px-size}px;
       font-size: #{$px-size/nth($base-font-size, $i)}rem;
     }
   }
