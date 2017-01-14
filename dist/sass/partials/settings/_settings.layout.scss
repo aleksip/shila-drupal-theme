@@ -4,40 +4,40 @@
  */
 
 // Columns
-$xs-cols: 4;
-$s-cols: 8;
-$m-cols: 12;
-$l-cols: 16;
-$cols-list: ($xs-cols $s-cols $m-cols $l-cols);
+$xs-cols: 4 !default;
+$s-cols: 8 !default;
+$m-cols: 12 !default;
+$l-cols: 16 !default;
+$cols-list: ($xs-cols $s-cols $m-cols $l-cols) !default;
 
 // Breakpoints
-$xs-break: max-width 524px;
-$s-break: 525px;
-$m-break: 801px;
-$l-break: 1025px;
-$breaks-list: ($xs-break $s-break $m-break $l-break);
+$xs-break: max-width 524px !default;
+$s-break: 525px !default;
+$m-break: 801px !default;
+$l-break: 1025px !default;
+$breaks-list: ($xs-break $s-break $m-break $l-break) !default;
 
 // Default grid settings
-$gutter: 1 / 3;
+$gutter: 1 / 3 !default;
 @for $i from 1 through length($breaks-list) {
   @include add-grid(nth($cols-list, $i) at nth($breaks-list, $i));
 }
 @include add-gutter($gutter);
 
 // Debug grid vizualisation
-$background-grid-color: $light-gray;
+$background-grid-color: $light-gray !default;
 // Uncomment for debug grid
 //@include sgs-change('debug', true);
 
 // Other Sizes
-$base-border-radius: 3px;
-$base-spacing: $base-line-height * 1em;
-$small-spacing: $base-spacing / 2;
-$large-spacing: $base-spacing * 2;
-$base-z-index: 0;
-$side-padding: 5%;
-$max-width: 32rem;
+$base-border-radius: 3px !default;
+$base-spacing: $base-line-height * 1em !default;
+$small-spacing: $base-spacing / 2 !default;
+$large-spacing: $base-spacing * 2 !default;
+$base-z-index: 0 !default;
+$side-padding: 5% !default;
+$max-width: 32rem !default;
 
 // Animations
-$base-duration: 150ms;
-$base-timing: ease;
+$base-duration: 150ms !default;
+$base-timing: ease !default;

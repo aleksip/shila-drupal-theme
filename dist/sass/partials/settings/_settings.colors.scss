@@ -4,20 +4,20 @@
  */
 
 // Colors
-$white: #fefefe;
-$blue: #1565c0;
-$dark-gray: #333;
-$medium-gray: #999;
-$light-gray: #ddd;
+$white: #fefefe !default;
+$blue: #1565c0 !default;
+$dark-gray: #333 !default;
+$medium-gray: #999 !default;
+$light-gray: #ddd !default;
 
 // Font Colors
-$base-font-color: $dark-gray;
-$action-color: $blue;
+$base-font-color: $dark-gray !default;
+$action-color: $blue !default;
 
 // Border
-$base-border-color: $light-gray;
-$base-border: 1px solid $base-border-color;
+$base-border-color: $light-gray !default;
+$base-border: 1px solid $base-border-color !default;
 
 // Background Colors
-$base-background-color: $white;
-$secondary-background-color: tint($base-border-color, 75%);
+$base-background-color: $white !default;
+$secondary-background-color: tint($base-border-color, 75%) !default;

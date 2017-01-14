@@ -9,26 +9,26 @@ $font-stack-helvetica: (
   "Helvetica",
   "Arial",
   sans-serif,
-);
+) !default;
 $font-stack-georgia: (
   "Georgia",
   "Times",
   "Times New Roman",
   serif,
-);
-$base-font-family: $font-stack-helvetica;
-$heading-font-family: $base-font-family;
+) !default;
+$base-font-family: $font-stack-helvetica !default;
+$heading-font-family: $base-font-family !default;
 
 // Font Sizes
-$base-font-size: (18, 20, 20, 20);
-$h1-font-size: 2rem;
-$h2-font-size: 1.5rem;
-$h3-font-size: 1.17rem;
-$h4-font-size: 1rem;
-$h5-font-size: .83rem;
-$h6-font-size: .67rem;
+$base-font-size: (18, 20, 20, 20) !default;
+$h1-font-size: 2rem !default;
+$h2-font-size: 1.5rem !default;
+$h3-font-size: 1.17rem !default;
+$h4-font-size: 1rem !default;
+$h5-font-size: .83rem !default;
+$h6-font-size: .67rem !default;
 
 // Line height
 // http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/
-$base-line-height: 1.6;
-$heading-line-height: 1.2;
+$base-line-height: 1.6 !default;
+$heading-line-height: 1.2 !default;
