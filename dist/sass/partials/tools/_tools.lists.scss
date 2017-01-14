@@ -1,0 +1,40 @@
+/**
+ * @file
+ * sass/partials/tools/_tools.lists.scss
+ */
+
+// A list(ol,ul) that is layed out such that the elements are floated left and won't wrap.
+// This is not an inline list.
+//
+// Setting `$padding` to `false` disables the padding between list elements
+@mixin horizontal-list($padding: 4px, $direction: left) {
+  @extend %reset-box-model;
+  @extend %clearfix;
+  li {
+    @extend %no-bullet;
+    white-space: nowrap;
+    float: $direction;
+    @if $padding {
+      padding: {
+        left: $padding;
+        right: $padding;
+      }
+      &:first-child,
+      &.first {
+        padding-#{$direction}: 0;
+      }
+      &:last-child {
+        padding-#{opposite-position($direction)}: 0;
+      }
+      &.last {
+        padding-#{opposite-position($direction)}: 0;
+      }
+    }
+  }
+}
+
+%no-bullet {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+}

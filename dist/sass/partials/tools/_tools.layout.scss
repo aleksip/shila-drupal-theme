@@ -1,15 +1,8 @@
 /**
  * @file
- * sass/partials/_placeholders.scss
+ * sass/partials/tools/_tools.layout.scss
  */
 
-%base-font-size {
-  @for $i from 1 through 4 {
-    @include breakpoint(nth($breaks-list, $i)) {
-      font-size: #{nth($base-font-size, $i)}px;
-    }
-  }
-}
 %side-paddings {
   padding-left: $side-padding;
   padding-right: $side-padding;
@@ -18,13 +11,6 @@
   max-width: $max-width;
   margin-left: auto;
   margin-right: auto;
-}
-%clearfix {
-  &::after {
-    clear: both;
-    content: '';
-    display: table;
-  }
 }
 %horizontal-nav {
   ul {
@@ -49,18 +35,8 @@
     color: $dark-gray;
   }
 }
-%hide-text {
-  overflow: hidden;
-  text-indent: 101%;
-  white-space: nowrap;
-}
 %reset-box-model {
   margin: 0;
   padding: 0;
   border: 0;
-}
-%no-bullet {
-  list-style-image: none;
-  list-style-type: none;
-  margin-left: 0;
 }

@@ -1,0 +1,10 @@
+/**
+ * @file
+ * sass/partials/tools/_tools.hidden.scss
+ */
+
+%hide-text {
+  overflow: hidden;
+  text-indent: 101%;
+  white-space: nowrap;
+}

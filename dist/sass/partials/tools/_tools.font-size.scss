@@ -1,0 +1,25 @@
+/**
+ * @file
+ * sass/partials/tools/_tools.font-size.scss
+ */
+
+@mixin font-size($px-sizes) {
+  @if length($px-sizes) == 1 {
+    $px-sizes: ($px-sizes $px-sizes $px-sizes $px-sizes)
+  }
+  @for $i from 1 through 4 {
+    $px-size: nth($px-sizes, $i);
+    @include breakpoint(nth($breaks-list, $i)) {
+      font-size: #{$px-size}px;
+      font-size: #{$px-size/nth($base-font-size, $i)}rem;
+    }
+  }
+}
+
+%base-font-size {
+  @for $i from 1 through 4 {
+    @include breakpoint(nth($breaks-list, $i)) {
+      font-size: #{nth($base-font-size, $i)}px;
+    }
+  }
+}

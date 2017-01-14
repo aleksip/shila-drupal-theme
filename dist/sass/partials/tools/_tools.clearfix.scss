@@ -1,0 +1,12 @@
+/**
+ * @file
+ * sass/partials/tools/_tools.clearfix.scss
+ */
+
+%clearfix {
+  &::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}

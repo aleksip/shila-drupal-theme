@@ -9,7 +9,16 @@
 
 @import 'singularitygs';
 @import 'breakpoint';
-@import 'partials/functions';
-@import 'partials/variables';
-@import 'partials/placeholders';
-@import 'partials/mixins';
+@import 'partials/settings/settings.colors';
+@import 'partials/settings/settings.forms';
+@import 'partials/settings/settings.typography';
+@import 'partials/settings/settings.layout';
+@import 'partials/tools/tools.clearfix';
+@import 'partials/tools/tools.colors';
+@import 'partials/tools/tools.constants';
+@import 'partials/tools/tools.font-size';
+@import 'partials/tools/tools.hidden';
+@import 'partials/tools/tools.layout';
+@import 'partials/tools/tools.lists';
+@import 'partials/tools/tools.multicol-layout';
+@import 'partials/tools/tools.sass-lists';

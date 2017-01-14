@@ -1,60 +1,7 @@
 /**
  * @file
- * sass/partials/_mixins.scss
- *
- * Importing this file must not generate any CSS.
+ * sass/partials/tools/_tools.multicol-layout.scss
  */
-
-@mixin font-size($px-sizes) {
-  @if length($px-sizes) == 1 {
-    $px-sizes: ($px-sizes $px-sizes $px-sizes $px-sizes)
-  }
-  @for $i from 1 through 4 {
-    $px-size: nth($px-sizes, $i);
-    @include breakpoint(nth($breaks-list, $i)) {
-      font-size: #{$px-size}px;
-      font-size: #{$px-size/nth($base-font-size, $i)}rem;
-    }
-  }
-}
-
-// Direction independent float mixin that fixes the
-// [double-margin bug in IE5/6](http://www.positioniseverything.net/explorer/doubled-margin.html)
-@mixin float($side: left) {
-  display: inline;
-  float: unquote($side);
-}
-
-
-// A list(ol,ul) that is layed out such that the elements are floated left and won't wrap.
-// This is not an inline list.
-//
-// Setting `$padding` to `false` disables the padding between list elements
-@mixin horizontal-list($padding: 4px, $direction: left) {
-  @extend %reset-box-model;
-  @extend %clearfix;
-  li {
-    @extend %no-bullet;
-    white-space: nowrap;
-    @include float($direction);
-    @if $padding {
-      padding: {
-        left: $padding;
-        right: $padding;
-      }
-      &:first-child,
-      &.first {
-        padding-#{$direction}: 0;
-      }
-      &:last-child {
-        padding-#{opposite-position($direction)}: 0;
-      }
-      &.last {
-        padding-#{opposite-position($direction)}: 0;
-      }
-    }
-  }
-}
 
 @mixin do-multicol-layout($inner-cols: 1, $selector: &) {
   @for $i from 1 through $inner-cols {

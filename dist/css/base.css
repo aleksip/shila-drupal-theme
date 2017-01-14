@@ -14,23 +14,35 @@
  */
 /**
  * @file
- * sass/partials/_functions.scss
- *
- * Importing this file must not generate any CSS.
- *
- * Functions must not use global variables.
+ * dist/sass/partials/settings/_settings.colors.scss
  */
 /**
  * @file
- * dist/sass/partials/_variables.scss
- *
- * Originally based on http://bitters.bourbon.io/
- *
- * Importing this file must not generate any CSS.
+ * dist/sass/partials/settings/_settings.forms.scss
  */
 /**
  * @file
- * sass/partials/_placeholders.scss
+ * dist/sass/partials/settings/_settings.typography.scss
+ */
+/**
+ * @file
+ * dist/sass/partials/settings/_settings.layout.scss
+ */
+/**
+ * @file
+ * sass/partials/tools/_tools.clearfix.scss
+ */
+/**
+ * @file
+ * sass/partials/tools/_tools.colors.scss
+ */
+/**
+ * @file
+ * sass/partials/tools/_tools.constants.scss
+ */
+/**
+ * @file
+ * sass/partials/tools/_tools.font-size.scss
  */
 @media (max-width: 524px) {
   button, input[type='button'], input[type='reset'], input[type='submit'], input,
@@ -74,15 +86,27 @@
 
 /**
  * @file
- * sass/partials/_mixins.scss
- *
- * Importing this file must not generate any CSS.
+ * sass/partials/tools/_tools.hidden.scss
  */
 /**
  * @file
- * atoms/_buttons.scss
- *
- * Originally based on http://bitters.bourbon.io/
+ * sass/partials/tools/_tools.layout.scss
+ */
+/**
+ * @file
+ * sass/partials/tools/_tools.lists.scss
+ */
+/**
+ * @file
+ * sass/partials/tools/_tools.multicol-layout.scss
+ */
+/**
+ * @file
+ * sass/partials/tools/_tools.sass-lists.scss
+ */
+/**
+ * @file
+ * atoms/_elements.buttons.scss
  */
 button, input[type='button'], input[type='reset'], input[type='submit'] {
   appearance: none;
@@ -120,36 +144,7 @@ button:disabled:hover, input[type='button']:disabled:hover, input[type='reset']:
 
 /**
  * @file
- * atoms/_elements.scss
- */
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-}
-
-html {
-  background-color: #fefefe;
-}
-
-img,
-picture {
-  margin: 0;
-  max-width: 100%;
-  height: auto;
-}
-
-picture source,
-picture img {
-  width: 100%;
-  height: auto;
-}
-
-/**
- * @file
- * atoms/_forms.scss
- *
- * Originally based on http://bitters.bourbon.io/
+ * atoms/_elements.forms.scss
  */
 fieldset {
   background-color: transparent;
@@ -253,72 +248,8 @@ select {
 
 /**
  * @file
- * atoms/_lists.scss
- *
- * Originally based on http://bitters.bourbon.io/
+ * atoms/_elements.headings.scss
  */
-ul,
-ol {
-  margin: 0 0 1rem;
-}
-
-dl {
-  margin-bottom: 0.8em;
-}
-
-dl dt {
-  font-weight: 600;
-  margin-top: 0.8em;
-}
-
-dl dd {
-  margin: 0;
-}
-
-/**
- * @file
- * atoms/_tables.scss
- *
- * Originally based on http://bitters.bourbon.io/
- */
-table {
-  border-collapse: collapse;
-  margin: 0.8em 0;
-  table-layout: fixed;
-  width: 100%;
-}
-
-th {
-  border-bottom: 1px solid #a6a6a6;
-  font-weight: 600;
-  padding: 0.8em 0;
-  text-align: left;
-}
-
-td {
-  border-bottom: 1px solid #ddd;
-  padding: 0.8em 0;
-}
-
-tr,
-td,
-th {
-  vertical-align: middle;
-}
-
-/**
- * @file
- * atoms/_typography.scss
- *
- * Originally based on http://bitters.bourbon.io/
- */
-html,
-body {
-  color: #333;
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  line-height: 1.6;
-}
-
 h1,
 h2,
 h3,
@@ -362,6 +293,99 @@ h6 {
   font-size: 0.67rem;
 }
 
+/**
+ * @file
+ * atoms/_elements.images.scss
+ */
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+picture source,
+picture img {
+  width: 100%;
+  height: auto;
+}
+
+/**
+ * @file
+ * atoms/_elements.lists.scss
+ */
+ul,
+ol {
+  margin: 0 0 1rem;
+}
+
+dl {
+  margin-bottom: 0.8em;
+}
+
+dl dt {
+  font-weight: 600;
+  margin-top: 0.8em;
+}
+
+dl dd {
+  margin: 0;
+}
+
+/**
+ * @file
+ * atoms/_elements.page.scss
+ */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #fefefe;
+}
+
+html,
+body {
+  color: #333;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  line-height: 1.6;
+}
+
+/**
+ * @file
+ * atoms/_elements.tables.scss
+ */
+table {
+  border-collapse: collapse;
+  margin: 0.8em 0;
+  table-layout: fixed;
+  width: 100%;
+}
+
+th {
+  border-bottom: 1px solid #a6a6a6;
+  font-weight: 600;
+  padding: 0.8em 0;
+  text-align: left;
+}
+
+td {
+  border-bottom: 1px solid #ddd;
+  padding: 0.8em 0;
+}
+
+tr,
+td,
+th {
+  vertical-align: middle;
+}
+
+/**
+ * @file
+ * atoms/_elements.text.scss
+ */
 p {
   margin: 0 0 1rem;
 }

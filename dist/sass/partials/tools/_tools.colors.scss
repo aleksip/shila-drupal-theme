@@ -1,32 +1,7 @@
 /**
  * @file
- * sass/partials/_functions.scss
- *
- * Importing this file must not generate any CSS.
- *
- * Functions must not use global variables.
+ * sass/partials/tools/_tools.colors.scss
  */
-
-// http://hugogiraudel.com/2013/08/08/advanced-sass-list-functions/
-@function first($list) {
-  @return nth($list, 1);
-}
-@function last($list) {
-  @return nth($list, length($list));
-}
-@function opposite-position($from) {
-  @if ($from == top) {
-    @return bottom;
-  } @else if ($from == bottom) {
-    @return top;
-  } @else if ($from == left) {
-    @return right;
-  } @else if ($from == right) {
-    @return left;
-  } @else if ($from == center) {
-    @return center;
-  }
-}
 
 /// Checks for a valid CSS color.
 ///

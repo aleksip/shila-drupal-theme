@@ -14,34 +14,60 @@
  */
 /**
  * @file
- * sass/partials/_functions.scss
- *
- * Importing this file must not generate any CSS.
- *
- * Functions must not use global variables.
+ * dist/sass/partials/settings/_settings.colors.scss
  */
 /**
  * @file
- * dist/sass/partials/_variables.scss
- *
- * Originally based on http://bitters.bourbon.io/
- *
- * Importing this file must not generate any CSS.
+ * dist/sass/partials/settings/_settings.forms.scss
  */
 /**
  * @file
- * sass/partials/_placeholders.scss
+ * dist/sass/partials/settings/_settings.typography.scss
  */
-.page__footer, .page__header {
-  padding-left: 5%;
-  padding-right: 5%;
-}
-
+/**
+ * @file
+ * dist/sass/partials/settings/_settings.layout.scss
+ */
+/**
+ * @file
+ * sass/partials/tools/_tools.clearfix.scss
+ */
 .card::after, .comment__content .links::after, .breadcrumb ol::after, .local-tasks__primary::after,
 .local-tasks__secondary::after, .node__links::after {
   clear: both;
   content: '';
   display: table;
+}
+
+/**
+ * @file
+ * sass/partials/tools/_tools.colors.scss
+ */
+/**
+ * @file
+ * sass/partials/tools/_tools.constants.scss
+ */
+/**
+ * @file
+ * sass/partials/tools/_tools.font-size.scss
+ */
+/**
+ * @file
+ * sass/partials/tools/_tools.hidden.scss
+ */
+.feed-icon {
+  overflow: hidden;
+  text-indent: 101%;
+  white-space: nowrap;
+}
+
+/**
+ * @file
+ * sass/partials/tools/_tools.layout.scss
+ */
+.page__footer, .page__header {
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .page__header .nav ul {
@@ -68,12 +94,6 @@
   color: #333;
 }
 
-.feed-icon {
-  overflow: hidden;
-  text-indent: 101%;
-  white-space: nowrap;
-}
-
 .comment__content .links, .breadcrumb ol, .local-tasks__primary,
 .local-tasks__secondary, .node__links {
   margin: 0;
@@ -81,6 +101,10 @@
   border: 0;
 }
 
+/**
+ * @file
+ * sass/partials/tools/_tools.lists.scss
+ */
 .comment__content .links li, .breadcrumb ol li, .local-tasks__primary li,
 .local-tasks__secondary li, .node__links li {
   list-style-image: none;
@@ -90,9 +114,11 @@
 
 /**
  * @file
- * sass/partials/_mixins.scss
- *
- * Importing this file must not generate any CSS.
+ * sass/partials/tools/_tools.multicol-layout.scss
+ */
+/**
+ * @file
+ * sass/partials/tools/_tools.sass-lists.scss
  */
 /**
  * @file
@@ -235,7 +261,6 @@
 
 .comment__content .links li {
   white-space: nowrap;
-  display: inline;
   float: left;
   padding-left: 0.5em;
   padding-right: 0.5em;
@@ -378,7 +403,6 @@
  */
 .breadcrumb ol li {
   white-space: nowrap;
-  display: inline;
   float: left;
   padding-left: 4px;
   padding-right: 4px;
@@ -416,7 +440,6 @@
 .local-tasks__primary li,
 .local-tasks__secondary li {
   white-space: nowrap;
-  display: inline;
   float: left;
   padding-left: 0.5em;
   padding-right: 0.5em;
@@ -617,7 +640,6 @@
 
 .node__links li {
   white-space: nowrap;
-  display: inline;
   float: left;
   padding-left: 0.5em;
   padding-right: 0.5em;

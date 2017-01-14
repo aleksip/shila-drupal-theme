@@ -1,0 +1,43 @@
+/**
+ * @file
+ * dist/sass/partials/settings/_settings.layout.scss
+ */
+
+// Columns
+$xs-cols: 4;
+$s-cols: 8;
+$m-cols: 12;
+$l-cols: 16;
+$cols-list: ($xs-cols $s-cols $m-cols $l-cols);
+
+// Breakpoints
+$xs-break: max-width 524px;
+$s-break: 525px;
+$m-break: 801px;
+$l-break: 1025px;
+$breaks-list: ($xs-break $s-break $m-break $l-break);
+
+// Default grid settings
+$gutter: 1 / 3;
+@for $i from 1 through length($breaks-list) {
+  @include add-grid(nth($cols-list, $i) at nth($breaks-list, $i));
+}
+@include add-gutter($gutter);
+
+// Debug grid vizualisation
+$background-grid-color: $light-gray;
+// Uncomment for debug grid
+//@include sgs-change('debug', true);
+
+// Other Sizes
+$base-border-radius: 3px;
+$base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 2;
+$large-spacing: $base-spacing * 2;
+$base-z-index: 0;
+$side-padding: 5%;
+$max-width: 32rem;
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease;

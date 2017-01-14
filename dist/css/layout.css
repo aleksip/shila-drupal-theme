@@ -14,37 +14,24 @@
  */
 /**
  * @file
- * sass/partials/_functions.scss
- *
- * Importing this file must not generate any CSS.
- *
- * Functions must not use global variables.
+ * dist/sass/partials/settings/_settings.colors.scss
  */
 /**
  * @file
- * dist/sass/partials/_variables.scss
- *
- * Originally based on http://bitters.bourbon.io/
- *
- * Importing this file must not generate any CSS.
+ * dist/sass/partials/settings/_settings.forms.scss
  */
 /**
  * @file
- * sass/partials/_placeholders.scss
+ * dist/sass/partials/settings/_settings.typography.scss
  */
-.page__content {
-  padding-left: 5%;
-  padding-right: 5%;
-}
-
-.region--header,
-.region--content,
-.region--footer {
-  max-width: 32rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
+/**
+ * @file
+ * dist/sass/partials/settings/_settings.layout.scss
+ */
+/**
+ * @file
+ * sass/partials/tools/_tools.clearfix.scss
+ */
 .layout-container::after,
 .page::after,
 .page__header::after,
@@ -60,9 +47,48 @@
 
 /**
  * @file
- * sass/partials/_mixins.scss
- *
- * Importing this file must not generate any CSS.
+ * sass/partials/tools/_tools.colors.scss
+ */
+/**
+ * @file
+ * sass/partials/tools/_tools.constants.scss
+ */
+/**
+ * @file
+ * sass/partials/tools/_tools.font-size.scss
+ */
+/**
+ * @file
+ * sass/partials/tools/_tools.hidden.scss
+ */
+/**
+ * @file
+ * sass/partials/tools/_tools.layout.scss
+ */
+.page__content {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.region--header,
+.region--content,
+.region--footer {
+  max-width: 32rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/**
+ * @file
+ * sass/partials/tools/_tools.lists.scss
+ */
+/**
+ * @file
+ * sass/partials/tools/_tools.multicol-layout.scss
+ */
+/**
+ * @file
+ * sass/partials/tools/_tools.sass-lists.scss
  */
 /**
  * @file

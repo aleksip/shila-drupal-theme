@@ -1,0 +1,21 @@
+/**
+ * @file
+ * atoms/_elements.page.scss
+ */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+html {
+  background-color: $base-background-color;
+}
+html,
+body {
+  @extend %base-font-size;
+  color: $base-font-color;
+  font-family: $base-font-family;
+  line-height: $base-line-height;
+}
+
