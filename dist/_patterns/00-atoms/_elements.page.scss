@@ -3,11 +3,6 @@
  * atoms/_elements.page.scss
  */
 
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-}
 html {
   background-color: $base-background-color;
 }
@@ -18,4 +13,3 @@ body {
   font-family: $base-font-family;
   line-height: $base-line-height;
 }
-
