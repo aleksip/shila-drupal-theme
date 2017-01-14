@@ -44,46 +44,6 @@
  * @file
  * sass/partials/tools/_tools.font-size.scss
  */
-@media (max-width: 524px) {
-  button, input[type='button'], input[type='reset'], input[type='submit'], input,
-  label,
-  select, input[type='color'], input[type='date'], input[type='datetime'], input[type='datetime-local'], input[type='email'], input[type='month'], input[type='number'], input[type='password'], input[type='search'], input[type='tel'], input[type='text'], input[type='time'], input[type='url'], input[type='week'], input:not([type]), textarea,
-  select[multiple=multiple], html,
-  body {
-    font-size: 18px;
-  }
-}
-
-@media (min-width: 525px) {
-  button, input[type='button'], input[type='reset'], input[type='submit'], input,
-  label,
-  select, input[type='color'], input[type='date'], input[type='datetime'], input[type='datetime-local'], input[type='email'], input[type='month'], input[type='number'], input[type='password'], input[type='search'], input[type='tel'], input[type='text'], input[type='time'], input[type='url'], input[type='week'], input:not([type]), textarea,
-  select[multiple=multiple], html,
-  body {
-    font-size: 20px;
-  }
-}
-
-@media (min-width: 801px) {
-  button, input[type='button'], input[type='reset'], input[type='submit'], input,
-  label,
-  select, input[type='color'], input[type='date'], input[type='datetime'], input[type='datetime-local'], input[type='email'], input[type='month'], input[type='number'], input[type='password'], input[type='search'], input[type='tel'], input[type='text'], input[type='time'], input[type='url'], input[type='week'], input:not([type]), textarea,
-  select[multiple=multiple], html,
-  body {
-    font-size: 20px;
-  }
-}
-
-@media (min-width: 1025px) {
-  button, input[type='button'], input[type='reset'], input[type='submit'], input,
-  label,
-  select, input[type='color'], input[type='date'], input[type='datetime'], input[type='datetime-local'], input[type='email'], input[type='month'], input[type='number'], input[type='password'], input[type='search'], input[type='tel'], input[type='text'], input[type='time'], input[type='url'], input[type='week'], input:not([type]), textarea,
-  select[multiple=multiple], html,
-  body {
-    font-size: 20px;
-  }
-}
-
 /**
  * @file
  * sass/partials/tools/_tools.hidden.scss
@@ -128,6 +88,30 @@ button, input[type='button'], input[type='reset'], input[type='submit'] {
   white-space: nowrap;
 }
 
+@media (max-width: 524px) {
+  button, input[type='button'], input[type='reset'], input[type='submit'] {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 525px) {
+  button, input[type='button'], input[type='reset'], input[type='submit'] {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 801px) {
+  button, input[type='button'], input[type='reset'], input[type='submit'] {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1025px) {
+  button, input[type='button'], input[type='reset'], input[type='submit'] {
+    font-size: 20px;
+  }
+}
+
 button:hover, button:focus, input[type='button']:hover, input[type='button']:focus, input[type='reset']:hover, input[type='reset']:focus, input[type='submit']:hover, input[type='submit']:focus {
   background-color: #11519a;
   color: #fff;
@@ -166,6 +150,38 @@ select {
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
+@media (max-width: 524px) {
+  input,
+  label,
+  select {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 525px) {
+  input,
+  label,
+  select {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 801px) {
+  input,
+  label,
+  select {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1025px) {
+  input,
+  label,
+  select {
+    font-size: 20px;
+  }
+}
+
 label {
   font-weight: 600;
   margin-bottom: 0.4em;
@@ -191,6 +207,34 @@ select[multiple=multiple] {
   padding: 0.53333em;
   transition: border-color 150ms ease;
   width: 100%;
+}
+
+@media (max-width: 524px) {
+  input[type='color'], input[type='date'], input[type='datetime'], input[type='datetime-local'], input[type='email'], input[type='month'], input[type='number'], input[type='password'], input[type='search'], input[type='tel'], input[type='text'], input[type='time'], input[type='url'], input[type='week'], input:not([type]), textarea,
+  select[multiple=multiple] {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 525px) {
+  input[type='color'], input[type='date'], input[type='datetime'], input[type='datetime-local'], input[type='email'], input[type='month'], input[type='number'], input[type='password'], input[type='search'], input[type='tel'], input[type='text'], input[type='time'], input[type='url'], input[type='week'], input:not([type]), textarea,
+  select[multiple=multiple] {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 801px) {
+  input[type='color'], input[type='date'], input[type='datetime'], input[type='datetime-local'], input[type='email'], input[type='month'], input[type='number'], input[type='password'], input[type='search'], input[type='tel'], input[type='text'], input[type='time'], input[type='url'], input[type='week'], input:not([type]), textarea,
+  select[multiple=multiple] {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1025px) {
+  input[type='color'], input[type='date'], input[type='datetime'], input[type='datetime-local'], input[type='email'], input[type='month'], input[type='number'], input[type='password'], input[type='search'], input[type='tel'], input[type='text'], input[type='time'], input[type='url'], input[type='week'], input:not([type]), textarea,
+  select[multiple=multiple] {
+    font-size: 20px;
+  }
 }
 
 input[type='color']:hover, input[type='date']:hover, input[type='datetime']:hover, input[type='datetime-local']:hover, input[type='email']:hover, input[type='month']:hover, input[type='number']:hover, input[type='password']:hover, input[type='search']:hover, input[type='tel']:hover, input[type='text']:hover, input[type='time']:hover, input[type='url']:hover, input[type='week']:hover, input:not([type]):hover, textarea:hover,
@@ -351,6 +395,34 @@ body {
   color: #333;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   line-height: 1.6;
+}
+
+@media (max-width: 524px) {
+  html,
+  body {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 525px) {
+  html,
+  body {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 801px) {
+  html,
+  body {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1025px) {
+  html,
+  body {
+    font-size: 20px;
+  }
 }
 
 /**

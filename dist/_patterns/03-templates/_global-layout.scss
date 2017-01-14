@@ -11,16 +11,16 @@
 .region--header,
 .region--content,
 .region--footer {
-  @extend %clearfix;
+  @include clearfix;
 }
 .region--header,
 .region--content,
 .region--footer {
-  @extend %outer-container;
+  @include outer-container;
   @include background-grid($color: $background-grid-color);
 }
 .page__content {
-  @extend %side-paddings;
+  @include side-paddings;
   padding-top: $large-spacing;
   margin-bottom: $large-spacing;
 }

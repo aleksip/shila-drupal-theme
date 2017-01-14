@@ -4,14 +4,14 @@
  */
 
 .page__header {
-  @extend %side-paddings;
+  @include side-paddings;
   width: 100%;
   background-color: $base-background-color;
   @include breakpoint($xs-break) {
     box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
   }
   .nav {
-    @extend %horizontal-nav;
+    @include horizontal-nav;
     display: none;
   }
   .nav--main {

@@ -16,7 +16,7 @@
   }
 }
 
-%base-font-size {
+@mixin base-font-size {
   @for $i from 1 through 4 {
     @include breakpoint(nth($breaks-list, $i)) {
       font-size: #{nth($base-font-size, $i)}px;

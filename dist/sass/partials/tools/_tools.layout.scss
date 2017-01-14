@@ -3,16 +3,16 @@
  * sass/partials/tools/_tools.layout.scss
  */
 
-%side-paddings {
+@mixin side-paddings {
   padding-left: $side-padding;
   padding-right: $side-padding;
 }
-%outer-container {
+@mixin outer-container {
   max-width: $max-width;
   margin-left: auto;
   margin-right: auto;
 }
-%horizontal-nav {
+@mixin horizontal-nav {
   ul {
     margin-top: 0;
     width: 100%;
@@ -35,7 +35,7 @@
     color: $dark-gray;
   }
 }
-%reset-box-model {
+@mixin reset-box-model {
   margin: 0;
   padding: 0;
   border: 0;

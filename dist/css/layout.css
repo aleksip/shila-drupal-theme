@@ -32,19 +32,6 @@
  * @file
  * sass/partials/tools/_tools.clearfix.scss
  */
-.layout-container::after,
-.page::after,
-.page__header::after,
-.page__content::after,
-.page__footer::after,
-.region--header::after,
-.region--content::after,
-.region--footer::after {
-  clear: both;
-  content: '';
-  display: table;
-}
-
 /**
  * @file
  * sass/partials/tools/_tools.colors.scss
@@ -65,19 +52,6 @@
  * @file
  * sass/partials/tools/_tools.layout.scss
  */
-.page__content {
-  padding-left: 5%;
-  padding-right: 5%;
-}
-
-.region--header,
-.region--content,
-.region--footer {
-  max-width: 32rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 /**
  * @file
  * sass/partials/tools/_tools.lists.scss
@@ -108,7 +82,30 @@
  * @file
  * templates/_global-layout.scss
  */
+.layout-container::after,
+.page::after,
+.page__header::after,
+.page__content::after,
+.page__footer::after,
+.region--header::after,
+.region--content::after,
+.region--footer::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.region--header,
+.region--content,
+.region--footer {
+  max-width: 32rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .page__content {
+  padding-left: 5%;
+  padding-right: 5%;
   padding-top: 3.2em;
   margin-bottom: 3.2em;
 }

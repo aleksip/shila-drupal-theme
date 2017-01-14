@@ -4,7 +4,7 @@
  */
 
 .card {
-  @extend %clearfix;
+  @include clearfix;
 }
 .card__title {
   margin-top: 0;

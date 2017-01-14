@@ -4,7 +4,7 @@
  */
 
 #{$all-buttons} {
-  @extend %base-font-size;
+  @include base-font-size;
   appearance: none;
   background-color: $action-color;
   border: 0;

@@ -32,13 +32,6 @@
  * @file
  * sass/partials/tools/_tools.clearfix.scss
  */
-.card::after, .comment__content .links::after, .breadcrumb ol::after, .local-tasks__primary::after,
-.local-tasks__secondary::after, .node__links::after {
-  clear: both;
-  content: '';
-  display: table;
-}
-
 /**
  * @file
  * sass/partials/tools/_tools.colors.scss
@@ -55,63 +48,14 @@
  * @file
  * sass/partials/tools/_tools.hidden.scss
  */
-.feed-icon {
-  overflow: hidden;
-  text-indent: 101%;
-  white-space: nowrap;
-}
-
 /**
  * @file
  * sass/partials/tools/_tools.layout.scss
  */
-.page__footer, .page__header {
-  padding-left: 5%;
-  padding-right: 5%;
-}
-
-.page__header .nav ul {
-  margin-top: 0;
-  width: 100%;
-  text-align: center;
-}
-
-.page__header .nav li {
-  display: inline-block;
-  padding-left: 0.8em;
-}
-
-.page__header .nav a {
-  color: #999;
-  text-decoration: none;
-}
-
-.page__header .nav a:active, .page__header .nav a:focus, .page__header .nav a:hover {
-  color: #333;
-}
-
-.page__header .nav .is-active {
-  color: #333;
-}
-
-.comment__content .links, .breadcrumb ol, .local-tasks__primary,
-.local-tasks__secondary, .node__links {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-
 /**
  * @file
  * sass/partials/tools/_tools.lists.scss
  */
-.comment__content .links li, .breadcrumb ol li, .local-tasks__primary li,
-.local-tasks__secondary li, .node__links li {
-  list-style-image: none;
-  list-style-type: none;
-  margin-left: 0;
-}
-
 /**
  * @file
  * sass/partials/tools/_tools.multicol-layout.scss
@@ -125,6 +69,9 @@
  * atoms/images/feed-icon/_feed-icon.scss
  */
 .feed-icon {
+  overflow: hidden;
+  text-indent: 101%;
+  white-space: nowrap;
   display: block;
   width: 1rem;
   height: 1rem;
@@ -141,6 +88,12 @@
  * @file
  * molecules/components/card/_card.scss
  */
+.card::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
 .card__title {
   margin-top: 0;
 }
@@ -259,7 +212,22 @@
   margin-top: 0;
 }
 
+.comment__content .links {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.comment__content .links::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
 .comment__content .links li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
   white-space: nowrap;
   float: left;
   padding-left: 0.5em;
@@ -401,7 +369,22 @@
  * @file
  * molecules/navigation/breadcrumb/_breadcrumb.scss
  */
+.breadcrumb ol {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.breadcrumb ol::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
 .breadcrumb ol li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
   white-space: nowrap;
   float: left;
   padding-left: 4px;
@@ -434,11 +417,24 @@
 
 .local-tasks__primary,
 .local-tasks__secondary {
+  margin: 0;
+  padding: 0;
+  border: 0;
   clear: both;
+}
+
+.local-tasks__primary::after,
+.local-tasks__secondary::after {
+  clear: both;
+  content: '';
+  display: table;
 }
 
 .local-tasks__primary li,
 .local-tasks__secondary li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
   white-space: nowrap;
   float: left;
   padding-left: 0.5em;
@@ -566,6 +562,8 @@
  * organisms/global/page-footer/_page-footer.scss
  */
 .page__footer {
+  padding-left: 5%;
+  padding-right: 5%;
   padding-bottom: 1.6em;
 }
 
@@ -574,6 +572,8 @@
  * organisms/global/page-header/_page-header.scss
  */
 .page__header {
+  padding-left: 5%;
+  padding-right: 5%;
   width: 100%;
   background-color: #fefefe;
 }
@@ -586,6 +586,30 @@
 
 .page__header .nav {
   display: none;
+}
+
+.page__header .nav ul {
+  margin-top: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.page__header .nav li {
+  display: inline-block;
+  padding-left: 0.8em;
+}
+
+.page__header .nav a {
+  color: #999;
+  text-decoration: none;
+}
+
+.page__header .nav a:active, .page__header .nav a:focus, .page__header .nav a:hover {
+  color: #333;
+}
+
+.page__header .nav .is-active {
+  color: #333;
 }
 
 .page__header .nav--main {
@@ -635,10 +659,22 @@
 }
 
 .node__links {
+  margin: 0;
+  padding: 0;
+  border: 0;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
+.node__links::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
 .node__links li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
   white-space: nowrap;
   float: left;
   padding-left: 0.5em;

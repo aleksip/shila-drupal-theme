@@ -8,10 +8,10 @@
 //
 // Setting `$padding` to `false` disables the padding between list elements
 @mixin horizontal-list($padding: 4px, $direction: left) {
-  @extend %reset-box-model;
-  @extend %clearfix;
+  @include reset-box-model;
+  @include clearfix;
   li {
-    @extend %no-bullet;
+    @include no-bullet;
     white-space: nowrap;
     float: $direction;
     @if $padding {
@@ -33,7 +33,7 @@
   }
 }
 
-%no-bullet {
+@mixin no-bullet {
   list-style-image: none;
   list-style-type: none;
   margin-left: 0;

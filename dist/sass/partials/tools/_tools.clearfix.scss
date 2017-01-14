@@ -3,7 +3,7 @@
  * sass/partials/tools/_tools.clearfix.scss
  */
 
-%clearfix {
+@mixin clearfix {
   &::after {
     clear: both;
     content: '';

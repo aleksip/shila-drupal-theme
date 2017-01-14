@@ -17,7 +17,7 @@ legend {
 input,
 label,
 select {
-  @extend %base-font-size;
+  @include base-font-size;
   display: block;
   font-family: $base-font-family;
 }
@@ -33,7 +33,7 @@ label {
 }
 #{$all-text-inputs},
 select[multiple=multiple] {
-  @extend %base-font-size;
+  @include base-font-size;
   background-color: $base-background-color;
   border: $base-border;
   border-radius: $base-border-radius;

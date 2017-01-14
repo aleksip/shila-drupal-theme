@@ -4,6 +4,6 @@
  */
 
 .page__footer {
-  @extend %side-paddings;
+  @include side-paddings;
   padding-bottom: $base-spacing;
 }
