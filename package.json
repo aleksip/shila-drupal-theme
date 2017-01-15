@@ -2,9 +2,10 @@
   "name": "shila-drupal-theme",
   "version": "1.0.0",
   "description": "Shila theme for Drupal 8",
-  "dependencies": {},
+  "dependencies": {
+    "shila-css": "^1.0.0-alpha"
+  },
   "devDependencies": {
-    "breakpoint-sass": "^2.7.0",
     "browser-sync": "^2.10.0",
     "gulp": "^3.9.0",
     "gulp-run": "1.6.10",
@@ -12,9 +13,7 @@
     "gulp-sass-glob": "^1.0.6",
     "gulp-sass-lint": "^1.2.0",
     "gulp-sourcemaps": "^1.6.0",
-    "run-sequence": "^1.1.5",
-    "sass-toolkit": "^2.10.0",
-    "singularitygs": "^1.7.0"
+    "run-sequence": "^1.1.5"
   },
   "repository": {
     "type": "git",
