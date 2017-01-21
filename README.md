@@ -15,9 +15,6 @@ npm install
 
 ## Integrating with Drupal
 
-Prerequisites: Drupal 8.2 or later.
-
-
 ### Component Libraries module
 
 Install and enable the [Component Libraries module](https://www.drupal.org/project/components). No configuration is needed.
