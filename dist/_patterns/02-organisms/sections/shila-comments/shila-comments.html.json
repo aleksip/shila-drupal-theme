@@ -1,0 +1,24 @@
+{
+    "attributes": {
+        "Attribute()": {
+            "class": ["field", "field--comment"]
+        }
+    },
+    "title_attributes": {
+        "Attribute()": {
+            "class": ["field--comment__title"]
+        }
+    },
+    "label": "Comments",
+    "comments": {
+        "join()": [
+            "molecules-shila-comment.html",
+            "<div class=\"indented\">",
+            "molecules-shila-comment.html",
+            "</div>",
+            "molecules-shila-comment.html"
+        ]
+    },
+    "comment_form_title": "Add new comment",
+    "comment_form": "molecules-comment-form"
+}

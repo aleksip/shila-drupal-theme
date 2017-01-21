@@ -1,0 +1,25 @@
+/**
+ * @file
+ * organisms/global/shila-page-header/_shila-page-header.scss
+ */
+
+.page__header {
+  @include side-paddings;
+  width: 100%;
+  background-color: $base-background-color;
+  @include breakpoint($xs-break) {
+    box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  .nav {
+    @include horizontal-nav;
+    display: none;
+  }
+  .nav--main {
+    padding-top: 0.92rem;
+  }
+  @include breakpoint($s-break) {
+    .nav {
+      display: block;
+    }
+  }
+}

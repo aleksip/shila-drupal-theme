@@ -21,7 +21,7 @@
 {% elseif photographer or photo_agency %}
   {% set credit %}{{ image_type }} {{ credit_people }}{{ credit_organizations }}.{% endset %}
 {% endif %}
-{% include "@molecules/media/image/image.html.twig"
+{% include "@molecules/media/shila-image/shila-image.html.twig"
   with {
     'image': content.field_image,
     'caption': content.field_caption['#items'].0.value

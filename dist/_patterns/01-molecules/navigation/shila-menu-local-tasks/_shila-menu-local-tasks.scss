@@ -1,0 +1,24 @@
+/**
+ * @file
+ * molecules/navigation/shila-menu-local-tasks/_shila-menu-local-tasks.scss
+ */
+
+.local-tasks {
+  font-size: smaller;
+}
+.local-tasks__primary,
+.local-tasks__secondary {
+  @include horizontal-list(0.5em);
+  clear: both;
+}
+.local-tasks__task .is-active {
+  color: shade($action-color, 25%);
+}
+.local-tasks__task .is-active,
+.local-tasks__secondary {
+}
+.local-tasks__task {
+  a {
+    padding: 0 0.3em;
+  }
+}

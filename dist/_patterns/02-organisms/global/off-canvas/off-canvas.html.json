@@ -1,8 +1,0 @@
-{
-    "attributes": {
-        "Attribute()": {
-            "class": ["region", "region--off-canvas"]
-        }
-    },
-    "content": "organisms-main-navigation-block.html"
-}

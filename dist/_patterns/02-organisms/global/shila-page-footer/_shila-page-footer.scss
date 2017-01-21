@@ -1,0 +1,9 @@
+/**
+ * @file
+ * organisms/global/shila-page-footer/_shila-page-footer.scss
+ */
+
+.page__footer {
+  @include side-paddings;
+  padding-bottom: $base-spacing;
+}

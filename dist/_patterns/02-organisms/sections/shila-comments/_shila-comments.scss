@@ -1,0 +1,17 @@
+/**
+ * @file
+ * organisms/sections/shila-comments/_shila-comments.scss
+ */
+
+.comments {
+  margin-top: $large-spacing;
+  .comment + .comment {
+    margin-top: $large-spacing;
+  }
+  .indented {
+    padding-left: $base-spacing;
+  }
+}
+.comments__title {
+  border-bottom: 1px solid $light-gray;
+}

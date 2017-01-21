@@ -66,7 +66,7 @@
  */
 /**
  * @file
- * atoms/images/feed-icon/_feed-icon.scss
+ * atoms/images/shila-feed-icon/_shila-feed-icon.scss
  */
 .feed-icon {
   overflow: hidden;
@@ -82,11 +82,11 @@
 
 /**
  * @file
- * molecules/components/card/_card-layout.scss
+ * molecules/components/shila-card/_shila-card-layout.scss
  */
 /**
  * @file
- * molecules/components/card/_card.scss
+ * molecules/components/shila-card/_shila-card.scss
  */
 .card::after {
   clear: both;
@@ -183,7 +183,7 @@
 
 /**
  * @file
- * molecules/components/comment/_comment.scss
+ * molecules/components/shila-comment/_shila-comment.scss
  */
 .comment {
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -261,9 +261,7 @@
 
 /**
  * @file
- * molecules/forms/form/_form.scss
- *
- * @see shila_theme_preprocess_form()
+ * molecules/forms/shila-form/_shila-form.scss
  */
 .form input[type='color'], .form input[type='date'], .form input[type='datetime'], .form input[type='datetime-local'], .form input[type='email'], .form input[type='month'], .form input[type='number'], .form input[type='password'], .form input[type='search'], .form input[type='tel'], .form input[type='text'], .form input[type='time'], .form input[type='url'], .form input[type='week'], .form input:not([type]), .form textarea,
 .form select[multiple=multiple] {
@@ -282,7 +280,7 @@
 
 /**
  * @file
- * molecules/media/image/_image.scss
+ * molecules/media/shila-image/_shila-image.scss
  */
 .image {
   margin: 0 0 1rem;
@@ -307,9 +305,7 @@
 
 /**
  * @file
- * molecules/messaging/messages/_messages.scss
- *
- * Originally based on http://refills.bourbon.io/components/
+ * molecules/messaging/shila-messages/_shila-messages.scss
  */
 .messages--status {
   background-color: #e5edf8;
@@ -367,7 +363,7 @@
 
 /**
  * @file
- * molecules/navigation/breadcrumb/_breadcrumb.scss
+ * molecules/navigation/shila-breadcrumb/_shila-breadcrumb.scss
  */
 .breadcrumb ol {
   margin: 0;
@@ -409,7 +405,7 @@
 
 /**
  * @file
- * molecules/navigation/local-tasks/_local-tasks.scss
+ * molecules/navigation/shila-menu-local-tasks/_shila-menu-local-tasks.scss
  */
 .local-tasks {
   font-size: smaller;
@@ -467,7 +463,7 @@
 
 /**
  * @file
- * molecules/text/formatted-text/_formatted-text.scss
+ * molecules/text/shila-formatted-text/_shila-formatted-text.scss
  */
 .formatted-text {
   margin: 0 0 1rem;
@@ -475,7 +471,7 @@
 
 /**
  * @file
- * molecules/text/lead/_lead.scss
+ * molecules/text/shila-lead/_shila-lead.scss
  */
 .lead {
   margin: 0 0 1rem;
@@ -483,11 +479,28 @@
 
 /**
  * @file
- * molecules/text/page-title/_page-title.scss
+ * molecules/text/shila-page-title/_shila-page-title.scss
  */
 /**
  * @file
- * organisms/blocks/branding-block/_branding-block.scss
+ * organisms/blocks/powered-by-block/_powered-by-block.scss
+ */
+.block--powered-by {
+  text-align: center;
+  font-size: smaller;
+}
+
+.block--powered-by a {
+  color: #333;
+}
+
+/**
+ * @file
+ * organisms/blocks/search-form-block/_search-form-block.scss
+ */
+/**
+ * @file
+ * organisms/blocks/shila-branding-block/_shila-branding-block.scss
  */
 .block--branding a {
   color: #333;
@@ -523,108 +536,7 @@
 
 /**
  * @file
- * organisms/blocks/powered-by-block/_powered-by-block.scss
- */
-.block--powered-by {
-  text-align: center;
-  font-size: smaller;
-}
-
-.block--powered-by a {
-  color: #333;
-}
-
-/**
- * @file
- * organisms/blocks/search-form-block/_search-form-block.scss
- */
-/**
- * @file
- * organisms/global/off-canvas/_off-canvas-layout.scss
- *
- * Pure CSS implementation (no JavaScript required).
- */
-/**
- * @file
- * organisms/global/off-canvas/_off-canvas.scss
- */
-.off-canvas {
-  background-color: #ddd;
-  padding: 1rem;
-}
-
-.off-canvas a {
-  color: #333;
-}
-
-/**
- * @file
- * organisms/global/page-footer/_page-footer.scss
- */
-.page__footer {
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-bottom: 1.6em;
-}
-
-/**
- * @file
- * organisms/global/page-header/_page-header.scss
- */
-.page__header {
-  padding-left: 5%;
-  padding-right: 5%;
-  width: 100%;
-  background-color: #fefefe;
-}
-
-@media (max-width: 524px) {
-  .page__header {
-    box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
-  }
-}
-
-.page__header .nav {
-  display: none;
-}
-
-.page__header .nav ul {
-  margin-top: 0;
-  width: 100%;
-  text-align: center;
-}
-
-.page__header .nav li {
-  display: inline-block;
-  padding-left: 0.8em;
-}
-
-.page__header .nav a {
-  color: #999;
-  text-decoration: none;
-}
-
-.page__header .nav a:active, .page__header .nav a:focus, .page__header .nav a:hover {
-  color: #333;
-}
-
-.page__header .nav .is-active {
-  color: #333;
-}
-
-.page__header .nav--main {
-  padding-top: 0.92rem;
-}
-
-@media (min-width: 525px) {
-  .page__header .nav {
-    display: block;
-  }
-}
-
-/**
- * @file
- * organisms/nodes/article/_article.scss
+ * organisms/nodes/shila-article/_shila-article.scss
  */
 .node--article .field--field-info {
   margin-bottom: 1rem;
@@ -645,7 +557,7 @@
 
 /**
  * @file
- * organisms/nodes/node/_node.scss
+ * organisms/nodes/shila-content/_shila-content.scss
  */
 .node {
   font-family: "Georgia", "Times", "Times New Roman", serif;
@@ -703,11 +615,95 @@
 
 /**
  * @file
- * organisms/sections/card-list/_card-list-layout.scss
+ * organisms/global/shila-off-canvas/_shila-off-canvas-layout.scss
+ *
+ * Pure CSS implementation (no JavaScript required).
  */
 /**
  * @file
- * organisms/sections/card-list/_card-list.scss
+ * organisms/global/shila-off-canvas/_shila-off-canvas.scss
+ */
+.off-canvas {
+  background-color: #ddd;
+  padding: 1rem;
+}
+
+.off-canvas a {
+  color: #333;
+}
+
+/**
+ * @file
+ * organisms/global/shila-page-footer/_shila-page-footer.scss
+ */
+.page__footer {
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 1.6em;
+}
+
+/**
+ * @file
+ * organisms/global/shila-page-header/_shila-page-header.scss
+ */
+.page__header {
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 100%;
+  background-color: #fefefe;
+}
+
+@media (max-width: 524px) {
+  .page__header {
+    box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.page__header .nav {
+  display: none;
+}
+
+.page__header .nav ul {
+  margin-top: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.page__header .nav li {
+  display: inline-block;
+  padding-left: 0.8em;
+}
+
+.page__header .nav a {
+  color: #999;
+  text-decoration: none;
+}
+
+.page__header .nav a:active, .page__header .nav a:focus, .page__header .nav a:hover {
+  color: #333;
+}
+
+.page__header .nav .is-active {
+  color: #333;
+}
+
+.page__header .nav--main {
+  padding-top: 0.92rem;
+}
+
+@media (min-width: 525px) {
+  .page__header .nav {
+    display: block;
+  }
+}
+
+/**
+ * @file
+ * organisms/sections/shila-card-list/_shila-card-list-layout.scss
+ */
+/**
+ * @file
+ * organisms/sections/shila-card-list/_shila-card-list.scss
  */
 .card-list .card + .card {
   margin-top: 1.6em;
@@ -947,7 +943,7 @@
 
 /**
  * @file
- * organisms/sections/comments/_comments.scss
+ * organisms/sections/shila-comments/_shila-comments.scss
  */
 .comments {
   margin-top: 3.2em;
@@ -967,7 +963,7 @@
 
 /**
  * @file
- * organisms/sections/front-page-listing/_front-page-listing.scss
+ * organisms/sections/shila-front-page-listing/_shila-front-page-listing.scss
  */
 .front-page-listing__row + .front-page-listing__row {
   margin-top: 3.2em;

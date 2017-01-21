@@ -1,0 +1,21 @@
+/**
+ * @file
+ * organisms/nodes/shila-article/_shila-article.scss
+ */
+
+.node--article {
+  .field--field-info {
+    margin-bottom: 1rem;
+    border: 1px solid $light-gray;
+    padding: 0.5rem 1rem;
+    color: $medium-gray;
+    font-size: smaller;
+    font-family: $font-stack-helvetica;
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .filter-wrapper {
+    display: none;
+  }
+}

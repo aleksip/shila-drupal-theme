@@ -1,0 +1,14 @@
+/**
+ * @file
+ * organisms/sections/shila-card-list/_shila-card-list.scss
+ */
+
+.card-list {
+  .card + .card {
+    margin-top: $base-spacing;
+  }
+  @include card-list-layout;
+}
+.card-list--multicol {
+  @include card-list-multicol-breakpoint-layout;
+}

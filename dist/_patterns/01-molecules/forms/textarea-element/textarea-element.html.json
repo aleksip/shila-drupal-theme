@@ -10,7 +10,7 @@
     "label_display": "before",
     "label": {
         "include()": {
-            "pattern": "atoms-label.html",
+            "pattern": "atoms-shila-label.html",
             "with": {
                 "title": "Textarea label"
             }
@@ -18,7 +18,7 @@
     },
     "children": {
         "include()": {
-            "pattern": "atoms-textarea.html",
+            "pattern": "atoms-shila-textarea.html",
             "with": {
                 "attributes": {
                     "Attribute()": {

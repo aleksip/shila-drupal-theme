@@ -1,0 +1,13 @@
+/**
+ * @file
+ * molecules/navigation/shila-breadcrumb/_shila-breadcrumb.scss
+ */
+
+.breadcrumb {
+  ol {
+    @include horizontal-list;
+  }
+  li + li::before {
+    content: '>';
+  }
+}

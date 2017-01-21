@@ -1,0 +1,10 @@
+/**
+ * @file
+ * organisms/sections/shila-front-page-listing/_shila-front-page-listing.scss
+ */
+
+.front-page-listing__row {
+  & + & {
+    margin-top: $large-spacing;
+  }
+}

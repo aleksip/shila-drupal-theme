@@ -13,7 +13,7 @@
                     "with": {
                         "label": {
                             "include()": {
-                                "pattern": "atoms-label.html",
+                                "pattern": "atoms-shila-label.html",
                                 "with": {
                                     "title": "Your name"
                                 }
@@ -28,7 +28,7 @@
                     "with": {
                         "label": {
                             "include()": {
-                                "pattern": "atoms-label.html",
+                                "pattern": "atoms-shila-label.html",
                                 "with": {
                                     "title": "Email"
                                 }
@@ -43,7 +43,7 @@
                     "with": {
                         "label": {
                             "include()": {
-                                "pattern": "atoms-label.html",
+                                "pattern": "atoms-shila-label.html",
                                 "with": {
                                     "title": "Homepage"
                                 }
@@ -58,7 +58,7 @@
                     "with": {
                         "label": {
                             "include()": {
-                                "pattern": "atoms-label.html",
+                                "pattern": "atoms-shila-label.html",
                                 "with": {
                                     "title": "Comment"
                                 }
@@ -69,7 +69,7 @@
             },
             {
                 "include()": {
-                    "pattern": "atoms-submit.html"
+                    "pattern": "atoms-shila-submit.html"
                 }
             }
         ]
