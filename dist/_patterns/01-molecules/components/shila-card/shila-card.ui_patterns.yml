@@ -13,10 +13,14 @@ shila_card:
       label: Image
       description: Card image. Optional.
       preview:
-        theme: image
-        uri: http://lorempixel.com/300/200/nature/
-        width: 300
-        attributes: {}
+        type: pattern
+        id: shila_image
+        fields:
+          image:
+            theme: image
+            uri: http://lorempixel.com/300/200/nature/
+            width: 300
+            attributes: {}
     title:
       type: string
       label: Title
