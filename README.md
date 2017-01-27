@@ -15,9 +15,14 @@ npm install
 
 ## Integrating with Drupal
 
-### Component Libraries module
+### Required: Component Libraries module
 
 Install and enable the [Component Libraries module](https://www.drupal.org/project/components). No configuration is needed.
+
+
+### Optional: UI Patterns module
+
+Install and enable the [UI Patterns module](https://www.drupal.org/project/ui_patterns). Some components have a `ui_patterns.yml` definition file, which enables them to be used with UI Patterns.
 
 
 ## Integrating with Pattern Lab

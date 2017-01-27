@@ -1,0 +1,24 @@
+shila_image:
+  label: Image
+  description: An image component with an optional caption and image credit.
+  fields:
+    image:
+      type: image
+      label: Image
+      description: Image.
+      preview:
+        theme: image
+        uri: http://lorempixel.com/300/200/nature/
+        width: 300
+        attributes: {}
+    caption:
+      type: string
+      label: Caption
+      description: Image caption. Optional.
+      preview: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    credit:
+      type: string
+      label: Credit
+      description: Image credit. Optional.
+      preview: 'Photo: Photographer Name.'
+  use: '@molecules/media/shila-image/shila-image.html.twig'

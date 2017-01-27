@@ -1,0 +1,17 @@
+shila_code:
+  label: Code
+  description: A block of code with syntax highlighting using Prism.js.
+  fields:
+    language:
+      type: string
+      label: Language
+      description: The code language as supported by Prism.js.
+      preview: php
+    content:
+      type: string
+      label: Content
+      description: Content of the code block.
+      preview: 'print phpinfo();'
+  libraries:
+    - shila_theme/prismjs
+  use: '@molecules/text/shila-code/shila-code.html.twig'
