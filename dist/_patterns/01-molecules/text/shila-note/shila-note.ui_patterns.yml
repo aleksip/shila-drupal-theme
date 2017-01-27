@@ -1,0 +1,10 @@
+shila_note:
+  label: Note
+  description: A short note.
+  fields:
+    content:
+      type: string
+      label: Content
+      description: Note.
+      preview: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+  use: '@molecules/text/shila-note/shila-note.html.twig'

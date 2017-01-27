@@ -479,6 +479,23 @@
 
 /**
  * @file
+ * molecules/text/shila-note/_shila-note.scss
+ */
+.note {
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  padding: 0.5rem 1rem;
+  color: #999;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: smaller;
+}
+
+.note > :last-child {
+  margin-bottom: 0;
+}
+
+/**
+ * @file
  * molecules/text/shila-page-title/_shila-page-title.scss
  */
 /**
@@ -536,21 +553,8 @@
 
 /**
  * @file
- * organisms/nodes/shila-article/_shila-article.scss
+ * organisms/content/shila-article/_shila-article.scss
  */
-.node--article .field--field-info {
-  margin-bottom: 1rem;
-  border: 1px solid #ddd;
-  padding: 0.5rem 1rem;
-  color: #999;
-  font-size: smaller;
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-}
-
-.node--article .field--field-info p:last-child {
-  margin-bottom: 0;
-}
-
 .node--article .filter-wrapper {
   display: none;
 }
