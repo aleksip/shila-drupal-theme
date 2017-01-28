@@ -1,9 +1,4 @@
-{#
-/**
- * @see templates/media/media--image.html.twig
- */
-#}
-<dl{{ attributes }}>
+<dl{{ attributes.addClass('image') }}>
   <dt class="image__image">{{ image }}</dt>
   {% if caption %}
     <dd class="image__caption">{{ caption }}</dd>
