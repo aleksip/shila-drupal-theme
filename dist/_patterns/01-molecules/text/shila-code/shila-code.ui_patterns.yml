@@ -1,11 +1,11 @@
 shila_code:
   label: Code
-  description: A block of code with syntax highlighting using Prism.js.
+  description: A block of code with syntax highlighting using Prism.
   fields:
     language:
       type: string
       label: Language
-      description: The code language as supported by Prism.js.
+      description: The code language as supported by Prism.
       preview: php
     content:
       type: string
