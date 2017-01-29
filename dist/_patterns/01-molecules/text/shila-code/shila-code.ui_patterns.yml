@@ -13,5 +13,5 @@ shila_code:
       description: Content of the code block.
       preview: 'print phpinfo();'
   libraries:
-    - shila_theme/prismjs
+    - shila_theme/shila-code
   use: '@molecules/text/shila-code/shila-code.html.twig'
