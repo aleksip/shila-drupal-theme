@@ -15,13 +15,15 @@
 #}
 {% set attributes = attributes.addClass('block--branding') %}
 {% block template %}
-  {% block content %}
-    {% embed "@organisms/blocks/shila-branding-block/shila-branding-block.html.twig"
-      with {
-        'site_home_url': path('<front>'),
-        'site_home_title': 'Home'|t
-      }
-    %}
-    {% endembed %}
-  {% endblock %}
+  {% embed "@organisms/blocks/shila-block/shila-block.html.twig" %}
+    {% block content %}
+      {% embed "@organisms/global/shila-branding/shila-branding.html.twig"
+        with {
+          'site_home_url': path('<front>'),
+          'site_home_title': 'Home'|t
+        }
+      %}
+      {% endembed %}
+    {% endblock %}
+  {% endembed %}
 {% endblock %}

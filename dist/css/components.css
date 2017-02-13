@@ -525,42 +525,6 @@ code {
  */
 /**
  * @file
- * organisms/blocks/shila-branding-block/_shila-branding-block.scss
- */
-.block--branding a {
-  color: #333;
-}
-
-.block--branding__logo img {
-  max-height: 2.56rem;
-}
-
-@media (min-width: 525px) {
-  .block--branding__logo img {
-    max-height: 2.67rem;
-  }
-}
-
-.block--branding__name {
-  font-size: 2.56rem;
-  font-weight: bold;
-  line-height: 1.2;
-}
-
-@media (min-width: 525px) {
-  .block--branding__name {
-    font-size: 2.67rem;
-  }
-}
-
-@media (max-width: 524px) {
-  .block--branding__slogan {
-    display: none;
-  }
-}
-
-/**
- * @file
  * organisms/content/shila-article/_shila-article.scss
  */
 .node--article .filter-wrapper {
@@ -623,6 +587,42 @@ code {
 
 .node.teaser .node__title a {
   color: #333;
+}
+
+/**
+ * @file
+ * organisms/global/shila-branding/_shila-branding.scss
+ */
+.branding a {
+  color: #333;
+}
+
+.branding__logo img {
+  max-height: 2.56rem;
+}
+
+@media (min-width: 525px) {
+  .branding__logo img {
+    max-height: 2.67rem;
+  }
+}
+
+.branding__name {
+  font-size: 2.56rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+@media (min-width: 525px) {
+  .branding__name {
+    font-size: 2.67rem;
+  }
+}
+
+@media (max-width: 524px) {
+  .branding__slogan {
+    display: none;
+  }
 }
 
 /**

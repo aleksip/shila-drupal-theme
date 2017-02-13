@@ -5,11 +5,11 @@
             "with": {
                 "content": {
                     "join()": [
-                        "organisms-shila-branding-block.html",
-                        "organisms-shila-main-navigation-block.html",
+                        "organisms-shila-branding.html",
+                        "molecules-shila-navigation-main",
                         {
                             "include()": {
-                                "pattern": "organisms-shila-menu-block.html",
+                                "pattern": "molecules-shila-navigation.html",
                                 "with": {
                                     "configuration": {
                                         "label_display": false

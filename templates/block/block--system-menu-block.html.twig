@@ -35,5 +35,5 @@
 {% set attributes = attributes|without('role', 'aria-labelledby') %}
 {% set attributes = attributes.addClass('nav') %}
 {% block template %}
-  {% include "@organisms/blocks/shila-menu-block/shila-menu-block.html.twig" %}
+  {% include "@molecules/navigation/shila-navigation/shila-navigation.html.twig" %}
 {% endblock %}

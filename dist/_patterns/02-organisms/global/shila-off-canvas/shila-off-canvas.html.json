@@ -4,5 +4,5 @@
             "class": ["region", "region--off-canvas"]
         }
     },
-    "content": "organisms-shila-main-navigation-block.html"
+    "content": "molecules-shila-navigation-main"
 }

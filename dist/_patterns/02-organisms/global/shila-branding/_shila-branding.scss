@@ -1,14 +1,14 @@
 /**
  * @file
- * organisms/blocks/shila-branding-block/_shila-branding-block.scss
+ * organisms/global/shila-branding/_shila-branding.scss
  */
 
-.block--branding {
+.branding {
   a {
     color: $base-font-color;
   }
 }
-.block--branding__logo {
+.branding__logo {
   img {
     max-height: 2.56rem;
   }
@@ -18,7 +18,7 @@
     }
   }
 }
-.block--branding__name {
+.branding__name {
   font-size: 2.56rem;
   font-weight: bold;
   line-height: $heading-line-height;
@@ -26,7 +26,7 @@
     font-size: 2.67rem;
   }
 }
-.block--branding__slogan {
+.branding__slogan {
   @include breakpoint($xs-break) {
     display: none;
   }

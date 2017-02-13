@@ -6,7 +6,7 @@
     },
     "configuration": {
         "label_display": true,
-        "label": "Menu Block Title"
+        "label": "Navigation"
     },
     "title_attributes": {
         "Attribute()": {

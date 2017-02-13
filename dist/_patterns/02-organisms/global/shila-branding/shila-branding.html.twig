@@ -1,0 +1,18 @@
+{#
+/**
+ * @see templates/block/block--system-branding-block.html.twig
+ */
+#}
+<div class="branding">
+  {% if site_logo %}
+    <a href="{{ site_home_url }}" title="{{ site_home_title }}" rel="home" class="branding__logo">
+      <img src="{{ site_logo }}" alt="{{ site_home_title }}" />
+    </a>
+  {% endif %}
+  {% if site_name %}
+    <a href="{{ site_home_url }}" title="{{ site_home_title }}" rel="home" class="branding__name">{{ site_name }}</a>
+  {% endif %}
+  {% if site_slogan %}
+    <span class="branding__slogan">{{ site_slogan }}</span>
+  {% endif %}
+</div>
