@@ -2,7 +2,7 @@
     "attributes": {
         "Attribute()": {
             "id": "search-block-form",
-            "class": ["form"]
+            "class": ["search-block-form"]
         }
     },
     "children": {

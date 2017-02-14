@@ -18,19 +18,6 @@ function shila_theme_theme_suggestions_form_alter(array &$suggestions, array $va
 }
 
 /**
- * Implements hook_form_alter() to add classes to the search form.
- */
-function shila_theme_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  if (in_array($form_id, ['search_block_form', 'search_form'])) {
-    $key = ($form_id == 'search_block_form') ? 'actions' : 'basic';
-    if (!isset($form[$key]['submit']['#attributes'])) {
-      $form[$key]['submit']['#attributes'] = new Attribute();
-    }
-    $form[$key]['submit']['#attributes']->addClass('search-form__submit');
-  }
-}
-
-/**
  * Implements hook_preprocess_HOOK() for menu.html.twig.
  */
 function shila_theme_preprocess_menu(&$variables) {
