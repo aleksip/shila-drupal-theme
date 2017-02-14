@@ -1,25 +1,18 @@
 {
     "block_messages": {
         "include()": {
-            "pattern": "organisms-shila-messages-block.html",
+            "pattern": "molecules-shila-messages.html",
             "with": {
-                "content": {
-                    "include()": {
-                        "pattern": "molecules-shila-messages.html",
-                        "with": {
-                            "attributes": {
-                                "Attribute()": {
-                                    "class": ["messages"]
-                                }
-                            },
-                            "message_list": {
-                                "status": ["Front page with a status message"]
-                            }
-                        },
-                        "only": true
+                "attributes": {
+                    "Attribute()": {
+                        "class": ["messages"]
                     }
+                },
+                "message_list": {
+                    "status": ["Front page with a status message"]
                 }
-            }
+            },
+            "only": true
         }
     },
     "block_main": {
