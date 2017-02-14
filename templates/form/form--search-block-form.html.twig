@@ -1,0 +1,14 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a 'form' element.
+ *
+ * Available variables:
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the form.
+ *
+ * @see template_preprocess_form()
+ */
+#}
+{% set attributes = attributes.addClass('search-form') %}
+{% include "@molecules/forms/shila-search-form/shila-search-form.html.twig" %}

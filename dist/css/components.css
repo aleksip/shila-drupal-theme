@@ -280,6 +280,10 @@
 
 /**
  * @file
+ * molecules/forms/shila-search-form/_shila-search-form.scss
+ */
+/**
+ * @file
  * molecules/media/shila-image/_shila-image.scss
  */
 .image {
@@ -519,10 +523,6 @@ code {
   color: #333;
 }
 
-/**
- * @file
- * organisms/blocks/search-form-block/_search-form-block.scss
- */
 /**
  * @file
  * organisms/content/shila-article/_shila-article.scss
