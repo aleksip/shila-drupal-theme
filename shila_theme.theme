@@ -5,9 +5,6 @@
  * Functions to support theming in Shila theme.
  */
 
-use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Template\Attribute;
-
 /**
  * Implements hook_theme_suggestions_HOOK_alter() for form templates.
  */
