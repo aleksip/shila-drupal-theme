@@ -8,10 +8,3 @@ global-styling:
       dist/css/state.css: {}
       dist/css/theme.css: {}
       dist/css/print.css: { media: print }
-shila-code:
-  version: 1.x
-  css:
-    theme:
-      dist/_patterns/01-molecules/text/shila-code/prism.css: {}
-  js:
-    dist/_patterns/01-molecules/text/shila-code/prism.js: {}
