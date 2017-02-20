@@ -1,0 +1,15 @@
+{% set points %}{{ points }}{% endset %}
+{%
+  set classes = [
+    'quiz-answer-option',
+    'quiz-answer-option--points-' ~ points,
+  ]
+%}
+{% set input_id %}{{ option_group_name }}_{{ option_value }}{% endset %}
+<li{{ attributes.addClass(classes) }}>
+  <input type="radio" name="{{ option_group_name }}" value="{{ option_value }}" id="{{ input_id }}">
+  <label for="{{ input_id }}">{{ option }}</label>
+  <div class="quiz-answer-option__feedback">
+    {{ feedback }}
+  </div>
+</li>

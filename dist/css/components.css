@@ -278,6 +278,40 @@
   color: #999;
 }
 
+.quiz-answer-option {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+}
+
+.quiz-answer-option input[type="radio"],
+.quiz-answer-option label {
+  display: inline-block;
+  line-height: normal;
+  vertical-align: middle;
+}
+
+.quiz-answer-option label {
+  margin: 0;
+  font-weight: normal;
+}
+
+.quiz-answer-option__feedback {
+  display: none;
+}
+
+input:checked ~ .quiz-answer-option__feedback {
+  display: block;
+}
+
+.quiz-question__answer_options {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
 /**
  * @file
  * molecules/forms/shila-search-block-form/_shila-search-block-form.scss
@@ -587,6 +621,10 @@ code {
 
 .node.teaser .node__title a {
   color: #333;
+}
+
+.quiz__result .quiz-result {
+  display: none;
 }
 
 /**

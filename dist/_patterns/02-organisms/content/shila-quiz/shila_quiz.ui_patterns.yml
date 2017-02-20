@@ -1,0 +1,51 @@
+shila_quiz:
+  label: Quiz
+  description: A multi-choice quiz.
+  fields:
+    content:
+      type: string
+      label: Content
+      description: Content shown before actual quiz.
+      preview: Take this quiz and find out how smart you really are.
+    questions:
+      type: component
+      label: Questions
+      description: The questions.
+      preview:
+        type: pattern
+        id: shila_quiz_question
+        fields:
+          question: What is the color of snow?
+          answer_options:
+            - type: pattern
+              id: shila_quiz_answer_option
+              fields:
+                option: White
+                points: 1
+                feedback: That is correct.
+                option_group_name: question_1
+                option_value: option_1
+            - type: pattern
+              id: shila_quiz_answer_option
+              fields:
+                option: Blue
+                points: 0
+                feedback: That is not correct.
+                option_group_name: question_1
+                option_value: option_2
+    results:
+      type: component
+      label: Results
+      description: List of different possible results from completing the quiz.
+      preview:
+        - type: pattern
+          id: shila_quiz_result
+          fields:
+            points_required: 0
+            result: Better luck next time...
+        - type: pattern
+          id: shila_quiz_result
+          fields:
+            points_required: 1
+            result: You answered all questions correctly. Congratulations!
+  use: '@organisms/content/shila-quiz/shila-quiz.html.twig'

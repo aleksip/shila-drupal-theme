@@ -1,0 +1,7 @@
+.quiz-question {
+}
+.quiz-question__answer_options {
+  @include reset-box-model;
+  list-style: none;
+  margin-bottom: 1rem;
+}
