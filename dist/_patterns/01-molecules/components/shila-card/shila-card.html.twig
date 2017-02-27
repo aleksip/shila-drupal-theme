@@ -1,8 +1,4 @@
-{% set classes = 'card' %}
-{% if additional_classes is iterable %}
-  {% set classes = [classes]|merge(additional_classes)|join(' ') %}
-{% endif %}
-<section class="{{ classes }}">
+<section{{ attributes.addClass('card') }}>
   {% spaceless %}
     <div class="card__image">
       {{ image }}
@@ -10,25 +6,17 @@
   {% endspaceless %}
   <div class="card__body">
     {% if title %}
-      {% spaceless %}
-        <h1 class="card__title">
-          {% if link_url %}
-            <a href="{{ link_url }}">
-          {% endif %}
-          {{ title }}
-          {% if link_url %}
-            </a>
-          {% endif %}
-        </h1>
-      {% endspaceless %}
+      <h1 class="card__title">{{ title }}</h1>
     {% endif %}
-    <div class="card__content">
-      {% block content %}
-        {{ content }}
-      {% endblock %}
-    </div>
-    {% if link_url and link_text %}
-      <p class="card__link"><a href="{{ link_url }}">{{ link_text }}</a></p>
+    {% if content %}
+      <div class="card__content">
+        {% block content %}
+          {{ content }}
+        {% endblock %}
+      </div>
+    {% endif %}
+    {% if link %}
+      <p class="card__link">{{ link }}</p>
     {% endif %}
   </div>
 </section>

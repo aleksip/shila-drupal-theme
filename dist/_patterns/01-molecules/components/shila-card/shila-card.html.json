@@ -2,6 +2,5 @@
   "image": "atoms-landscape-3x2",
   "title": "Card Title",
   "content": "<p>Card body text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>",
-  "link_url": "/",
-  "link_text": "Read more"
+  "link": "<a href=\"http://example.com\">Read more</a>"
 }

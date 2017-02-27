@@ -18,7 +18,20 @@
         "include()": {
             "pattern": "organisms-main-block.html",
             "with": {
-                "content": "organisms-shila-card-list-multicol.html"
+                "content": {
+                    "include()": {
+                        "pattern": "organisms-shila-card-list.html",
+                        "with": {
+                            "attributes": {
+                                "Attribute()": {
+                                    "class": [
+                                        "card-list--multicol"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }

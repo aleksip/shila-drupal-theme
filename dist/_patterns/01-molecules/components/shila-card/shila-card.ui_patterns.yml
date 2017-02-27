@@ -1,17 +1,11 @@
 shila_card:
   label: Card
-  description: A card component. Defaults to a vertical layout. Horizontal layout can be applied with an additional card--horizontal class.
+  description: A card component.
   fields:
-    additional_classes:
-      type: string array
-      label: Additional classes
-      description: Additional CSS classes to add to the card object.
-      preview:
-        - card--horizontal
     image:
       type: image
       label: Image
-      description: Card image. Optional.
+      description: Card image.
       preview:
         type: pattern
         id: shila_image
@@ -27,18 +21,13 @@ shila_card:
       description: Card title.
       preview: Lorem ipsum dolor sit amet
     content:
-      type: anything
+      type: string
       label: Content
       description: Card content.
-      preview: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    link_url:
-      type: url
-      label: Link url
-      description: Url that will be used in the title and possible link text. Optional.
-      preview: http://example.com
-    link_text:
-      type: text
-      label: Link text
-      description: Card link text. Will only be shown if link_url is also provided. Optional.
-      preview: Read more
+      preview: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>'
+    link:
+      type: string
+      label: Link
+      description: Action link.
+      preview: '<a href="http://example.com">Read more</a>'
   use: '@molecules/components/shila-card/shila-card.html.twig'

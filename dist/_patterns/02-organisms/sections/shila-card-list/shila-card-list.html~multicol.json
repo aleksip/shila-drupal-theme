@@ -1,4 +1,11 @@
 {
+  "attributes": {
+    "Attribute()": {
+      "class": [
+        "card-list--multicol"
+      ]
+    }
+  },
   "cards": [
     {
       "image": "atoms-landscape-3x2",
