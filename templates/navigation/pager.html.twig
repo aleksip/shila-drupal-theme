@@ -1,0 +1,48 @@
+{#
+/**
+ * @file
+ * Theme override to display a pager.
+ *
+ * Available variables:
+ * - items: List of pager items.
+ *   The list is keyed by the following elements:
+ *   - first: Item for the first page; not present on the first page of results.
+ *   - previous: Item for the previous page; not present on the first page
+ *     of results.
+ *   - next: Item for the next page; not present on the last page of results.
+ *   - last: Item for the last page; not present on the last page of results.
+ *   - pages: List of pages, keyed by page number.
+ *   Sub-sub elements:
+ *   items.first, items.previous, items.next, items.last, and each item inside
+ *   items.pages contain the following elements:
+ *   - href: URL with appropriate query parameters for the item.
+ *   - attributes: A keyed list of HTML attributes for the item.
+ *   - text: The visible text used for the item link, such as "‹ Previous"
+ *     or "Next ›".
+ * - current: The page number of the current page.
+ * - ellipses: If there are more pages than the quantity allows, then an
+ *   ellipsis before or after the listed pages may be present.
+ *   - previous: Present if the currently visible list of pages does not start
+ *     at the first page.
+ *   - next: Present if the visible list of pages ends before the last page.
+ *
+ * @see template_preprocess_pager()
+ */
+#}
+{% set pagination_title = 'Pagination'|t %}
+{% set first_page_title = 'Go to first page'|t %}
+{% set first_page_text = 'First page'|t %}
+{% set first_text = '« First'|t %}
+{% set previous_page_title = 'Go to previous page'|t %}
+{% set previous_page_text = 'Previous page'|t %}
+{% set previous_text = '‹ Previous'|t %}
+{% set current_page_text = 'Current page'|t %}
+{% set go_to_page_text = 'Go to page'|t %}
+{% set page_text = 'Page'|t %}
+{% set next_page_title = 'Go to next page'|t %}
+{% set next_page_text = 'Next page'|t %}
+{% set next_text = 'Next ›'|t %}
+{% set last_page_title = 'Go to last page'|t %}
+{% set last_page_text = 'Last page'|t %}
+{% set last_text = 'Last »'|t %}
+{% include "@molecules/navigation/shila-pager/shila-pager.html.twig" %}

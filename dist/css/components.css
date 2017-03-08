@@ -467,6 +467,34 @@
 
 /**
  * @file
+ * molecules/navigation/shila-pager/_shila-pager.scss
+ */
+.pager ul {
+  margin-top: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.pager li {
+  display: inline-block;
+  padding-left: 0.8em;
+}
+
+.pager a {
+  color: #999;
+  text-decoration: none;
+}
+
+.pager a:active, .pager a:focus, .pager a:hover {
+  color: #333;
+}
+
+.pager .is-active {
+  color: #333;
+}
+
+/**
+ * @file
  * molecules/text/shila-formatted-text/_shila-formatted-text.scss
  */
 code {

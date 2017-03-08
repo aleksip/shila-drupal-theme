@@ -39,3 +39,33 @@ function _menu_links(&$items, $menu_level) {
     }
   }
 }
+
+/**
+ * Implements hook_preprocess_HOOK() for pager.html.twig.
+ */
+function shila_theme_preprocess_pager(&$variables) {
+  $keys = [
+    'first' => ['href', 'title'],
+    'previous' => ['href', 'title', 'rel'],
+    'next' => ['href', 'title', 'rel'],
+    'last' => ['href', 'title'],
+  ];
+  foreach ($keys as $key => $remove) {
+    _remove_attributes($variables, $key, $remove);
+  }
+  if (isset($variables['items']['pages'])) {
+    foreach ($variables['items']['pages'] as $key => $item) {
+      if (isset($item['attributes'])) {
+        $item['attributes']->removeAttribute('href')->removeAttribute('title');
+      }
+    }
+  }
+}
+
+function _remove_attributes(&$variables, $key, $remove) {
+  if (isset($variables['items'][$key]['attributes'])) {
+    foreach ($remove as $attribute) {
+      $variables['items'][$key]['attributes']->removeAttribute($attribute);
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+    "pagination_title": "Pagination",
+    "first_page_title": "Go to first page",
+    "first_page_text": "First page",
+    "first_text": "« First",
+    "previous_page_title": "Go to previous page",
+    "previous_page_text": "Previous page",
+    "previous_text": "‹ Previous",
+    "current_page_text": "Current page",
+    "go_to_page_text": "Go to page",
+    "page_text": "Page",
+    "next_page_title": "Go to next page",
+    "next_page_text": "Next page",
+    "next_text": "Next ›",
+    "last_page_title": "Go to last page",
+    "last_page_text": "Last page",
+    "last_text": "Last »",
+    "items": {
+        "first": {
+            "href": ""
+        },
+        "previous": {
+            "href": ""
+        },
+        "pages": {
+            "1": {
+                "href": ""
+            },
+            "2": {
+                "href": ""
+            },
+            "3": {
+                "href": ""
+            },
+            "4": {
+                "href": ""
+            },
+            "5": {
+                "href": ""
+            }
+        },
+        "next": {
+            "href": ""
+        },
+        "last": {
+            "href": ""
+        }
+    }
+}

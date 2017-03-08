@@ -1,0 +1,72 @@
+{#
+/**
+ * @see templates/navigation/pager.html.twig
+ */
+#}
+{% if items %}
+  <nav class="pager" role="navigation" aria-labelledby="pagination-heading">
+    <h4 id="pagination-heading" class="visually-hidden">{{ pagination_title }}</h4>
+    <ul class="pager__items js-pager__items">
+      {# Print first item if we are not on the first page. #}
+      {% if items.first %}
+        <li class="pager__item pager__item--first">
+          <a href="{{ items.first.href }}" title="{{ first_page_title }}"{{ items.first.attributes }}>
+            <span class="visually-hidden">{{ first_page_text }}</span>
+            <span aria-hidden="true">{{ items.first.text|default(first_text) }}</span>
+          </a>
+        </li>
+      {% endif %}
+      {# Print previous item if we are not on the first page. #}
+      {% if items.previous %}
+        <li class="pager__item pager__item--previous">
+          <a href="{{ items.previous.href }}" title="{{ previous_page_title }}" rel="prev"{{ items.previous.attributes }}>
+            <span class="visually-hidden">{{ previous_page_text }}</span>
+            <span aria-hidden="true">{{ items.previous.text|default(previous_text) }}</span>
+          </a>
+        </li>
+      {% endif %}
+      {# Add an ellipsis if there are further previous pages. #}
+      {% if ellipses.previous %}
+        <li class="pager__item pager__item--ellipsis" role="presentation">&hellip;</li>
+      {% endif %}
+      {# Now generate the actual pager piece. #}
+      {% for key, item in items.pages %}
+        <li class="pager__item{{ current == key ? ' is-active' : '' }}">
+          {% if current == key %}
+            {% set title = current_page_text %}
+          {% else %}
+            {% set title = go_to_page_text ~ ' ' ~ key %}
+          {% endif %}
+          <a href="{{ item.href }}" title="{{ title }}"{{ item.attributes }}>
+            <span class="visually-hidden">
+              {{ current == key ? current_page_text : page_text }}
+            </span>
+            {{- key -}}
+          </a>
+        </li>
+      {% endfor %}
+      {# Add an ellipsis if there are further next pages. #}
+      {% if ellipses.next %}
+        <li class="pager__item pager__item--ellipsis" role="presentation">&hellip;</li>
+      {% endif %}
+      {# Print next item if we are not on the last page. #}
+      {% if items.next %}
+        <li class="pager__item pager__item--next">
+          <a href="{{ items.next.href }}" title="{{ next_page_title }}" rel="next"{{ items.next.attributes }}>
+            <span class="visually-hidden">{{ next_page_text }}</span>
+            <span aria-hidden="true">{{ items.next.text|default(next_text) }}</span>
+          </a>
+        </li>
+      {% endif %}
+      {# Print last item if we are not on the last page. #}
+      {% if items.last %}
+        <li class="pager__item pager__item--last">
+          <a href="{{ items.last.href }}" title="{{ last_page_title }}"{{ items.last.attributes }}>
+            <span class="visually-hidden">{{ last_page_text }}</span>
+            <span aria-hidden="true">{{ items.last.text|default(last_text) }}</span>
+          </a>
+        </li>
+      {% endif %}
+    </ul>
+  </nav>
+{% endif %}
