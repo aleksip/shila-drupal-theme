@@ -14,6 +14,14 @@
  */
 /**
  * @file
+ * partials/settings/_settings.core.scss
+ */
+/**
+ * @file
+ * partials/settings/_settings.animations.scss
+ */
+/**
+ * @file
  * partials/settings/_settings.colors.scss
  */
 /**
@@ -99,7 +107,7 @@
 }
 
 .card__title a {
-  color: #333;
+  color: #202020;
 }
 
 .card__body {
@@ -110,24 +118,21 @@
   margin-bottom: 0;
 }
 
-.card--horizontal .card__image {
-  width: 100%;
-  float: right;
-  margin-left: 0;
-  margin-right: 0;
-  clear: none;
-}
-
-.card--horizontal .card__image:not(:empty) {
-  margin-bottom: 0.8em;
-}
-
-.card--horizontal .card__body {
-  width: 100%;
-  float: right;
-  margin-left: 0;
-  margin-right: 0;
-  clear: both;
+@media (max-width: 524px) {
+  .card--horizontal .card__image {
+    width: 20%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none;
+  }
+  .card--horizontal .card__body {
+    width: 73.33333%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
 }
 
 @media (min-width: 525px) {
@@ -196,7 +201,7 @@
 
 .comment__byline {
   margin: 0.5em 0 0;
-  color: #999;
+  color: gray;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
@@ -269,13 +274,13 @@
 }
 
 .form .form-item {
-  margin-bottom: 0.8em;
+  margin-bottom: 0.8rem;
 }
 
 .form .description {
   font-size: smaller;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  color: #999;
+  color: gray;
 }
 
 /**
@@ -304,7 +309,7 @@
   display: inline;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: smaller;
-  color: #999;
+  color: gray;
 }
 
 /**
@@ -315,8 +320,8 @@
   background-color: #e5edf8;
   color: #244e87;
   display: block;
-  margin-bottom: 0.8em;
-  padding: 0.8em;
+  margin-bottom: 0.8rem;
+  padding: 0.8rem;
   text-align: center;
 }
 
@@ -333,8 +338,8 @@
   background-color: #fff6bf;
   color: #8c7800;
   display: block;
-  margin-bottom: 0.8em;
-  padding: 0.8em;
+  margin-bottom: 0.8rem;
+  padding: 0.8rem;
   text-align: center;
 }
 
@@ -351,8 +356,8 @@
   background-color: #fbe3e4;
   color: #97161b;
   display: block;
-  margin-bottom: 0.8em;
-  padding: 0.8em;
+  margin-bottom: 0.8rem;
+  padding: 0.8rem;
   text-align: center;
 }
 
@@ -469,28 +474,33 @@
  * @file
  * molecules/navigation/shila-pager/_shila-pager.scss
  */
-.pager ul {
-  margin-top: 0;
-  width: 100%;
+.pager {
+  margin: 0;
+  padding: 0;
+  border: 0;
   text-align: center;
 }
 
 .pager li {
   display: inline-block;
-  padding-left: 0.8em;
+  padding-left: 0.8rem;
+}
+
+.pager li:first-child {
+  padding-left: 0;
 }
 
 .pager a {
-  color: #999;
+  color: gray;
   text-decoration: none;
 }
 
 .pager a:active, .pager a:focus, .pager a:hover {
-  color: #333;
+  color: #606060;
 }
 
 .pager .is-active {
-  color: #333;
+  color: #606060;
 }
 
 /**
@@ -523,9 +533,9 @@ code {
  */
 .note {
   margin-bottom: 1rem;
-  border: 1px solid #ddd;
+  border: 1px solid #9f9f9f;
   padding: 0.5rem 1rem;
-  color: #999;
+  color: gray;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: smaller;
 }
@@ -548,12 +558,12 @@ code {
 }
 
 .block--powered-by a {
-  color: #333;
+  color: #202020;
 }
 
 /**
  * @file
- * organisms/content/shila-article/_shila-article.scss
+ * organisms/content/shila-content-article/_shila-content-article.scss
  */
 .node--article .filter-wrapper {
   display: none;
@@ -561,7 +571,7 @@ code {
 
 /**
  * @file
- * organisms/nodes/shila-content/_shila-content.scss
+ * organisms/content/shila-content/_shila-content.scss
  */
 .node {
   font-family: "Georgia", "Times", "Times New Roman", serif;
@@ -569,7 +579,7 @@ code {
 
 .node__byline {
   margin: .5em 0 1rem;
-  color: #999;
+  color: gray;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: smaller;
 }
@@ -614,15 +624,115 @@ code {
 }
 
 .node.teaser .node__title a {
-  color: #333;
+  color: #202020;
 }
 
+/**
+ * @file
+ * organisms/global/shila-off-canvas/_shila-off-canvas-layout.scss
+ *
+ * Pure CSS implementation (no JavaScript required).
+ */
+/**
+ * @file
+ * organisms/global/shila-off-canvas/_shila-off-canvas.scss
+ */
+.off-canvas {
+  background-color: #9f9f9f;
+  padding: 1rem;
+}
+
+.off-canvas a {
+  color: #202020;
+}
+
+/**
+ * @file
+ * organisms/global/shila-page-content/_shila-page-content.scss
+ */
+.page__content .region-container {
+  background-color: white;
+}
+
+/**
+ * @file
+ * organisms/global/shila-page-footer/_shila-page-footer.scss
+ */
+.page__footer .region-container {
+  background-color: white;
+}
+
+/**
+ * @file
+ * organisms/global/shila-page-header/_shila-page-header.scss
+ */
+.page__header {
+  width: 100%;
+}
+
+.page__header .region-container {
+  background-color: white;
+}
+
+.page__header .nav {
+  display: none;
+}
+
+.page__header .nav > ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-align: center;
+}
+
+.page__header .nav > ul li {
+  display: inline-block;
+  padding-left: 0.8rem;
+}
+
+.page__header .nav > ul li:first-child {
+  padding-left: 0;
+}
+
+.page__header .nav > ul a {
+  color: gray;
+  text-decoration: none;
+}
+
+.page__header .nav > ul a:active, .page__header .nav > ul a:focus, .page__header .nav > ul a:hover {
+  color: #606060;
+}
+
+.page__header .nav > ul .is-active {
+  color: #606060;
+}
+
+.page__header .nav--main {
+  padding-top: 0.92rem;
+}
+
+@media (max-width: 524px) {
+  .page__header {
+    box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (min-width: 525px) {
+  .page__header .nav {
+    display: block;
+  }
+}
+
+/**
+ * @file
+ * organisms/global/shila-page/_shila-page.scss
+ */
 /**
  * @file
  * organisms/global/shila-branding/_shila-branding.scss
  */
 .branding a {
-  color: #333;
+  color: #202020;
 }
 
 .branding__logo img {
@@ -655,90 +765,6 @@ code {
 
 /**
  * @file
- * organisms/global/shila-off-canvas/_shila-off-canvas-layout.scss
- *
- * Pure CSS implementation (no JavaScript required).
- */
-/**
- * @file
- * organisms/global/shila-off-canvas/_shila-off-canvas.scss
- */
-.off-canvas {
-  background-color: #ddd;
-  padding: 1rem;
-}
-
-.off-canvas a {
-  color: #333;
-}
-
-/**
- * @file
- * organisms/global/shila-page-footer/_shila-page-footer.scss
- */
-.page__footer {
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-bottom: 1.6em;
-}
-
-/**
- * @file
- * organisms/global/shila-page-header/_shila-page-header.scss
- */
-.page__header {
-  padding-left: 5%;
-  padding-right: 5%;
-  width: 100%;
-  background-color: #fefefe;
-}
-
-@media (max-width: 524px) {
-  .page__header {
-    box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
-  }
-}
-
-.page__header .nav {
-  display: none;
-}
-
-.page__header .nav ul {
-  margin-top: 0;
-  width: 100%;
-  text-align: center;
-}
-
-.page__header .nav li {
-  display: inline-block;
-  padding-left: 0.8em;
-}
-
-.page__header .nav a {
-  color: #999;
-  text-decoration: none;
-}
-
-.page__header .nav a:active, .page__header .nav a:focus, .page__header .nav a:hover {
-  color: #333;
-}
-
-.page__header .nav .is-active {
-  color: #333;
-}
-
-.page__header .nav--main {
-  padding-top: 0.92rem;
-}
-
-@media (min-width: 525px) {
-  .page__header .nav {
-    display: block;
-  }
-}
-
-/**
- * @file
  * organisms/sections/shila-card-list/_shila-card-list-layout.scss
  */
 /**
@@ -746,27 +772,27 @@ code {
  * organisms/sections/shila-card-list/_shila-card-list.scss
  */
 .card-list .card + .card {
-  margin-top: 1.6em;
+  margin-top: 1.6rem;
 }
 
-.card-list .card .card__image {
-  width: 100%;
-  float: right;
-  margin-left: 0;
-  margin-right: 0;
-  clear: none;
-}
-
-.card-list .card .card__image:not(:empty) {
-  margin-bottom: 0.8em;
-}
-
-.card-list .card .card__body {
-  width: 100%;
-  float: right;
-  margin-left: 0;
-  margin-right: 0;
-  clear: both;
+@media (max-width: 524px) {
+  .card-list .card .card__image {
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+  .card-list .card .card__image:not(:empty) {
+    margin-bottom: 0.8rem;
+  }
+  .card-list .card .card__body {
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: both;
+  }
 }
 
 @media (min-width: 525px) {
@@ -820,24 +846,24 @@ code {
   }
 }
 
-.card-list--multicol .card .card__image {
-  width: 100%;
-  float: right;
-  margin-left: 0;
-  margin-right: 0;
-  clear: none;
-}
-
-.card-list--multicol .card .card__image:not(:empty) {
-  margin-bottom: 0.8em;
-}
-
-.card-list--multicol .card .card__body {
-  width: 100%;
-  float: right;
-  margin-left: 0;
-  margin-right: 0;
-  clear: both;
+@media (max-width: 524px) {
+  .card-list--multicol .card .card__image {
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+  .card-list--multicol .card .card__image:not(:empty) {
+    margin-bottom: 0.8rem;
+  }
+  .card-list--multicol .card .card__body {
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: both;
+  }
 }
 
 @media (min-width: 525px) {
@@ -866,7 +892,7 @@ code {
     clear: none;
   }
   .card-list--multicol .card .card__image:not(:empty) {
-    margin-bottom: 0.8em;
+    margin-bottom: 0.8rem;
   }
   .card-list--multicol .card .card__body {
     width: 100%;
@@ -913,7 +939,7 @@ code {
     clear: none;
   }
   .card-list--multicol .card .card__image:not(:empty) {
-    margin-bottom: 0.8em;
+    margin-bottom: 0.8rem;
   }
   .card-list--multicol .card .card__body {
     width: 100%;
@@ -970,7 +996,7 @@ code {
     clear: none;
   }
   .card-list--multicol .card .card__image:not(:empty) {
-    margin-bottom: 0.8em;
+    margin-bottom: 0.8rem;
   }
   .card-list--multicol .card .card__body {
     width: 100%;
@@ -986,19 +1012,19 @@ code {
  * organisms/sections/shila-comments/_shila-comments.scss
  */
 .comments {
-  margin-top: 3.2em;
+  margin-top: 3.2rem;
 }
 
 .comments .comment + .comment {
-  margin-top: 3.2em;
+  margin-top: 3.2rem;
 }
 
 .comments .indented {
-  padding-left: 1.6em;
+  padding-left: 1.6rem;
 }
 
 .comments__title {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #9f9f9f;
 }
 
 /**
@@ -1006,7 +1032,7 @@ code {
  * organisms/sections/shila-front-page-listing/_shila-front-page-listing.scss
  */
 .front-page-listing__row + .front-page-listing__row {
-  margin-top: 3.2em;
+  margin-top: 3.2rem;
 }
 
 /*# sourceMappingURL=components.css.map */

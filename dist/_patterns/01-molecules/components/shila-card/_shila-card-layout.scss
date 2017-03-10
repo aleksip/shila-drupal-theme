@@ -38,18 +38,15 @@
 /// Breakpoint-based card layout.
 ///
 /// @param {List} $outer-cols [$cols-list]
-///   Column span of parent element in each breakpoint.
+///   Column span of parent element in one or more breakpoint.
 /// @param {List} $layouts
-///   Layout to use in each breakpoint.
+///   Layout to use in respective breakpoints.
 @mixin card-breakpoint-layout(
-  $outer-cols: $cols-list, $layouts: ('vertical', 'horizontal', 'horizontal', 'horizontal')
+  $outer-cols: $shila-columns, $layouts: ('xs': 'vertical', 's': 'horizontal', 'm': 'horizontal', 'l': 'horizontal')
 ) {
-  @include card-layout(nth($cols-list, 1), nth($layouts, 1));
-  @for $i from 2 through 4 {
-    @include breakpoint(nth($breaks-list, $i)) {
-      @include card-layout(
-        nth($cols-list, $i), nth($layouts, $i)
-      );
+  @each $breakpoint-key, $columns in $outer-cols {
+    @include breakpoint(shila-breakpoint($breakpoint-key)) {
+      @include card-layout($columns, map-get($layouts, $breakpoint-key));
     }
   }
 }

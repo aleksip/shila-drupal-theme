@@ -9,6 +9,14 @@
 
 @import 'singularitygs';
 @import 'breakpoint';
+
+@import 'partials/settings/settings.core';
+$base-line-height: $shila-base-line-height;
+$base-spacing: $shila-base-spacing;
+$small-spacing: $shila-small-spacing;
+$large-spacing: $shila-large-spacing;
+
+@import 'partials/settings/settings.animations';
 @import 'partials/settings/settings.colors';
 @import 'partials/settings/settings.forms';
 @import 'partials/settings/settings.typography';

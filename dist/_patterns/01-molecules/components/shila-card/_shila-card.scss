@@ -20,6 +20,7 @@
 }
 .card--horizontal {
   @include card-breakpoint-layout(
-    ('horizontal', 'horizontal', 'horizontal', 'horizontal')
+    $shila-columns,
+    ('xs': 'horizontal', 's': 'horizontal', 'm': 'horizontal', 'l': 'horizontal')
   );
 }

@@ -45,16 +45,11 @@
 /// @param $gutter [$gutter]
 ///   Gutter size of parent element.
 @mixin card-list-multicol-breakpoint-layout(
-  $inner-cols: (1 2 3 4), $outer-cols: $cols-list, $gutter: $gutter
+  $inner-cols: ('xs': 1, 's': 2, 'm': 3, 'l': 4), $outer-cols: $shila-columns, $gutter: $gutter
 ) {
-  @include card-list-multicol-layout(
-    nth($outer-cols, 1), nth($inner-cols, 1), $gutter
-  );
-  @for $i from 2 through 4 {
-    @include breakpoint(nth($breaks-list, $i)) {
-      @include card-list-multicol-layout(
-        nth($outer-cols, $i), nth($inner-cols, $i), $gutter
-      );
+  @each $breakpoint-key, $cols in $inner-cols {
+    @include breakpoint(shila-breakpoint($breakpoint-key)) {
+      @include card-list-multicol-layout(map-get($outer-cols, $breakpoint-key), $cols, $gutter);
     }
   }
 }
