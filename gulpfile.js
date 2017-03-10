@@ -20,7 +20,8 @@ config.sass = {
   ],
   watchFiles: [
     './dist/sass/**/*.scss',
-    './dist/_patterns/**/*.scss'
+    './dist/_patterns/**/*.scss',
+    './node_modules/shila-css/**/*.scss'
   ],
   options: {
     includePaths: [
