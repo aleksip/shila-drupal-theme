@@ -84,4 +84,6 @@
 {% set author %}
   {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
 {% endset %}
-{% include "@organisms/content/shila-content/shila-content.html.twig" %}
+{% block template %}
+  {% include "@organisms/content/shila-content/shila-content.html.twig" %}
+{% endblock %}
