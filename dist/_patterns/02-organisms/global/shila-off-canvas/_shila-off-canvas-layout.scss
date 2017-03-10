@@ -7,7 +7,7 @@
 
 $off-canvas-in-use: $xs-break !default;
 $off-canvas-not-in-use: $s-break !default;
-$off-canvas-width: (80% 20rem 20rem 20rem) !default;
+$off-canvas-widths: ('xs': 80%, 's': 20rem, 'm': 20rem, 'l': 20rem) !default;
 $off-canvas-header-height: 64px !default;
 $off-canvas-z-index: 500 !default;
 $off-canvas-side: right !default;
@@ -47,10 +47,10 @@ $off-canvas-side: right !default;
     min-height: 100%;
     overflow: hidden;
     overflow-y: auto;
-    @for $i from 1 through 4 {
-      @include breakpoint(nth($breaks-list, $i)) {
-        #{$off-canvas-side}: -(nth($off-canvas-width, $i));
-        width: nth($off-canvas-width, $i);;
+    @each $breakpoint-key, $breakpoint in $shila-breakpoints {
+      @include breakpoint($breakpoint) {
+        #{$off-canvas-side}: -(map-get($off-canvas-widths, $breakpoint-key));
+        width: map-get($off-canvas-widths, $breakpoint-key);
       }
     }
   }
@@ -89,9 +89,9 @@ $off-canvas-side: right !default;
     }
     & ~ #off-canvas-label,
     & ~ .page {
-      @for $i from 1 through 4 {
-        @include breakpoint(nth($breaks-list, $i)) {
-          #{$off-canvas-side}: nth($off-canvas-width, $i);
+      @each $breakpoint-key, $breakpoint in $shila-breakpoints {
+        @include breakpoint($breakpoint) {
+          #{$off-canvas-side}: map-get($off-canvas-widths, $breakpoint-key);
         }
       }
     }

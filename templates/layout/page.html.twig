@@ -39,21 +39,10 @@
 #}
 <div class="layout-container">
   {% if page.off_canvas %}
-    <input id="off-canvas-checkbox" type="checkbox">
-    <label for="off-canvas-checkbox" id="off-canvas-label" onclick=""></label>
+    <input type="checkbox" id="off-canvas-checkbox">
+    <label for="off-canvas-checkbox" id="off-canvas-label"></label>
   {% endif %}
-  <div class="page">
-    {% if page.header %}
-      {{ page.header }}
-    {% endif %}
-    <main role="main" class="main page__content">
-      <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-      {{ page.content }}
-    </main>
-    {% if page.footer %}
-      {{ page.footer }}
-    {% endif %}
-  </div>
+  {% include "@organisms/global/shila-page/shila-page.html.twig" %}
   {% if page.off_canvas %}
     {{ page.off_canvas }}
   {% endif %}

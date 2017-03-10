@@ -1,0 +1,14 @@
+{#
+/**
+ * @see templates/layout/page.html.twig
+ */
+#}
+<div class="page">
+  {% if page.header %}
+    {{ page.header }}
+  {% endif %}
+  {{ page.content }}
+  {% if page.footer %}
+    {{ page.footer }}
+  {% endif %}
+</div>

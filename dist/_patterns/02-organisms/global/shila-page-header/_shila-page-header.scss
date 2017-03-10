@@ -4,18 +4,21 @@
  */
 
 .page__header {
-  @include side-paddings;
   width: 100%;
-  background-color: $base-background-color;
-  @include breakpoint($xs-break) {
-    box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
+  .region-container {
+    background-color: $content-background-color;
   }
   .nav {
-    @include horizontal-nav;
     display: none;
+  }
+  .nav > ul {
+    @include horizontal-nav;
   }
   .nav--main {
     padding-top: 0.92rem;
+  }
+  @include breakpoint($xs-break) {
+    box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
   }
   @include breakpoint($s-break) {
     .nav {

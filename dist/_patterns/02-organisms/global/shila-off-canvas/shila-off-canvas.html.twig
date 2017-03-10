@@ -4,9 +4,11 @@
  */
 #}
 <div class="off-canvas">
-  <div{{ attributes }}>
-    {% block off_canvas %}
-      {{ content }}
-    {% endblock %}
+  <div class="region-container">
+    <div{{ attributes.addClass('region--off-canvas') }}>
+      {% block off_canvas %}
+        {{ content }}
+      {% endblock %}
+    </div>
   </div>
 </div>

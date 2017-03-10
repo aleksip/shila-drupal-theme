@@ -4,9 +4,11 @@
  */
 #}
 <footer role="contentinfo" class="footer page__footer">
-  <div{{ attributes }}>
-    {% block page_footer %}
-      {{ content }}
-    {% endblock %}
+  <div class="region-container">
+    <div{{ attributes.addClass('region--footer') }}>
+      {% block page_footer %}
+        {{ content }}
+      {% endblock %}
+    </div>
   </div>
 </footer>

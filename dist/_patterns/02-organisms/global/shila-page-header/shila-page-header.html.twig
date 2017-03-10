@@ -4,9 +4,11 @@
  */
 #}
 <header role="banner" class="header page__header">
-  <div{{ attributes }}>
-    {% block page_header %}
-      {{ content }}
-    {% endblock %}
+  <div class="region-container">
+    <div{{ attributes.addClass('region--header') }}>
+      {% block page_header %}
+        {{ content }}
+      {% endblock %}
+    </div>
   </div>
 </header>
