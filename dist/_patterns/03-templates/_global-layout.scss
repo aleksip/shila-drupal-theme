@@ -5,24 +5,33 @@
 
 .layout-container,
 .page,
-.page__header,
-.page__content,
-.page__footer,
-.region--header,
-.region--content,
-.region--footer {
+.page > *,
+.region-container,
+.region {
   @include clearfix;
 }
-.region--header,
-.region--content,
-.region--footer {
+.region-container {
   @include outer-container;
+}
+.region {
+  @include side-margins;
   @include background-grid($color: $background-grid-color);
 }
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.page__header,
+.page__footer {
+  flex: none;
+}
 .page__content {
-  @include side-paddings;
-  padding-top: $large-spacing;
-  margin-bottom: $large-spacing;
+  flex: 1 0 auto;
+}
+.region-container,
+.region {
+  height: 100%;
 }
 @if $off-canvas-not-in-use {
   @if $off-canvas-not-in-use == true {

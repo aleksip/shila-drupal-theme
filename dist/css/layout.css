@@ -14,6 +14,14 @@
  */
 /**
  * @file
+ * partials/settings/_settings.core.scss
+ */
+/**
+ * @file
+ * partials/settings/_settings.animations.scss
+ */
+/**
+ * @file
  * partials/settings/_settings.colors.scss
  */
 /**
@@ -84,30 +92,43 @@
  */
 .layout-container::after,
 .page::after,
-.page__header::after,
-.page__content::after,
-.page__footer::after,
-.region--header::after,
-.region--content::after,
-.region--footer::after {
+.page > *::after,
+.region-container::after,
+.region::after {
   clear: both;
   content: '';
   display: table;
 }
 
-.region--header,
-.region--content,
-.region--footer {
+.region-container {
   max-width: 32rem;
   margin-left: auto;
   margin-right: auto;
 }
 
+.region {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page__header,
+.page__footer {
+  flex: none;
+}
+
 .page__content {
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-top: 3.2em;
-  margin-bottom: 3.2em;
+  flex: 1 0 auto;
+}
+
+.region-container,
+.region {
+  height: 100%;
 }
 
 @media (min-width: 525px) {
