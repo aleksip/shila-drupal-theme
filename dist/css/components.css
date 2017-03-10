@@ -654,6 +654,10 @@ code {
   background-color: white;
 }
 
+.page__content .block:first-child {
+  margin-top: 3.2rem;
+}
+
 /**
  * @file
  * organisms/global/shila-page-footer/_shila-page-footer.scss
