@@ -12,5 +12,6 @@
  *   displayed after the main title tag that appears in the template.
  */
 #}
+{% set title %}{{ title }}{% endset %}
 {% set title_attributes = title_attributes.addClass('page-title') %}
 {% include "@molecules/text/shila-page-title/shila-page-title.html.twig" %}
