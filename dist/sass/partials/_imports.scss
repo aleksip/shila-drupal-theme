@@ -11,16 +11,12 @@
 @import 'breakpoint';
 
 @import 'partials/settings/settings.core';
-$base-line-height: $shila-base-line-height;
-$base-spacing: $shila-base-spacing;
-$small-spacing: $shila-small-spacing;
-$large-spacing: $shila-large-spacing;
-
 @import 'partials/settings/settings.animations';
 @import 'partials/settings/settings.colors';
 @import 'partials/settings/settings.forms';
 @import 'partials/settings/settings.typography';
 @import 'partials/settings/settings.layout';
+@import 'partials/tools/tools.core';
 @import 'partials/tools/tools.clearfix';
 @import 'partials/tools/tools.colors';
 @import 'partials/tools/tools.constants';

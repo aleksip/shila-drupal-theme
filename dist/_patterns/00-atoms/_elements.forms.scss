@@ -11,19 +11,19 @@ fieldset {
 }
 legend {
   font-weight: 600;
-  margin-bottom: $small-spacing / 2;
+  margin-bottom: $shila-small-spacing / 2;
   padding: 0;
 }
 input,
 label,
 select {
   display: block;
-  font-family: $base-font-family;
+  font-family: $shila-base-font-family;
   font-size: 1rem;
 }
 label {
   font-weight: 600;
-  margin-bottom: $small-spacing / 2;
+  margin-bottom: $shila-small-spacing / 2;
   &.required::after {
     content: "*";
   }
@@ -31,32 +31,32 @@ label {
     display: none;
   }
 }
-#{$all-text-inputs},
+#{$shila-all-text-inputs},
 select[multiple=multiple] {
-  background-color: $content-background-color;
-  border: $base-border;
-  border-radius: $base-border-radius;
-  box-shadow: $form-box-shadow;
+  background-color: $shila-content-background-color;
+  border: $shila-base-border;
+  border-radius: $shila-base-border-radius;
+  box-shadow: $shila-form-box-shadow;
   box-sizing: border-box;
-  font-family: $base-font-family;
+  font-family: $shila-base-font-family;
   font-size: 1rem;
-  margin-bottom: $small-spacing;
-  padding: $base-spacing / 3;
-  transition: border-color $base-duration $base-timing;
+  margin-bottom: $shila-small-spacing;
+  padding: $shila-base-spacing / 3;
+  transition: border-color $shila-base-duration $shila-base-timing;
   width: 100%;
   &:hover {
-    border-color: shade($base-border-color, 20%);
+    border-color: shade($shila-base-border-color, 20%);
   }
   &:focus {
-    border-color: $action-color;
-    box-shadow: $form-box-shadow-focus;
+    border-color: $shila-action-color;
+    box-shadow: $shila-form-box-shadow-focus;
     outline: none;
   }
   &:disabled {
-    background-color: shade($content-background-color, 5%);
+    background-color: shade($shila-content-background-color, 5%);
     cursor: not-allowed;
     &:hover {
-      border: $base-border;
+      border: $shila-base-border;
     }
   }
 }
@@ -69,17 +69,17 @@ input[type="search"] {
 input[type="checkbox"],
 input[type="radio"] {
   display: inline;
-  margin-right: $small-spacing / 2;
+  margin-right: $shila-small-spacing / 2;
   + label {
     display: inline-block;
   }
 }
 input[type="file"] {
-  margin-bottom: $small-spacing;
+  margin-bottom: $shila-small-spacing;
   width: 100%;
 }
 select {
-  margin-bottom: $base-spacing;
+  margin-bottom: $shila-base-spacing;
   max-width: 100%;
   width: auto;
 }

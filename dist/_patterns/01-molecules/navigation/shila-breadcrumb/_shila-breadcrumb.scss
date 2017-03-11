@@ -5,7 +5,7 @@
 
 .breadcrumb {
   ol {
-    @include horizontal-list;
+    @include shila-horizontal-list;
   }
   li + li::before {
     content: '>';

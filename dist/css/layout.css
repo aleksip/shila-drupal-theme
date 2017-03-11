@@ -38,6 +38,10 @@
  */
 /**
  * @file
+ * partials/tools/_tools.core.scss
+ */
+/**
+ * @file
  * partials/tools/_tools.clearfix.scss
  */
 /**
@@ -101,14 +105,21 @@
 }
 
 .region-container {
-  max-width: 32rem;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .region {
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+@media (min-width: 525px) {
+  .region {
+    margin-left: 1.6rem;
+    margin-right: 1.6rem;
+  }
 }
 
 .page {
@@ -179,11 +190,6 @@
     min-height: 100%;
     overflow: hidden;
     overflow-y: auto;
-  }
-}
-
-@media (max-width: 524px) and (max-width: 524px) {
-  .off-canvas {
     right: -80%;
     width: 80%;
   }
@@ -242,9 +248,6 @@
   #off-canvas-checkbox:checked ~ .page .page__content {
     margin-top: 0;
   }
-}
-
-@media (max-width: 524px) and (max-width: 524px) {
   #off-canvas-checkbox:checked ~ #off-canvas-label,
   #off-canvas-checkbox:checked ~ .page {
     right: 80%;

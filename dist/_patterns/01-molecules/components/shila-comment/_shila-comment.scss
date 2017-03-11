@@ -4,7 +4,7 @@
  */
 
 .comment {
-  font-family: $font-stack-helvetica;
+  font-family: $shila-font-stack-helvetica;
   font-size: smaller;
 }
 .comment__title {
@@ -12,8 +12,8 @@
 }
 .comment__byline {
   margin: 0.5em 0 0;
-  color: $medium-gray;
-  font-family: $base-font-family;
+  color: $shila-medium-gray;
+  font-family: $shila-base-font-family;
   p {
     margin: 0;
   }
@@ -28,7 +28,7 @@
     }
   }
   .links {
-    @include horizontal-list(0.5em);
+    @include shila-horizontal-list(0.5em);
   }
 }
 .comment-reply {

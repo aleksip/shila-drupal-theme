@@ -3,7 +3,6 @@
  * molecules/messaging/shila-messages/_shila-messages.scss
  */
 
-$base-spacing: 1.5em !default;
 $status-color: #e5edf8 !default;
 $warning-color: #fff6bf !default;
 $error-color: #fbe3e4 !default;
@@ -13,8 +12,8 @@ $success-color: #e6efc2 !default;
   background-color: $color;
   color: darken($color, 60%);
   display: block;
-  margin-bottom: $base-spacing / 2;
-  padding: $base-spacing / 2;
+  margin-bottom: $shila-small-spacing;
+  padding: $shila-small-spacing;
   text-align: center;
   a {
     color: darken($color, 70%);

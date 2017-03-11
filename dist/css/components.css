@@ -38,6 +38,10 @@
  */
 /**
  * @file
+ * partials/tools/_tools.core.scss
+ */
+/**
+ * @file
  * partials/tools/_tools.clearfix.scss
  */
 /**
@@ -90,6 +94,19 @@
 
 /**
  * @file
+ * dist/_patterns/01-molecules/components/next-previous/_next-previous.scss
+ */
+.next-previous {
+  margin-top: 1.5rem;
+  border-top: 1px solid #9f9f9f;
+  padding: 1rem 0 0 0;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: smaller;
+  list-style-type: none;
+}
+
+/**
+ * @file
  * molecules/components/shila-card/_shila-card-layout.scss
  */
 /**
@@ -118,21 +135,20 @@
   margin-bottom: 0;
 }
 
-@media (max-width: 524px) {
-  .card--horizontal .card__image {
-    width: 20%;
-    float: left;
-    margin-right: -100%;
-    margin-left: 0;
-    clear: none;
-  }
-  .card--horizontal .card__body {
-    width: 73.33333%;
-    float: right;
-    margin-left: 0;
-    margin-right: 0;
-    clear: none;
-  }
+.card--horizontal .card__image {
+  width: 20%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0;
+  clear: none;
+}
+
+.card--horizontal .card__body {
+  width: 73.33333%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
 }
 
 @media (min-width: 525px) {
@@ -145,40 +161,6 @@
   }
   .card--horizontal .card__body {
     width: 74.07407%;
-    float: right;
-    margin-left: 0;
-    margin-right: 0;
-    clear: none;
-  }
-}
-
-@media (min-width: 801px) {
-  .card--horizontal .card__image {
-    width: 23.07692%;
-    float: left;
-    margin-right: -100%;
-    margin-left: 0;
-    clear: none;
-  }
-  .card--horizontal .card__body {
-    width: 74.35897%;
-    float: right;
-    margin-left: 0;
-    margin-right: 0;
-    clear: none;
-  }
-}
-
-@media (min-width: 1025px) {
-  .card--horizontal .card__image {
-    width: 23.52941%;
-    float: left;
-    margin-right: -100%;
-    margin-left: 0;
-    clear: none;
-  }
-  .card--horizontal .card__body {
-    width: 74.5098%;
     float: right;
     margin-left: 0;
     margin-right: 0;
@@ -463,7 +445,7 @@
 }
 
 .local-tasks__task .is-active {
-  color: #104c90;
+  color: shade(#1565c0, 25%);
 }
 
 .local-tasks__task a {
@@ -493,6 +475,7 @@
 .pager a {
   color: gray;
   text-decoration: none;
+  transition: color 150ms ease;
 }
 
 .pager a:active, .pager a:focus, .pager a:hover {
@@ -701,6 +684,7 @@ code {
 .page__header .nav > ul a {
   color: gray;
   text-decoration: none;
+  transition: color 150ms ease;
 }
 
 .page__header .nav > ul a:active, .page__header .nav > ul a:focus, .page__header .nav > ul a:hover {
@@ -779,24 +763,24 @@ code {
   margin-top: 1.6rem;
 }
 
-@media (max-width: 524px) {
-  .card-list .card .card__image {
-    width: 100%;
-    float: right;
-    margin-left: 0;
-    margin-right: 0;
-    clear: none;
-  }
-  .card-list .card .card__image:not(:empty) {
-    margin-bottom: 0.8rem;
-  }
-  .card-list .card .card__body {
-    width: 100%;
-    float: right;
-    margin-left: 0;
-    margin-right: 0;
-    clear: both;
-  }
+.card-list .card .card__image {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+
+.card-list .card .card__image:not(:empty) {
+  margin-bottom: 0.8rem;
+}
+
+.card-list .card .card__body {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: both;
 }
 
 @media (min-width: 525px) {
@@ -816,58 +800,24 @@ code {
   }
 }
 
-@media (min-width: 801px) {
-  .card-list .card .card__image {
-    width: 23.07692%;
-    float: left;
-    margin-right: -100%;
-    margin-left: 0;
-    clear: none;
-  }
-  .card-list .card .card__body {
-    width: 74.35897%;
-    float: right;
-    margin-left: 0;
-    margin-right: 0;
-    clear: none;
-  }
+.card-list--multicol .card .card__image {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
 }
 
-@media (min-width: 1025px) {
-  .card-list .card .card__image {
-    width: 23.52941%;
-    float: left;
-    margin-right: -100%;
-    margin-left: 0;
-    clear: none;
-  }
-  .card-list .card .card__body {
-    width: 74.5098%;
-    float: right;
-    margin-left: 0;
-    margin-right: 0;
-    clear: none;
-  }
+.card-list--multicol .card .card__image:not(:empty) {
+  margin-bottom: 0.8rem;
 }
 
-@media (max-width: 524px) {
-  .card-list--multicol .card .card__image {
-    width: 100%;
-    float: right;
-    margin-left: 0;
-    margin-right: 0;
-    clear: none;
-  }
-  .card-list--multicol .card .card__image:not(:empty) {
-    margin-bottom: 0.8rem;
-  }
-  .card-list--multicol .card .card__body {
-    width: 100%;
-    float: right;
-    margin-left: 0;
-    margin-right: 0;
-    clear: both;
-  }
+.card-list--multicol .card .card__body {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: both;
 }
 
 @media (min-width: 525px) {

@@ -5,9 +5,14 @@
  * Pure CSS implementation (no JavaScript required).
  */
 
-$off-canvas-in-use: $xs-break !default;
-$off-canvas-not-in-use: $s-break !default;
-$off-canvas-widths: ('xs': 80%, 's': 20rem, 'm': 20rem, 'l': 20rem) !default;
+$off-canvas-in-use: max-width 524px !default;
+$off-canvas-not-in-use: $shila-s-break !default;
+$off-canvas-base-width: 80%;
+$off-canvas-breakpoint-widths: (
+  's': 20rem,
+  'm': 20rem,
+  'l': 20rem
+) !default;
 $off-canvas-header-height: 64px !default;
 $off-canvas-z-index: 500 !default;
 $off-canvas-side: right !default;
@@ -47,10 +52,12 @@ $off-canvas-side: right !default;
     min-height: 100%;
     overflow: hidden;
     overflow-y: auto;
-    @each $breakpoint-key, $breakpoint in $shila-breakpoints {
-      @include breakpoint($breakpoint) {
-        #{$off-canvas-side}: -(map-get($off-canvas-widths, $breakpoint-key));
-        width: map-get($off-canvas-widths, $breakpoint-key);
+    #{$off-canvas-side}: -($off-canvas-base-width);
+    width: $off-canvas-base-width;
+    @each $breakpoint-key, $width in $off-canvas-breakpoint-widths {
+      @include breakpoint(shila-breakpoint($breakpoint-key)) {
+        #{$off-canvas-side}: -($width);
+        width: $width;
       }
     }
   }
@@ -89,9 +96,10 @@ $off-canvas-side: right !default;
     }
     & ~ #off-canvas-label,
     & ~ .page {
-      @each $breakpoint-key, $breakpoint in $shila-breakpoints {
-        @include breakpoint($breakpoint) {
-          #{$off-canvas-side}: map-get($off-canvas-widths, $breakpoint-key);
+      #{$off-canvas-side}: $off-canvas-base-width;
+      @each $breakpoint-key, $width in $off-canvas-breakpoint-widths {
+        @include breakpoint(shila-breakpoint($breakpoint-key)) {
+          #{$off-canvas-side}: $width;
         }
       }
     }

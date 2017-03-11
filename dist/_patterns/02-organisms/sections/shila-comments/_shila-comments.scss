@@ -4,14 +4,14 @@
  */
 
 .comments {
-  margin-top: $large-spacing;
+  margin-top: $shila-large-spacing;
   .comment + .comment {
-    margin-top: $large-spacing;
+    margin-top: $shila-large-spacing;
   }
   .indented {
-    padding-left: $base-spacing;
+    padding-left: $shila-base-spacing;
   }
 }
 .comments__title {
-  border-bottom: 1px solid $light-gray;
+  border-bottom: 1px solid $shila-light-gray;
 }

@@ -7,26 +7,26 @@ p {
   margin: 0 0 1rem;
 }
 a {
-  color: $action-color;
+  color: $shila-action-color;
   text-decoration: none;
-  transition: color $base-duration $base-timing;
+  transition: color $shila-base-duration $shila-base-timing;
   &:active,
   &:focus,
   &:hover {
-    color: shade($action-color, 25%);
+    color: shade($shila-action-color, 25%);
     text-decoration: underline;
   }
 }
 hr {
-  border-bottom: $base-border;
+  border-bottom: $shila-base-border;
   border-left: 0;
   border-right: 0;
   border-top: 0;
-  margin: $base-spacing 0;
+  margin: $shila-base-spacing 0;
 }
 blockquote {
-  color: $medium-gray;
+  color: $shila-medium-gray;
   margin-left: 0;
-  border-left: 0.33rem solid $light-gray;
+  border-left: 0.33rem solid $shila-light-gray;
   padding-left: 1rem;
 }

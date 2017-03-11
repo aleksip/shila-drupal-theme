@@ -5,14 +5,14 @@
 
 .branding {
   a {
-    color: $base-font-color;
+    color: $shila-base-font-color;
   }
 }
 .branding__logo {
   img {
     max-height: 2.56rem;
   }
-  @include breakpoint($s-break) {
+  @include breakpoint($shila-s-break) {
     img {
       max-height: 2.67rem;
     }
@@ -21,13 +21,13 @@
 .branding__name {
   font-size: 2.56rem;
   font-weight: bold;
-  line-height: $heading-line-height;
-  @include breakpoint($s-break) {
+  line-height: $shila-heading-line-height;
+  @include breakpoint($shila-s-break) {
     font-size: 2.67rem;
   }
 }
 .branding__slogan {
-  @include breakpoint($xs-break) {
+  @include breakpoint($shila-xs-break) {
     display: none;
   }
 }

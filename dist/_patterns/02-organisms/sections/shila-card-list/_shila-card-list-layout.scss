@@ -12,44 +12,68 @@
 
 /// Multi-column card list layout.
 ///
-/// @param {Number} $outer-cols
-///   Column span of parent element.
-/// @param {Number} $inner-cols [1]
-///   Number of columns.
+/// @param {Number} $inner-columns
+///   Number of inner columns.
+/// @param {Number} $outer-columns
+///   Number of columns in parent element.
 /// @param $selector [&]
 ///   Selector to use if not targeting current parent selector.
-/// @param $gutter [$gutter]
+/// @param $gutter [$shila-gutter]
 ///   Gutter size of parent element.
 @mixin card-list-multicol-layout(
-  $outer-cols, $inner-cols: 1, $gutter: $gutter
+  $inner-columns: 1,
+  $outer-columns: $shila-base-columns,
+  $selector: &,
+  $gutter: $shila-gutter
 ) {
-  @if ($inner-cols >= 2) {
-    @include multicol-layout($outer-cols, $inner-cols, '.card', $gutter);
-    @for $i from 2 through $inner-cols {
+  @if ($inner-columns >= 2) {
+    @include shila-multicol-layout($inner-columns, $outer-columns, '.card', $gutter);
+    @for $i from 2 through $inner-columns {
       .card + .card:nth-child(#{$i}) {
         margin-top: 0;
       }
     }
   }
   .card {
-    @include card-layout($outer-cols, 'top-down', $gutter);
+    @include card-layout('vertical', $outer-columns, $gutter);
   }
 }
 
 /// Multi-column card list layout with breakpoints.
 ///
-/// @param {List} $inner-cols [(1 2 3 4)]
-///   Number of columns for each breakpoint.
-/// @param {List} $outer-cols [$cols-list]
-///   Column span of parent element in each breakpoint.
-/// @param $gutter [$gutter]
+/// @param {Number} $base-inner-columns
+///   Number of inner columns [1]
+/// @param {Map} $breakpoint-inner-columns [('s': 2, 'm': 3, 'l': 4)]
+///   Number of inner columns for specified breakpoints.
+/// @param {Number} $base-outer-columns [$shila-base-columns]
+///   Number of columns in parent element.
+/// @param {Map} $breakpoint-outer-columns [$shila-breakpoint-columns]
+///   Number of columns in parent element for specified breakpoints.
+///   Must contain all the keys that are in $breakpoint-inner-columns.
+/// @param $selector [&]
+///   Selector to use if not targeting current parent selector.
+/// @param $gutter [$shila-gutter]
 ///   Gutter size of parent element.
 @mixin card-list-multicol-breakpoint-layout(
-  $inner-cols: ('xs': 1, 's': 2, 'm': 3, 'l': 4), $outer-cols: $shila-columns, $gutter: $gutter
+  $base-inner-columns: 1,
+  $breakpoint-inner-columns: ('s': 2, 'm': 3, 'l': 4),
+  $base-outer-columns: $shila-base-columns,
+  $breakpoint-outer-columns: $shila-breakpoint-columns,
+  $selector: &,
+  $gutter: $shila-gutter
 ) {
-  @each $breakpoint-key, $cols in $inner-cols {
+  @include card-list-multicol-layout(
+    $base-inner-columns, $base-outer-columns, $selector, $gutter
+  );
+  @each $breakpoint-key, $inner-columns in $breakpoint-inner-columns {
     @include breakpoint(shila-breakpoint($breakpoint-key)) {
-      @include card-list-multicol-layout(map-get($outer-cols, $breakpoint-key), $cols, $gutter);
+      @include card-list-multicol-layout(
+        $inner-columns,
+        map-get($breakpoint-outer-columns,
+        $breakpoint-key),
+        $selector,
+        $gutter
+      );
     }
   }
 }

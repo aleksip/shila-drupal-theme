@@ -8,14 +8,14 @@
 .page > *,
 .region-container,
 .region {
-  @include clearfix;
+  @include shila-clearfix;
 }
 .region-container {
-  @include outer-container;
+  @include shila-outer-container;
 }
 .region {
-  @include side-margins;
-  @include background-grid($color: $background-grid-color);
+  @include shila-side-margins;
+  @include background-grid($color: $shila-background-grid-color);
 }
 .page {
   display: flex;

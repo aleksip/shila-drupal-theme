@@ -5,7 +5,7 @@
 
 .card-list {
   .card + .card {
-    margin-top: $base-spacing;
+    margin-top: $shila-base-spacing;
   }
   @include card-list-layout;
 }

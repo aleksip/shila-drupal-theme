@@ -6,21 +6,21 @@
 .page__header {
   width: 100%;
   .region-container {
-    background-color: $content-background-color;
+    background-color: $shila-content-background-color;
   }
   .nav {
     display: none;
   }
   .nav > ul {
-    @include horizontal-nav;
+    @include shila-horizontal-nav;
   }
   .nav--main {
     padding-top: 0.92rem;
   }
-  @include breakpoint($xs-break) {
+  @include breakpoint($shila-xs-break) {
     box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
   }
-  @include breakpoint($s-break) {
+  @include breakpoint($shila-s-break) {
     .nav {
       display: block;
     }

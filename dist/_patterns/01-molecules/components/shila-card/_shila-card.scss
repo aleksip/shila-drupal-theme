@@ -4,12 +4,12 @@
  */
 
 .card {
-  @include clearfix;
+  @include shila-clearfix;
 }
 .card__title {
   margin-top: 0;
   a {
-    color: $base-font-color;
+    color: $shila-base-font-color;
   }
 }
 .card__body {
@@ -19,8 +19,5 @@
   }
 }
 .card--horizontal {
-  @include card-breakpoint-layout(
-    $shila-columns,
-    ('xs': 'horizontal', 's': 'horizontal', 'm': 'horizontal', 'l': 'horizontal')
-  );
+  @include card-breakpoint-layout('horizontal');
 }
