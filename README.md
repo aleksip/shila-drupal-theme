@@ -13,6 +13,9 @@ In the Shila theme root directory run:
 npm install
 ```
 
+Please note that latest version of Shila theme always uses the latest version of [shila-css](https://github.com/aleksip/shila-css), which is still in alpha and can introduce breaking changes. If you are pulling changes from the Shila theme repository be sure to also update to the latest version of shila-css. Or if basing your theme on a specific version of Shila theme be sure to specify the exact matching version of shila-css in `package.json`.
+
+
 ## Integrating with Drupal
 
 ### Required: Component Libraries module
