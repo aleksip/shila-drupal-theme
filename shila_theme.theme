@@ -6,6 +6,8 @@
  */
 
 /**
+ * Adds a template suggestion for the search block form.
+ *
  * Implements hook_theme_suggestions_HOOK_alter() for form templates.
  */
 function shila_theme_theme_suggestions_form_alter(array &$suggestions, array $variables) {
@@ -15,12 +17,18 @@ function shila_theme_theme_suggestions_form_alter(array &$suggestions, array $va
 }
 
 /**
+ * Adds classes to menu links. This cannot be done in Twig templates without
+ * using Drupal specific extensions.
+ *
  * Implements hook_preprocess_HOOK() for menu.html.twig.
  */
 function shila_theme_preprocess_menu(&$variables) {
   _menu_links($variables['items'], 0);
 }
 
+/**
+ * Helper function for adding classes to menu links.
+ */
 function _menu_links(&$items, $menu_level) {
   foreach ($items as $item) {
     $classes = ['menu-item'];
@@ -41,6 +49,9 @@ function _menu_links(&$items, $menu_level) {
 }
 
 /**
+ * Removes specific attributes from pagers. This cannot be done in Twig
+ * templates without using Drupal specific extensions.
+ *
  * Implements hook_preprocess_HOOK() for pager.html.twig.
  */
 function shila_theme_preprocess_pager(&$variables) {
@@ -62,10 +73,48 @@ function shila_theme_preprocess_pager(&$variables) {
   }
 }
 
+/**
+ * Helper function for removing attributes.
+ */
 function _remove_attributes(&$variables, $key, $remove) {
   if (isset($variables['items'][$key]['attributes'])) {
     foreach ($remove as $attribute) {
       $variables['items'][$key]['attributes']->removeAttribute($attribute);
     }
+  }
+}
+
+/**
+ * Adds the entity and possible contextual links to PatternContext when using
+ * UI Patterns Layouts module.
+ *
+ * Implements template_preprocess_ds_entity_view().
+ */
+function shila_theme_preprocess_ds_entity_view(&$variables) {
+  if (isset($variables['content']['#type']) && $variables['content']['#type'] == 'pattern') {
+    $variables['content']['#context']['entity'] = $variables['content']['#entity'];
+    if (isset($variables['title_suffix']['contextual_links'])) {
+      $variables['content']['#context']['contextual_links'] = $variables['title_suffix']['contextual_links'];
+    }
+  }
+}
+
+/**
+ * Adds entity type BEM modifier class and contextual links to shila-cards when
+ * using UI Patterns module.
+ *
+ * Implements hook_preprocess_HOOK().
+ */
+function shila_theme_preprocess_pattern_shila_card(&$variables) {
+  $classes = [];
+  if ($variables['context']->getProperty('entity')) {
+    $classes[] = 'card--' . $variables['context']->getProperty('entity')->bundle();
+  }
+  if ($variables['context']->getProperty('contextual_links')) {
+    $classes[] = 'contextual-region';
+    $variables['contextual_links'] = $variables['context']->getProperty('contextual_links');
+  }
+  if (!empty($classes)) {
+    $variables['attributes'] = $variables['attributes']->addClass($classes);
   }
 }
