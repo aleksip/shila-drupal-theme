@@ -45,7 +45,7 @@ select[multiple=multiple] {
   transition: border-color $shila-base-duration $shila-base-timing;
   width: 100%;
   &:hover {
-    border-color: shade($shila-base-border-color, 20%);
+    border-color: shila-shade($shila-base-border-color, 20%);
   }
   &:focus {
     border-color: $shila-action-color;
@@ -53,7 +53,7 @@ select[multiple=multiple] {
     outline: none;
   }
   &:disabled {
-    background-color: shade($shila-content-background-color, 5%);
+    background-color: shila-shade($shila-content-background-color, 5%);
     cursor: not-allowed;
     &:hover {
       border: $shila-base-border;

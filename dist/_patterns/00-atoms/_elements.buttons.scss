@@ -24,7 +24,7 @@
   white-space: nowrap;
   &:hover,
   &:focus {
-    background-color: shade($shila-action-color, 20%);
+    background-color: shila-shade($shila-action-color, 20%);
     color: #fff;
   }
   &:disabled {

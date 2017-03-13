@@ -146,7 +146,7 @@ button, input[type='button'], input[type='reset'], input[type='submit'] {
 }
 
 button:hover, button:focus, input[type='button']:hover, input[type='button']:focus, input[type='reset']:hover, input[type='reset']:focus, input[type='submit']:hover, input[type='submit']:focus {
-  background-color: shade(#1565c0, 20%);
+  background-color: #11519a;
   color: #fff;
 }
 
@@ -214,7 +214,7 @@ select[multiple=multiple] {
 
 input[type='color']:hover, input[type='date']:hover, input[type='datetime']:hover, input[type='datetime-local']:hover, input[type='email']:hover, input[type='month']:hover, input[type='number']:hover, input[type='password']:hover, input[type='search']:hover, input[type='tel']:hover, input[type='text']:hover, input[type='time']:hover, input[type='url']:hover, input[type='week']:hover, input:not([type]):hover, textarea:hover,
 select[multiple=multiple]:hover {
-  border-color: shade(#dfdfdf, 20%);
+  border-color: #b3b3b3;
 }
 
 input[type='color']:focus, input[type='date']:focus, input[type='datetime']:focus, input[type='datetime-local']:focus, input[type='email']:focus, input[type='month']:focus, input[type='number']:focus, input[type='password']:focus, input[type='search']:focus, input[type='tel']:focus, input[type='text']:focus, input[type='time']:focus, input[type='url']:focus, input[type='week']:focus, input:not([type]):focus, textarea:focus,
@@ -226,7 +226,7 @@ select[multiple=multiple]:focus {
 
 input[type='color']:disabled, input[type='date']:disabled, input[type='datetime']:disabled, input[type='datetime-local']:disabled, input[type='email']:disabled, input[type='month']:disabled, input[type='number']:disabled, input[type='password']:disabled, input[type='search']:disabled, input[type='tel']:disabled, input[type='text']:disabled, input[type='time']:disabled, input[type='url']:disabled, input[type='week']:disabled, input:not([type]):disabled, textarea:disabled,
 select[multiple=multiple]:disabled {
-  background-color: shade(white, 5%);
+  background-color: #f2f2f2;
   cursor: not-allowed;
 }
 
@@ -363,7 +363,7 @@ table {
 }
 
 th {
-  border-bottom: 1px solid shade(#dfdfdf, 25%);
+  border-bottom: 1px solid #a7a7a7;
   font-weight: 600;
   padding: 0.8rem 0;
   text-align: left;
@@ -395,7 +395,7 @@ a {
 }
 
 a:active, a:focus, a:hover {
-  color: shade(#1565c0, 25%);
+  color: #104c90;
   text-decoration: underline;
 }
 

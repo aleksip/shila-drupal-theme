@@ -94,19 +94,6 @@
 
 /**
  * @file
- * dist/_patterns/01-molecules/components/next-previous/_next-previous.scss
- */
-.next-previous {
-  margin-top: 1.5rem;
-  border-top: 1px solid #9f9f9f;
-  padding: 1rem 0 0 0;
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  font-size: smaller;
-  list-style-type: none;
-}
-
-/**
- * @file
  * molecules/components/shila-card/_shila-card-layout.scss
  */
 /**
@@ -445,7 +432,7 @@
 }
 
 .local-tasks__task .is-active {
-  color: shade(#1565c0, 25%);
+  color: #104c90;
 }
 
 .local-tasks__task a {

@@ -13,7 +13,7 @@ a {
   &:active,
   &:focus,
   &:hover {
-    color: shade($shila-action-color, 25%);
+    color: shila-shade($shila-action-color, 25%);
     text-decoration: underline;
   }
 }

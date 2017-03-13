@@ -12,7 +12,7 @@
   clear: both;
 }
 .local-tasks__task .is-active {
-  color: shade($shila-action-color, 25%);
+  color: shila-shade($shila-action-color, 25%);
 }
 .local-tasks__task .is-active,
 .local-tasks__secondary {
