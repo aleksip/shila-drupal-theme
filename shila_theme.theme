@@ -100,21 +100,19 @@ function shila_theme_preprocess_ds_entity_view(&$variables) {
 }
 
 /**
- * Adds entity type BEM modifier class and contextual links to shila-cards when
- * using UI Patterns module.
+ * Adds entity type and view mode BEM modifier classes and contextual links to
+ * shila-cards when using UI Patterns module.
  *
  * Implements hook_preprocess_HOOK().
  */
 function shila_theme_preprocess_pattern_shila_card(&$variables) {
-  $classes = [];
-  if ($variables['context']->getProperty('entity')) {
-    $classes[] = 'card--' . $variables['context']->getProperty('entity')->bundle();
-  }
+  $classes = [
+    'card--type-' . $variables['context']->getProperty('bundle'),
+    'card--view-mode-' . $variables['context']->getProperty('view_mode'),
+  ];
   if ($variables['context']->getProperty('contextual_links')) {
     $classes[] = 'contextual-region';
     $variables['contextual_links'] = $variables['context']->getProperty('contextual_links');
   }
-  if (!empty($classes)) {
-    $variables['attributes'] = $variables['attributes']->addClass($classes);
-  }
+  $variables['attributes'] = $variables['attributes']->addClass($classes);
 }
