@@ -621,11 +621,8 @@ code {
  * organisms/global/shila-page-content/_shila-page-content.scss
  */
 .page__content .region-container {
+  padding-top: 3.2rem;
   background-color: white;
-}
-
-.page__content .block:first-child {
-  margin-top: 3.2rem;
 }
 
 /**
