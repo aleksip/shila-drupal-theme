@@ -2,13 +2,6 @@ shila_image:
   label: Image
   description: An image component with an optional caption and image credit.
   fields:
-    attributes:
-      type: Attribute object
-      label: Attributes
-      description: An Attribute object containing possible additional attributes.
-      preview:
-        class:
-          - image
     image:
       type: image
       label: Image
