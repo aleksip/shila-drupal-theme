@@ -1,0 +1,15 @@
+shila_byline:
+  label: Byline
+  description: Gives the date, as well as the name of the writer or source of the content.
+  fields:
+    source:
+      type: string
+      label: Source
+      description: Source
+      preview: Author Name
+    date:
+      type: date
+      label: Date
+      description: Date
+      preview: 13.3.2017
+  use: '@molecules/text/shila-byline/shila-byline.html.twig'
