@@ -475,6 +475,23 @@
 
 /**
  * @file
+ * molecules/text/shila-byline/_shila-byline.scss
+ */
+.byline {
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  color: gray;
+}
+
+.byline a {
+  color: gray;
+}
+
+.byline > * + *::before {
+  content: ' | ';
+}
+
+/**
+ * @file
  * molecules/text/shila-formatted-text/_shila-formatted-text.scss
  */
 code {

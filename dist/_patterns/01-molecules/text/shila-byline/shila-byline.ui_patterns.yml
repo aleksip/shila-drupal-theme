@@ -1,12 +1,17 @@
 shila_byline:
   label: Byline
-  description: Gives the date, as well as the name of the writer or source of the content.
+  description: Gives the date, as well as the name of the writer and/or source of the content. e
   fields:
+    author:
+      type: string
+      label: Author
+      description: Author
+      preview: Author Name
     source:
       type: string
       label: Source
       description: Source
-      preview: Author Name
+      preview: Source Name
     date:
       type: date
       label: Date

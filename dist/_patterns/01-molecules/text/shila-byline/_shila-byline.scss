@@ -9,4 +9,7 @@
   a {
     color: $shila-medium-gray;
   }
+  > * + *::before {
+    content: ' | ';
+  }
 }
