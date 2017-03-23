@@ -18,6 +18,9 @@
     margin-bottom: 0;
   }
 }
-.card--horizontal {
+.card--layout-breakpoint {
+  @include card-breakpoint-layout;
+}
+.card--layout-horizontal {
   @include card-breakpoint-layout('horizontal');
 }

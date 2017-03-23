@@ -7,8 +7,10 @@
   .card + .card {
     margin-top: $shila-base-spacing;
   }
+}
+.card-list--layout-default {
   @include card-list-layout;
 }
-.card-list--multicol {
+.card-list--layout-multicol {
   @include card-list-multicol-breakpoint-layout;
 }
