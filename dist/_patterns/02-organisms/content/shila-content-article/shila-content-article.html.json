@@ -6,6 +6,8 @@
     },
     "page": true,
     "display_submitted": true,
+    "author": "Submitted by Author Name",
+    "metadata": "on Mon, 01/04/2016 - 12:08",
     "content": {
         "join()": [
             "molecules-node-body-field.html",

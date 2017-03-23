@@ -1,4 +1,9 @@
 {
+  "attributes": {
+    "Attribute()": {
+      "class": ["card-list--layout-default"]
+    }
+  },
   "cards": [
     {
       "image": "atoms-landscape-3x2",

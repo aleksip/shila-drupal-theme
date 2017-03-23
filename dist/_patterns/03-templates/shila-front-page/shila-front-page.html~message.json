@@ -1,34 +1,49 @@
 {
-    "block_messages": {
+    "page": {
         "include()": {
-            "pattern": "molecules-shila-messages.html",
+            "pattern": "organisms-shila-page.html",
             "with": {
-                "attributes": {
-                    "Attribute()": {
-                        "class": ["messages"]
+                "page": {
+                    "header": "organisms-shila-page-header.html",
+                    "content": {
+                        "include()": {
+                            "pattern": "organisms-shila-page-content.html",
+                            "with": {
+                                "content": {
+                                    "join()": [
+                                        {
+                                            "include()": {
+                                                "pattern": "molecules-shila-messages.html",
+                                                "with": {
+                                                    "attributes": {
+                                                        "Attribute()": {
+                                                            "class": ["messages"]
+                                                        }
+                                                    },
+                                                    "message_list": {
+                                                        "status": ["Front page with a status message"]
+                                                    }
+                                                },
+                                                "only": true
+                                            }
+                                        },
+                                        "organisms-shila-front-page-listing.html"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "footer": {
+                        "include()": {
+                            "pattern": "organisms-shila-page-footer.html",
+                            "with": {
+                                "content": "organisms-powered-by-block.html"
+                            }
+                        }
                     }
-                },
-                "message_list": {
-                    "status": ["Front page with a status message"]
                 }
-            },
-            "only": true
-        }
-    },
-    "block_main": {
-        "include()": {
-            "pattern": "organisms-main-block.html",
-            "with": {
-                "content": "organisms-shila-front-page-listing.html"
             }
         }
     },
-    "page_footer": {
-        "include()": {
-            "pattern": "organisms-shila-page-footer.html",
-            "with": {
-                "page_footer_content": "organisms-powered-by-block.html"
-            }
-        }
-    }
+    "off_canvas": "organisms-shila-off-canvas.html"
 }

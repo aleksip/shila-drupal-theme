@@ -1,38 +1,59 @@
 {
-    "block_page_title": {
+    "page": {
         "include()": {
-            "pattern": "organisms-shila-page-title-block.html",
+            "pattern": "organisms-shila-page.html",
             "with": {
-                "content": {
-                    "include()": {
-                        "pattern": "molecules-shila-page-title.html",
-                        "with": {
-                            "title": "Multi-column card list page"
-                        }
-                    }
-                }
-            }
-        }
-    },
-    "block_main": {
-        "include()": {
-            "pattern": "organisms-main-block.html",
-            "with": {
-                "content": {
-                    "include()": {
-                        "pattern": "organisms-shila-card-list.html",
-                        "with": {
-                            "attributes": {
-                                "Attribute()": {
-                                    "class": [
-                                        "card-list--multicol"
+                "page": {
+                    "header": "organisms-shila-page-header.html",
+                    "content": {
+                        "include()": {
+                            "pattern": "organisms-shila-page-content.html",
+                            "with": {
+                                "content": {
+                                    "join()": [
+                                        {
+                                            "include()": {
+                                                "pattern": "organisms-shila-page-title-block.html",
+                                                "with": {
+                                                    "content": {
+                                                        "include()": {
+                                                            "pattern": "molecules-shila-page-title.html",
+                                                            "with": {
+                                                                "title": "Multi-column card list page"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "include()": {
+                                                "pattern": "organisms-main-block.html",
+                                                "with": {
+                                                    "content": {
+                                                        "include()": {
+                                                            "pattern": "organisms-shila-card-list.html",
+                                                            "with": {
+                                                                "attributes": {
+                                                                    "Attribute()": {
+                                                                        "class": ["card-list--layout-multicol"]
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
                                     ]
                                 }
                             }
                         }
-                    }
+                    },
+                    "footer": "organisms-shila-page-footer.html"
                 }
             }
         }
-    }
+    },
+    "off_canvas": "organisms-shila-off-canvas.html"
 }

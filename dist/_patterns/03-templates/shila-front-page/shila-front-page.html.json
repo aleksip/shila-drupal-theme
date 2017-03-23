@@ -1,18 +1,27 @@
 {
-    "page_header": "organisms-shila-page-header.html",
-    "block_main": {
+    "page": {
         "include()": {
-            "pattern": "organisms-main-block.html",
+            "pattern": "organisms-shila-page.html",
             "with": {
-                "content": "organisms-shila-front-page-listing.html"
-            }
-        }
-    },
-    "page_footer": {
-        "include()": {
-            "pattern": "organisms-shila-page-footer.html",
-            "with": {
-                "content": "organisms-powered-by-block.html"
+                "page": {
+                    "header": "organisms-shila-page-header.html",
+                    "content": {
+                        "include()": {
+                            "pattern": "organisms-shila-page-content.html",
+                            "with": {
+                                "content": "organisms-shila-front-page-listing.html"
+                            }
+                        }
+                    },
+                    "footer": {
+                        "include()": {
+                            "pattern": "organisms-shila-page-footer.html",
+                            "with": {
+                                "content": "organisms-powered-by-block.html"
+                            }
+                        }
+                    }
+                }
             }
         }
     },

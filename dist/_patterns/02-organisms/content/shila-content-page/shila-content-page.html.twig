@@ -3,4 +3,8 @@
  * @see templates/content/node--page.html.twig
  */
 #}
-{% include "@organisms/content/shila-content/shila-content.html.twig" %}
+{% include "@organisms/content/shila-content/shila-content.html.twig"
+  with {
+    'attributes': attributes
+  }
+%}

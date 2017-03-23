@@ -19,29 +19,12 @@
   </head>
   <body class="{{ bodyClass }}">
     <div class="layout-container">
-      <input id="off-canvas-checkbox" type="checkbox">
-      <label for="off-canvas-checkbox" id="off-canvas-label" onclick=""></label>
-      <div class="page{% block is_front %}{% endblock %}">
-        {% block page_header %}
-          {{ page_header }}
-        {% endblock %}
-        <main role="main" class="main page__content">
-          <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-          <div class="region region--content">
-            {% block page_content %}
-              {{ block_page_title }}
-              {{ block_messages }}
-              {{ block_main }}
-            {% endblock %}
-          </div>
-        </main>
-        {% block page_footer %}
-          {{ page_footer }}
-        {% endblock %}
-      </div>
-      {% block off_canvas %}
-        {{ off_canvas }}
-      {% endblock %}
+      {% if off_canvas %}
+        <input type="checkbox" id="off-canvas-checkbox">
+        <label for="off-canvas-checkbox" id="off-canvas-label"></label>
+      {% endif %}
+      {{ page }}
+      {{ off_canvas }}
     </div>{# /.layout-container #}
   </body>
 </html>

@@ -2,7 +2,7 @@
   "attributes": {
     "Attribute()": {
       "class": [
-        "card-list--multicol"
+        "card-list--layout-multicol"
       ]
     }
   },

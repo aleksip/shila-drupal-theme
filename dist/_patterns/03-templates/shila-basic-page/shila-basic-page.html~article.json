@@ -1,25 +1,48 @@
 {
-    "block_page_title": {
+    "page": {
         "include()": {
-            "pattern": "organisms-shila-page-title-block.html",
+            "pattern": "organisms-shila-page.html",
             "with": {
-                "content": {
-                    "include()": {
-                        "pattern": "molecules-shila-page-title.html",
-                        "with": {
-                            "title": "Article page"
+                "page": {
+                    "header": "organisms-shila-page-header.html",
+                    "content": {
+                        "include()": {
+                            "pattern": "organisms-shila-page-content.html",
+                            "with": {
+                                "content": {
+                                    "join()": [
+                                        {
+                                            "include()": {
+                                                "pattern": "organisms-shila-page-title-block.html",
+                                                "with": {
+                                                    "content": {
+                                                        "include()": {
+                                                            "pattern": "molecules-shila-page-title.html",
+                                                            "with": {
+                                                                "title": "Article page"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "include()": {
+                                                "pattern": "organisms-main-block.html",
+                                                "with": {
+                                                    "content": "organisms-shila-content-article.html"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
                         }
-                    }
+                    },
+                    "footer": "organisms-shila-page-footer.html"
                 }
             }
         }
     },
-    "block_main": {
-        "include()": {
-            "pattern": "organisms-main-block.html",
-            "with": {
-                "content": "organisms-shila-article.html"
-            }
-        }
-    }
+    "off_canvas": "organisms-shila-off-canvas.html"
 }
