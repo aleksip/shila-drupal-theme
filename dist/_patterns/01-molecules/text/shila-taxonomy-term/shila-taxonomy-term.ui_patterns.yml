@@ -1,0 +1,15 @@
+shila_taxonomy_term:
+  label: Taxonomy term
+  description: Taxonomy term
+  fields:
+    title:
+      type: string
+      label: Title
+      description: Term title
+      preview: Term title
+    url:
+      type: string
+      label: URL
+      description: Term URL
+      preview: http://example.com
+  use: '@molecules/text/shila-taxonomy-term/shila-taxonomy-term.html.twig'
