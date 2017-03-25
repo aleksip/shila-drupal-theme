@@ -5,6 +5,8 @@
  * Functions to support theming in Shila theme.
  */
 
+use Drupal\Core\Form\FormStateInterface;
+
 /**
  * Adds a template suggestion for the search block form.
  *
@@ -13,6 +15,17 @@
 function shila_theme_theme_suggestions_form_alter(array &$suggestions, array $variables) {
   if ($variables['element']['#form_id'] == 'search_block_form') {
     $suggestions[] = 'form__search_block_form';
+  }
+}
+
+/**
+ * Adds a placeholder attribute to the search block form.
+ *
+ * Implements hook_form_alter().
+ */
+function shila_theme_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'search_block_form') {
+    $form['keys']['#attributes']['placeholder'] = t('Enter your keywords');
   }
 }
 
