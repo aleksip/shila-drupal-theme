@@ -122,7 +122,44 @@
   margin-bottom: 0;
 }
 
-.card--horizontal .card__image {
+.card--layout-breakpoint .card__image {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+
+.card--layout-breakpoint .card__image:not(:empty) {
+  margin-bottom: 0.65rem;
+}
+
+.card--layout-breakpoint .card__body {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: both;
+}
+
+@media (min-width: 525px) {
+  .card--layout-breakpoint .card__image {
+    width: 22.22222%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none;
+  }
+  .card--layout-breakpoint .card__body {
+    width: 74.07407%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+}
+
+.card--layout-horizontal .card__image {
   width: 20%;
   float: left;
   margin-right: -100%;
@@ -130,7 +167,7 @@
   clear: none;
 }
 
-.card--horizontal .card__body {
+.card--layout-horizontal .card__body {
   width: 73.33333%;
   float: right;
   margin-left: 0;
@@ -139,14 +176,14 @@
 }
 
 @media (min-width: 525px) {
-  .card--horizontal .card__image {
+  .card--layout-horizontal .card__image {
     width: 22.22222%;
     float: left;
     margin-right: -100%;
     margin-left: 0;
     clear: none;
   }
-  .card--horizontal .card__body {
+  .card--layout-horizontal .card__body {
     width: 74.07407%;
     float: right;
     margin-left: 0;
@@ -157,82 +194,17 @@
 
 /**
  * @file
- * molecules/components/shila-comment/_shila-comment.scss
+ * molecules/forms/shila-form/_shila-form--comment.scss
  */
-.comment {
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  font-size: smaller;
-}
-
-.comment__title {
-  display: none;
-}
-
-.comment__byline {
-  margin: 0.5em 0 0;
-  color: gray;
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-}
-
-.comment__byline p {
-  margin: 0;
-}
-
-.comment__permalink {
-  display: none;
-}
-
-.comment__content .field--comment-body p:first-child {
-  margin-top: 0;
-}
-
-.comment__content .links {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-
-.comment__content .links::after {
-  clear: both;
-  content: '';
-  display: table;
-}
-
-.comment__content .links li {
-  list-style-image: none;
-  list-style-type: none;
-  margin-left: 0;
-  white-space: nowrap;
-  float: left;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-}
-
-.comment__content .links li:first-child, .comment__content .links li.first {
-  padding-left: 0;
-}
-
-.comment__content .links li:last-child {
-  padding-right: 0;
-}
-
-.comment__content .links li.last {
-  padding-right: 0;
-}
-
-.path-frontpage .comment-add {
+.form--comment #edit-field-homepage-0-uri--description,
+.form--comment #edit-preview {
   display: none;
 }
 
 /**
  * @file
- * molecules/forms/comment-form/_comment-form.scss
+ * molecules/forms/shila-form/_shila-form--search-block.scss
  */
-.comment-form #edit-field-homepage-0-uri--description,
-.comment-form #edit-preview {
-  display: none;
-}
-
 /**
  * @file
  * molecules/forms/shila-form/_shila-form.scss
@@ -243,7 +215,7 @@
 }
 
 .form .form-item {
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.65rem;
 }
 
 .form .description {
@@ -252,10 +224,6 @@
   color: gray;
 }
 
-/**
- * @file
- * molecules/forms/shila-search-block-form/_shila-search-block-form.scss
- */
 /**
  * @file
  * molecules/media/shila-image/_shila-image.scss
@@ -285,12 +253,16 @@
  * @file
  * molecules/messaging/shila-messages/_shila-messages.scss
  */
+.messages ul {
+  margin-bottom: 0;
+}
+
 .messages--status {
   background-color: #e5edf8;
   color: #244e87;
   display: block;
-  margin-bottom: 0.8rem;
-  padding: 0.8rem;
+  margin-bottom: 0.65rem;
+  padding: 0.65rem;
   text-align: center;
 }
 
@@ -307,8 +279,8 @@
   background-color: #fff6bf;
   color: #8c7800;
   display: block;
-  margin-bottom: 0.8rem;
-  padding: 0.8rem;
+  margin-bottom: 0.65rem;
+  padding: 0.65rem;
   text-align: center;
 }
 
@@ -325,8 +297,8 @@
   background-color: #fbe3e4;
   color: #97161b;
   display: block;
-  margin-bottom: 0.8rem;
-  padding: 0.8rem;
+  margin-bottom: 0.65rem;
+  padding: 0.65rem;
   text-align: center;
 }
 
@@ -452,7 +424,7 @@
 
 .pager li {
   display: inline-block;
-  padding-left: 0.8rem;
+  padding-left: 0.65rem;
 }
 
 .pager li:first-child {
@@ -537,7 +509,23 @@ code {
  */
 /**
  * @file
- * organisms/blocks/powered-by-block/_powered-by-block.scss
+ * molecules/text/shila-taxonomy-term/_shila-taxonomy-term.scss
+ */
+.taxonomy-terms .taxonomy-term {
+  display: inline-block;
+  border: 1px solid #1565c0;
+  border-radius: 21px;
+  padding: 0 0.65rem;
+  margin-bottom: 0.325rem;
+}
+
+/**
+ * @file
+ * molecules/text/shila-taxonomy-terms/_shila-taxonomy-terms.scss
+ */
+/**
+ * @file
+ * organisms/blocks/shila-block/_shila-block--powered-by.scss
  */
 .block--powered-by {
   text-align: center;
@@ -550,21 +538,130 @@ code {
 
 /**
  * @file
- * organisms/content/shila-content-article/_shila-content-article.scss
+ * organisms/blocks/shila-block/_shila-block.scss
  */
-.node--article .filter-wrapper {
+/**
+ * @file
+ * organisms/global/shila-branding/_shila-branding.scss
+ */
+.branding a {
+  color: #202020;
+}
+
+.branding__logo img {
+  max-height: 2.56rem;
+}
+
+@media (min-width: 525px) {
+  .branding__logo img {
+    max-height: 2.67rem;
+  }
+}
+
+.branding__name {
+  font-size: 2.56rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+@media (min-width: 525px) {
+  .branding__name {
+    font-size: 2.67rem;
+  }
+}
+
+@media (max-width: 524px) {
+  .branding__slogan {
+    display: none;
+  }
+}
+
+/**
+ * @file
+ * molecules/components/shila-comment/_shila-comment.scss
+ */
+.comment {
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: smaller;
+}
+
+.comment__title {
+  display: none;
+}
+
+.comment__byline {
+  margin: 0.5em 0 0;
+  color: gray;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+.comment__byline p {
+  margin: 0;
+}
+
+.comment__permalink {
+  display: none;
+}
+
+.comment__content .field--comment-body p:first-child {
+  margin-top: 0;
+}
+
+.comment__content .links {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.comment__content .links::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.comment__content .links li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  white-space: nowrap;
+  float: left;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.comment__content .links li:first-child, .comment__content .links li.first {
+  padding-left: 0;
+}
+
+.comment__content .links li:last-child {
+  padding-right: 0;
+}
+
+.comment__content .links li.last {
+  padding-right: 0;
+}
+
+.path-frontpage .comment-add {
   display: none;
 }
 
 /**
  * @file
- * organisms/content/shila-content/_shila-content.scss
+ * organisms/content/shila-node/_shila-node--type-article.scss
+ */
+.node--type-article .filter-wrapper {
+  display: none;
+}
+
+/**
+ * @file
+ * organisms/content/shila-node/_shila-node.scss
  */
 .node {
   font-family: "Georgia", "Times", "Times New Roman", serif;
 }
 
-.node__byline {
+.node__meta {
   margin: .5em 0 1rem;
   color: gray;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -606,11 +703,11 @@ code {
   padding-right: 0;
 }
 
-.node.teaser .node__title {
+.node--view-mode-teaser .node__title {
   margin: 0;
 }
 
-.node.teaser .node__title a {
+.node--view-mode-teaser .node__title a {
   color: #202020;
 }
 
@@ -638,8 +735,11 @@ code {
  * organisms/global/shila-page-content/_shila-page-content.scss
  */
 .page__content .region-container {
-  padding-top: 3.2rem;
   background-color: white;
+}
+
+.page__content .region--content {
+  padding-top: 2.6rem;
 }
 
 /**
@@ -675,7 +775,7 @@ code {
 
 .page__header .nav > ul li {
   display: inline-block;
-  padding-left: 0.8rem;
+  padding-left: 0.65rem;
 }
 
 .page__header .nav > ul li:first-child {
@@ -718,42 +818,6 @@ code {
  */
 /**
  * @file
- * organisms/global/shila-branding/_shila-branding.scss
- */
-.branding a {
-  color: #202020;
-}
-
-.branding__logo img {
-  max-height: 2.56rem;
-}
-
-@media (min-width: 525px) {
-  .branding__logo img {
-    max-height: 2.67rem;
-  }
-}
-
-.branding__name {
-  font-size: 2.56rem;
-  font-weight: bold;
-  line-height: 1.2;
-}
-
-@media (min-width: 525px) {
-  .branding__name {
-    font-size: 2.67rem;
-  }
-}
-
-@media (max-width: 524px) {
-  .branding__slogan {
-    display: none;
-  }
-}
-
-/**
- * @file
  * organisms/sections/shila-card-list/_shila-card-list-layout.scss
  */
 /**
@@ -761,10 +825,10 @@ code {
  * organisms/sections/shila-card-list/_shila-card-list.scss
  */
 .card-list .card + .card {
-  margin-top: 1.6rem;
+  margin-top: 1.3rem;
 }
 
-.card-list .card .card__image {
+.card-list--layout-default .card .card__image {
   width: 100%;
   float: right;
   margin-left: 0;
@@ -772,11 +836,11 @@ code {
   clear: none;
 }
 
-.card-list .card .card__image:not(:empty) {
-  margin-bottom: 0.8rem;
+.card-list--layout-default .card .card__image:not(:empty) {
+  margin-bottom: 0.65rem;
 }
 
-.card-list .card .card__body {
+.card-list--layout-default .card .card__body {
   width: 100%;
   float: right;
   margin-left: 0;
@@ -785,14 +849,14 @@ code {
 }
 
 @media (min-width: 525px) {
-  .card-list .card .card__image {
+  .card-list--layout-default .card .card__image {
     width: 22.22222%;
     float: left;
     margin-right: -100%;
     margin-left: 0;
     clear: none;
   }
-  .card-list .card .card__body {
+  .card-list--layout-default .card .card__body {
     width: 74.07407%;
     float: right;
     margin-left: 0;
@@ -801,7 +865,7 @@ code {
   }
 }
 
-.card-list--multicol .card .card__image {
+.card-list--layout-multicol .card .card__image {
   width: 100%;
   float: right;
   margin-left: 0;
@@ -809,11 +873,11 @@ code {
   clear: none;
 }
 
-.card-list--multicol .card .card__image:not(:empty) {
-  margin-bottom: 0.8rem;
+.card-list--layout-multicol .card .card__image:not(:empty) {
+  margin-bottom: 0.65rem;
 }
 
-.card-list--multicol .card .card__body {
+.card-list--layout-multicol .card .card__body {
   width: 100%;
   float: right;
   margin-left: 0;
@@ -822,34 +886,34 @@ code {
 }
 
 @media (min-width: 525px) {
-  .card-list--multicol .card:nth-child(2n+1) {
+  .card-list--layout-multicol .card:nth-child(2n+1) {
     width: 48%;
     float: left;
     margin-right: -100%;
     margin-left: 0;
     clear: both;
   }
-  .card-list--multicol .card:nth-child(2n+2) {
+  .card-list--layout-multicol .card:nth-child(2n+2) {
     width: 48%;
     float: right;
     margin-left: 0;
     margin-right: 0;
     clear: none;
   }
-  .card-list--multicol .card + .card:nth-child(2) {
+  .card-list--layout-multicol .card + .card:nth-child(2) {
     margin-top: 0;
   }
-  .card-list--multicol .card .card__image {
+  .card-list--layout-multicol .card .card__image {
     width: 100%;
     float: right;
     margin-left: 0;
     margin-right: 0;
     clear: none;
   }
-  .card-list--multicol .card .card__image:not(:empty) {
-    margin-bottom: 0.8rem;
+  .card-list--layout-multicol .card .card__image:not(:empty) {
+    margin-bottom: 0.65rem;
   }
-  .card-list--multicol .card .card__body {
+  .card-list--layout-multicol .card .card__body {
     width: 100%;
     float: right;
     margin-left: 0;
@@ -859,44 +923,44 @@ code {
 }
 
 @media (min-width: 801px) {
-  .card-list--multicol .card:nth-child(3n+1) {
+  .card-list--layout-multicol .card:nth-child(3n+1) {
     width: 31.57895%;
     float: left;
     margin-right: -100%;
     margin-left: 0;
     clear: both;
   }
-  .card-list--multicol .card:nth-child(3n+2) {
+  .card-list--layout-multicol .card:nth-child(3n+2) {
     width: 31.57895%;
     float: left;
     margin-right: -100%;
     margin-left: 34.21053%;
     clear: none;
   }
-  .card-list--multicol .card:nth-child(3n+3) {
+  .card-list--layout-multicol .card:nth-child(3n+3) {
     width: 31.57895%;
     float: right;
     margin-left: 0;
     margin-right: 0;
     clear: none;
   }
-  .card-list--multicol .card + .card:nth-child(2) {
+  .card-list--layout-multicol .card + .card:nth-child(2) {
     margin-top: 0;
   }
-  .card-list--multicol .card + .card:nth-child(3) {
+  .card-list--layout-multicol .card + .card:nth-child(3) {
     margin-top: 0;
   }
-  .card-list--multicol .card .card__image {
+  .card-list--layout-multicol .card .card__image {
     width: 100%;
     float: right;
     margin-left: 0;
     margin-right: 0;
     clear: none;
   }
-  .card-list--multicol .card .card__image:not(:empty) {
-    margin-bottom: 0.8rem;
+  .card-list--layout-multicol .card .card__image:not(:empty) {
+    margin-bottom: 0.65rem;
   }
-  .card-list--multicol .card .card__body {
+  .card-list--layout-multicol .card .card__body {
     width: 100%;
     float: right;
     margin-left: 0;
@@ -906,54 +970,54 @@ code {
 }
 
 @media (min-width: 1025px) {
-  .card-list--multicol .card:nth-child(4n+1) {
+  .card-list--layout-multicol .card:nth-child(4n+1) {
     width: 23.52941%;
     float: left;
     margin-right: -100%;
     margin-left: 0;
     clear: both;
   }
-  .card-list--multicol .card:nth-child(4n+2) {
+  .card-list--layout-multicol .card:nth-child(4n+2) {
     width: 23.52941%;
     float: left;
     margin-right: -100%;
     margin-left: 25.4902%;
     clear: none;
   }
-  .card-list--multicol .card:nth-child(4n+3) {
+  .card-list--layout-multicol .card:nth-child(4n+3) {
     width: 23.52941%;
     float: left;
     margin-right: -100%;
     margin-left: 50.98039%;
     clear: none;
   }
-  .card-list--multicol .card:nth-child(4n+4) {
+  .card-list--layout-multicol .card:nth-child(4n+4) {
     width: 23.52941%;
     float: right;
     margin-left: 0;
     margin-right: 0;
     clear: none;
   }
-  .card-list--multicol .card + .card:nth-child(2) {
+  .card-list--layout-multicol .card + .card:nth-child(2) {
     margin-top: 0;
   }
-  .card-list--multicol .card + .card:nth-child(3) {
+  .card-list--layout-multicol .card + .card:nth-child(3) {
     margin-top: 0;
   }
-  .card-list--multicol .card + .card:nth-child(4) {
+  .card-list--layout-multicol .card + .card:nth-child(4) {
     margin-top: 0;
   }
-  .card-list--multicol .card .card__image {
+  .card-list--layout-multicol .card .card__image {
     width: 100%;
     float: right;
     margin-left: 0;
     margin-right: 0;
     clear: none;
   }
-  .card-list--multicol .card .card__image:not(:empty) {
-    margin-bottom: 0.8rem;
+  .card-list--layout-multicol .card .card__image:not(:empty) {
+    margin-bottom: 0.65rem;
   }
-  .card-list--multicol .card .card__body {
+  .card-list--layout-multicol .card .card__body {
     width: 100%;
     float: right;
     margin-left: 0;
@@ -967,15 +1031,15 @@ code {
  * organisms/sections/shila-comments/_shila-comments.scss
  */
 .comments {
-  margin-top: 3.2rem;
+  margin-top: 2.6rem;
 }
 
 .comments .comment + .comment {
-  margin-top: 3.2rem;
+  margin-top: 2.6rem;
 }
 
 .comments .indented {
-  padding-left: 1.6rem;
+  padding-left: 1.3rem;
 }
 
 .comments__title {
@@ -987,7 +1051,7 @@ code {
  * organisms/sections/shila-front-page-listing/_shila-front-page-listing.scss
  */
 .front-page-listing__row + .front-page-listing__row {
-  margin-top: 3.2rem;
+  margin-top: 2.6rem;
 }
 
 /*# sourceMappingURL=components.css.map */

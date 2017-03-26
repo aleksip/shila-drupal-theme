@@ -17,7 +17,7 @@
                         "include()": {
                             "pattern": "organisms-shila-page-footer.html",
                             "with": {
-                                "content": "organisms-powered-by-block.html"
+                                "content": "organisms-shila-block.html-powered-by"
                             }
                         }
                     }

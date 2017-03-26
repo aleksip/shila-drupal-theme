@@ -95,8 +95,8 @@ html {
  * partials/elements/_elements.page.scss
  */
 html {
-  font-size: 1.125em;
-  line-height: 1.6;
+  font-size: 1em;
+  line-height: 1.3;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   color: #202020;
   background-color: white;
@@ -104,19 +104,19 @@ html {
 
 @media (min-width: 525px) {
   html {
-    font-size: 1.25em;
+    font-size: 1em;
   }
 }
 
 @media (min-width: 801px) {
   html {
-    font-size: 1.25em;
+    font-size: 1em;
   }
 }
 
 @media (min-width: 1025px) {
   html {
-    font-size: 1.25em;
+    font-size: 1em;
   }
 }
 
@@ -137,7 +137,7 @@ button, input[type='button'], input[type='reset'], input[type='submit'] {
   -webkit-font-smoothing: antialiased;
   font-weight: 600;
   line-height: 1;
-  padding: 0.8rem 1.6rem;
+  padding: 0.65rem 1.3rem;
   text-decoration: none;
   transition: background-color 150ms ease;
   user-select: none;
@@ -172,7 +172,7 @@ fieldset {
 
 legend {
   font-weight: 600;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.325rem;
   padding: 0;
 }
 
@@ -186,7 +186,7 @@ select {
 
 label {
   font-weight: 600;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.325rem;
 }
 
 label.required::after {
@@ -206,8 +206,8 @@ select[multiple=multiple] {
   box-sizing: border-box;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 1rem;
-  margin-bottom: 0.8rem;
-  padding: 0.53333rem;
+  margin-bottom: 0.65rem;
+  padding: 0.43333rem;
   transition: border-color 150ms ease;
   width: 100%;
 }
@@ -246,7 +246,7 @@ input[type="search"] {
 input[type="checkbox"],
 input[type="radio"] {
   display: inline;
-  margin-right: 0.4rem;
+  margin-right: 0.325rem;
 }
 
 input[type="checkbox"] + label,
@@ -255,12 +255,12 @@ input[type="radio"] + label {
 }
 
 input[type="file"] {
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.65rem;
   width: 100%;
 }
 
 select {
-  margin-bottom: 1.6rem;
+  margin-bottom: 1.3rem;
   max-width: 100%;
   width: auto;
 }
@@ -339,12 +339,12 @@ ol {
 }
 
 dl {
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.65rem;
 }
 
 dl dt {
   font-weight: 600;
-  margin-top: 0.8rem;
+  margin-top: 0.65rem;
 }
 
 dl dd {
@@ -357,7 +357,7 @@ dl dd {
  */
 table {
   border-collapse: collapse;
-  margin: 0.8rem 0;
+  margin: 0.65rem 0;
   table-layout: fixed;
   width: 100%;
 }
@@ -365,13 +365,13 @@ table {
 th {
   border-bottom: 1px solid #a7a7a7;
   font-weight: 600;
-  padding: 0.8rem 0;
+  padding: 0.65rem 0;
   text-align: left;
 }
 
 td {
   border-bottom: 1px solid #dfdfdf;
-  padding: 0.8rem 0;
+  padding: 0.65rem 0;
 }
 
 tr,
@@ -404,7 +404,7 @@ hr {
   border-left: 0;
   border-right: 0;
   border-top: 0;
-  margin: 1.6rem 0;
+  margin: 1.3rem 0;
 }
 
 blockquote {

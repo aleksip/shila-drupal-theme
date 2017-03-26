@@ -13,7 +13,7 @@
                                     "join()": [
                                         {
                                             "include()": {
-                                                "pattern": "organisms-shila-page-title-block.html",
+                                                "pattern": "organisms-shila-block.html-page-title",
                                                 "with": {
                                                     "content": {
                                                         "include()": {
@@ -28,9 +28,9 @@
                                         },
                                         {
                                             "include()": {
-                                                "pattern": "organisms-main-block.html",
+                                                "pattern": "organisms-shila-block.html-main",
                                                 "with": {
-                                                    "content": "organisms-shila-content-article.html"
+                                                    "content": "organisms-shila-node.html-article"
                                                 }
                                             }
                                         }

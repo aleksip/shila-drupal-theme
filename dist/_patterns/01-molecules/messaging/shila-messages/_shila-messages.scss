@@ -25,6 +25,11 @@ $success-color: #e6efc2 !default;
   }
 }
 
+.messages {
+  ul {
+    margin-bottom: 0;
+  }
+}
 .messages--status {
   @include message($status-color);
 }

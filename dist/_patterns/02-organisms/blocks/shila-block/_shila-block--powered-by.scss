@@ -1,0 +1,12 @@
+/**
+ * @file
+ * organisms/blocks/shila-block/_shila-block--powered-by.scss
+ */
+
+.block--powered-by {
+  text-align: center;
+  font-size: smaller;
+  a {
+    color: $shila-base-font-color;
+  }
+}

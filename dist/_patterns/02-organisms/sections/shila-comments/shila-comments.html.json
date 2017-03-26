@@ -12,13 +12,13 @@
     "label": "Comments",
     "comments": {
         "join()": [
-            "molecules-shila-comment.html",
+            "organisms-shila-comment.html",
             "<div class=\"indented\">",
-            "molecules-shila-comment.html",
+            "organisms-shila-comment.html",
             "</div>",
-            "molecules-shila-comment.html"
+            "organisms-shila-comment.html"
         ]
     },
     "comment_form_title": "Add new comment",
-    "comment_form": "molecules-comment-form"
+    "comment_form": "molecules-shila-form.html-comment"
 }

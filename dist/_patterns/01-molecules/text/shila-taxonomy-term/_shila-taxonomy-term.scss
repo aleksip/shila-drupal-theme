@@ -4,4 +4,11 @@
  */
 
 .taxonomy-term {
+  .taxonomy-terms & {
+    display: inline-block;
+    border: 1px solid $shila-action-color;
+    border-radius: shila-pixel-line-height();
+    padding: 0 $shila-small-spacing;
+    margin-bottom: $shila-tiny-spacing;
+  }
 }

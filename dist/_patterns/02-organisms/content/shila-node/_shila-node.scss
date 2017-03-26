@@ -1,0 +1,26 @@
+/**
+ * @file
+ * organisms/content/shila-node/_shila-node.scss
+ */
+
+.node {
+  font-family: $shila-font-stack-georgia;
+}
+.node__meta {
+  margin: .5em 0 1rem;
+  color: $shila-medium-gray;
+  font-family: $shila-base-font-family;
+  font-size: smaller;
+}
+.node__links {
+  @include shila-horizontal-list(.5em);
+  font-family: $shila-base-font-family;
+}
+.node--view-mode-teaser {
+  .node__title {
+    margin: 0;
+    a {
+      color: $shila-base-font-color;
+    }
+  }
+}

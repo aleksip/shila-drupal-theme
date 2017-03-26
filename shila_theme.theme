@@ -8,14 +8,12 @@
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Adds a template suggestion for the search block form.
+ * Adds a form id based template suggestion for all forms.
  *
  * Implements hook_theme_suggestions_HOOK_alter() for form templates.
  */
 function shila_theme_theme_suggestions_form_alter(array &$suggestions, array $variables) {
-  if ($variables['element']['#form_id'] == 'search_block_form') {
-    $suggestions[] = 'form__search_block_form';
-  }
+  $suggestions[] = 'form__' . $variables['element']['#form_id'];
 }
 
 /**

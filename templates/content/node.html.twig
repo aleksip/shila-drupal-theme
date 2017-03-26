@@ -72,7 +72,6 @@
 #}
 {%
   set classes = [
-    'node',
     'node--type-' ~ node.bundle|clean_class,
     node.isPromoted() ? 'node--promoted',
     node.isSticky() ? 'node--sticky',
@@ -81,12 +80,9 @@
   ]
 %}
 {% set attributes = attributes.addClass(classes) %}
-{% if view_mode != 'page' %}
-  {% set title_attributes = title_attributes.addClass('node__title') %}
-{% endif %}
 {% set author %}
   {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
 {% endset %}
 {% block template %}
-  {% include "@organisms/content/shila-content/shila-content.html.twig" %}
+  {% include "@organisms/content/shila-node/shila-node.html.twig" %}
 {% endblock %}

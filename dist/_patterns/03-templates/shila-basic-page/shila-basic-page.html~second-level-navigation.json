@@ -11,7 +11,7 @@
                                 "content": {
                                     "join()": [
                                         "organisms-shila-branding.html",
-                                        "molecules-shila-navigation-main",
+                                        "molecules-shila-navigation.html-main",
                                         {
                                             "include()": {
                                                 "pattern": "molecules-shila-navigation.html",
@@ -35,7 +35,7 @@
                                     "join()": [
                                         {
                                             "include()": {
-                                                "pattern": "organisms-shila-page-title-block.html",
+                                                "pattern": "organisms-shila-block.html-page-title",
                                                 "with": {
                                                     "content": {
                                                         "include()": {
@@ -50,9 +50,9 @@
                                         },
                                         {
                                             "include()": {
-                                                "pattern": "organisms-main-block.html",
+                                                "pattern": "organisms-shila-block.html-main",
                                                 "with": {
-                                                    "content": "organisms-shila-content-page.html"
+                                                    "content": "organisms-shila-node.html-page"
                                                 }
                                             }
                                         }

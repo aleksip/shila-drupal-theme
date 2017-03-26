@@ -1,14 +1,7 @@
 <div{{ attributes.addClass('card-list') }}>
   {% block cards %}
     {% for card in cards %}
-      {% include '@molecules/components/shila-card/shila-card.html.twig'
-        with {
-          'image': card.image,
-          'title': card.title,
-          'content': card.content,
-          'link': card.link
-        }
-      %}
+      {{ card }}
     {% endfor %}
   {% endblock %}
 </div>
