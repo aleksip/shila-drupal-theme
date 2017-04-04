@@ -38,11 +38,13 @@
  */
 #}
 {% for item in items %}
-  {% include "@molecules/text/shila-taxonomy-term/shila-taxonomy-term.html.twig"
+  {% embed "@molecules/text/shila-taxonomy-term/shila-taxonomy-term.html.twig"
     with {
-      'attributes': item.attributes,
-      'title': item.content['#title'],
-      'url': item.content['#url']
+      'attributes': item.attributes
     }
   %}
+    {% block content %}
+      {{ item.content }}
+    {% endblock %}
+  {% endembed %}
 {% endfor %}

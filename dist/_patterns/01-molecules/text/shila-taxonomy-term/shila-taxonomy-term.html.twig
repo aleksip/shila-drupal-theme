@@ -3,6 +3,10 @@
  * @see templates/field/field--entity-reference--taxonomy-term--entity-reference-label.html.twig
  */
 #}
+{% spaceless %}
 <span{{ attributes.addClass('taxonomy-term') }}>
-  <a href="{{ url }}">{{ title }}</a>
+  {% block content %}
+    <a href="{{ url }}">{{ title }}</a>
+  {% endblock %}
 </span>
+{% endspaceless %}
