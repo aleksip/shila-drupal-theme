@@ -15,11 +15,21 @@ shila_card:
             uri: http://lorempixel.com/300/200/nature/
             width: 300
             attributes: {}
+    title_prefix:
+      type: string
+      label: Title prefix
+      description: Title prefix.
+      preview: ''
     title:
       type: string
       label: Title
       description: Card title.
       preview: Lorem ipsum dolor sit amet
+    title_suffix:
+      type: string
+      label: Title suffix
+      description: Title suffix.
+      preview: ''
     content:
       type: string
       label: Content

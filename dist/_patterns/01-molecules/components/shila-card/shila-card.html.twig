@@ -6,9 +6,11 @@
   {% endspaceless %}
   <div class="card__body">
     {{ contextual_links }}
+    {{ title_prefix }}
     {% if title %}
       <h2 class="card__title">{{ title }}</h2>
     {% endif %}
+    {{ title_suffix }}
     {% if content %}
       <div class="card__content">
         {% block content %}
@@ -17,7 +19,9 @@
       </div>
     {% endif %}
     {% if actions %}
-      <div class="card__actions">{{ actions }}</div>
+      <div class="card__actions">
+        {{ actions }}
+      </div>
     {% endif %}
   </div>
 </section>
