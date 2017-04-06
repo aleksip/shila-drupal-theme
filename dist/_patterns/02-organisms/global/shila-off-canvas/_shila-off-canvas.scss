@@ -4,9 +4,33 @@
  */
 
 .off-canvas {
+  padding-top: $shila-small-spacing;
+  padding-bottom: $shila-base-spacing;
   background-color: $shila-light-gray;
-  padding: 1rem;
   a {
     color: $shila-base-font-color;
+  }
+  .region {
+    margin: 0;
+  }
+  .menu {
+    @include shila-reset-box-model;
+    @include shila-no-bullets;
+    @include shila-font-size(18px);
+    text-transform: uppercase;
+  }
+  .menu li {
+    border-top: 1px solid darken($shila-light-gray, 2%);
+  }
+  .menu li:last-child {
+    border-bottom: 1px solid darken($shila-light-gray, 2%);
+  }
+  .menu a {
+    display: block;
+    padding: $shila-small-spacing $shila-base-spacing;
+  }
+  .menu a:hover {
+    background-color: darken($shila-light-gray, 2%);
+    text-decoration: none;
   }
 }

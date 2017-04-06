@@ -424,11 +424,10 @@
 
 .pager li {
   display: inline-block;
-  padding-left: 0.65rem;
 }
 
-.pager li:first-child {
-  padding-left: 0;
+.pager li + li {
+  padding-left: 0.65rem;
 }
 
 .pager a {
@@ -722,12 +721,52 @@ code {
  * organisms/global/shila-off-canvas/_shila-off-canvas.scss
  */
 .off-canvas {
+  padding-top: 0.65rem;
+  padding-bottom: 1.3rem;
   background-color: #9f9f9f;
-  padding: 1rem;
 }
 
 .off-canvas a {
   color: #202020;
+}
+
+.off-canvas .region {
+  margin: 0;
+}
+
+.off-canvas .menu {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.16667;
+  text-transform: uppercase;
+}
+
+.off-canvas .menu li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+}
+
+.off-canvas .menu li {
+  border-top: 1px solid #9a9a9a;
+}
+
+.off-canvas .menu li:last-child {
+  border-bottom: 1px solid #9a9a9a;
+}
+
+.off-canvas .menu a {
+  display: block;
+  padding: 0.65rem 1.3rem;
+}
+
+.off-canvas .menu a:hover {
+  background-color: #9a9a9a;
+  text-decoration: none;
 }
 
 /**
@@ -775,11 +814,10 @@ code {
 
 .page__header .nav > ul li {
   display: inline-block;
-  padding-left: 0.65rem;
 }
 
-.page__header .nav > ul li:first-child {
-  padding-left: 0;
+.page__header .nav > ul li + li {
+  padding-left: 0.65rem;
 }
 
 .page__header .nav > ul a {
