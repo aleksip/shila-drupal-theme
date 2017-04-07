@@ -1,7 +1,7 @@
 {
     "attributes": {
         "Attribute()": {
-            "class": ["block", "block--powered-by"]
+            "class": ["block", "block--system-powered-by-block"]
         }
     },
     "title_attributes": {

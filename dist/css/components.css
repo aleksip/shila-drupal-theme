@@ -524,14 +524,14 @@ code {
  */
 /**
  * @file
- * organisms/blocks/shila-block/_shila-block--powered-by.scss
+ * organisms/blocks/shila-block/_shila-block--system-powered-by-block.scss
  */
-.block--powered-by {
+.block--system-powered-by-block {
   text-align: center;
   font-size: smaller;
 }
 
-.block--powered-by a {
+.block--system-powered-by-block a {
   color: #202020;
 }
 

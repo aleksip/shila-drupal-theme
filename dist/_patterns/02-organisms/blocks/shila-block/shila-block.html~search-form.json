@@ -1,7 +1,7 @@
 {
     "attributes": {
         "Attribute()": {
-            "class": ["block", "block--search-form"]
+            "class": ["block", "block--search-form-block"]
         }
     },
     "title_attributes": {

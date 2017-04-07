@@ -33,7 +33,13 @@
 #}
 {% set heading_id = attributes.id ~ '-menu'|clean_id %}
 {% set attributes = attributes|without('role', 'aria-labelledby') %}
-{% set attributes = attributes.addClass('nav') %}
+{%
+  set classes = [
+    'nav',
+    'nav--' ~ (derivative_plugin_id ? derivative_plugin_id|clean_class : plugin_id|clean_class),
+  ]
+%}
+{% set attributes = attributes.addClass(classes) %}
 {% block template %}
   {% include "@molecules/navigation/shila-navigation/shila-navigation.html.twig" %}
 {% endblock %}

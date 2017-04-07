@@ -1,7 +1,7 @@
 {
     "attributes": {
         "Attribute()": {
-            "class": ["block", "block--main"]
+            "class": ["block", "block--system-main-block"]
         }
     },
     "title_attributes": {

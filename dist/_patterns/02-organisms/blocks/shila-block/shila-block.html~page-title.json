@@ -1,7 +1,7 @@
 {
     "attributes": {
         "Attribute()": {
-            "class": ["block", "block--page-title"]
+            "class": ["block", "block--page-title-block"]
         }
     },
     "title_attributes": {
