@@ -1,0 +1,11 @@
+{#
+/**
+ * @file
+ * Theme override to display a page title block.
+ *
+ * Only display the block when there is a title.
+ */
+#}
+{% if content['#title'] %}
+  {% include "block.html.twig" %}
+{% endif %}
