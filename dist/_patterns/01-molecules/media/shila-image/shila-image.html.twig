@@ -1,9 +1,9 @@
-<dl{{ attributes.addClass('image') }}>
-  <dt class="image__image">{{ image }}</dt>
-  {% if caption %}
-    <dd class="image__caption">{{ caption }}</dd>
+<div{{ attributes.addClass('image') }}>
+  <div class="image__image">{{ image }}</div>
+  {% if caption or credit %}
+    <div class="image__text">
+      {% if caption %}<span class="image__caption">{{ caption }}</span>{% endif %}
+      {% if credit %}<span class="image__credit">{{ credit }}</span>{% endif %}
+    </div>
   {% endif %}
-  {% if credit %}
-    <dd class="image__credit">{{ credit }}</dd>
-  {% endif %}
-</dl>
+</div>

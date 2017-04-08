@@ -243,7 +243,6 @@
 
 .image__caption,
 .image__credit {
-  display: inline;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: smaller;
   color: gray;
