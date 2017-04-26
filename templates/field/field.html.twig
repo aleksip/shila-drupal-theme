@@ -39,8 +39,15 @@
 {%
   set classes = [
     'field',
-    'field--' ~ field_name|clean_class,
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
   ]
 %}
-{% set attributes = attributes.addClass(classes) %}
+{%
+  set title_classes = [
+    'field__label',
+    label_display == 'visually_hidden' ? 'visually-hidden',
+  ]
+%}
 {% include "@molecules/fields/shila-field/shila-field.html.twig" %}

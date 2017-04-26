@@ -5,24 +5,24 @@
 #}
 {% if label_hidden %}
   {% if multiple %}
-    <div{{ attributes }}>
+    <div{{ attributes.addClass(classes, 'field__items') }}>
       {% for item in items %}
-        <div{{ item.attributes }}>{{ item.content }}</div>
+        <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
       {% endfor %}
     </div>
   {% else %}
     {% for item in items %}
-      <div{{ attributes }}>{{ item.content }}</div>
+      <div{{ attributes.addClass(classes, 'field__item') }}>{{ item.content }}</div>
     {% endfor %}
   {% endif %}
 {% else %}
-  <div{{ attributes }}>
-    <div{{ title_attributes }}>{{ label }}</div>
+  <div{{ attributes.addClass(classes) }}>
+    <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
     {% if multiple %}
-      <div>
+      <div class="field__items">
     {% endif %}
     {% for item in items %}
-      <div{{ item.attributes }}>{{ item.content }}</div>
+      <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
     {% endfor %}
     {% if multiple %}
       </div>
