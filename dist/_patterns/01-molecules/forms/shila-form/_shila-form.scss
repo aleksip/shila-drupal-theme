@@ -5,7 +5,8 @@
 
 .form {
   #{$shila-all-text-inputs},
-  select[multiple=multiple] {
+  select[multiple=multiple],
+  select {
     margin-bottom: 0;
   }
   .form-item {
