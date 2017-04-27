@@ -127,17 +127,3 @@ function shila_theme_preprocess_pattern_shila_card(&$variables) {
   }
   $variables['attributes'] = $variables['attributes']->addClass($classes);
 }
-
-/**
- * Adds a template suggestion for entity reference fields formatted as labels.
- * This is useful for theming taxonomy terms.
- *
- * Implements hook_theme_suggestions_HOOK_alter() for field templates.
- */
-function shila_theme_theme_suggestions_field_alter(array &$suggestions, array $variables) {
-  $element = $variables['element'];
-  if ($element['#field_type'] == 'entity_reference' && $element['#formatter'] == 'entity_reference_label') {
-    $settings = $variables['element']['#items']->getFieldDefinition()->getSettings();
-    $suggestions[] = 'field__' . $element['#field_type'] . '__' . $settings['target_type'] . '__' . $element['#formatter'];
-  }
-}
