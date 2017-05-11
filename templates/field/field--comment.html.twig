@@ -26,8 +26,25 @@
  * @see comment_preprocess_field()
  */
 #}
-{% set attributes = attributes.addClass('comments') %}
-{% set title_attributes = title_attributes.addClass('comments__title') %}
+{%
+  set classes = [
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+    'comments',
+  ]
+%}
+{%
+  set title_classes = [
+    'title',
+    label_display == 'visually_hidden' ? 'visually-hidden',
+    'comments__title',
+  ]
+%}
+{% set attributes = attributes.addClass(classes) %}
+{% set title_attributes = title_attributes.addClass(title_classes) %}
+{% set content_attributes = content_attributes.addClass('comments__form-title') %}
 {% include "@organisms/sections/shila-comments/shila-comments.html.twig"
   with {
     'comment_form_title': 'Add new comment'|t
