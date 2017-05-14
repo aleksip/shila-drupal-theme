@@ -6,11 +6,11 @@
 .layout-container,
 .page,
 .page > *,
-.region-container,
+.region-wrapper,
 .region {
   @include shila-clearfix;
 }
-.region-container {
+.region-wrapper {
   @include shila-outer-container;
 }
 .region {
@@ -29,7 +29,7 @@
 .page__content {
   flex: 1 0 auto;
 }
-.region-container,
+.region-wrapper,
 .region {
   height: 100%;
 }

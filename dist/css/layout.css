@@ -97,14 +97,14 @@
 .layout-container::after,
 .page::after,
 .page > *::after,
-.region-container::after,
+.region-wrapper::after,
 .region::after {
   clear: both;
   content: '';
   display: table;
 }
 
-.region-container {
+.region-wrapper {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -137,7 +137,7 @@
   flex: 1 0 auto;
 }
 
-.region-container,
+.region-wrapper,
 .region {
   height: 100%;
 }

@@ -251,6 +251,30 @@
 
 /**
  * @file
+ * molecules/media/shila-media/_shila-media.scss
+ */
+.media {
+  margin: 0 0 1rem;
+  line-height: normal;
+}
+
+.media__media {
+  margin: 0;
+}
+
+.media__media img {
+  vertical-align: bottom;
+}
+
+.media__caption,
+.media__credit {
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: smaller;
+  color: gray;
+}
+
+/**
+ * @file
  * molecules/messaging/shila-messages/_shila-messages.scss
  */
 .messages ul {
@@ -773,7 +797,7 @@ code {
  * @file
  * organisms/global/shila-page-content/_shila-page-content.scss
  */
-.page__content .region-container {
+.page__content .region-wrapper {
   background-color: white;
 }
 
@@ -785,7 +809,7 @@ code {
  * @file
  * organisms/global/shila-page-footer/_shila-page-footer.scss
  */
-.page__footer .region-container {
+.page__footer .region-wrapper {
   background-color: white;
 }
 
@@ -797,7 +821,7 @@ code {
   width: 100%;
 }
 
-.page__header .region-container {
+.page__header .region-wrapper {
   background-color: white;
 }
 
