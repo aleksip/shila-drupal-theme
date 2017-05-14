@@ -1,0 +1,9 @@
+<div{{ attributes.addClass('media') }}>
+  <div class="media__media">{{ media }}</div>
+  {% if caption or credit %}
+    <div class="media__text">
+      {% if caption %}<span class="media__caption">{{ caption }}</span>{% endif %}
+      {% if credit %}<span class="media__credit">{{ credit }}</span>{% endif %}
+    </div>
+  {% endif %}
+</div>

@@ -1,0 +1,23 @@
+shila_media:
+  label: Media
+  description: A media component with optional caption and credit.
+  fields:
+    media:
+      type: media
+      label: Media
+      description: media.
+      preview:
+        theme: image
+        uri: http://lorempixel.com/300/200/nature/
+        width: 300
+    caption:
+      type: string
+      label: Caption
+      description: Media caption. Optional.
+      preview: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    credit:
+      type: string
+      label: Credit
+      description: Media credit. Optional.
+      preview: 'Photo: Photographer Name / Organization.'
+  use: '@molecules/media/shila-media/shila-media.html.twig'
