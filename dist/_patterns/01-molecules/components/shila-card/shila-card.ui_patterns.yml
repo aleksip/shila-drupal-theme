@@ -40,4 +40,9 @@ shila_card:
       label: Actions
       description: Action links, buttons etc.
       preview: '<a href="http://example.com">Read more</a>'
+    link_url:
+      type: url
+      label: Link URL
+      description: The link URL if the entire card should be displayed as a link.
+      preview: ''
   use: '@molecules/components/shila-card/shila-card.html.twig'

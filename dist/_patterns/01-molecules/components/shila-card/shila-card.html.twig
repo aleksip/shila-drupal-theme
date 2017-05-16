@@ -1,4 +1,12 @@
-<section{{ attributes.addClass('card') }}>
+{% set link_url %}{{ link_url }}{% endset %}
+{%
+  set classes = [
+    'card',
+    link_url ? 'card--link',
+  ]
+%}
+<section{{ attributes.addClass(classes) }}>
+  {% if link_url %}<a href="{{ link_url }}">{% endif %}
   {% spaceless %}
     <div class="card__image">
       {{ image }}
@@ -24,4 +32,5 @@
       </div>
     {% endif %}
   </div>
+  {% if link_url %}</a>{% endif %}
 </section>
