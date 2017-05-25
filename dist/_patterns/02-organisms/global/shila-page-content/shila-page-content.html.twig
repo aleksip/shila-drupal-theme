@@ -3,10 +3,10 @@
  * @see templates/layout/region--content.html.twig
  */
 #}
-<main role="main" class="main page__content">
+<main role="main" class="page-content">
   <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
   <div class="region-wrapper">
-    <div{{ attributes.addClass('region--content') }}>
+    <div{{ attributes }}>
       {% block page_content %}
         {{ content }}
       {% endblock %}

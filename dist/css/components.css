@@ -797,11 +797,11 @@ code {
  * @file
  * organisms/global/shila-page-content/_shila-page-content.scss
  */
-.page__content .region-wrapper {
+.page-content .region-wrapper {
   background-color: white;
 }
 
-.page__content .region--content {
+.page-content .region--content {
   padding-top: 2.6rem;
 }
 
@@ -809,7 +809,7 @@ code {
  * @file
  * organisms/global/shila-page-footer/_shila-page-footer.scss
  */
-.page__footer .region-wrapper {
+.page-footer .region-wrapper {
   background-color: white;
 }
 
@@ -817,59 +817,59 @@ code {
  * @file
  * organisms/global/shila-page-header/_shila-page-header.scss
  */
-.page__header {
+.page-header {
   width: 100%;
 }
 
-.page__header .region-wrapper {
+.page-header .region-wrapper {
   background-color: white;
 }
 
-.page__header .nav {
+.page-header .nav {
   display: none;
 }
 
-.page__header .nav > ul {
+.page-header .nav > ul {
   margin: 0;
   padding: 0;
   border: 0;
   text-align: center;
 }
 
-.page__header .nav > ul li {
+.page-header .nav > ul li {
   display: inline-block;
 }
 
-.page__header .nav > ul li + li {
+.page-header .nav > ul li + li {
   padding-left: 0.65rem;
 }
 
-.page__header .nav > ul a {
+.page-header .nav > ul a {
   color: gray;
   text-decoration: none;
   transition: color 150ms ease;
 }
 
-.page__header .nav > ul a:active, .page__header .nav > ul a:focus, .page__header .nav > ul a:hover {
+.page-header .nav > ul a:active, .page-header .nav > ul a:focus, .page-header .nav > ul a:hover {
   color: #606060;
 }
 
-.page__header .nav > ul .is-active {
+.page-header .nav > ul .is-active {
   color: #606060;
 }
 
-.page__header .nav--main {
+.page-header .nav--main {
   padding-top: 0.92rem;
 }
 
 @media (max-width: 524px) {
-  .page__header {
+  .page-header {
     box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
   }
 }
 
 @media (min-width: 525px) {
-  .page__header .nav {
+  .page-header .nav {
     display: block;
   }
 }

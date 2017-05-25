@@ -22,11 +22,11 @@
   flex-direction: column;
   min-height: 100vh;
 }
-.page__header,
-.page__footer {
+.page-header,
+.page-footer {
   flex: none;
 }
-.page__content {
+.page-content {
   flex: 1 0 auto;
 }
 .region-wrapper,

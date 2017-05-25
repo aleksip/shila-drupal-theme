@@ -128,12 +128,12 @@
   min-height: 100vh;
 }
 
-.page__header,
-.page__footer {
+.page-header,
+.page-footer {
   flex: none;
 }
 
-.page__content {
+.page-content {
   flex: 1 0 auto;
 }
 
@@ -229,12 +229,12 @@
     height: auto;
     overflow: visible;
   }
-  .page__header {
+  .page-header {
     position: fixed;
     z-index: 500;
     height: 64px;
   }
-  .page__content {
+  .page-content {
     margin-top: 64px;
   }
   #off-canvas-checkbox:checked ~ .page {
@@ -242,10 +242,10 @@
     height: 100%;
     overflow: hidden;
   }
-  #off-canvas-checkbox:checked ~ .page .page__header {
+  #off-canvas-checkbox:checked ~ .page .page-header {
     position: static;
   }
-  #off-canvas-checkbox:checked ~ .page .page__content {
+  #off-canvas-checkbox:checked ~ .page .page-content {
     margin-top: 0;
   }
   #off-canvas-checkbox:checked ~ #off-canvas-label,

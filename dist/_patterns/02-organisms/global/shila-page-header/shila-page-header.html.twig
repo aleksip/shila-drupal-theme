@@ -3,9 +3,9 @@
  * @see templates/layout/region--header.html.twig
  */
 #}
-<header role="banner" class="header page__header">
+<header role="banner" class="page-header">
   <div class="region-wrapper">
-    <div{{ attributes.addClass('region--header') }}>
+    <div{{ attributes }}>
       {% block page_header %}
         {{ content }}
       {% endblock %}

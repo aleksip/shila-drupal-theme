@@ -72,12 +72,12 @@ $off-canvas-side: right !default;
     height: auto;
     overflow: visible;
   }
-  .page__header {
+  .page-header {
     position: fixed;
     z-index: $off-canvas-z-index;
     height: $off-canvas-header-height;
   }
-  .page__content {
+  .page-content {
     margin-top: $off-canvas-header-height;
   }
 
@@ -87,10 +87,10 @@ $off-canvas-side: right !default;
       position: fixed;
       height: 100%;
       overflow: hidden;
-      .page__header {
+      .page-header {
         position: static;
       }
-      .page__content {
+      .page-content {
         margin-top: 0;
       }
     }
