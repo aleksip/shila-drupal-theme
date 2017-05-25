@@ -21,3 +21,6 @@ component-libraries:
   organisms:
     paths:
       - dist/_patterns/02-organisms
+  templates:
+    paths:
+      - dist/_patterns/03-templates
