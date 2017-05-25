@@ -69,8 +69,7 @@
     @include breakpoint(shila-breakpoint($breakpoint-key)) {
       @include card-list-multicol-layout(
         $inner-columns,
-        map-get($breakpoint-outer-columns,
-        $breakpoint-key),
+        map-get($breakpoint-outer-columns, $breakpoint-key),
         $selector,
         $gutter
       );
