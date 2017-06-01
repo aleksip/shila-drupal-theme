@@ -1,0 +1,16 @@
+{
+    "items": [
+        {
+            "title": "Menu item 1",
+            "url": ""
+        },
+        {
+            "title": "Menu item 2",
+            "url": ""
+        },
+        {
+            "title": "Menu item 3",
+            "url": ""
+        }
+    ]
+}

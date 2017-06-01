@@ -470,6 +470,109 @@
 
 /**
  * @file
+ * molecules/navigation/shila-vertical-menu/_shila-vertical-menu.scss
+ */
+.vertical-menu {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  background-color: #dfdfdf;
+  text-transform: uppercase;
+}
+
+.vertical-menu li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+}
+
+.vertical-menu .menu-item__content {
+  padding-left: 1.3rem;
+}
+
+.vertical-menu > .menu-item > .menu {
+  background-color: #d0d0d0;
+}
+
+.vertical-menu > .menu-item > .menu .menu-item__content {
+  padding-left: 2.6rem;
+}
+
+.vertical-menu > .menu-item > .menu > .menu-item > .menu {
+  background-color: #c1c1c1;
+}
+
+.vertical-menu > .menu-item > .menu > .menu-item > .menu .menu-item__content {
+  padding-left: 3.9rem;
+}
+
+.vertical-menu > .menu-item > .menu > .menu-item > .menu > .menu-item > .menu {
+  background-color: #b1b1b1;
+}
+
+.vertical-menu > .menu-item > .menu > .menu-item > .menu > .menu-item > .menu .menu-item__content {
+  padding-left: 5.2rem;
+}
+
+.vertical-menu > .menu-item > .menu > .menu-item > .menu > .menu-item > .menu > .menu-item > .menu {
+  background-color: #a2a2a2;
+}
+
+.vertical-menu > .menu-item > .menu > .menu-item > .menu > .menu-item > .menu > .menu-item > .menu .menu-item__content {
+  padding-left: 6.5rem;
+}
+
+.vertical-menu .menu {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+}
+
+.vertical-menu .menu li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+}
+
+.vertical-menu .menu-item__item {
+  position: relative;
+}
+
+.vertical-menu .menu-item__content {
+  display: block;
+  margin-right: 44px;
+  border-right: 1px solid #e7e7e7;
+  padding-top: 0.65rem;
+  padding-right: 0.65rem;
+  padding-bottom: 0.65rem;
+  color: black;
+}
+
+.vertical-menu .menu-item__action {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 44px;
+  height: 100%;
+  min-height: 44px;
+  background-size: 22px 22px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.vertical-menu .menu-item--collapsed > .menu-item__item > .menu-item__action {
+  background-image: url("../images/icons/black/svg/plus.svg");
+}
+
+.vertical-menu .menu-item--expanded > .menu-item__item > .menu-item__action {
+  background-image: url("../images/icons/black/svg/minus.svg");
+}
+
+/**
+ * @file
  * molecules/text/shila-byline/_shila-byline.scss
  */
 .byline {
@@ -745,52 +848,7 @@ code {
  * organisms/global/shila-off-canvas/_shila-off-canvas.scss
  */
 .off-canvas {
-  padding-top: 0.65rem;
-  padding-bottom: 1.3rem;
-  background-color: #9f9f9f;
-}
-
-.off-canvas a {
-  color: #202020;
-}
-
-.off-canvas .region {
-  margin: 0;
-}
-
-.off-canvas .menu {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  list-style: none;
-  font-size: 18px;
-  font-size: 1.125rem;
-  line-height: 1.16667;
-  text-transform: uppercase;
-}
-
-.off-canvas .menu li {
-  list-style-image: none;
-  list-style-type: none;
-  margin-left: 0;
-}
-
-.off-canvas .menu li {
-  border-top: 1px solid #9a9a9a;
-}
-
-.off-canvas .menu li:last-child {
-  border-bottom: 1px solid #9a9a9a;
-}
-
-.off-canvas .menu a {
-  display: block;
-  padding: 0.65rem 1.3rem;
-}
-
-.off-canvas .menu a:hover {
-  background-color: #9a9a9a;
-  text-decoration: none;
+  background-color: #dfdfdf;
 }
 
 /**

@@ -110,13 +110,13 @@
   margin-right: auto;
 }
 
-.region {
+.region:not(.region--off-canvas) {
   margin-left: 5%;
   margin-right: 5%;
 }
 
 @media (min-width: 525px) {
-  .region {
+  .region:not(.region--off-canvas) {
     margin-left: 1.3rem;
     margin-right: 1.3rem;
   }
@@ -166,8 +166,6 @@
     left: -9999px;
   }
   #off-canvas-label {
-    transition-property: right;
-    transition-duration: .4s;
     display: block;
     position: fixed;
     right: 0;
@@ -181,17 +179,17 @@
     background-image: url("../images/menu.png");
     background-image: url("../images/menu.svg");
     cursor: pointer;
+    transition: right 0.4s;
   }
   .off-canvas {
-    transition-property: right;
-    transition-duration: .4s;
     display: block;
     position: fixed;
-    min-height: 100%;
+    height: 100%;
     overflow: hidden;
     overflow-y: auto;
     right: -80%;
     width: 80%;
+    transition: right 0.4s;
   }
 }
 
@@ -221,13 +219,12 @@
     display: none;
   }
   .page {
-    transition-property: right;
-    transition-duration: .4s;
     position: absolute;
     right: 0;
     width: 100%;
     height: auto;
     overflow: visible;
+    transition: right 0.4s;
   }
   .page-header {
     position: fixed;

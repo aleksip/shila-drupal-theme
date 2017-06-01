@@ -1,0 +1,14 @@
+shila_vertical_menu:
+  label: Vertical menu
+  description: A vertical menu component.
+  fields:
+    items:
+      type: string
+      label: Items
+      description: The menu items.
+      preview: TODO
+  libraries:
+    - shila-vertical-menu-js:
+        js:
+          shila-vertical-menu.js: {}
+  use: '@molecules/navigation/shila-vertical-menu/shila-vertical-menu.html.twig'

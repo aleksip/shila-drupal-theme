@@ -7,7 +7,7 @@
 
 $off-canvas-in-use: $shila-xs-break !default;
 $off-canvas-not-in-use: $shila-s-break !default;
-$off-canvas-base-width: 80%;
+$off-canvas-base-width: 80% !default;
 $off-canvas-breakpoint-widths: (
   's': 20rem,
   'm': 20rem,
@@ -16,6 +16,7 @@ $off-canvas-breakpoint-widths: (
 $off-canvas-header-height: 64px !default;
 $off-canvas-z-index: 500 !default;
 $off-canvas-side: right !default;
+$off-canvas-transition-duration: .4s !default;
 
 @mixin off-canvas-in-use-rules {
   .layout-container {
@@ -30,7 +31,6 @@ $off-canvas-side: right !default;
     left: -9999px;
   }
   #off-canvas-label {
-    @include off-canvas-slide;
     display: block;
     position: fixed;
     #{$off-canvas-side}: 0;
@@ -44,16 +44,17 @@ $off-canvas-side: right !default;
     background-image: url('../images/menu.png');
     background-image: url('../images/menu.svg');
     cursor: pointer;
+    transition: $off-canvas-side $off-canvas-transition-duration;
   }
   .off-canvas {
-    @include off-canvas-slide;
     display: block;
     position: fixed;
-    min-height: 100%;
+    height: 100%;
     overflow: hidden;
     overflow-y: auto;
     #{$off-canvas-side}: -($off-canvas-base-width);
     width: $off-canvas-base-width;
+    transition: $off-canvas-side $off-canvas-transition-duration;
     @each $breakpoint-key, $width in $off-canvas-breakpoint-widths {
       @include breakpoint(shila-breakpoint($breakpoint-key)) {
         #{$off-canvas-side}: -($width);
@@ -65,12 +66,12 @@ $off-canvas-side: right !default;
     display: none;
   }
   .page {
-    @include off-canvas-slide;
     position: absolute;
     #{$off-canvas-side}: 0;
     width: 100%;
     height: auto;
     overflow: visible;
+    transition: $off-canvas-side $off-canvas-transition-duration;
   }
   .page-header {
     position: fixed;
@@ -118,9 +119,4 @@ $off-canvas-side: right !default;
   .off-canvas-hidden {
     display: block;
   }
-}
-
-@mixin off-canvas-slide {
-  transition-property: $off-canvas-side;
-  transition-duration: .4s;
 }
