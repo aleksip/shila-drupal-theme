@@ -1,17 +1,21 @@
-jQuery(document).ready(function ($) {
+(function ($, Drupal) {
   'use strict';
-  $('.menu-item__action').click(function() {
-    var $menuItem = $(this).parent().parent();
-    if ($menuItem.is('.menu-item--expanded') || $menuItem.is('.menu-item--collapsed')) {
-      $menuItem.toggleClass("menu-item--expanded").toggleClass('menu-item--collapsed');
-      $(this).parent().siblings('.menu').slideToggle(300);
+  Drupal.behaviors.shilaVerticalMenu = {
+    attach: function (context) {
+      $('.menu-item__action', context).click(function() {
+        var $menuItem = $(this).parent().parent();
+        if ($menuItem.is('.menu-item--expanded') || $menuItem.is('.menu-item--collapsed')) {
+          $menuItem.toggleClass("menu-item--expanded").toggleClass('menu-item--collapsed');
+          $(this).parent().siblings('.menu').slideToggle(300);
+        }
+      });
+      $('.menu-item__action', context).each(function () {
+        var $menuItem = $(this).parent().parent();
+        if (!$menuItem.is('.menu-item--active-trail') && $menuItem.is('.menu-item--expanded')) {
+          $menuItem.toggleClass("menu-item--expanded").toggleClass("menu-item--collapsed");
+          $(this).parent().siblings('.menu').hide();
+        }
+      });
     }
-  });
-  $('.menu-item__action').each(function() {
-    var $menuItem = $(this).parent().parent();
-    if (!$menuItem.is('.menu-item--active-trail') && $menuItem.is('.menu-item--expanded')) {
-      $menuItem.toggleClass("menu-item--expanded").toggleClass("menu-item--collapsed");
-      $(this).parent().siblings('.menu').hide();
-    }
-  });
-});
+  };
+})(jQuery, Drupal);
