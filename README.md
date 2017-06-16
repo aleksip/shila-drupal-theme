@@ -30,29 +30,12 @@ Install and enable the [UI Patterns module](https://www.drupal.org/project/ui_pa
 
 ## Integrating with Pattern Lab
 
-Prerequisites: [git](https://git-scm.com/) and [Composer](https://getcomposer.org/) installed.
+Prerequisites: [npm](https://nodejs.org/) and [Composer](https://getcomposer.org/) installed.
 
 In the Shila theme root directory run:
 
 ```sh
-git clone https://github.com/pattern-lab/edition-php-drupal-standard pattern-lab
+npm run install-pattern-lab
 ```
 
-In the `pattern-lab` directory run:
-
-```sh
-composer install
-```
-
-In the file `pattern-lab/config/config.yml` change `sourceDir` and `twigAutoescape` like so:
-
- ```yml
- sourceDir: ../dist
- twigAutoescape: false
- ```
-
-If everything went well you should now be able to generate the static Pattern Lab site. In the `pattern-lab` directory run:
-
-```sh
-php core/console --generate
-```
+This will download Pattern Lab, make required configuration changes and generate the Pattern Lab website. The command will not do anything if a `pattern-lab` directory already exists.

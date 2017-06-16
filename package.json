@@ -19,5 +19,8 @@
     "type": "git",
     "url": "https://github.com/aleksip/shila-drupal-theme"
   },
-  "license": "GPL-2.0"
+  "license": "GPL-2.0",
+  "scripts": {
+    "install-pattern-lab": "if [ ! -d pattern-lab ]; then composer create-project -n pattern-lab/edition-drupal-standard pattern-lab && cd pattern-lab && php core/console -c --set sourceDir=../dist && php core/console -c --set twigAutoescape=0 && php core/console --generate && cd ..; fi"
+  }
 }
