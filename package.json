@@ -21,7 +21,7 @@
   },
   "license": "GPL-2.0",
   "scripts": {
-    "install-pattern-lab": "if [ ! -d pattern-lab ]; then composer create-project -n pattern-lab/edition-drupal-standard pattern-lab && cd pattern-lab && php core/console -c --set sourceDir=../dist && php core/console -c --set twigAutoescape=0 && php core/console --generate && cd ..; fi",
-    "install-pattern-lab-development": "if [ ! -d pattern-lab ]; then composer create-project -n --keep-vcs --repository '{ \"type\": \"vcs\", \"url\": \"https://github.com/aleksip/pattern-lab-edition-shila-development\" }' drupal-pattern-lab/edition-development-twig=dev-master pattern-lab && cd pattern-lab && php core/console -c --set sourceDir=../dist && php core/console -c --set twigAutoescape=0 && php core/console --generate && cd ..; fi"
+    "install-pattern-lab": "if [ ! -d pattern-lab ]; then composer create-project -n --keep-vcs --repository '{ \"type\": \"vcs\", \"url\": \"https://github.com/aleksip/edition-php-twig-standard\" }' drupal-pattern-lab/edition-twig-standard=dev-shila-drupal-theme pattern-lab && cd pattern-lab && php core/console -c --set sourceDir=../dist && php core/console -c --set twigAutoescape=0 && php core/console --generate && cd ..; fi",
+    "install-pattern-lab-development": "if [ ! -d pattern-lab ]; then composer create-project -n --keep-vcs --repository '{ \"type\": \"vcs\", \"url\": \"https://github.com/aleksip/edition-php-twig-development\" }' drupal-pattern-lab/edition-development-twig=dev-shila-drupal-theme pattern-lab && cd pattern-lab && php core/console -c --set sourceDir=../dist && php core/console -c --set twigAutoescape=0 && php core/console --generate && cd ..; fi"
   }
 }
