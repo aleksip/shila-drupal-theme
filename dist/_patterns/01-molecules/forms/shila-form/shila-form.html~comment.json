@@ -9,11 +9,11 @@
         "join()": [
             {
                 "include()": {
-                    "pattern": "molecules-shila-form-element.html-textfield",
+                    "pattern": "molecules-shila-form-element-html-textfield",
                     "with": {
                         "label": {
                             "include()": {
-                                "pattern": "atoms-shila-label.html",
+                                "pattern": "atoms-shila-label-html",
                                 "with": {
                                     "title": "Your name"
                                 }
@@ -24,11 +24,11 @@
             },
             {
                 "include()": {
-                    "pattern": "molecules-shila-form-element.html-textfield",
+                    "pattern": "molecules-shila-form-element-html-textfield",
                     "with": {
                         "label": {
                             "include()": {
-                                "pattern": "atoms-shila-label.html",
+                                "pattern": "atoms-shila-label-html",
                                 "with": {
                                     "title": "Email"
                                 }
@@ -39,11 +39,11 @@
             },
             {
                 "include()": {
-                    "pattern": "molecules-shila-form-element.html-textfield",
+                    "pattern": "molecules-shila-form-element-html-textfield",
                     "with": {
                         "label": {
                             "include()": {
-                                "pattern": "atoms-shila-label.html",
+                                "pattern": "atoms-shila-label-html",
                                 "with": {
                                     "title": "Homepage"
                                 }
@@ -54,11 +54,11 @@
             },
             {
                 "include()": {
-                    "pattern": "molecules-shila-form-element.html-textarea",
+                    "pattern": "molecules-shila-form-element-html-textarea",
                     "with": {
                         "label": {
                             "include()": {
-                                "pattern": "atoms-shila-label.html",
+                                "pattern": "atoms-shila-label-html",
                                 "with": {
                                     "title": "Comment"
                                 }
@@ -69,7 +69,7 @@
             },
             {
                 "include()": {
-                    "pattern": "atoms-shila-input.html-submit"
+                    "pattern": "atoms-shila-input-html-submit"
                 }
             }
         ]

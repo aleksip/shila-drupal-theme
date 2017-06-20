@@ -6,8 +6,8 @@
     },
     "content": {
         "join()": [
-            "organisms-shila-branding.html",
-            "molecules-shila-navigation.html-main"
+            "organisms-shila-branding-html",
+            "molecules-shila-navigation-html-main"
         ]
     }
 }

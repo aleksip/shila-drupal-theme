@@ -7,11 +7,11 @@
         }
     },
     "cards": [
-        "molecules-shila-card.html",
-        "molecules-shila-card.html-variant",
-        "molecules-shila-card.html",
-        "molecules-shila-card.html-variant",
-        "molecules-shila-card.html",
-        "molecules-shila-card.html-variant"
+        "molecules-shila-card-html",
+        "molecules-shila-card-html-variant",
+        "molecules-shila-card-html",
+        "molecules-shila-card-html-variant",
+        "molecules-shila-card-html",
+        "molecules-shila-card-html-variant"
     ]
 }

@@ -1,19 +1,19 @@
 {
     "page": {
         "include()": {
-            "pattern": "organisms-shila-page.html",
+            "pattern": "organisms-shila-page-html",
             "with": {
                 "page": {
-                    "header": "organisms-shila-page-header.html",
+                    "header": "organisms-shila-page-header-html",
                     "content": {
                         "include()": {
-                            "pattern": "organisms-shila-page-content.html",
+                            "pattern": "organisms-shila-page-content-html",
                             "with": {
                                 "content": {
                                     "join()": [
                                         {
                                             "include()": {
-                                                "pattern": "molecules-shila-messages.html",
+                                                "pattern": "molecules-shila-messages-html",
                                                 "with": {
                                                     "attributes": {
                                                         "Attribute()": {
@@ -27,7 +27,7 @@
                                                 "only": true
                                             }
                                         },
-                                        "organisms-shila-front-page-listing.html"
+                                        "organisms-shila-front-page-listing-html"
                                     ]
                                 }
                             }
@@ -35,9 +35,9 @@
                     },
                     "footer": {
                         "include()": {
-                            "pattern": "organisms-shila-page-footer.html",
+                            "pattern": "organisms-shila-page-footer-html",
                             "with": {
-                                "content": "organisms-shila-block.html-system-powered-by-block"
+                                "content": "organisms-shila-block-html-system-powered-by-block"
                             }
                         }
                     }
@@ -45,5 +45,5 @@
             }
         }
     },
-    "off_canvas": "organisms-shila-off-canvas.html"
+    "off_canvas": "organisms-shila-off-canvas-html"
 }

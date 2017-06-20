@@ -10,13 +10,13 @@
     "label_display": "before",
     "label": {
         "include()": {
-            "pattern": "atoms-shila-label.html",
+            "pattern": "atoms-shila-label-html",
             "with": {
                 "title": "Textfield label"
             }
         }
     },
     "children": {
-        "join()": ["atoms-shila-input.html"]
+        "join()": ["atoms-shila-input-html"]
     }
 }

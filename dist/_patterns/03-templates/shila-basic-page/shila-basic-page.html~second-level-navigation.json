@@ -1,20 +1,20 @@
 {
     "page": {
         "include()": {
-            "pattern": "organisms-shila-page.html",
+            "pattern": "organisms-shila-page-html",
             "with": {
                 "page": {
                     "header": {
                         "include()": {
-                            "pattern": "organisms-shila-page-header.html",
+                            "pattern": "organisms-shila-page-header-html",
                             "with": {
                                 "content": {
                                     "join()": [
-                                        "organisms-shila-branding.html",
-                                        "molecules-shila-navigation.html-main",
+                                        "organisms-shila-branding-html",
+                                        "molecules-shila-navigation-html-main",
                                         {
                                             "include()": {
-                                                "pattern": "molecules-shila-navigation.html",
+                                                "pattern": "molecules-shila-navigation-html",
                                                 "with": {
                                                     "configuration": {
                                                         "label_display": false
@@ -29,17 +29,17 @@
                     },
                     "content": {
                         "include()": {
-                            "pattern": "organisms-shila-page-content.html",
+                            "pattern": "organisms-shila-page-content-html",
                             "with": {
                                 "content": {
                                     "join()": [
                                         {
                                             "include()": {
-                                                "pattern": "organisms-shila-block.html-page-title",
+                                                "pattern": "organisms-shila-block-html-page-title",
                                                 "with": {
                                                     "content": {
                                                         "include()": {
-                                                            "pattern": "molecules-shila-page-title.html",
+                                                            "pattern": "molecules-shila-page-title-html",
                                                             "with": {
                                                                 "title": "Page with second level navigation"
                                                             }
@@ -50,9 +50,9 @@
                                         },
                                         {
                                             "include()": {
-                                                "pattern": "organisms-shila-block.html-main",
+                                                "pattern": "organisms-shila-block-html-main",
                                                 "with": {
-                                                    "content": "organisms-shila-node.html-page"
+                                                    "content": "organisms-shila-node-html-page"
                                                 }
                                             }
                                         }
@@ -61,10 +61,10 @@
                             }
                         }
                     },
-                    "footer": "organisms-shila-page-footer.html"
+                    "footer": "organisms-shila-page-footer-html"
                 }
             }
         }
     },
-    "off_canvas": "organisms-shila-off-canvas.html"
+    "off_canvas": "organisms-shila-off-canvas-html"
 }

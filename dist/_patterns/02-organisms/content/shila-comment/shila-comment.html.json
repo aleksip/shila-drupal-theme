@@ -18,8 +18,8 @@
     },
     "content": {
         "join()": [
-            "molecules-shila-field.html-comment-body",
-            "molecules-shila-links.html"
+            "molecules-shila-field-html-comment-body",
+            "molecules-shila-links-html"
         ]
     }
 }
