@@ -1,0 +1,3 @@
+---
+title: Node title field
+---

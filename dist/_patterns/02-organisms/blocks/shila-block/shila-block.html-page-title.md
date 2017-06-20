@@ -1,0 +1,3 @@
+---
+title: Page title block
+---
