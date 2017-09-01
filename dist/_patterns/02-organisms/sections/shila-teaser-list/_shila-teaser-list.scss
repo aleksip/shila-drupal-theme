@@ -1,0 +1,10 @@
+/**
+ * @file
+ * organisms/sections/shila-teaser-list/_shila-teaser-list.scss
+ */
+
+.teaser-list__row {
+  & + & {
+    margin-top: $shila-large-spacing;
+  }
+}

@@ -1,0 +1,68 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ *
+ * @ingroup themeable
+ */
+#}
+{% set css_name = view.id|clean_class ~ '-' ~ view.current_display|clean_class %}
+{# 'card list name': 'card list layout class' #}
+{% set card_list_views = {
+  }
+%}
+{# 'teaser list name': 'teaser list layout class' #}
+{% set teaser_list_views = {
+    'frontpage-page-1': 'default',
+  }
+%}
+{% if card_list_views[css_name] is defined %}
+  {% set attributes = attributes.addClass('card-list--' ~ css_name) %}
+  {% if card_list_views[css_name] %}
+    {% set attributes = attributes.addClass('card-list--layout-' ~ card_list_views[css_name]) %}
+  {% endif %}
+  {% embed "@organisms/sections/shila-card-list/shila-card-list.html.twig" %}
+    {% block cards %}
+      {% for row in rows %}
+        {{ row.content }}
+      {% endfor %}
+    {% endblock %}
+  {% endembed %}
+{% elseif teaser_list_views[css_name] is defined %}
+  {% set attributes = attributes.addClass('teaser-list--' ~ css_name) %}
+  {% if teaser_list_views[css_name] %}
+    {% set attributes = attributes.addClass('teaser-list--layout-' ~ teaser_list_views[css_name]) %}
+  {% endif %}
+  {% embed "@organisms/sections/shila-teaser-list/shila-teaser-list.html.twig" %}
+    {% block cards %}
+      {% for row in rows %}
+        {{ row.content }}
+      {% endfor %}
+    {% endblock %}
+  {% endembed %}
+{% else %}
+  {% if title %}
+    <h3>{{ title }}</h3>
+  {% endif %}
+  {% for row in rows %}
+    {%
+      set row_classes = [
+        default_row_class ? 'views-row',
+      ]
+    %}
+    <div{{ row.attributes.addClass(row_classes) }}>
+      {{ row.content }}
+    </div>
+  {% endfor %}
+{% endif %}

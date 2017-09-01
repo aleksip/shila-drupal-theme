@@ -1,0 +1,12 @@
+{#
+/**
+ * @see templates/views/views-view-unformatted.html.twig
+ */
+#}
+<div class="teaser-list">
+  {% for row in rows %}
+    <div class="teaser-list__row">
+      {{ row.content }}
+    </div>
+  {% endfor %}
+</div>

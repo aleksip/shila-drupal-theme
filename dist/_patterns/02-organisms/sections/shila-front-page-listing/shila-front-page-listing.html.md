@@ -1,3 +1,0 @@
----
-title: Front page listing
----

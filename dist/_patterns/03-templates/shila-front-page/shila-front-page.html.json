@@ -9,7 +9,7 @@
                         "include()": {
                             "pattern": "organisms-shila-page-content-html",
                             "with": {
-                                "content": "organisms-shila-front-page-listing-html"
+                                "content": "organisms-shila-teaser-list-html"
                             }
                         }
                     },
