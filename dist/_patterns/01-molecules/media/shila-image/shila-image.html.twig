@@ -1,5 +1,8 @@
+{% set link_url %}{{ link_url }}{% endset %}
 <div{{ attributes.addClass('image') }}>
+  {% if link_url %}<a href="{{ link_url }}">{% endif %}
   <div class="image__image">{{ image }}</div>
+  {% if link_url %}</a>{% endif %}
   {% if caption or credit %}
     <div class="image__text">
       {% if caption %}<span class="image__caption">{{ caption }}</span>{% endif %}

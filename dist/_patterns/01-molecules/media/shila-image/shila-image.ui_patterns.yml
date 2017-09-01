@@ -20,4 +20,9 @@ shila_image:
       label: Credit
       description: Image credit. Optional.
       preview: 'Photo: Photographer Name / Organization.'
+    link_url:
+      type: url
+      label: Link URL
+      description: The link URL if the image should be a link.
+      preview: ''
   use: '@molecules/media/shila-image/shila-image.html.twig'
