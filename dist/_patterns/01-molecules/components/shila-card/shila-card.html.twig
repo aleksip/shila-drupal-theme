@@ -14,11 +14,15 @@
   {% endspaceless %}
   <div class="card__body">
     {{ contextual_links }}
-    {{ title_prefix }}
+    {% if title_prefix %}
+      <div class="card__title-prefix">{{ title_prefix }}</div>
+    {% endif %}
     {% if title %}
       <h2 class="card__title">{{ title }}</h2>
     {% endif %}
-    {{ title_suffix }}
+    {% if title_suffix %}
+      <div class="card__title-suffix">{{ title_suffix }}</div>
+    {% endif %}
     {% if content %}
       <div class="card__content">
         {% block content %}
