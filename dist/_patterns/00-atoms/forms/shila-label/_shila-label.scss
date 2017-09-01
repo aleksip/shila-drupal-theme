@@ -1,0 +1,15 @@
+/**
+ * @file
+ * atoms/forms/shila-label/_shila-label.scss
+ */
+
+label {
+  font-weight: 600;
+  margin-bottom: $shila-small-spacing / 2;
+  &.required::after {
+    content: "*";
+  }
+  abbr {
+    display: none;
+  }
+}

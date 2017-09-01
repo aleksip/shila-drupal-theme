@@ -1,0 +1,20 @@
+/**
+ * @file
+ * atoms/forms/shila-input/_shila-input.scss
+ */
+
+input[type="search"] {
+  appearance: none;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline;
+  margin-right: $shila-small-spacing / 2;
+  + label {
+    display: inline-block;
+  }
+}
+input[type="file"] {
+  margin-bottom: $shila-small-spacing;
+  width: 100%;
+}

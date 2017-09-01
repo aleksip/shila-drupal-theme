@@ -21,19 +21,9 @@ select {
   font-family: $shila-base-font-family;
   font-size: 1rem;
 }
-label {
-  font-weight: 600;
-  margin-bottom: $shila-small-spacing / 2;
-  &.required::after {
-    content: "*";
-  }
-  abbr {
-    display: none;
-  }
-}
 #{$shila-all-text-inputs},
 select[multiple=multiple] {
-  background-color: $shila-content-background-color;
+  background-color: $shila-form-element-background-color;
   border: $shila-base-border;
   border-radius: $shila-base-border-radius;
   box-shadow: $shila-form-box-shadow;
@@ -53,33 +43,10 @@ select[multiple=multiple] {
     outline: none;
   }
   &:disabled {
-    background-color: shila-shade($shila-content-background-color, 5%);
+    background-color: shila-shade($shila-form-element-background-color, 5%);
     cursor: not-allowed;
     &:hover {
       border: $shila-base-border;
     }
   }
-}
-textarea {
-  resize: vertical;
-}
-input[type="search"] {
-  appearance: none;
-}
-input[type="checkbox"],
-input[type="radio"] {
-  display: inline;
-  margin-right: $shila-small-spacing / 2;
-  + label {
-    display: inline-block;
-  }
-}
-input[type="file"] {
-  margin-bottom: $shila-small-spacing;
-  width: 100%;
-}
-select {
-  margin-bottom: $shila-base-spacing;
-  max-width: 100%;
-  width: auto;
 }
