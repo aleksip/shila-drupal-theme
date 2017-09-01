@@ -52,7 +52,7 @@
 ///   Gutter size of parent element.
 @mixin card-breakpoint-layout(
   $base-layout: 'vertical',
-  $breakpoint-layouts: ('s': 'horizontal'),
+  $breakpoint-layouts: ('s': 'horizontal', 'm': 'horizontal', 'l': 'horizontal'),
   $base-outer-columns: $shila-base-columns,
   $breakpoint-outer-columns: $shila-breakpoint-columns,
   $gutter: $shila-gutter
