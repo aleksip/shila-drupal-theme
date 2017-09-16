@@ -43,6 +43,6 @@ shila_card:
     link_url:
       type: url
       label: Link URL
-      description: The link URL if the entire card should be displayed as a link.
+      description: The link URL if the entire card should be a link.
       preview: ''
   use: '@molecules/components/shila-card/shila-card.html.twig'
