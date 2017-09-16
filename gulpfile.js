@@ -9,7 +9,8 @@ config.browserSync = {
   proxyTarget: 'localhost:8080',
   proxyReqHeaders: {
     host: 'www.shila.dev'
-  }
+  },
+  open: false
 };
 config.drush = {
   alias: '@local.d8.shila'
@@ -70,21 +71,22 @@ function isDirectory(dir) {
 // Gulp tasks.
 
 /**
- * Sets up BrowserSync and watchers.
+ * Sets up Browsersync and watchers.
  */
 gulp.task('watch', ['sass-change'], function () {
   browserSync.init({
     proxy: {
       target: config.browserSync.proxyTarget,
       reqHeaders: config.browserSync.proxyReqHeaders
-    }
+    },
+    open: config.browserSync.open
   });
   gulp.watch(config.sass.watchFiles, ['sass-change']);
   gulp.watch(config.patternsDir + '/**/*.twig', ['patterns-change']);
 });
 
 /**
- * Compiles Sass files.
+ * Processes Sass files.
  */
 gulp.task('sass', function () {
   return gulp.src(config.sass.srcFiles)
@@ -134,7 +136,7 @@ gulp.task('drush:cr', function () {
 });
 
 /**
- * Calls BrowserSync reload.
+ * Calls Browsersync reload.
  */
 gulp.task('bs:reload', function () {
   browserSync.reload();
