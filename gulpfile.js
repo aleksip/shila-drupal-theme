@@ -35,7 +35,8 @@ config.patternLab = {
     config.patternsDir + '/**/*.twig',
     config.patternsDir + '/**/*.json',
     config.patternsDir + '/**/*.yml'
-  ]
+  ],
+  publicCssDir: './pattern-lab/public/css'
 };
 
 // Load Gulp and other tools.
@@ -82,7 +83,7 @@ gulp.task('watch', function () {
  * Task sequence to run when Sass files have changed.
  */
 gulp.task('sass-change', function () {
-  runSequence('sass', 'pl:generate', 'bs:reload');
+  runSequence('sass', 'copy-css');
 });
 
 /**
@@ -103,6 +104,17 @@ gulp.task('sass', function () {
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(config.sass.destDir))
     .pipe(browserSync.stream({match: '**/*.css'}));
+});
+
+/**
+ * Copies CSS files to Pattern Lab's public dir.
+ */
+gulp.task('copy-css', function () {
+  if (isDirectory(config.patternLab.dir)) {
+    return gulp.src(config.sass.destDir + '/**/*.css')
+      .pipe(gulp.dest(config.patternLab.publicCssDir))
+      .pipe(browserSync.stream());
+  }
 });
 
 /**
