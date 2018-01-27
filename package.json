@@ -1,0 +1,21 @@
+{
+  "name": "pattern-lab-project",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Aleksi Peebles",
+  "license": "GPL-2.0",
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-run": "^1.7.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sass-glob": "^1.0.8",
+    "gulp-sass-lint": "^1.3.4",
+    "gulp-sourcemaps": "^1.12.1",
+    "run-sequence": "^2.2.1"
+  },
+  "main": "index.js",
+  "scripts": {
+    "install-pattern-lab": "if [ ! -d pattern-lab ]; then composer create-project -n pattern-lab/edition-twig-standard pattern-lab && cd pattern-lab && composer require aleksip/plugin-data-transform && php core/console -c --set sourceDir=../dist && php core/console -c --set twigAutoescape=0 && php core/console --generate && cd ..; fi"
+  }
+}

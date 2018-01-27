@@ -1,0 +1,12 @@
+/**
+ * @file
+ * sass/base.scss
+ *
+ * CSS rules that style HTML elements ("base" styles).
+ */
+
+@import 'partials/imports';
+@import 'partials/generic/generic.box-sizing';
+@import 'partials/elements/elements.page';
+@import 'partials/elements/elements.headings';
+@import '../_patterns/00-atoms/*.scss';

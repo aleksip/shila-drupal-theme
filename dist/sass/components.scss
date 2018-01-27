@@ -1,0 +1,10 @@
+/**
+ * @file
+ * sass/components.scss
+ *
+ * CSS rules that style design components (and their associated states and themes.)
+ */
+
+@import 'partials/imports';
+@import '../_patterns/01-molecules/**/*.scss';
+@import '../_patterns/02-organisms/**/*.scss';
