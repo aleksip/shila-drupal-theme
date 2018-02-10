@@ -2,7 +2,9 @@
 
 An [atomic design](http://bradfrost.com/blog/post/atomic-web-design/) and [Pattern Lab](http://patternlab.io/) friendly starting point for new Drupal 8 themes. Can be used stand-alone with Pattern Lab. Can be used as a Pattern Lab StarterKit as well.
 
-Please note that theme-specific CSS files are not committed in the repository. They can be generated after installing development dependencies.
+Shila theme is based on [pattern-lab-project](https://github.com/aleksip/pattern-lab-project) and uses [shila-css](https://github.com/aleksip/shila-css).
+
+Please note that theme-specific CSS files are not committed to the repository. They can be generated after installing development dependencies.
 
 
 ## Installing development dependencies
