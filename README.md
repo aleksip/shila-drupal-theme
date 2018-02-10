@@ -2,6 +2,8 @@
 
 An [atomic design](http://bradfrost.com/blog/post/atomic-web-design/) and [Pattern Lab](http://patternlab.io/) friendly starting point for new Drupal 8 themes. Can be used stand-alone with Pattern Lab. Can be used as a Pattern Lab StarterKit as well.
 
+Please note that theme-specific CSS files are not committed in the repository. They can be generated after installing development dependencies.
+
 
 ## Installing development dependencies
 
@@ -13,7 +15,14 @@ In the Shila theme root directory run:
 npm install
 ```
 
-Please note that latest version of Shila theme always uses the latest version of [shila-css](https://github.com/aleksip/shila-css), which is still in alpha and can introduce breaking changes. If you are pulling changes from the Shila theme repository be sure to also update to the latest version of shila-css. Or if basing your theme on a specific version of Shila theme be sure to specify the exact matching version of shila-css in `package.json`.
+
+## Generating theme-specific CSS files
+
+In the Shila theme root directory run:
+
+```sh
+gulp sass
+```
 
 
 ## Integrating with Drupal
