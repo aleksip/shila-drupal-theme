@@ -11,7 +11,7 @@
     "gulp-sass-lint": "^1.3.4",
     "gulp-sourcemaps": "^1.12.1",
     "run-sequence": "^2.2.1",
-    "shila-css": "1.0.0-alpha.6"
+    "shila-css": "1.0.0-alpha.5"
   },
   "repository": {
     "type": "git",
