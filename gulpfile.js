@@ -3,14 +3,28 @@
 // Configuration.
 
 var config = {};
+config.patternsDir = './dist/_patterns';
+config.patternLab = {
+  dir: './pattern-lab',
+  watchFiles: [
+    config.patternsDir + '/**/*.twig',
+    config.patternsDir + '/**/*.json',
+    config.patternsDir + '/**/*.yml'
+  ],
+  publicCssDir: './pattern-lab/public/css'
+};
 config.browserSync = {
-  proxyTarget: 'localhost:8080',
-  proxyReqHeaders: {
-    host: 'www.shila.test'
+  server: {
+    baseDir: config.patternLab.dir + '/public'
+  },
+  proxy: {
+    target: '',
+    reqHeaders: {
+      host: ''
+    }
   },
   open: false
 };
-config.patternsDir = './dist/_patterns';
 config.sass = {
   srcFiles: [
     './dist/sass/*.scss'
@@ -31,15 +45,6 @@ config.sass = {
     outputStyle: 'expanded'
   },
   destDir: './dist/css'
-};
-config.patternLab = {
-  dir: './pattern-lab',
-  watchFiles: [
-    config.patternsDir + '/**/*.twig',
-    config.patternsDir + '/**/*.json',
-    config.patternsDir + '/**/*.yml'
-  ],
-  publicCssDir: './pattern-lab/public/css'
 };
 
 // Load Gulp and other tools.
@@ -71,13 +76,18 @@ function isDirectory(dir) {
  * Sets up Browsersync and watchers.
  */
 gulp.task('watch', function () {
-  browserSync.init({
-    proxy: {
-      target: config.browserSync.proxyTarget,
-      reqHeaders: config.browserSync.proxyReqHeaders
-    },
-    open: config.browserSync.open
-  });
+  if (config.browserSync.proxy.target) {
+    browserSync.init({
+      proxy: config.browserSync.proxy,
+      open: config.browserSync.open
+    });
+  }
+  else {
+    browserSync.init({
+      server: config.browserSync.server,
+      open: config.browserSync.open
+    });
+  }
   gulp.watch(config.sass.watchFiles, ['sass-change']);
   gulp.watch(config.patternLab.watchFiles, ['patterns-change']);
 });
