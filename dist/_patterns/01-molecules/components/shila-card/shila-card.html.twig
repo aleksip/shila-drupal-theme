@@ -6,35 +6,37 @@
   ]
 %}
 <section{{ attributes.addClass(classes) }}>
-  {% if link_url %}<a href="{{ link_url }}">{% endif %}
-  {% spaceless %}
-    <div class="card__image">
-      {{ image }}
+  <div class="card__layout">
+    {% if link_url %}<a href="{{ link_url }}">{% endif %}
+    {% spaceless %}
+      <div class="card__image">
+        {{ image }}
+      </div>
+    {% endspaceless %}
+    <div class="card__body">
+      {{ contextual_links }}
+      {% if title_prefix %}
+        <div class="card__title-prefix">{{ title_prefix }}</div>
+      {% endif %}
+      {% if title %}
+        <h2 class="card__title">{{ title }}</h2>
+      {% endif %}
+      {% if title_suffix %}
+        <div class="card__title-suffix">{{ title_suffix }}</div>
+      {% endif %}
+      {% if content %}
+        <div class="card__content">
+          {% block content %}
+            {{ content }}
+          {% endblock %}
+        </div>
+      {% endif %}
+      {% if actions %}
+        <div class="card__actions">
+          {{ actions }}
+        </div>
+      {% endif %}
     </div>
-  {% endspaceless %}
-  <div class="card__body">
-    {{ contextual_links }}
-    {% if title_prefix %}
-      <div class="card__title-prefix">{{ title_prefix }}</div>
-    {% endif %}
-    {% if title %}
-      <h2 class="card__title">{{ title }}</h2>
-    {% endif %}
-    {% if title_suffix %}
-      <div class="card__title-suffix">{{ title_suffix }}</div>
-    {% endif %}
-    {% if content %}
-      <div class="card__content">
-        {% block content %}
-          {{ content }}
-        {% endblock %}
-      </div>
-    {% endif %}
-    {% if actions %}
-      <div class="card__actions">
-        {{ actions }}
-      </div>
-    {% endif %}
+    {% if link_url %}</a>{% endif %}
   </div>
-  {% if link_url %}</a>{% endif %}
 </section>

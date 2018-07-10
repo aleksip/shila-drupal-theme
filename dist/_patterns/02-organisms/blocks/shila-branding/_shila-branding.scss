@@ -21,7 +21,6 @@
 .branding__name {
   font-size: 2.56rem;
   font-weight: bold;
-  line-height: $shila-heading-line-height;
   @include breakpoint($shila-s-break) {
     font-size: 2.67rem;
   }

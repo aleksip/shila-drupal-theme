@@ -7,5 +7,14 @@
 
 @import 'partials/imports';
 @import 'partials/generic/generic.box-sizing';
+@import 'partials/generic/generic.normalize';
 @import 'partials/elements/elements.page';
+@import 'partials/elements/elements.headings';
+@import 'partials/elements/elements.images';
+@import 'partials/elements/elements.tables';
+@import 'partials/styles/styles.typography';
+@import 'partials/styles/styles.buttons';
+@import 'partials/styles/styles.forms';
+@import 'partials/styles/styles.lists';
+@import 'partials/styles/styles.tables';
 @import '../_patterns/00-atoms/*.scss';

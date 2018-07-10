@@ -15,7 +15,6 @@
 }
 .region:not(.region--off-canvas) {
   @include shila-side-margins;
-  @include background-grid($color: $shila-background-grid-color);
 }
 .page {
   display: flex;

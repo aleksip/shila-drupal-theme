@@ -5,64 +5,51 @@
 
 /// @param $layout-type ['vertical']
 ///   Either 'vertical' or 'horizontal'.
-/// @param $outer-columns [$shila-base-columns]
-///   Number of columns in parent element.
-/// @param $gutter [$shila-gutter]
-///   Gutter size of parent element.
-@mixin card-layout(
-  $layout-type: 'vertical',
-  $outer-columns: $shila-base-columns,
-  $gutter: $shila-gutter
-) {
-  $scaled-gutter: $gutter / ($outer-columns / 4);
-  @include layout(4) {
-    @if ($layout-type == 'horizontal') {
-      .card__image {
-        @include grid-span(1, 1, $gutter: $scaled-gutter);
+@mixin card-layout($layout-type: 'vertical') {
+  .card__layout {
+    @include shila-clearfix;
+  }
+  @if ($layout-type == 'horizontal') {
+    .card__image {
+      float: left;
+      width: 1/4*100%;
+    }
+    .card__body {
+      float: right;
+      width: calc(3/4*100% - #{$shila-base-spacing});
+      margin-left: $shila-base-spacing;
+    }
+  }
+  @else {
+    .card__image {
+      float: none;
+      width: auto;
+      &:not(:empty) {
+        margin-bottom: $shila-small-spacing;
       }
-      .card__body {
-        @include grid-span(3, 2, $gutter: $scaled-gutter);
-      }
-    } @else {
-      .card__image {
-        @include grid-span(4, 1, $gutter: $scaled-gutter);
-        &:not(:empty) {
-          margin-bottom: $shila-small-spacing;
-        }
-      }
-      .card__body {
-        @include isolation-span(4, 1, 'both', $gutter: $scaled-gutter);
-      }
+    }
+    .card__body {
+      float: none;
+      width: auto;
     }
   }
 }
 
 /// Breakpoint-based card layout.
 ///
-/// @param $base-layout ['vertical']
-///   The base layout. Either 'vertical' or 'horizontal'.
-/// @param {Map} $breakpoint-layouts [('s': 'horizontal')]
+/// @param {Map} $layouts
 ///   Layouts for specified breakpoints.
-/// @param {Number} $base-outer-columns [$shila-base-columns]
-///   Number of columns in parent element.
-/// @param {Map} $breakpoint-outer-columns [$shila-breakpoint-columns]
-///   Number of columns in parent element for specified breakpoints.
-///   Must contain all the keys that are in $breakpoint-layouts.
-/// @param $gutter [$shila-gutter]
-///   Gutter size of parent element.
 @mixin card-breakpoint-layout(
-  $base-layout: 'vertical',
-  $breakpoint-layouts: ('s': 'horizontal', 'm': 'horizontal', 'l': 'horizontal'),
-  $base-outer-columns: $shila-base-columns,
-  $breakpoint-outer-columns: $shila-breakpoint-columns,
-  $gutter: $shila-gutter
+  $layouts: ('default': 'vertical', 's': 'horizontal', 'm': 'horizontal', 'l': 'horizontal')
 ) {
-  @include card-layout($base-layout, $base-outer-columns);
-  @each $breakpoint-key, $layout in $breakpoint-layouts {
-    @include breakpoint(shila-breakpoint($breakpoint-key)) {
-      @include card-layout(
-        $layout, map-get($breakpoint-outer-columns, $breakpoint-key), $gutter
-      );
+  @each $breakpoint, $layout in $layouts {
+    @if $breakpoint == 'default' {
+      @include card-layout($layout);
+    }
+    @else {
+      @include breakpoint(shila-breakpoint($breakpoint)) {
+        @include card-layout($layout);
+      }
     }
   }
 }

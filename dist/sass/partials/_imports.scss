@@ -1,31 +1,23 @@
-/**
- * @file
- * sass/partials/_imports.scss
- *
- * Global imports.
- *
- * Importing this file must not generate any CSS.
- */
+// @file
+// sass/partials/_imports.scss
+//
+// Global imports.
+//
+// Importing this file must not generate any CSS.
 
-@import 'singularitygs';
-@import 'breakpoint';
 
+@import 'node_modules/breakpoint-sass/stylesheets/breakpoint';
+@import 'partials/tools/tools.core';
 @import 'partials/settings/settings.core';
-@import 'partials/settings/settings.animations';
-
 @import 'partials/settings/settings.colors';
-$shila-form-element-background-color: $shila-content-background-color;
-
-@import 'partials/settings/settings.forms';
+@import 'partials/settings/settings.selectors';
 @import 'partials/settings/settings.typography';
 @import 'partials/settings/settings.layout';
-@import 'partials/tools/tools.core';
+@import 'partials/settings/settings.styles';
 @import 'partials/tools/tools.clearfix';
-@import 'partials/tools/tools.colors';
 @import 'partials/tools/tools.constants';
 @import 'partials/tools/tools.font-size';
 @import 'partials/tools/tools.hidden';
 @import 'partials/tools/tools.layout';
 @import 'partials/tools/tools.lists';
-@import 'partials/tools/tools.multicol-layout';
-@import 'partials/tools/tools.sass-lists';
+@import 'partials/tools/tools.reset';
