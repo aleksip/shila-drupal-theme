@@ -4,8 +4,9 @@ description: An atomic design and Pattern Lab friendly starting point for new Dr
 package: Shila
 core: 8.x
 libraries:
-  - core/normalize
   - shila_theme/global-styling
+libraries-override:
+  core/normalize: false
 regions:
   header: Header
   content: Content
