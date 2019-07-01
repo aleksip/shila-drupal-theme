@@ -1,0 +1,11 @@
+attributes:
+  Attribute():
+    class:
+      - block
+      - block-system
+      - block-system-branding-block
+site_logo: ../../images/logo.svg
+site_home_title: 'Home'
+site_name: 'Site name'
+site_slogan: 'Site slogan. Lorem ipsum dolor sit amet, consectetur adipiscing
+  elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'

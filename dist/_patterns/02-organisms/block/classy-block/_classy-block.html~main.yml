@@ -1,0 +1,10 @@
+# Hidden pseudo-pattern variant that can be included in other patterns.
+
+attributes:
+  Attribute():
+    class:
+      - block
+      - block-system
+      - block-system-main-block
+label: false
+content: organisms-classy-node-html

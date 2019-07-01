@@ -1,0 +1,19 @@
+# Hidden pseudo-pattern variant that can be included in other patterns.
+
+attributes:
+  Attribute():
+    class:
+      - region
+      - region-footer
+content:
+  join():
+    - include():
+        pattern: organisms-classy-block-html
+        with:
+          attributes:
+            Attribute():
+              class:
+                - block
+                - block-system-powered-by-block
+          label: ''
+          content: 'Powered by <a href="https://patternlab.io/">Pattern Lab</a>'

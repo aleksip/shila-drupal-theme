@@ -1,8 +1,8 @@
 .idea
-/dist/css/*
-!/dist/css/hidden.module.css
-!/dist/css/normalize.css
-!/dist/css/pattern-scaffolding.css
 node_modules
+/dist/css/**
+!/dist/css/classy
+!/dist/css/stable
+!/dist/css/stable-theme.admin.css
+!/dist/css/stable-theme.css
 /pattern-lab
-wiki

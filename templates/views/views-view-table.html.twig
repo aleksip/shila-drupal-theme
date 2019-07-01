@@ -1,0 +1,12 @@
+{%
+  set classes = [
+    'views-table',
+    'views-view-table',
+    'cols-' ~ header|length,
+    responsive ? 'responsive-enabled',
+    sticky ? 'sticky-enabled',
+  ]
+%}
+{% set attributes = attributes.addClass(classes) %}
+
+{% include '@organisms/views/classy-views-view-table/classy-views-view-table.html.twig' %}

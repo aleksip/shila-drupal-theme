@@ -1,14 +1,1 @@
-{#
-/**
- * @file
- * Theme override for a 'form' element.
- *
- * Available variables
- * - attributes: A list of HTML attributes for the wrapper element.
- * - children: The child elements of the form.
- *
- * @see template_preprocess_form()
- */
-#}
-{% set attributes = attributes.addClass('form') %}
-{% include "@molecules/forms/shila-form/shila-form.html.twig" %}
+{% include '@molecules/form/classy-form/classy-form.html.twig' %}

@@ -1,0 +1,13 @@
+# Hidden pseudo-pattern variant that can be included in other patterns.
+
+attributes:
+  Attribute():
+    class:
+      - region
+      - region-header
+content:
+  join():
+    - include():
+        pattern: organisms-classy-branding-block-html
+        with:
+          site_slogan: ''

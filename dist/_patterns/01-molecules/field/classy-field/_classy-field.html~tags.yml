@@ -1,0 +1,19 @@
+# Hidden pseudo-pattern variant that can be included in other patterns.
+
+label: 'Tags'
+items:
+  - content: '<a href="">Tag one</a>'
+    attributes:
+      Attribute():
+        class:
+          - field__item
+  - content: '<a href="">Tag two</a>'
+    attributes:
+      Attribute():
+        class:
+          - field__item
+  - content: '<a href="">Tag three</a>'
+    attributes:
+      Attribute():
+        class:
+          - field__item

@@ -1,0 +1,93 @@
+/**
+ * This stylesheet is for styles you want to include only when displaying demo
+ * styles for grids, animations, color swatches, etc.
+ * These styles will not be your production CSS.
+ */
+
+@import "partials/imports";
+
+/** CSS Transition
+ *	Usage: @include transition(width,0.3s,ease-out);
+ */
+@mixin transition($transition-property, $transition-time, $method) {
+  -webkit-transition: $transition-property $transition-time $method;
+  -moz-transition: $transition-property $transition-time $method;
+  -ms-transition: $transition-property $transition-time $method;
+  -o-transition: $transition-property $transition-time $method;
+  transition: $transition-property $transition-time $method;
+}
+
+#sg-patterns {
+  -webkit-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+  max-width: 100%;
+  padding: 0 0.5em;
+}
+
+.demo-animate {
+  background: #ddd;
+  padding: 1em;
+  margin-bottom: 1em;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.sg-colors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.sg-colors li {
+  -webkit-box-flex: 1;
+  -ms-flex: auto;
+  flex: auto;
+  padding: 0.3em;
+  margin: 0 0.5em 0.5em 0;
+  min-width: 5em;
+  max-width: 14em;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.sg-swatch {
+  display: block;
+  height: 4em;
+  margin-bottom: 0.3em;
+  border-radius: 5px;
+}
+
+.sg-label {
+  font-size: 90%;
+  line-height: 1;
+}
+
+#atoms-logo-reversed .sg-pattern-example {
+  background: #444;
+  display: inline-block;
+}
+
+#molecules-logo-footer-link .sg-pattern-example {
+  background: #444;
+  display: inline-block;
+}
+
+.font-secondary {
+  font-family: $shila-font-stack-georgia;
+}
+
+/**
+ * Fade Animation
+ */
+.animate-fade {
+  @include transition(opacity, $shila-base-duration, $shila-base-timing);
+
+  &:hover {
+    opacity: 0;
+  }
+}

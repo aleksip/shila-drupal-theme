@@ -1,0 +1,10 @@
+{%
+  set classes = [
+    'block',
+    'block-search',
+    'container-inline',
+  ]
+%}
+{% set attributes = attributes.addClass(classes) %}
+
+{% include '@organisms/block/classy-search-form-block/classy-search-form-block.html.twig' %}

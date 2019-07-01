@@ -1,0 +1,10 @@
+attributes:
+  Attribute():
+    class:
+      - js-form-item
+      - form-item
+label_display: before
+label: atoms-classy-form-element-label-html
+children: atoms-classy-input-html-textfield
+errors: 'Error message. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'

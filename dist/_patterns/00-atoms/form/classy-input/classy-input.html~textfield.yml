@@ -1,0 +1,6 @@
+attributes:
+  Attribute():
+    class:
+      - form-text
+    type:
+      - text

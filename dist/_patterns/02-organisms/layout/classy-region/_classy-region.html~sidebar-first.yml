@@ -1,0 +1,10 @@
+# Hidden pseudo-pattern variant that can be included in other patterns.
+
+attributes:
+  Attribute():
+    class:
+      - region
+      - region-sidebar-first
+content:
+  join():
+    - organisms-classy-search-form-block-html

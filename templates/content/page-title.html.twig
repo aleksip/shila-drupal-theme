@@ -1,17 +1,3 @@
-{#
-/**
- * @file
- * Theme override for page titles.
- *
- * Available variables:
- * - title_attributes: HTML attributes for the page title element.
- * - title_prefix: Additional output populated by modules, intended to be
- *   displayed in front of the main title tag that appears in the template.
- * - title: The page title, for use in the actual content.
- * - title_suffix: Additional output populated by modules, intended to be
- *   displayed after the main title tag that appears in the template.
- */
-#}
-{% set title %}{{ title }}{% endset %}
 {% set title_attributes = title_attributes.addClass('page-title') %}
-{% include "@molecules/text/shila-page-title/shila-page-title.html.twig" %}
+
+{% include '@organisms/content/classy-page-title/classy-page-title.html.twig' %}

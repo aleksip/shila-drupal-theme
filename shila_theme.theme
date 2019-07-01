@@ -5,43 +5,40 @@
  * Functions to support theming in Shila theme.
  */
 
-use Drupal\Core\Form\FormStateInterface;
-
 /**
- * Adds a form id based template suggestion for all forms.
+ * Adds classes to field items.
  *
- * Implements hook_theme_suggestions_HOOK_alter() for form templates.
+ * Implements hook_preprocess_HOOK() for field.html.twig.
  */
-function shila_theme_theme_suggestions_form_alter(array &$suggestions, array $variables) {
-  $suggestions[] = 'form__' . $variables['element']['#form_id'];
-}
-
-/**
- * Adds a placeholder attribute to the search block form.
- *
- * Implements hook_form_alter().
- */
-function shila_theme_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  if ($form_id == 'search_block_form') {
-    $form['keys']['#attributes']['placeholder'] = t('Enter your keywords');
+function shila_theme_preprocess_field(&$variables) {
+  if ($variables['label_hidden']) {
+    if ($variables['multiple']) {
+      foreach ($variables['items'] as &$item) {
+        $item['attributes']->addClass('field__item');
+      }
+    }
+  }
+  else {
+    foreach ($variables['items'] as &$item) {
+      $item['attributes']->addClass('field__item');
+    }
   }
 }
 
 /**
- * Adds classes to menu links. This cannot be done in Twig templates without
- * using Drupal specific extensions.
+ * Adds classes and generated links to menu items.
  *
  * Implements hook_preprocess_HOOK() for menu.html.twig.
  */
 function shila_theme_preprocess_menu(&$variables) {
-  _menu_links($variables['items'], 0);
+  _menu_links($variables['items'], 0, \Drupal::service('twig.extension'));
 }
 
 /**
- * Helper function for adding classes to menu links.
+ * Helper function for adding classes and generated links to menu items.
  */
-function _menu_links(&$items, $menu_level) {
-  foreach ($items as $item) {
+function _menu_links(&$items, $menu_level, $twig_extension) {
+  foreach ($items as &$item) {
     $classes = ['menu-item'];
     if ($item['is_expanded']) {
       $classes[] = 'menu-item--expanded';
@@ -53,15 +50,17 @@ function _menu_links(&$items, $menu_level) {
       $classes[] = 'menu-item--active-trail';
     }
     $item['attributes']->addClass($classes);
+    if ($item['title'] && $item['url']) {
+      $item['link'] = $twig_extension->getLink($item['title'], $item['url']);
+    }
     if ($item['below']) {
-      _menu_links($item['below'], $menu_level + 1);
+      _menu_links($item['below'], $menu_level + 1, $twig_extension);
     }
   }
 }
 
 /**
- * Removes specific attributes from pagers. This cannot be done in Twig
- * templates without using Drupal specific extensions.
+ * Removes specific attributes from pagers.
  *
  * Implements hook_preprocess_HOOK() for pager.html.twig.
  */
@@ -76,7 +75,7 @@ function shila_theme_preprocess_pager(&$variables) {
     _remove_attributes($variables, $key, $remove);
   }
   if (isset($variables['items']['pages'])) {
-    foreach ($variables['items']['pages'] as $key => $item) {
+    foreach ($variables['items']['pages'] as $item) {
       if (isset($item['attributes'])) {
         $item['attributes']->removeAttribute('href')->removeAttribute('title');
       }
@@ -96,34 +95,61 @@ function _remove_attributes(&$variables, $key, $remove) {
 }
 
 /**
- * Adds the entity and possible contextual links to PatternContext when using
- * UI Patterns Layouts module.
+ * Creates attributes for each message type.
  *
- * Implements template_preprocess_ds_entity_view().
+ * Implements template_preprocess_status_messages().
  */
-function shila_theme_preprocess_ds_entity_view(&$variables) {
-  if (isset($variables['content']['#type']) && $variables['content']['#type'] == 'pattern') {
-    $variables['content']['#context']['entity'] = $variables['content']['#entity'];
-    if (isset($variables['title_suffix']['contextual_links'])) {
-      $variables['content']['#context']['contextual_links'] = $variables['title_suffix']['contextual_links'];
+function shila_theme_preprocess_status_messages(&$variables) {
+  $variables['type_attributes'] = [];
+  foreach ($variables['message_list'] as $type => $messages) {
+    $attributes = $variables['attributes'];
+    $attributes['class'][] = 'messages';
+    $attributes['class'][] = 'messages--' . $type;
+    unset($attributes['role']);
+    unset($attributes['aria-label']);
+    $variables['type_attributes'][$type] = new \Drupal\Core\Template\Attribute($attributes);
+  }
+}
+
+/**
+ * Conditionally adds default views classes.
+ *
+ * Implements template_preprocess_views_view_table().
+ */
+function shila_theme_preprocess_views_view_table(&$variables) {
+  if ($variables['header']) {
+    foreach ($variables['header'] as $key => &$column) {
+      if ($column['default_classes']) {
+        $column_classes = [
+          'views-field',
+          'views-field-' . $variables['fields'][$key]
+        ];
+        $column['attributes']->addClass($column_classes)->setAttribute('scope', 'col');
+      }
+    }
+  }
+  foreach ($variables['rows'] as &$row) {
+    foreach ($row['columns'] as $key => &$column) {
+      if ($column['default_classes']) {
+        $column_classes = ['views-field'];
+        foreach ($column['fields'] as $field) {
+          $column_classes[] = 'views-field-' . $field;
+        }
+        $column['attributes']->addClass($column_classes);
+      }
     }
   }
 }
 
 /**
- * Adds entity type and view mode BEM modifier classes and contextual links to
- * shila-cards when using UI Patterns module.
+ * Conditionally adds default views row classes.
  *
- * Implements hook_preprocess_HOOK().
+ * Implements template_preprocess_views_view_unformatted().
  */
-function shila_theme_preprocess_pattern_shila_card(&$variables) {
-  $classes = [
-    'card--type-' . $variables['context']->getProperty('bundle'),
-    'card--view-mode-' . $variables['context']->getProperty('view_mode'),
-  ];
-  if ($variables['context']->getProperty('contextual_links')) {
-    $classes[] = 'contextual-region';
-    $variables['contextual_links'] = $variables['context']->getProperty('contextual_links');
+function shila_theme_preprocess_views_view_unformatted(&$variables) {
+  if ($variables['default_row_class']) {
+    foreach ($variables['rows'] as &$row) {
+      $row['attributes']->addClass('views-row');
+    }
   }
-  $variables['attributes'] = $variables['attributes']->addClass($classes);
 }

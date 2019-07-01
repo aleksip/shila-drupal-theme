@@ -1,0 +1,6 @@
+attributes:
+  Attribute():
+    class:
+      - feed-icon
+title: 'Subscribe to'
+url: ''

@@ -1,0 +1,35 @@
+# Hidden pseudo-pattern variant that can be included in other patterns.
+
+attributes:
+  Attribute():
+    class:
+      - block
+      - block-menu
+      - navigation
+      - menu--footer
+title_attributes:
+  Attribute():
+    class:
+      - visually-hidden
+configuration:
+  label: Footer menu
+content:
+  include():
+    pattern: molecules-classy-menu-html
+    with:
+      items:
+        - attributes:
+            Attribute():
+              class:
+                - menu-item
+          link: '<a href="">Footer menu item 1</a>'
+        - attributes:
+            Attribute():
+              class:
+                - menu-item
+          link: '<a href="">Footer menu item 2</a>'
+        - attributes:
+            Attribute():
+              class:
+                - menu-item
+          link: '<a href="">Footer menu item 3</a>'

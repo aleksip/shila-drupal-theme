@@ -1,0 +1,41 @@
+page:
+  include():
+    pattern: organisms-classy-page-html
+    with:
+      page:
+        breadcrumb: ''
+        content:
+          include():
+            pattern: organisms-classy-region-html-content
+            with:
+              content:
+                include():
+                  pattern: organisms-classy-views-view-html
+                  with:
+                    attributes:
+                      Attribute():
+                        class:
+                          - view
+                          - view-frontpage
+                    rows:
+                      include():
+                        pattern: organisms-classy-views-view-unformatted-html
+                        with:
+                          rows:
+                            - attributes:
+                                Attribute():
+                                  class:
+                                    - views-row
+                              content: organisms-shila-article-html-teaser
+                            - attributes:
+                                Attribute():
+                                  class:
+                                    - views-row
+                              content: organisms-shila-article-html-teaser
+                            - attributes:
+                                Attribute():
+                                  class:
+                                    - views-row
+                              content: organisms-shila-article-html-teaser
+                        only: true
+                    feed_icons: atoms-stable-feed-icon-html

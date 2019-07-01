@@ -1,0 +1,10 @@
+options:
+  - type: option
+    value: 1
+    label: 'Option 1'
+  - type: option
+    value: 2
+    label: 'Option 2'
+  - type: option
+    value: 3
+    label: 'Option 3'

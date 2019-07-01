@@ -1,0 +1,13 @@
+attributes:
+  Attribute():
+    class:
+      - block
+title_prefix: ''
+title_attributes:
+  Attribute(): {}
+label: 'Block title'
+title_suffix: ''
+content:
+  join():
+    - atoms-paragraph
+    - atoms-paragraph

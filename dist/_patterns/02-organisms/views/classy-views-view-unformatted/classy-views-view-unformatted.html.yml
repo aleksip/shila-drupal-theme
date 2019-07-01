@@ -1,0 +1,27 @@
+title: ''
+rows:
+  - attributes:
+      Attribute():
+        class:
+          - views-row
+    content: 'Row 1 content'
+  - attributes:
+      Attribute():
+        class:
+          - views-row
+    content: 'Row 2 content'
+  - attributes:
+      Attribute():
+        class:
+          - views-row
+    content: 'Row 3 content'
+  - attributes:
+      Attribute():
+        class:
+          - views-row
+    content: 'Row 4 content'
+  - attributes:
+      Attribute():
+        class:
+          - views-row
+    content: 'Row 5 content'

@@ -1,0 +1,11 @@
+attributes:
+  Attribute():
+    class:
+      - node
+page: true
+display_submitted: false
+content_attributes:
+  Attribute():
+    class:
+      - node__content
+content: molecules-classy-field-html-node-body

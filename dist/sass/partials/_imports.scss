@@ -1,23 +1,33 @@
 // @file
 // sass/partials/_imports.scss
 //
-// Global imports.
+// Global imports. Importing this file must not generate any CSS.
 //
-// Importing this file must not generate any CSS.
+// You can configure shila-css by setting your custom values for shila-css
+// variables in this file. Values should usually be set before importing the
+// file in which the variable is defined by shila-css.
 
 
-@import 'node_modules/breakpoint-sass/stylesheets/breakpoint';
-@import 'partials/tools/tools.core';
-@import 'partials/settings/settings.core';
-@import 'partials/settings/settings.colors';
-@import 'partials/settings/settings.selectors';
-@import 'partials/settings/settings.typography';
-@import 'partials/settings/settings.layout';
-@import 'partials/settings/settings.styles';
-@import 'partials/tools/tools.clearfix';
-@import 'partials/tools/tools.constants';
-@import 'partials/tools/tools.font-size';
-@import 'partials/tools/tools.hidden';
-@import 'partials/tools/tools.layout';
-@import 'partials/tools/tools.lists';
-@import 'partials/tools/tools.reset';
+// Breakpoint is required by tools.font-size and tools.layout. You do not need
+// to import Breakpoint if you are not importing those partials.
+@import "node_modules/breakpoint-sass/stylesheets/breakpoint";
+
+// tools.core and settings.core should always be the first two shila-css
+// partials imported, in this order.
+@import "partials/tools/tools.core";
+@import "partials/settings/settings.core";
+
+@import "partials/settings/settings.colors";
+@import "partials/settings/settings.layout";
+@import "partials/settings/settings.selectors";
+@import "partials/settings/settings.styles";
+@import "partials/settings/settings.typography";
+
+@import "partials/tools/tools.clearfix";
+@import "partials/tools/tools.font-size";
+@import "partials/tools/tools.hidden";
+@import "partials/tools/tools.layout";
+@import "partials/tools/tools.lists";
+@import "partials/tools/tools.ratio";
+@import "partials/tools/tools.reset";
+@import "partials/tools/tools.typography";

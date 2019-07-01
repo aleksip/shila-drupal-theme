@@ -1,0 +1,9 @@
+attributes:
+  Attribute():
+    class:
+      - button
+      - form-submit
+    type:
+      - submit
+    value:
+      - 'Submit'

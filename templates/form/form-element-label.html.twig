@@ -1,17 +1,3 @@
-{#
-/**
- * @file
- * Theme override for a form element label.
- *
- * Available variables:
- * - title: The label's text.
- * - title_display: Elements title_display setting.
- * - required: An indicator for whether the associated form element is required.
- * - attributes: A list of HTML attributes for the label.
- *
- * @see template_preprocess_form_element_label()
- */
-#}
 {%
   set classes = [
     title_display == 'after' ? 'option',
@@ -21,4 +7,5 @@
   ]
 %}
 {% set attributes = attributes.addClass(classes) %}
-{% include "@atoms/forms/shila-label/shila-label.html.twig" %}
+
+{% include '@atoms/form/classy-form-element-label/classy-form-element-label.html.twig' %}

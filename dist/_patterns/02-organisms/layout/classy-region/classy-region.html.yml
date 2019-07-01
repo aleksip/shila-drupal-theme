@@ -1,0 +1,7 @@
+attributes:
+  Attribute():
+    class:
+      - region
+content:
+  join():
+    - organisms-classy-block-html

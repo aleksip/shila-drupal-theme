@@ -1,0 +1,14 @@
+# Hidden pseudo-pattern variant that can be included in other patterns.
+
+label_hidden: true
+attributes:
+  Attribute():
+    class:
+      - field
+      - field--node-body
+items:
+  - content:
+      join():
+        - atoms-paragraph
+        - atoms-paragraph
+        - atoms-paragraph

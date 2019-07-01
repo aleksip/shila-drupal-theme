@@ -1,0 +1,8 @@
+attributes:
+  Attribute():
+    class:
+      - block
+      - block-search
+      - container-inline
+label: Search
+content: molecules-classy-form-html-search-block

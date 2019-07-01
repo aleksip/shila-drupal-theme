@@ -1,0 +1,11 @@
+attributes:
+  Attribute():
+    class:
+      - block
+      - block-menu
+      - navigation
+title_attributes:
+  Attribute(): {}
+configuration:
+  label: 'Menu block label'
+content: molecules-classy-menu-html

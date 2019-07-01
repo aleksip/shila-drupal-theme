@@ -5,4 +5,6 @@
  * CSS rules that style states and are not included with components.
  */
 
-@import 'partials/imports';
+@import "partials/imports";
+
+@import "../_patterns/_*.state.scss";

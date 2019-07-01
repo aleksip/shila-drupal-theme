@@ -1,42 +1,13 @@
 # Shila theme for Drupal 8
 
-An [atomic design](http://bradfrost.com/blog/post/atomic-web-design/) and [Pattern Lab](http://patternlab.io/) friendly starting point for new Drupal 8 themes. Can be used stand-alone with Pattern Lab. Can be used as a Pattern Lab StarterKit as well.
+An [atomic design](http://bradfrost.com/blog/post/atomic-web-design/) and [Pattern Lab](http://patternlab.io/) friendly, [component-based](https://github.com/aleksip/component-based-theming), fairly unopinionated starting point for new Drupal 8 themes. Shila theme can be used stand-alone with Pattern Lab.
 
-Shila theme is based on [pattern-lab-project](https://github.com/aleksip/pattern-lab-project) and uses [shila-css](https://github.com/aleksip/shila-css).
-
-Please note that theme-specific CSS files are not committed to the repository. They can be generated after installing development dependencies.
-
-
-## Installing development dependencies
-
-Prerequisites: [npm](https://nodejs.org/) installed.
-
-In the Shila theme root directory run:
-
-```sh
-npm install
-```
-
-
-## Generating theme-specific CSS files
-
-In the Shila theme root directory run:
-
-```sh
-gulp sass
-```
+For more information and documentation, see the [project Wiki](https://github.com/aleksip/shila-drupal-theme/wiki).
 
 
 ## Integrating with Drupal
 
-### Required: Component Libraries module
-
-Install and enable the [Component Libraries module](https://www.drupal.org/project/components). No configuration is needed.
-
-
-### Optional: UI Patterns module
-
-Install and enable the [UI Patterns module](https://www.drupal.org/project/ui_patterns). Some components have a `ui_patterns.yml` definition file, which enables them to be used with UI Patterns.
+Prerequisites:  [Component Libraries](https://www.drupal.org/project/components) module installed and enabled.
 
 
 ## Integrating with Pattern Lab
@@ -50,3 +21,20 @@ npm run install-pattern-lab
 ```
 
 This will download Pattern Lab, make required configuration changes and generate the Pattern Lab website. The command will not do anything if a `pattern-lab` directory already exists.
+
+
+## Installing optional development dependencies
+
+Prerequisites: [npm](https://nodejs.org/) installed.
+
+In the Shila theme root directory run:
+
+```sh
+npm install
+```
+
+To generate theme-specific CSS files, in the Shila theme root directory run:
+
+```sh
+gulp sass
+```

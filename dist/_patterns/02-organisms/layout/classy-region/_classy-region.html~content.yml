@@ -1,0 +1,11 @@
+# Hidden pseudo-pattern variant that can be included in other patterns.
+
+attributes:
+  Attribute():
+    class:
+      - region
+      - region-content
+content:
+  join():
+    - organisms-classy-block-html-page-title
+    - organisms-classy-block-html-main

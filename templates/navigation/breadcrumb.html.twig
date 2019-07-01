@@ -1,16 +1,3 @@
-{#
-/**
- * @file
- * Theme override for a breadcrumb trail.
- *
- * Available variables:
- * - breadcrumb: Breadcrumb trail items.
- */
-#}
-{% if breadcrumb %}
-  {% include "@molecules/navigation/shila-breadcrumb/shila-breadcrumb.html.twig"
-    with {
-      'title': 'Breadcrumb'|t
-    }
-  %}
-{% endif %}
+{% set title = 'Breadcrumb'|t %}
+
+{% include '@molecules/navigation/classy-breadcrumb/classy-breadcrumb.html.twig' %}

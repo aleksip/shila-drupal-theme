@@ -1,0 +1,16 @@
+attributes:
+  Attribute():
+    class:
+      - js-form-item
+      - form-item
+label_display: before
+label:
+  include():
+    pattern: atoms-classy-form-element-label-html
+    with:
+      attributes:
+        Attribute():
+          class:
+            - form-required
+      required: true
+children: atoms-classy-input-html-textfield

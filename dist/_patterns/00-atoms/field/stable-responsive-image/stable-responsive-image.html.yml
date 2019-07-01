@@ -1,0 +1,5 @@
+sources:
+  - Attribute():
+      srcset: 'https://interactive-examples.mdn.mozilla.net/media/examples/surfer-240-200.jpg'
+      media: '(min-width: 800px)'
+img_element: atoms-classy-image-html

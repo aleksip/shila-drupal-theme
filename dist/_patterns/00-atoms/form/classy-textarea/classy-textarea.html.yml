@@ -1,0 +1,10 @@
+wrapper_attributes:
+  Attribute():
+    class:
+      - form-textarea-wrapper
+attributes:
+  Attribute():
+    class:
+      - form-textarea
+      - resize-vertical
+value: ''

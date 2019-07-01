@@ -1,0 +1,15 @@
+primary_tabs_title: 'Primary tabs'
+primary:
+  join():
+    - include():
+        pattern: molecules-classy-menu-local-task-html
+        with:
+          link: '<a href="">Local task 1</a>'
+    - include():
+        pattern: molecules-classy-menu-local-task-html
+        with:
+          link: '<a href="">Local task 2</a>'
+    - include():
+        pattern: molecules-classy-menu-local-task-html
+        with:
+          link: '<a href="">Local task 3</a>'

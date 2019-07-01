@@ -5,6 +5,6 @@
  * CSS rules that layout a page.
  */
 
-@import 'partials/imports';
-@import '../_patterns/02-organisms/global/shila-off-canvas/shila-off-canvas-layout';
-@import '../_patterns/03-templates/**/*.scss';
+@import "partials/imports";
+
+@import "../_patterns/**/*.layout.scss";

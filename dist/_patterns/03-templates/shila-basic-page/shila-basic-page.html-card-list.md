@@ -1,3 +1,0 @@
----
-title: Card list page
----

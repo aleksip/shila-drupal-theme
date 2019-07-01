@@ -1,0 +1,5 @@
+attributes:
+  Attribute():
+    class:
+      - field
+      - field--label-inline

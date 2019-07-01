@@ -1,0 +1,4 @@
+htmlClass: pl
+bodyClass: body
+attributes:
+  Attribute(): {}

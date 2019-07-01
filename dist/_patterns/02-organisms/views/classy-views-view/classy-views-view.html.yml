@@ -1,0 +1,5 @@
+attributes:
+  Attribute():
+    class:
+      - view
+rows: organisms-classy-views-view-unformatted-html

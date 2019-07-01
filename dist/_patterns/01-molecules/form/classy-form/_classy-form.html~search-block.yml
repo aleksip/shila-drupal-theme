@@ -1,0 +1,58 @@
+# Hidden pseudo-pattern variant that can be included in other patterns.
+
+attributes:
+  Attribute():
+    id: search-block-form
+    class:
+      - search-block-form
+children:
+  join():
+    - include():
+        pattern: molecules-classy-form-element-html
+        with:
+          label:
+            include():
+              pattern: atoms-classy-form-element-label-html
+              with:
+                title: 'Search'
+                attributes:
+                  Attribute():
+                    class:
+                      - visually-hidden
+          description_display: false
+          children:
+            include():
+              pattern: atoms-classy-input-html-textfield
+              with:
+                attributes:
+                  Attribute():
+                    class:
+                      - form-search
+                    type:
+                      - search
+                    size:
+                      - 15
+    - include():
+        pattern: molecules-classy-container-html
+        with:
+          attributes:
+            Attribute():
+              class:
+                - form-actions
+                - js-form-wrapper
+                - form-wrapper
+          children:
+            include():
+              pattern: atoms-classy-input-html-submit
+              with:
+                attributes:
+                  Attribute():
+                    id:
+                      - edit-submit
+                    type:
+                      - submit
+                    value:
+                      - 'Search'
+                    class:
+                      - button
+    -

@@ -1,0 +1,96 @@
+page:
+  include():
+    pattern: organisms-classy-page-html
+    with:
+      page:
+        header:
+          include():
+            pattern: organisms-classy-region-html-header
+            with:
+              content:
+                join():
+                  - include():
+                      pattern: organisms-classy-branding-block-html
+                      with:
+                        site_name: 'Shila theme'
+                        site_slogan: ''
+
+        primary_menu:
+          include():
+            pattern: organisms-classy-menu-block-html-main
+            with:
+              content:
+                include():
+                  pattern: molecules-classy-menu-html
+                  with:
+                    attributes:
+                      Attribute():
+                        class:
+                          - menu
+                    items:
+                      - attributes:
+                          Attribute():
+                            class:
+                              - menu-item
+                        link: '<a href="">Home</a>'
+                  only: true
+        secondary_menu:
+          include():
+            pattern: organisms-classy-menu-block-html
+            with:
+              attributes:
+                Attribute():
+                  class:
+                    - block
+                    - block-menu
+                    - navigation
+                    - menu--account
+              title_attributes:
+                Attribute():
+                  class:
+                    - visually-hidden
+              configuration:
+                label: 'User account menu'
+              content:
+                include():
+                  pattern: molecules-classy-menu-html
+                  with:
+                    attributes:
+                      Attribute():
+                        class:
+                          - menu
+                    items:
+                      - attributes:
+                          Attribute():
+                            class:
+                              - menu-item
+                        link: '<a href="">Log in</a>'
+                  only: true
+            only: true
+        breadcrumb: ''
+        content:
+          include():
+            pattern: organisms-classy-region-html-content
+            with:
+              attributes:
+                Attribute():
+                  class:
+                    - region
+                    - region-content
+              content:
+                join():
+                  - include():
+                      pattern: organisms-classy-block-html-page-title
+                      with:
+                        content:
+                          include():
+                            pattern: organisms-classy-page-title-html
+                            with:
+                              title: 'Welcome to Shila theme in Pattern Lab'
+                  - include():
+                      pattern: organisms-classy-block-html-main
+                      with:
+                        content: 'No front page content has been created yet.<br>Follow the
+                          <a target="_blank" href="https://www.drupal.org/docs/user_guide/en/index.html">User Guide</a>
+                          to start building your site.'
+            only: true

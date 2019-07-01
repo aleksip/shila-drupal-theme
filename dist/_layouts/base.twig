@@ -1,30 +1,3 @@
-<!DOCTYPE html>
-<html class="{{ htmlClass }}">
-  <head>
-    <title>{{ title }}</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width" />
-    <!-- From Drupal core -->
-    <link rel="stylesheet" href="../../css/normalize.css?{{ cacheBuster }}" media="all" />
-    <link rel="stylesheet" href="../../css/hidden.module.css?{{ cacheBuster }}" media="all" />
-    <!-- Shila Drupal theme CSS -->
-    <link rel="stylesheet" href="../../css/base.css?{{ cacheBuster }}" media="all" />
-    <link rel="stylesheet" href="../../css/layout.css?{{ cacheBuster }}" media="all" />
-    <link rel="stylesheet" href="../../css/components.css?{{ cacheBuster }}" media="all" />
-    <link rel="stylesheet" href="../../css/state.css?{{ cacheBuster }}" media="all" />
-    <link rel="stylesheet" href="../../css/theme.css?{{ cacheBuster }}" media="all" />
-    <link rel="stylesheet" href="../../css/print.css?{{ cacheBuster }}" media="all" />
-    <!-- Style guide specific -->
-    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?{{ cacheBuster }}" media="all" />
-  </head>
-  <body class="{{ bodyClass }}">
-    <div class="layout-container">
-      {% if off_canvas %}
-        <input type="checkbox" id="off-canvas-checkbox">
-        <label for="off-canvas-checkbox" id="off-canvas-label"></label>
-      {% endif %}
-      {{ page }}
-      {{ off_canvas }}
-    </div>{# /.layout-container #}
-  </body>
-</html>
+{{ page_top }}
+{{ page }}
+{{ page_bottom }}

@@ -1,0 +1,40 @@
+attributes:
+  Attribute():
+    class:
+      - node
+      - node--type-article
+      - node--view-mode-teaser
+page: false
+title_attributes:
+  Attribute(): {}
+label: 'Article title'
+content:
+  join():
+    - include():
+        pattern: molecules-classy-field-html
+        with:
+          label_hidden: true
+          attributes:
+            Attribute():
+              class:
+                - field
+                - field--node-body
+          items:
+            - content: atoms-paragraph
+    - molecules-classy-field-html-tags
+    - include():
+        pattern: molecules-classy-links-html
+        with:
+          attributes:
+            Attribute():
+              class:
+                - links
+                - inline
+                - node__links
+          links:
+            - attributes:
+                Attribute():
+                  class:
+                    - node-readmore
+              link: '<a href="">Read more</a>'
+        only: true

@@ -1,17 +1,34 @@
-name: Shila theme
+name: 'Shila theme'
 type: theme
-description: An atomic design and Pattern Lab friendly starting point for new Drupal themes.
+description: 'An atomic design and Pattern Lab friendly starting point for new Drupal themes.'
 package: Shila
 core: 8.x
+
+# The core Normalize library is included and then replaced so that Normalize
+# will be the first stylesheet in the HTML source.
 libraries:
+  - core/normalize
   - shila_theme/global-styling
 libraries-override:
-  core/normalize: false
+  core/normalize:
+    css:
+      base:
+        assets/vendor/normalize-css/normalize.css: dist/css/normalize.css
+
 regions:
-  header: Header
-  content: Content
-  footer: Footer
-  off_canvas: Off Canvas
+  page_top: 'Page top'
+  header: 'Header'
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  breadcrumb: 'Breadcrumb'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content: 'Content'
+  sidebar_first: 'Left sidebar'
+  sidebar_second: 'Right sidebar'
+  footer: 'Footer'
+  page_bottom: 'Page bottom'
+
 component-libraries:
   atoms:
     paths:

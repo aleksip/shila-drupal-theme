@@ -1,0 +1,73 @@
+################################################################################
+# Browsersync
+################################################################################
+browserSync:
+
+  # Proxy mode will be used if a proxy target is set.
+  proxy:
+    # This is the value that usually needs to be changed for every project,
+    # unless development is done in Pattern Lab only.
+    target: ''
+    # Setting a different host in the request headers can be useful in some
+    # setups.
+    reqHeaders:
+      host: ''
+  # Server mode will be used if a proxy target is not set and a Pattern Lab
+  # public directory exists.
+  server:
+    baseDir: './pattern-lab/public'
+  open: false
+
+
+################################################################################
+# Sass
+################################################################################
+sass:
+
+  # Sass options.
+  options:
+    includePaths:
+      - './dist/sass'
+      - './node_modules/shila-css/sass'
+      - './node_modules/breakpoint-sass/stylesheets'
+    outputStyle: 'expanded'
+
+  # Global Sass files, compiled to the global CSS directory.
+  global:
+    srcFiles:
+      - './dist/sass/**/*.scss'
+    destDir: './dist/css'
+
+  # Sass files to watch for changes. These are also the Sass files that will be
+  # linted.
+  watchFiles:
+    - './dist/sass/**/*.scss'
+    - './dist/_patterns/**/*.scss'
+
+
+################################################################################
+# Pattern Lab
+################################################################################
+patternLab:
+
+  dir: './pattern-lab'
+  publicCssDir: './pattern-lab/public/css'
+
+  # Changes to watched files will cause Pattern Lab to be regenerated.
+  # These files should not include Sass files, which are processed separately.
+  watchFiles:
+    - './dist/_patterns/**/*.twig'
+    - './dist/_patterns/**/*.js'
+    - './dist/_patterns/**/*.json'
+    - './dist/_patterns/**/*.yml'
+    - './dist/_patterns/**/*.md'
+
+
+################################################################################
+# JavaScript files
+################################################################################
+js:
+
+  srcFiles:
+    - './dist/_patterns/**/*.js'
+  destDir: './dist/js'

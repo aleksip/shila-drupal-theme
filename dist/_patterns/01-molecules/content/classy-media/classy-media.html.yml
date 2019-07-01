@@ -1,0 +1,9 @@
+attributes:
+  Attribute():
+    class:
+      - media
+      - media--type-image
+      - media--view-mode-full
+title_suffix:
+  contextual_links: ''
+content: molecules-classy-field-html-image

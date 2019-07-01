@@ -1,0 +1,19 @@
+attributes:
+  Attribute():
+    class:
+      - field
+      - field--comment
+title_attributes:
+  Attribute():
+    class:
+      - field--comment__title
+label: Comments
+comments:
+  join():
+    - organisms-classy-comment-html
+    - '<div class="indented">'
+    - organisms-classy-comment-html
+    - '</div>'
+    - organisms-classy-comment-html
+comment_form_title: 'Add new comment'
+comment_form: molecules-classy-form-html-comment

@@ -1,65 +1,33 @@
-'use strict';
-
-// Configuration.
-
-var config = {};
-config.patternsDir = './dist/_patterns';
-config.patternLab = {
-  dir: './pattern-lab',
-  watchFiles: [
-    config.patternsDir + '/**/*.twig',
-    config.patternsDir + '/**/*.json',
-    config.patternsDir + '/**/*.yml'
-  ],
-  publicCssDir: './pattern-lab/public/css'
-};
-config.browserSync = {
-  server: {
-    baseDir: config.patternLab.dir + '/public'
-  },
-  proxy: {
-    target: '',
-    reqHeaders: {
-      host: ''
-    }
-  },
-  open: false
-};
-config.sass = {
-  srcFiles: [
-    './dist/sass/*.scss'
-  ],
-  watchFiles: [
-    './dist/sass/**/*.scss',
-    config.patternsDir + '/**/*.scss',
-    './node_modules/shila-css/**/*.scss'
-  ],
-  options: {
-    includePaths: [
-      './dist/sass',
-      './node_modules/shila-css',
-      './node_modules/breakpoint-sass/stylesheets',
-      './node_modules/sass-toolkit/stylesheets',
-      './node_modules/singularitygs/stylesheets'
-    ],
-    outputStyle: 'expanded'
-  },
-  destDir: './dist/css'
-};
-
 // Load Gulp and other tools.
 
+var cp = require('child_process');
 var fs = require('fs');
+
 var browserSync = require('browser-sync').create();
 var gulp = require('gulp');
-var run = require('gulp-run');
+var concat = require('gulp-concat');
 var sass = require('gulp-sass');
 var sassGlob = require('gulp-sass-glob');
-var sassLint = require('gulp-sass-lint');
 var sourcemaps = require('gulp-sourcemaps');
-var runSequence = require('run-sequence');
+var stylelint = require('gulp-stylelint');
+var yaml = require('js-yaml');
 
-// Helper functions.
+
+// Load configuration from YAML file.
+var config = yaml.safeLoad(fs.readFileSync('./gulp-options.yml', 'utf8'));
+
+
+// Define tasks.
+
+gulp.task('watch', watch);
+gulp.task('compileSass', compileGlobalSass);
+gulp.task('plGenerate', plGenerate);
+gulp.task('lintSass', lintSass);
+gulp.task('copyCss', copyCss);
+gulp.task('default', gulp.series(compileGlobalSass, styleguideScripts, plGenerate, watch));
+
+
+// Task and helper functions.
 
 function isDirectory(dir) {
   try {
@@ -70,12 +38,10 @@ function isDirectory(dir) {
   }
 }
 
-// Gulp tasks.
-
 /**
- * Sets up Browsersync and watchers.
+ * Sets up Browsersync and watches files for changes.
  */
-gulp.task('watch', function () {
+function watch(cb) {
   if (config.browserSync.proxy.target) {
     browserSync.init({
       proxy: config.browserSync.proxy,
@@ -88,76 +54,86 @@ gulp.task('watch', function () {
       open: config.browserSync.open
     });
   }
-  gulp.watch(config.sass.watchFiles, ['sass-change']);
-  gulp.watch(config.patternLab.watchFiles, ['patterns-change']);
-});
+  gulp.watch(config.sass.watchFiles, gulp.series(compileGlobalSass, copyCss));
+  gulp.watch(config.patternLab.watchFiles, gulp.series(styleguideScripts, plGenerate, bsReload));
+  cb();
+}
+watch.description = 'Sets up Browsersync and watches files for changes.';
 
 /**
- * Task sequence to run when Sass files have changed.
+ * Compiles global Sass files and updates Browsersync.
  */
-gulp.task('sass-change', function () {
-  runSequence('sass', 'copy-css');
-});
-
-/**
- * Task sequence to run when pattern files have changed.
- */
-gulp.task('patterns-change', function () {
-  runSequence('pl:generate', 'bs:reload');
-});
-
-/**
- * Processes Sass files and updates Browsersync.
- */
-gulp.task('sass', function () {
-  return gulp.src(config.sass.srcFiles)
+function compileGlobalSass() {
+  return gulp.src(config.sass.global.srcFiles)
     .pipe(sassGlob())
     .pipe(sourcemaps.init())
     .pipe(sass(config.sass.options).on('error', sass.logError))
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest(config.sass.destDir))
+    .pipe(gulp.dest(config.sass.global.destDir))
     .pipe(browserSync.stream({match: '**/*.css'}));
-});
+}
+compileGlobalSass.description = 'Compiles global Sass files and updates Browsersync.';
 
 /**
- * Copies CSS files to Pattern Lab's public dir.
+ * Copies global CSS files to Pattern Lab's public directory.
  */
-gulp.task('copy-css', function () {
+function copyCss(cb) {
   if (isDirectory(config.patternLab.dir)) {
-    return gulp.src(config.sass.destDir + '/**/*.css')
+    gulp.src(config.sass.global.destDir + '/**/*.css')
       .pipe(gulp.dest(config.patternLab.publicCssDir))
       .pipe(browserSync.stream());
   }
-});
+  cb();
+}
+copyCss.description = "Copies global CSS files to Pattern Lab's public directory.";
 
 /**
- * Generates Pattern Lab front-end.
+ * Creates concatenated JavaScript file for Pattern Lab.
  */
-gulp.task('pl:generate', function () {
+function styleguideScripts(cb) {
+  gulp.src(config.js.srcFiles)
+    .pipe(concat('scripts-styleguide.js'))
+    .pipe(gulp.dest(config.js.destDir));
+  cb();
+}
+styleguideScripts.description = 'Creates concatenated JavaScript file for Pattern Lab.';
+
+/**
+ * Generates the Pattern Lab front-end.
+ */
+function plGenerate(cb) {
   if (isDirectory(config.patternLab.dir)) {
-    return run('php ' + config.patternLab.dir + '/core/console --generate').exec();
+    cp.exec('php ' + config.patternLab.dir + '/core/console --generate', function (err, stdout, stderr) {
+      console.log(stdout);
+      console.log(stderr);
+      cb(err);
+    });
   }
-});
+  else {
+    cb();
+  }
+}
+plGenerate.description = 'Generates the Pattern Lab front-end.';
 
 /**
  * Calls Browsersync reload.
  */
-gulp.task('bs:reload', function () {
+function bsReload(cb) {
   browserSync.reload();
-});
+  cb();
+}
 
 /**
  * Lints Sass files.
  */
-gulp.task('lint:sass', function () {
-  return gulp.src(config.sass.srcFiles)
-    .pipe(sassLint())
-    .pipe(sassLint.format());
-});
-
-/**
- * Gulp default task.
- */
-gulp.task('default', function () {
-  runSequence('sass', 'pl:generate', 'watch');
-});
+function lintSass(cb) {
+  gulp.src(config.sass.watchFiles)
+    .pipe(stylelint({
+      failAfterError: false,
+      reporters: [
+        { formatter: 'string', console: true }
+      ]
+    }));
+  cb();
+}
+lintSass.description = 'Lints Sass files.';

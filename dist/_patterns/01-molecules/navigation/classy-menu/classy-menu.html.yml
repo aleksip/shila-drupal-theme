@@ -1,0 +1,20 @@
+attributes:
+  Attribute():
+    class:
+      - menu
+items:
+  - attributes:
+      Attribute():
+        class:
+          - menu-item
+    link: '<a href="">Menu item 1</a>'
+  - attributes:
+      Attribute():
+        class:
+          - menu-item
+    link: '<a href="">Menu item 2</a>'
+  - attributes:
+      Attribute():
+        class:
+          - menu-item
+    link: '<a href="">Menu item 3</a>'

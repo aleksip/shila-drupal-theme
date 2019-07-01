@@ -1,11 +1,47 @@
 /**
  * @file
- * sass/components.scss
+ * sass/component.scss
  *
  * CSS rules that style design components (and their associated states and themes.)
  */
 
-@import 'partials/imports';
-@import '../_patterns/00-atoms/images/shila-feed-icon/shila-feed-icon';
-@import '../_patterns/01-molecules/**/*.scss';
-@import '../_patterns/02-organisms/**/*.scss';
+@import "partials/imports";
+
+// CSS files from Classy theme.
+@import "classy/components/action-links.css";
+@import "classy/components/breadcrumb.css";
+@import "classy/components/button.css";
+@import "classy/components/collapse-processed.css";
+@import "classy/components/container-inline.css";
+@import "classy/components/details.css";
+@import "classy/components/exposed-filters.css";
+@import "classy/components/field.css";
+@import "classy/components/form.css";
+@import "classy/components/icons.css";
+@import "classy/components/inline-form.css";
+@import "classy/components/item-list.css";
+@import "classy/components/link.css";
+@import "classy/components/links.css";
+@import "classy/components/menu.css";
+@import "classy/components/more-link.css";
+@import "classy/components/pager.css";
+@import "classy/components/tabledrag.css";
+@import "classy/components/tableselect.css";
+@import "classy/components/tablesort.css";
+@import "classy/components/tabs.css";
+@import "classy/components/textarea.css";
+@import "classy/components/ui-dialog.css";
+@import "classy/components/book-navigation.css";
+@import "classy/components/dialog.css";
+@import "classy/components/dropbutton.css";
+@import "classy/components/file.css";
+@import "classy/components/forum.css";
+@import "classy/components/image-widget.css";
+@import "classy/components/indented.css";
+@import "classy/components/messages.css";
+@import "classy/components/node.css";
+@import "classy/components/progress.css";
+@import "classy/components/search-results.css";
+@import "classy/components/user.css";
+
+@import "../_patterns/**/_*.component.scss";
