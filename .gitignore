@@ -1,8 +1,10 @@
-.idea
-node_modules
 /dist/css/**
 !/dist/css/classy
 !/dist/css/stable
 !/dist/css/stable-theme.admin.css
 !/dist/css/stable-theme.css
 /pattern-lab
+/wiki
+.idea
+node_modules
+package-lock.json
