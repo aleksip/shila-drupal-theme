@@ -1,0 +1,13 @@
+{% if attributes is not defined %}
+  {% set attributes = create_attribute({'class': ['js-form-wrapper', 'form-wrapper']}) %}
+{% endif %}
+{% if children is not defined %}
+  {% set children = include('@molecules/form/classy-form-element/demo/classy-form-element-demo.twig', with_context = false) %}
+{% endif %}
+
+{%
+  include '@molecules/form/classy-container/_classy-container.html.twig' with {
+    'attributes': attributes,
+    'children': children
+  } only
+%}

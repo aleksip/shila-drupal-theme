@@ -1,0 +1,21 @@
+{% if attributes is not defined %}
+  {% set attributes = create_attribute({'class': ['block', 'block-menu', 'navigation']}) %}
+{% endif %}
+{% if title_attributes is not defined %}
+  {% set title_attributes = create_attribute() %}
+{% endif %}
+{% if configuration is not defined %}
+  {% set configuration = {'label': 'Menu block label'} %}
+{% endif %}
+{% if content is not defined %}
+  {% set content = include('@molecules/navigation/classy-menu/demo/classy-menu-demo.twig', with_context = false) %}
+{% endif %}
+
+{%
+  include '@organisms/block/classy-menu-block/_classy-menu-block.html.twig' with {
+    'attributes': attributes,
+    'title_attributes': title_attributes,
+    'configuration': configuration,
+    'content': content
+  } only
+%}

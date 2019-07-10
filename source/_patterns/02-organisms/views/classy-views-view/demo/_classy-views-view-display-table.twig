@@ -1,0 +1,5 @@
+{%
+  include '@organisms/views/classy-views-view/demo/classy-views-view-demo.twig' with {
+    'rows': include('@organisms/views/classy-views-view-table/demo/classy-views-view-table-demo.twig', with_context = false)
+  } only
+%}

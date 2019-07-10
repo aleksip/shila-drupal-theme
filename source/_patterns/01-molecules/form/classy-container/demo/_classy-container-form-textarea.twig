@@ -1,0 +1,17 @@
+{% if label is not defined %}
+  {% set label = 'Textarea label' %}
+{% endif %}
+{% set children = include('@molecules/form/classy-form-element/demo/classy-form-element-demo.twig', {
+    'label':
+      include('@atoms/form/classy-form-element-label/demo/classy-form-element-label-demo.twig', {
+        'title': label
+      }, with_context = false),
+    'children':
+      include('@atoms/form/classy-textarea/demo/classy-textarea-demo.twig', with_context = false)
+  }, with_context = false) %}
+
+{%
+  include '@molecules/form/classy-container/demo/classy-container-demo.twig' with {
+    'children': children
+  } only
+%}

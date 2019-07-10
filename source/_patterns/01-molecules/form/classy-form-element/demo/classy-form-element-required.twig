@@ -1,0 +1,9 @@
+{%
+  include '@molecules/form/classy-form-element/demo/classy-form-element-demo.twig' with {
+    'label':
+      include('@atoms/form/classy-form-element-label/demo/classy-form-element-label-demo.twig', {
+        'attributes': create_attribute({'class': ['form-required']}),
+        'required': true
+      }, with_context = false)
+  } only
+%}

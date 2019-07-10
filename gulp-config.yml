@@ -1,0 +1,77 @@
+################################################################################
+# Browsersync
+################################################################################
+browserSync:
+
+  # Proxy mode will be used if a proxy target is set.
+  proxy:
+    # This is the value that usually needs to be changed for every project,
+    # unless development is done in Pattern Lab only.
+    target: ''
+    # Setting a different host in the request headers can be useful in some
+    # setups.
+    reqHeaders:
+      host: ''
+  # Server mode will be used if a proxy target is not set and a Pattern Lab
+  # public directory exists.
+  server:
+    baseDir: './public'
+  open: false
+
+
+################################################################################
+# Sass
+################################################################################
+sass:
+
+  # Sass options.
+  options:
+    includePaths:
+      - './source/sass'
+      - './node_modules/shila-css/sass'
+      - './node_modules/breakpoint-sass/stylesheets'
+    outputStyle: 'expanded'
+
+  # Global Sass files, compiled to the global CSS directory.
+  global:
+    srcFiles:
+      - './source/sass/**/*.scss'
+    destDir: './source/css'
+
+  # Sass files to watch for changes. These are also the Sass files that will be
+  # linted.
+  watchFiles:
+    - './source/sass/**/*.scss'
+    - './source/_patterns/**/*.scss'
+
+
+################################################################################
+# Pattern Lab
+################################################################################
+patternLab:
+
+  # Pattern Lab PHP directory.
+  # Gulp tasks will use either Pattern Lab PHP or Pattern Lab Node depending on
+  # whether this option is set or not.
+  #dir: './pattern-lab-php'
+
+  publicCssDir: './public/css'
+
+  # Changes to watched files will cause Pattern Lab to be regenerated.
+  # These files should not include Sass files, which are processed separately.
+  watchFiles:
+    - './source/_patterns/**/*.twig'
+    - './source/_patterns/**/*.js'
+    - './source/_patterns/**/*.json'
+    - './source/_patterns/**/*.yml'
+    - './source/_patterns/**/*.md'
+
+
+################################################################################
+# JavaScript files
+################################################################################
+js:
+
+  srcFiles:
+    - './source/_patterns/**/*.js'
+  destDir: './source/js'

@@ -1,0 +1,17 @@
+{% if attributes is not defined %}
+  {% set attributes = create_attribute({'class': ['block', 'block-core', 'block-page-title-block']}) %}
+{% endif %}
+{% if label is not defined %}
+  {% set label = false %}
+{% endif %}
+{% if content is not defined %}
+  {% set content = include('@organisms/content/classy-page-title/demo/classy-page-title-demo.twig', with_context = false) %}
+{% endif %}
+
+{%
+  include '@organisms/block/classy-block/demo/classy-block-demo.twig' with {
+    'attributes': attributes,
+    'label': label,
+    'content': content
+  } only
+%}

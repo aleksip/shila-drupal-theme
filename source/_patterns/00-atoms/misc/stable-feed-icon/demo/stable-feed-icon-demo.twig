@@ -1,0 +1,17 @@
+{% if attributes is not defined %}
+  {% set attributes = create_attribute({'class': ['feed-icon']}) %}
+{% endif %}
+{% if title is not defined %}
+  {% set title = 'Subscribe to' %}
+{% endif %}
+{% if url is not defined %}
+  {% set url = '' %}
+{% endif %}
+
+{%
+  include '@atoms/misc/stable-feed-icon/_stable-feed-icon.html.twig' with {
+    'attributes': attributes,
+    'title': title,
+    'url': url
+  } only
+%}

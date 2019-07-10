@@ -1,0 +1,26 @@
+{% if title is not defined %}
+  {% set title = 'Breadcrumb' %}
+{% endif %}
+{% if breadcrumb is not defined %}
+  {% set breadcrumb = [
+    {
+      'text': 'Crumb 1',
+      'url': '#'
+    },
+    {
+      'text': 'Crumb 2',
+      'url': '#'
+    },
+    {
+      'text': 'Crumb 3',
+      'url': '#'
+    }
+  ] %}
+{% endif %}
+
+{%
+  include '@molecules/navigation/classy-breadcrumb/_classy-breadcrumb.html.twig' with {
+    'title': title,
+    'breadcrumb': breadcrumb
+  } only
+%}

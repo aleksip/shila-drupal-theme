@@ -1,0 +1,29 @@
+{% if message_list is not defined %}
+  {% set message_list = {
+    'status': ['First status message', 'Second status message'],
+    'warning': ['Warning message'],
+    'error': ['Error message']
+  } %}
+{% endif %}
+{% if status_headings is not defined %}
+  {% set status_headings = {
+    'status': 'Status message',
+    'warning': 'Warning message',
+    'error': 'Error message'
+  } %}
+{% endif %}
+{% if type_attributes is not defined %}
+  {% set type_attributes = {
+    'status': create_attribute({'class': ['messages', 'messages--status']}),
+    'warning': create_attribute({'class': ['messages', 'messages--warning']}),
+    'error': create_attribute({'class': ['messages', 'messages--error']}),
+  } %}
+{% endif %}
+
+{%
+  include '@molecules/misc/classy-status-messages/_classy-status-messages.html.twig' with {
+    'message_list': message_list,
+    'status_headings': status_headings,
+    'type_attributes': type_attributes
+  } only
+%}

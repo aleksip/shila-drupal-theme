@@ -1,0 +1,13 @@
+{% if attributes is not defined %}
+  {% set attributes = create_attribute({'class': ['page-title']}) %}
+{% endif %}
+{% if title is not defined %}
+  {% set title = 'Page title' %}
+{% endif %}
+
+{%
+  include '@organisms/content/classy-page-title/_classy-page-title.html.twig' with {
+    'title_attributes': title_attributes,
+    'title': title
+  } only
+%}

@@ -1,0 +1,30 @@
+{% if attributes is not defined %}
+  {% set attributes = create_attribute({'class': ['block']}) %}
+{% endif %}
+{% if title_prefix is not defined %}
+  {% set title_prefix = '' %}
+{% endif %}
+{% if title_attributes is not defined %}
+  {% set title_attributes = create_attribute() %}
+{% endif %}
+{% if label is not defined %}
+  {% set label = 'Block title' %}
+{% endif %}
+{% if title_suffix is not defined %}
+  {% set title_suffix = '' %}
+{% endif %}
+{% if content is not defined %}
+  {% set content = include('@atoms/content/paragraph.twig', with_context = false) %}
+{% endif %}
+
+{%
+  include '@organisms/block/classy-block/_classy-block.html.twig' with {
+    'attributes': attributes,
+    'class': class,
+    'title_prefix': title_prefix,
+    'title_attributes': title_attributes,
+    'label': label,
+    'title_suffix': title_suffix,
+    'content': content
+  } only
+%}

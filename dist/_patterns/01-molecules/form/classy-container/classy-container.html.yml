@@ -1,6 +1,0 @@
-attributes:
-  Attribute():
-    class:
-      - js-form-wrapper
-      - form-wrapper
-children: molecules-classy-form-element-html

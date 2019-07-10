@@ -1,0 +1,12 @@
+{%
+  include '@molecules/form/classy-form-element/demo/classy-form-element-demo.twig' with {
+    'description_display': 'after',
+    'description': {
+      'attributes': create_attribute({'class': ['description']}),
+      'content': 'Description. Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    },
+    'errors': 'Error message. Lorem ipsum dolor sit amet, consectetur adipiscing
+      elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+  } only
+%}

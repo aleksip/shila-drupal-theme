@@ -1,0 +1,18 @@
+{% if sources is not defined %}
+  {% set sources = [
+    create_attribute({
+      'srcset': ['https://interactive-examples.mdn.mozilla.net/media/examples/surfer-240-200.jpg'],
+      'media': ['(min-width: 800px)']
+    })
+  ] %}
+{% endif %}
+{% if img_element is not defined %}
+  {% set img_element = include('@atoms/field/classy-image/demo/classy-image-demo.twig', with_context = false) %}
+{% endif %}
+
+{%
+  include '@atoms/field/stable-responsive-image/_stable-responsive-image.html.twig' with {
+    'sources': sources,
+    'img_element': img_element
+  } only
+%}

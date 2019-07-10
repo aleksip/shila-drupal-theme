@@ -1,0 +1,65 @@
+{%
+  include '@organisms/layout/classy-page/demo/_classy-page-demo.twig' with {
+    'page': {
+      'header':
+        include('@organisms/layout/classy-region/demo/classy-region-header.twig', {
+          'content':
+            include('@organisms/block/classy-branding-block/demo/classy-branding-block-demo.twig', {
+              'site_name': 'Shila theme',
+              'site_slogan': ''
+            }, with_context = false)
+        }, with_context = false),
+
+      'primary_menu':
+        include('@organisms/layout/classy-region/demo/classy-region-primary-menu.twig', {
+          'content':
+            include('@organisms/block/classy-menu-block/demo/_classy-menu-block-main.twig', {
+              'content':
+                include('@molecules/navigation/classy-menu/demo/classy-menu-demo.twig', {
+                  'items': [
+                    {
+                      'attributes': create_attribute({'class': ['menu-item']}),
+                      'link': '<a href="">Home</a>'
+                    }
+                  ]
+                }, with_context = false)
+            }, with_context = false)
+        }, with_context = false),
+
+      'secondary_menu':
+        include('@organisms/layout/classy-region/demo/classy-region-secondary-menu.twig', {
+          'content':
+            include('@organisms/block/classy-menu-block/demo/_classy-menu-block-account.twig', {
+              'content':
+                include('@molecules/navigation/classy-menu/demo/classy-menu-demo.twig', {
+                  'items': [
+                    {
+                      'attributes': create_attribute({'class': ['menu-item']}),
+                      'link': '<a href="">Log in</a>'
+                    }
+                  ]
+                }, with_context = false)
+            }, with_context = false)
+        }, with_context = false),
+
+      'breadcrumb': '',
+
+      'content':
+        include('@organisms/layout/classy-region/demo/classy-region-demo.twig', {
+        'content':
+          include('@organisms/block/classy-block/demo/_classy-block-page-title.twig', {
+            'content':
+              include('@organisms/content/classy-page-title/demo/classy-page-title-demo.twig', {
+                'title': 'Welcome to Shila theme in Pattern Lab'
+              }, with_context = false)
+          }, with_context = false) ~
+          include('@organisms/block/classy-block/demo/_classy-block-main.twig', {
+            'content':
+              'No front page content has been created yet.<br>Follow the
+              <a target="_blank" href="https://www.drupal.org/docs/user_guide/en/index.html">User Guide</a>
+              to start building your site.'
+          }, with_context = false)
+        }, with_context = false)
+    }
+  } only
+%}

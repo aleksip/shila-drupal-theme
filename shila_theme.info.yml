@@ -13,7 +13,7 @@ libraries-override:
   core/normalize:
     css:
       base:
-        assets/vendor/normalize-css/normalize.css: dist/css/normalize.css
+        assets/vendor/normalize-css/normalize.css: source/css/normalize.css
 
 regions:
   page_top: 'Page top'
@@ -32,13 +32,13 @@ regions:
 component-libraries:
   atoms:
     paths:
-      - dist/_patterns/00-atoms
+      - source/_patterns/00-atoms
   molecules:
     paths:
-      - dist/_patterns/01-molecules
+      - source/_patterns/01-molecules
   organisms:
     paths:
-      - dist/_patterns/02-organisms
+      - source/_patterns/02-organisms
   templates:
     paths:
-      - dist/_patterns/03-templates
+      - source/_patterns/03-templates

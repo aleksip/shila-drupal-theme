@@ -1,0 +1,19 @@
+{% if attributes is not defined %}
+  {% set attributes = create_attribute({'class': [
+    'block', 'block-search', 'container-inline'
+  ]}) %}
+{% endif %}
+{% if label is not defined %}
+  {% set label = 'Search' %}
+{% endif %}
+{% if content is not defined %}
+  {% set content = include('@molecules/form/classy-form/demo/_classy-form-search-block.twig', with_context = false) %}
+{% endif %}
+
+{%
+  include '@organisms/block/classy-search-form-block/_classy-search-form-block.html.twig' with {
+    'attributes': attributes,
+    'label': label,
+    'content': content
+  } only
+%}

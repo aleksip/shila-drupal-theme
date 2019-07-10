@@ -1,0 +1,17 @@
+{% if wrapper_attributes is not defined %}
+  {% set wrapper_attributes = create_attribute({'class': ['form-textarea-wrapper']}) %}
+{% endif %}
+{% if attributes is not defined %}
+  {% set attributes = create_attribute({'class': ['form-textarea', 'resize-vertical']}) %}
+{% endif %}
+{% if value is not defined %}
+  {% set value = '' %}
+{% endif %}
+
+{%
+  include '@atoms/form/classy-textarea/_classy-textarea.html.twig' with {
+    'wrapper_attributes': wrapper_attributes,
+    'attributes': attributes,
+    'value': value
+  } only
+%}

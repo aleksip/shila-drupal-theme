@@ -1,0 +1,21 @@
+{% if wrapper_attributes is not defined %}
+  {% set wrapper_attributes = create_attribute({'class': ['item-list']}) %}
+{% endif %}
+{% if list_type is not defined %}
+  {% set list_type = 'ul' %}
+{% endif %}
+{% if items is not defined %}
+  {% set items = [
+    {'attributes': create_attribute(), 'value': 'Item 1'},
+    {'attributes': create_attribute(), 'value': 'Item 2'},
+    {'attributes': create_attribute(), 'value': 'Item 3'}
+  ] %}
+{% endif %}
+
+{%
+  include '@molecules/dataset/classy-item-list/_classy-item-list.html.twig' with {
+    'wrapper_attributes': wrapper_attributes,
+    'list_type': list_type,
+    'items': items
+  } only
+%}

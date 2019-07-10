@@ -1,0 +1,32 @@
+{% extends "@organisms/block/classy-block/_classy-block.html.twig" %}
+{#
+/**
+ * @file
+ * Theme override for a branding block.
+ *
+ * Each branding element variable (logo, name, slogan) is only available if
+ * enabled in the block configuration.
+ *
+ * Available variables:
+ * - site_logo: Logo for site as defined in Appearance or theme settings.
+ * - site_name: Name for site as defined in Site information settings.
+ * - site_slogan: Slogan for site as defined in Site information settings.
+ *
+ * @see templates/block/block--system-branding-block.html.twig
+ */
+#}
+{% block content %}
+  {% if site_logo %}
+    <a href="{{ site_home_url }}" title="{{ site_home_title }}" rel="home" class="site-logo">
+      <img src="{{ site_logo }}" alt="{{ site_home_title }}" />
+    </a>
+  {% endif %}
+  {% if site_name %}
+    <div class="site-name">
+      <a href="{{ site_home_url }}" title="{{ site_home_title }}" rel="home">{{ site_name }}</a>
+    </div>
+  {% endif %}
+  {% if site_slogan %}
+    <div class="site-slogan">{{ site_slogan }}</div>
+  {% endif %}
+{% endblock %}

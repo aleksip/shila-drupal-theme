@@ -1,0 +1,26 @@
+{% if attributes is not defined %}
+  {% set attributes = create_attribute({'class': ['menu']}) %}
+{% endif %}
+{% if items is not defined %}
+  {% set items = [
+    {
+      'attributes': create_attribute({'class': ['menu-item']}),
+      'link': '<a href="">Menu item 1</a>'
+    },
+    {
+      'attributes': create_attribute({'class': ['menu-item']}),
+      'link': '<a href="">Menu item 2</a>'
+    },
+    {
+      'attributes': create_attribute({'class': ['menu-item']}),
+      'link': '<a href="">Menu item 3</a>'
+    },
+  ] %}
+{% endif %}
+
+{%
+  include '@molecules/navigation/classy-menu/_classy-menu.html.twig' with {
+    'attributes': attributes,
+    'items': items
+  } only
+%}

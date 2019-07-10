@@ -1,0 +1,13 @@
+{%
+  include '@organisms/content/classy-node/demo/classy-node-demo.twig' with {
+    'attributes': create_attribute({'class': [
+      'node', 'node--type-article', 'node--view-mode-teaser'
+    ]}),
+    'page': false,
+    'label': 'Article title',
+    'display_submitted': true,
+    'content':
+      include('@molecules/field/classy-field/demo/_classy-field-node-teaser.twig', with_context = false) ~
+      include('@molecules/navigation/classy-links/demo/_classy-links-read-more.twig', with_context = false)
+  } only
+%}

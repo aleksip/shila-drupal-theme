@@ -1,0 +1,13 @@
+{% if attributes is not defined %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+{% if children is not defined %}
+  {% set children = '' %}
+{% endif %}
+
+{%
+  include '@atoms/form/classy-input/_classy-input.html.twig' with {
+    'attributes': attributes,
+    'children': children
+  } only
+%}

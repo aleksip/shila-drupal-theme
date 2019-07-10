@@ -1,0 +1,19 @@
+{%
+  include '@molecules/field/classy-field/demo/classy-field-demo.twig' with {
+    'label': 'Tags',
+    'items': [
+      {
+        'attributes': create_attribute({'class': ['field__item']}),
+        'content': '<a href="">Tag one</a>'
+      },
+      {
+        'attributes': create_attribute({'class': ['field__item']}),
+        'content': '<a href="">Tag two</a>'
+      },
+      {
+        'attributes': create_attribute({'class': ['field__item']}),
+        'content': '<a href="">Tag three</a>'
+      }
+    ]
+  } only
+%}

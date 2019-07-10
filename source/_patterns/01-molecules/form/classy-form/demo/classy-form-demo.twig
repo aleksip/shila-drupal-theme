@@ -1,0 +1,17 @@
+{% if attributes is not defined %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+{% if children is not defined %}
+  {% set children %}
+    {% include '@molecules/form/classy-container/demo/classy-container-demo.twig' only %}
+    {% include '@molecules/form/classy-container/demo/classy-container-demo.twig' only %}
+    {% include '@molecules/form/classy-container/demo/classy-container-demo.twig' only %}
+  {% endset %}
+{% endif %}
+
+{%
+  include '@molecules/form/classy-form/_classy-form.html.twig' with {
+    'attributes': attributes,
+    'children': children
+  } only
+%}

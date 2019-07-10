@@ -1,0 +1,11 @@
+{%
+  include '@molecules/navigation/classy-links/demo/classy-links-demo.twig' with {
+    'attributes': create_attribute({'class': ['links', 'inline', 'node__links']}),
+    'links': [
+      {
+        'attributes': create_attribute({'class': ['node-readmore']}),
+        'link': '<a href="">Read more</a>'
+      }
+    ]
+  } only
+%}

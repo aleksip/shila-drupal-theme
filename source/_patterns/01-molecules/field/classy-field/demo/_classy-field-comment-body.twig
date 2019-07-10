@@ -1,0 +1,12 @@
+{%
+  include '@molecules/field/classy-field/demo/classy-field-demo.twig' with {
+    'label_hidden': true,
+    'attributes': create_attribute({'class': ['field', 'field--comment-body']}),
+    'items': [
+      {
+        'attributes': create_attribute({'class': ['field__item']}),
+        'content': include('@atoms/content/paragraph.twig', with_context = false)
+      }
+    ]
+  } only
+%}

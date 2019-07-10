@@ -1,0 +1,26 @@
+{% if attributes is not defined %}
+  {% set attributes = create_attribute({'class': ['links', 'inline']}) %}
+{% endif %}
+{% if links is not defined %}
+  {% set links = [
+    {
+      'attributes': create_attribute(),
+      'link': '<a href="">Link 1</a>'
+    },
+    {
+      'attributes': create_attribute(),
+      'link': '<a href="">Link 2</a>'
+    },
+    {
+      'attributes': create_attribute(),
+      'link': '<a href="">Link 3</a>'
+    },
+  ] %}
+{% endif %}
+
+{%
+  include '@molecules/navigation/classy-links/_classy-links.html.twig' with {
+    'attributes': attributes,
+    'links': links
+  } only
+%}

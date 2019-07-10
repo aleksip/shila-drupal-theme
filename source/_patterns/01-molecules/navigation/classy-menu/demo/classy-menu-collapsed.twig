@@ -1,0 +1,20 @@
+{% set items = [
+  {
+    'attributes': create_attribute({'class': ['menu-item', 'menu-item--collapsed']}),
+    'link': '<a href="">Menu item 1</a>'
+  },
+  {
+    'attributes': create_attribute({'class': ['menu-item', 'menu-item--collapsed']}),
+    'link': '<a href="">Menu item 2</a>'
+  },
+  {
+    'attributes': create_attribute({'class': ['menu-item', 'menu-item--collapsed']}),
+    'link': '<a href="">Menu item 3</a>'
+  },
+] %}
+
+{%
+  include '@molecules/navigation/classy-menu/demo/classy-menu-demo.twig' with {
+    'items': items
+  } only
+%}

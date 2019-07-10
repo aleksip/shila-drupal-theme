@@ -1,0 +1,40 @@
+{% if attributes is not defined %}
+  {% set attributes = create_attribute({'class': ['comment']}) %}
+{% endif %}
+{% if submitted is not defined %}
+  {% set submitted = 'Submitted by Shila (not verified) on Mon, 01/04/2016 - 12:08' %}
+{% endif %}
+{% if title_attributes is not defined %}
+  {% set title_attributes = create_attribute({'class': ['comment__title']}) %}
+{% endif %}
+{% if title is not defined %}
+  {% set title = 'Comment title' %}
+{% endif %}
+{% if content_attributes is not defined %}
+  {% set content_attributes = create_attribute({'class': ['comment__content']}) %}
+{% endif %}
+{% if content is not defined %}
+  {% set content %}
+    {% include '@molecules/field/classy-field/demo/_classy-field-comment-body.twig' only %}
+    {% include '@molecules/navigation/classy-links/demo/classy-links-demo.twig' with {
+      'attributes': create_attribute({'class': ['links', 'inline']}),
+      'links': [
+        {
+          'attributes': create_attribute(),
+          'link': '<a href="">Reply</a>'
+        }
+      ]
+    } only %}
+  {% endset %}
+{% endif %}
+
+{%
+  include '@organisms/content/classy-comment/_classy-comment.html.twig' with {
+    'attributes': attributes,
+    'submitted': submitted,
+    'title_attributes': title_attributes,
+    'title': title,
+    'content_attributes': content_attributes,
+    'content': content
+  } only
+%}

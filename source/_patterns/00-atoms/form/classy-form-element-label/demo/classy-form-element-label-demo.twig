@@ -1,0 +1,13 @@
+{% if attributes is not defined %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+{% if title is not defined %}
+  {% set title = 'Form element label' %}
+{% endif %}
+
+{%
+  include '@atoms/form/classy-form-element-label/_classy-form-element-label.html.twig' with {
+    'attributes': attributes,
+    'title': title
+  } only
+%}

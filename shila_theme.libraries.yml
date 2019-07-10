@@ -1,12 +1,12 @@
 global-styling:
   css:
     base:
-      dist/css/base.css: {}
+      source/css/base.css: {}
     component:
-      dist/css/component.css: {}
+      source/css/component.css: {}
     layout:
-      dist/css/layout.css: {}
+      source/css/layout.css: {}
     state:
-      dist/css/state.css: {}
+      source/css/state.css: {}
     theme:
-      dist/css/theme.css: {}
+      source/css/theme.css: {}

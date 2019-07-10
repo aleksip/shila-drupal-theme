@@ -1,0 +1,19 @@
+{% if attributes is not defined %}
+  {% set attributes = create_attribute({'class': ['media', 'media--type-image']}) %}
+{% endif %}
+{% if title_suffix is not defined %}
+  {% set title_suffix = {
+    'contextual_links': ''
+  } %}
+{% endif %}
+{% if content is not defined %}
+  {% set content = include('@molecules/field/classy-field/demo/_classy-field-image.twig', with_context = false) %}
+{% endif %}
+
+{%
+  include '@molecules/content/classy-media/_classy-media.html.twig' with {
+    'attributes': attributes,
+    'title_suffix': title_suffix,
+    'content': content
+  } only
+%}

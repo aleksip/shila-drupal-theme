@@ -1,0 +1,16 @@
+{% if attributes is not defined %}
+  {% set attributes = create_attribute({'class': ['region', 'region-content']}) %}
+{% endif %}
+{% if content is not defined %}
+  {% set content %}
+    {% include '@organisms/block/classy-block/demo/_classy-block-page-title.twig' only %}
+    {% include '@organisms/block/classy-block/demo/_classy-block-main.twig' only %}
+  {% endset %}
+{% endif %}
+
+{%
+  include '@organisms/layout/classy-region/_classy-region.html.twig' with {
+    'attributes': attributes,
+    'content': content
+  } only
+%}

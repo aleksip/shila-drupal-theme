@@ -1,7 +1,0 @@
-attributes:
-  Attribute():
-    class:
-      - file
-      - file--general
-icon: ''
-link: '<a href="">File link</a>'

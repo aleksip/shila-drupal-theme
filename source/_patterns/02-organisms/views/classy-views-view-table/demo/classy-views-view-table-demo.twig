@@ -1,0 +1,168 @@
+{% if attributes is not defined %}
+  {% set attributes = create_attribute({'class': ['views-table', 'views-view-table']}) %}
+{% endif %}
+{% if caption_needed is not defined %}
+  {% set caption_needed = false %}
+{% endif %}
+{% if caption is not defined %}
+  {% set caption = 'Caption' %}
+{% endif %}
+{% if title is not defined %}
+  {% set title = 'Title' %}
+{% endif %}
+{% if summary is not defined %}
+  {% set summary = 'Summary' %}
+{% endif %}
+{% if description is not defined %}
+  {% set description = 'Description' %}
+{% endif %}
+{% if header is not defined %}
+  {% set header = {
+    'column-1': {
+      'attributes': create_attribute(),
+      'wrapper_element': '',
+      'url': '',
+      'title': '',
+      'content': 'Column 1',
+      'sort_indicator': ''
+    },
+    'column-2': {
+      'attributes': create_attribute(),
+      'wrapper_element': '',
+      'url': '',
+      'title': '',
+      'content': 'Column 2',
+      'sort_indicator': ''
+    },
+    'column-3': {
+      'attributes': create_attribute(),
+      'wrapper_element': '',
+      'url': '',
+      'title': '',
+      'content': 'Column 3',
+      'sort_indicator': ''
+    }
+  } %}
+{% endif %}
+{% if rows is not defined %}
+  {% set rows = [
+    {
+      'attributes': create_attribute(),
+      'columns': {
+        'column-1': {
+          'attributes': create_attribute(),
+          'wrapper_element': '',
+          'content': [
+            {
+              'separator': '',
+              'field_output': 'Row 1 Column 1'
+            }
+          ]
+        },
+        'column-2': {
+          'attributes': create_attribute(),
+          'wrapper_element': '',
+          'content': [
+            {
+              'separator': '',
+              'field_output': 'Row 1 Column 2'
+            }
+          ]
+        },
+        'column-3': {
+          'attributes': create_attribute(),
+          'wrapper_element': '',
+          'content': [
+            {
+              'separator': '',
+              'field_output': 'Row 1 Column 3'
+            }
+          ]
+        }
+      }
+    },
+    {
+      'attributes': create_attribute(),
+      'columns': {
+        'column-1': {
+          'attributes': create_attribute(),
+          'wrapper_element': '',
+          'content': [
+            {
+              'separator': '',
+              'field_output': 'Row 2 Column 1'
+            }
+          ]
+        },
+        'column-2': {
+          'attributes': create_attribute(),
+          'wrapper_element': '',
+          'content': [
+            {
+              'separator': '',
+              'field_output': 'Row 2 Column 2'
+            }
+          ]
+        },
+        'column-3': {
+          'attributes': create_attribute(),
+          'wrapper_element': '',
+          'content': [
+            {
+              'separator': '',
+              'field_output': 'Row 2 Column 3'
+            }
+          ]
+        }
+      }
+    },
+    {
+      'attributes': create_attribute(),
+      'columns': {
+        'column-1': {
+          'attributes': create_attribute(),
+          'wrapper_element': '',
+          'content': [
+            {
+              'separator': '',
+              'field_output': 'Row 3 Column 1'
+            }
+          ]
+        },
+        'column-2': {
+          'attributes': create_attribute(),
+          'wrapper_element': '',
+          'content': [
+            {
+              'separator': '',
+              'field_output': 'Row 3 Column 2'
+            }
+          ]
+        },
+        'column-3': {
+          'attributes': create_attribute(),
+          'wrapper_element': '',
+          'content': [
+            {
+              'separator': '',
+              'field_output': 'Row 3 Column 3'
+            }
+          ]
+        }
+      }
+    }
+  ] %}
+{% endif %}
+
+{%
+  include '@organisms/views/classy-views-view-table/_classy-views-view-table.html.twig' with {
+    'attributes': attributes,
+    'caption_needed': caption_needed,
+    'caption': caption,
+    'title': title,
+    'summary': summary,
+    'description': description,
+    'header': header,
+    'rows': rows
+  } only
+%}

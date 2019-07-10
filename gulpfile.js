@@ -3,6 +3,8 @@
 var cp = require('child_process');
 var fs = require('fs');
 
+var plConfig = require('./patternlab-config.json');
+var patternlab = require('@pattern-lab/core')(plConfig);
 var browserSync = require('browser-sync').create();
 var gulp = require('gulp');
 var concat = require('gulp-concat');
@@ -14,7 +16,7 @@ var yaml = require('js-yaml');
 
 
 // Load configuration from YAML file.
-var config = yaml.safeLoad(fs.readFileSync('./gulp-options.yml', 'utf8'));
+var config = yaml.safeLoad(fs.readFileSync('./gulp-config.yml', 'utf8'));
 
 
 // Define tasks.
@@ -78,7 +80,7 @@ compileGlobalSass.description = 'Compiles global Sass files and updates Browsers
  * Copies global CSS files to Pattern Lab's public directory.
  */
 function copyCss(cb) {
-  if (isDirectory(config.patternLab.dir)) {
+  if (isDirectory(config.patternLab.publicCssDir)) {
     gulp.src(config.sass.global.destDir + '/**/*.css')
       .pipe(gulp.dest(config.patternLab.publicCssDir))
       .pipe(browserSync.stream());
@@ -110,7 +112,13 @@ function plGenerate(cb) {
     });
   }
   else {
-    cb();
+    patternlab
+      .build({
+        cleanPublic: plConfig.cleanPublic
+      })
+      .then(function () {
+        cb();
+      });
   }
 }
 plGenerate.description = 'Generates the Pattern Lab front-end.';

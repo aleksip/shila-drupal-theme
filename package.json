@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Shila theme for Drupal 8",
   "devDependencies": {
+    "@pattern-lab/cli": "^0.0.3",
+    "@pattern-lab/core": "^3.0.1",
+    "@pattern-lab/engine-twig-php": "^3.0.1",
+    "@pattern-lab/uikit-workshop": "^1.0.1",
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
@@ -23,7 +27,9 @@
   },
   "license": "GPL-2.0",
   "scripts": {
-    "install-pattern-lab": "if [ ! -d pattern-lab ]; then composer create-project -n pattern-lab/edition-twig-standard pattern-lab && cd pattern-lab && composer require aleksip/plugin-data-transform && php core/console -c --set sourceDir=../dist && php core/console -c --set twigAutoescape=0 && php core/console --generate && cd ..; fi"
+    "setup": "npm install && composer install",
+    "setup-pattern-lab-php": "if [ ! -d pattern-lab-php ]; then composer create-project -n pattern-lab/edition-twig-standard pattern-lab-php && cd pattern-lab-php && composer require aleksip/plugin-data-transform && php core/console -c --set sourceDir=../source && php core/console -c --set publicDir=../public && php core/console -c --set twigAutoescape=0 && cd ..; fi",
+    "clean": "rm -rf pattern-lab-php && rm -rf node_modules && rm -rf public && rm -rf vendor"
   },
   "dependencies": {}
 }

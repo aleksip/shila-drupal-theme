@@ -1,0 +1,11 @@
+{% if attributes is not defined %}
+  {% set attributes = create_attribute({
+    'src': ['https://interactive-examples.mdn.mozilla.net/media/examples/painted-hand-298-332.jpg']
+  }) %}
+{% endif %}
+
+{%
+  include '@atoms/field/classy-image/_classy-image.html.twig' with {
+    'attributes': attributes
+  } only
+%}

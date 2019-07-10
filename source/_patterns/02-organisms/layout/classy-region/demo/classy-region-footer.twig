@@ -1,0 +1,21 @@
+{% if attributes is not defined %}
+  {% set attributes = create_attribute({'class': ['region', 'region-footer']}) %}
+{% endif %}
+{% if content is not defined %}
+  {% set content %}
+    {%
+      include '@organisms/block/classy-block/demo/classy-block-demo.twig' with {
+        'attributes': create_attribute({'class': ['block', 'block-system-powered-by-block']}),
+        'label': '',
+        'content': 'Powered by <a target="_blank" href="https://patternlab.io/">Pattern Lab</a>'
+      } only
+    %}
+  {% endset %}
+{% endif %}
+
+{%
+  include '@organisms/layout/classy-region/demo/classy-region-demo.twig' with {
+    'attributes': attributes,
+    'content': content
+  } only
+%}

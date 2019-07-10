@@ -1,0 +1,36 @@
+{% if attributes is not defined %}
+  {% set attributes = create_attribute({'class': ['js-form-item', 'form-item']}) %}
+{% endif %}
+{% if label_display is not defined %}
+  {% set label_display = 'before' %}
+{% endif %}
+{% if label is not defined %}
+  {% set label = include('@atoms/form/classy-form-element-label/demo/classy-form-element-label-demo.twig', with_context = false) %}
+{% endif %}
+{% if description_display is not defined %}
+  {% set description_display = false %}
+{% endif %}
+{% if description is not defined %}
+  {% set description = {
+    'attributes': create_attribute(),
+    'description_content': ''
+  } %}
+{% endif %}
+{% if children is not defined %}
+  {% set children = include('@atoms/form/classy-input/demo/classy-input-textfield.twig', with_context = false) %}
+{% endif %}
+{% if errors is not defined %}
+  {% set errors = false %}
+{% endif %}
+
+{%
+  include '@molecules/form/classy-form-element/_classy-form-element.html.twig' with {
+    'attributes': attributes,
+    'label_display': label_display,
+    'label': label,
+    'description_display': description_display,
+    'description': description,
+    'children': children,
+    'errors': errors
+  } only
+%}

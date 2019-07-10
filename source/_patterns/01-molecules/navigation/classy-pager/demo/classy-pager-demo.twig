@@ -1,0 +1,103 @@
+{% if pagination_title is not defined %}
+  {% set pagination_title = 'Pagination' %}
+{% endif %}
+{% if first_page_title is not defined %}
+  {% set first_page_title = 'Go to first page' %}
+{% endif %}
+{% if first_page_text is not defined %}
+  {% set first_page_text = 'First page' %}
+{% endif %}
+{% if first_text is not defined %}
+  {% set first_text = '« First' %}
+{% endif %}
+{% if previous_page_title is not defined %}
+  {% set previous_page_title = 'Go to previous page' %}
+{% endif %}
+{% if previous_page_text is not defined %}
+  {% set previous_page_text = 'Previous page' %}
+{% endif %}
+{% if previous_text is not defined %}
+  {% set previous_text = '‹ Previous' %}
+{% endif %}
+{% if current_page_text is not defined %}
+  {% set current_page_text = 'Current page' %}
+{% endif %}
+{% if go_to_page_text is not defined %}
+  {% set go_to_page_text = 'Go to page' %}
+{% endif %}
+{% if page_text is not defined %}
+  {% set page_text = 'Page' %}
+{% endif %}
+{% if next_page_title is not defined %}
+  {% set next_page_title = 'Go to next page' %}
+{% endif %}
+{% if next_page_text is not defined %}
+  {% set next_page_text = 'Next page' %}
+{% endif %}
+{% if next_text is not defined %}
+  {% set next_text = 'Next ›' %}
+{% endif %}
+{% if last_page_title is not defined %}
+  {% set last_page_title = 'Go to last page' %}
+{% endif %}
+{% if last_page_text is not defined %}
+  {% set last_page_text = 'Last page' %}
+{% endif %}
+{% if last_text is not defined %}
+  {% set last_text = 'Last »' %}
+{% endif %}
+{% if items is not defined %}
+  {% set items = {
+    'first': {
+      'href': ''
+    },
+    'previous': {
+      'href': ''
+    },
+    'pages': {
+      1: {
+        'href': ''
+      },
+      2: {
+        'href': ''
+      },
+      3: {
+        'href': ''
+      },
+      4: {
+        'href': ''
+      },
+      5: {
+        'href': ''
+      },
+    },
+    'next': {
+      'href': ''
+    },
+    'last': {
+      'href': ''
+    }
+  } %}
+{% endif %}
+
+{%
+  include '@molecules/navigation/classy-pager/_classy-pager.html.twig' with {
+    'pagination_title': pagination_title,
+    'first_page_title': first_page_title,
+    'first_page_text': first_page_text,
+    'first_text': first_text,
+    'previous_page_title': previous_page_title,
+    'previous_page_text': previous_page_text,
+    'previous_text': previous_text,
+    'current_page_text': current_page_text,
+    'go_to_page_text': go_to_page_text,
+    'page_text': page_text,
+    'next_page_title': next_page_title,
+    'next_page_text': next_page_text,
+    'next_text': next_text,
+    'last_page_title': last_page_title,
+    'last_page_text': last_page_text,
+    'last_text': last_text,
+    'items': items
+  } only
+%}

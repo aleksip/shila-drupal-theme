@@ -1,0 +1,41 @@
+{% if attributes is not defined %}
+  {% set attributes = create_attribute({'class': ['node']}) %}
+{% endif %}
+{% if page is not defined %}
+  {% set page = true %}
+{% endif %}
+{% if title_attributes is not defined %}
+  {% set title_attributes = create_attribute() %}
+{% endif %}
+{% if label is not defined %}
+  {% set label = 'Node title' %}
+{% endif %}
+{% if display_submitted is not defined %}
+  {% set display_submitted = false %}
+{% endif %}
+{% if submitted is not defined %}
+  {% set submitted = 'Submitted by Author Name' %}
+{% endif %}
+{% if metadata is not defined %}
+  {% set metadata = 'on Mon, 01/04/2016 - 12:08' %}
+{% endif %}
+{% if content_attributes is not defined %}
+  {% set content_attributes = create_attribute({'class': ['node__content']}) %}
+{% endif %}
+{% if content is not defined %}
+  {% set content = include('@molecules/field/classy-field/demo/_classy-field-node-body.twig', with_context = false) %}
+{% endif %}
+
+{%
+  include '@organisms/content/classy-node/_classy-node.html.twig' with {
+    'attributes': attributes,
+    'page': page,
+    'title_attributes': title_attributes,
+    'label': label,
+    'display_submitted': display_submitted,
+    'submitted': submitted,
+    'metadata': metadata,
+    'content_attributes': content_attributes,
+    'content': content
+  } only
+%}

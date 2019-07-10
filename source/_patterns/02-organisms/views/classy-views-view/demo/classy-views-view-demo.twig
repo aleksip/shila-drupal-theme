@@ -1,0 +1,13 @@
+{% if attributes is not defined %}
+  {% set attributes = create_attribute({'class': ['view']}) %}
+{% endif %}
+{% if rows is not defined %}
+  {% set rows = include('@organisms/views/classy-views-view-unformatted/demo/classy-views-view-unformatted-demo.twig', with_context = false) %}
+{% endif %}
+
+{%
+  include '@organisms/views/classy-views-view/_classy-views-view.html.twig' with {
+    'attributes': attributes,
+    'rows': rows
+  } only
+%}

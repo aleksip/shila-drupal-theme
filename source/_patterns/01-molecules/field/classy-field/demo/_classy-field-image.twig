@@ -1,0 +1,17 @@
+{%
+  include '@molecules/field/classy-field/demo/classy-field-demo.twig' with {
+    'label': 'Image',
+    'attributes': create_attribute({
+      'class': ['field', 'field--name-field-media-image', 'field--type-image']
+    }),
+    'title_attributes': create_attribute({
+      'class': ['field__label', 'visually-hidden']
+    }),
+    'items': [
+      {
+        'attributes': create_attribute({'class': ['field__item']}),
+        'content': include('@atoms/field/classy-image/demo/classy-image-demo.twig', with_context = false),
+      }
+    ]
+  } only
+%}

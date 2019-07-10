@@ -1,0 +1,34 @@
+{% if label_hidden is not defined %}
+  {% set label_hidden = false %}
+{% endif %}
+{% if multiple is not defined %}
+  {% set multiple = false %}
+{% endif %}
+{% if label is not defined %}
+  {% set label = 'Field label' %}
+{% endif %}
+{% if attributes is not defined %}
+  {% set attributes = create_attribute({'class': ['field']}) %}
+{% endif %}
+{% if title_attributes is not defined %}
+  {% set title_attributes = create_attribute({'class': ['field__label']}) %}
+{% endif %}
+{% if items is not defined %}
+  {% set items = [
+    {
+      'attributes': create_attribute({'class': ['field__item']}),
+      'content': 'Field item'
+    }
+  ] %}
+{% endif %}
+
+{%
+  include '@molecules/field/classy-field/_classy-field.html.twig' with {
+    'label_hidden': label_hidden,
+    'multiple': multiple,
+    'label': label,
+    'attributes': attributes,
+    'title_attributes': title_attributes,
+    'items': items
+  } only
+%}

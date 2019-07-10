@@ -1,0 +1,28 @@
+{% if attributes is not defined %}
+  {% set attributes = create_attribute({'class': [
+    'block', 'block-system', 'block-system-branding-block'
+  ]}) %}
+{% endif %}
+{% if site_logo is not defined %}
+  {% set site_logo = '../../images/logo.svg' %}
+{% endif %}
+{% if site_home_title is not defined %}
+  {% set site_home_title = 'Home' %}
+{% endif %}
+{% if site_name is not defined %}
+  {% set site_name = 'Site name' %}
+{% endif %}
+{% if site_slogan is not defined %}
+  {% set site_slogan = 'Site slogan. Lorem ipsum dolor sit amet, consectetur adipiscing
+    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' %}
+{% endif %}
+
+{%
+  include '@organisms/block/classy-branding-block/_classy-branding-block.html.twig' with {
+    'attributes': attributes,
+    'site_logo': site_logo,
+    'site_home_title': site_home_title,
+    'site_name': site_name,
+    'site_slogan': site_slogan
+  } only
+%}

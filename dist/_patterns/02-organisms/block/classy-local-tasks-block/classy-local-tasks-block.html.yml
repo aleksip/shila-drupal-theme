@@ -1,7 +1,0 @@
-attributes:
-  Attribute():
-    class:
-      - block
-      - block-core
-      - block-local-tasks-block
-content: molecules-classy-menu-local-tasks-html

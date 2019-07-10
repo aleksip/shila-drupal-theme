@@ -1,0 +1,39 @@
+{% if page is not defined %}
+  {% set page = {} %}
+{% endif %}
+{% if page.header is not defined %}
+  {% set page = page|merge({'header': include('@organisms/layout/classy-region/demo/classy-region-header.twig', with_context = false)}) %}
+{% endif %}
+{% if page.primary_menu is not defined %}
+  {% set page = page|merge({'primary_menu': include('@organisms/layout/classy-region/demo/classy-region-primary-menu.twig', with_context = false)}) %}
+{% endif %}
+{% if page.secondary_menu is not defined %}
+  {% set page = page|merge({'secondary_menu': include('@organisms/layout/classy-region/demo/classy-region-secondary-menu.twig', with_context = false)}) %}
+{% endif %}
+{% if page.breadcrumb is not defined %}
+  {% set page = page|merge({'breadcrumb': include('@organisms/layout/classy-region/demo/classy-region-breadcrumb.twig', with_context = false)}) %}
+{% endif %}
+{% if page.highlighted is not defined %}
+  {% set page = page|merge({'highlighted': ''}) %}
+{% endif %}
+{% if page.help is not defined %}
+  {% set page = page|merge({'help': ''}) %}
+{% endif %}
+{% if page.content is not defined %}
+  {% set page = page|merge({'content': include('@organisms/layout/classy-region/demo/classy-region-demo.twig', with_context = false)}) %}
+{% endif %}
+{% if page.sidebar_first is not defined %}
+  {% set page = page|merge({'sidebar_first': include('@organisms/layout/classy-region/demo/classy-region-sidebar-first.twig', with_context = false)}) %}
+{% endif %}
+{% if page.sidebar_second is not defined %}
+  {% set page = page|merge({'sidebar_second': ''}) %}
+{% endif %}
+{% if page.footer is not defined %}
+  {% set page = page|merge({'footer': include('@organisms/layout/classy-region/demo/classy-region-footer.twig', with_context = false)}) %}
+{% endif %}
+
+{%
+  include '@organisms/layout/classy-page/_classy-page.html.twig' with {
+    'page': page
+  } only
+%}

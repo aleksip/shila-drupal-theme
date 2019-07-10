@@ -1,0 +1,32 @@
+{%
+  include '@organisms/layout/classy-page/demo/_classy-page-demo.twig' with {
+    'page': {
+      'breadcrumb': '',
+      'content':
+        include('@organisms/layout/classy-region/demo/classy-region-demo.twig', {
+          'content':
+              include('@organisms/views/classy-views-view/demo/classy-views-view-demo.twig', {
+                'attributes': create_attribute('view', 'view-frontpage'),
+                'rows':
+                  include('@organisms/views/classy-views-view-unformatted/demo/classy-views-view-unformatted-demo.twig', {
+                    'rows': [
+                      {
+                        'attributes': create_attribute({'class': ['views-row']}),
+                        'content': include('@organisms/content/shila-article/demo/shila-article-teaser.twig', with_context = false)
+                      },
+                      {
+                        'attributes': create_attribute({'class': ['views-row']}),
+                        'content': include('@organisms/content/shila-article/demo/shila-article-teaser.twig', with_context = false)
+                      },
+                      {
+                        'attributes': create_attribute({'class': ['views-row']}),
+                        'content': include('@organisms/content/shila-article/demo/shila-article-teaser.twig', with_context = false)
+                      }
+                    ]
+                  }, with_context = false),
+                'feed_icons': include('@atoms/misc/stable-feed-icon/demo/stable-feed-icon-demo.twig', with_context = false)
+              }, with_context = false)
+        }, with_context = false)
+    }
+  } only
+%}

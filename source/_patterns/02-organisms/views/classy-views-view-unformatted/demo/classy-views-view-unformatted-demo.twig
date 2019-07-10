@@ -1,0 +1,26 @@
+{% if title is not defined %}
+  {% set title = '' %}
+{% endif %}
+{% if rows is not defined %}
+  {% set rows = [
+    {
+      'attributes': create_attribute({'class': ['views-row']}),
+      'content': 'Row 1 content'
+    },
+    {
+      'attributes': create_attribute({'class': ['views-row']}),
+      'content': 'Row 2 content'
+    },
+    {
+      'attributes': create_attribute({'class': ['views-row']}),
+      'content': 'Row 3 content'
+    }
+  ] %}
+{% endif %}
+
+{%
+  include '@organisms/views/classy-views-view-unformatted/_classy-views-view-unformatted.html.twig' with {
+    'title': title,
+    'rows': rows
+  } only
+%}

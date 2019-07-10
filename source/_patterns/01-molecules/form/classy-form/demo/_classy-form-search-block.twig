@@ -1,0 +1,39 @@
+{%
+  include '@molecules/form/classy-form/demo/classy-form-demo.twig' with {
+    'attributes': create_attribute({
+      'id': ['search-block-form'],
+      'class': ['search-block-form']
+    }),
+    'children':
+      include('@molecules/form/classy-form-element/demo/classy-form-element-demo.twig', {
+        'label':
+          include('@atoms/form/classy-form-element-label/demo/classy-form-element-label-demo.twig', {
+            'attributes': create_attribute({'class': ['visually-hidden']}),
+            'title': 'Search'
+          }, with_context = false),
+        'children':
+          include('@atoms/form/classy-input/demo/classy-input-demo.twig', {
+            'attributes': create_attribute({
+              'class': ['form-search'],
+              'type': ['search'],
+              'size': ['15']
+            })
+          }, with_context = false)
+      }, with_context = false) ~
+
+      include('@molecules/form/classy-container/demo/classy-container-demo.twig', {
+        'attributes': create_attribute({
+          'class': ['form-actions', 'js-form-wrapper', 'form-wrapper']
+        }),
+        'children':
+          include('@atoms/form/classy-input/demo/classy-input-demo.twig', {
+            'attributes': create_attribute({
+              'id': ['edit-submit'],
+              'type': ['submit'],
+              'value': ['Search'],
+              'class': ['button']
+            })
+          }, with_context = false)
+      }, with_context = false)
+  } only
+%}

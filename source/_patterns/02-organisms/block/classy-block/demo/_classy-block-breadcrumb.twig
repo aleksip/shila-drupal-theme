@@ -1,0 +1,17 @@
+{% if attributes is not defined %}
+  {% set attributes = create_attribute({'class': ['block', 'block-system', 'block-system-breadcrumb-block']}) %}
+{% endif %}
+{% if label is not defined %}
+  {% set label = false %}
+{% endif %}
+{% if content is not defined %}
+  {% set content = include('@molecules/navigation/classy-breadcrumb/demo/classy-breadcrumb-demo.twig', with_context = false) %}
+{% endif %}
+
+{%
+  include '@organisms/block/classy-block/demo/classy-block-demo.twig' with {
+    'attributes': attributes,
+    'label': label,
+    'content': content
+  } only
+%}

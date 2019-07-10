@@ -1,0 +1,17 @@
+{% if attributes is not defined %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+{% if options is not defined %}
+  {% set options = [
+    {'type': 'option', 'value': 1, 'label': 'Option 1'},
+    {'type': 'option', 'value': 2, 'label': 'Option 2'},
+    {'type': 'option', 'value': 3, 'label': 'Option 3'},
+  ] %}
+{% endif %}
+
+{%
+  include '@atoms/form/classy-select/_classy-select.html.twig' with {
+    'attributes': attributes,
+    'options': options
+  } only
+%}

@@ -1,0 +1,29 @@
+{%
+  include '@molecules/form/classy-form/demo/classy-form-demo.twig' with {
+    'attributes': create_attribute({
+      'id': ['comment-form'],
+      'class': ['comment-form', 'comment-comment-form']
+    }),
+    'children':
+      include('@molecules/form/classy-container/demo/_classy-container-form-textfield.twig', {
+        'label': 'Your name'
+      }, with_context = false) ~
+
+      include('@molecules/form/classy-container/demo/_classy-container-form-textfield.twig', {
+        'label': 'Email'
+      }, with_context = false) ~
+
+      include('@molecules/form/classy-container/demo/_classy-container-form-textfield.twig', {
+        'label': 'Homepage'
+      }, with_context = false) ~
+
+      include('@molecules/form/classy-container/demo/_classy-container-form-textarea.twig', {
+        'label': 'Comment'
+      }, with_context = false) ~
+
+      include('@molecules/form/classy-container/demo/classy-container-demo.twig', {
+        'children':
+          include('@atoms/form/classy-input/demo/classy-input-submit.twig', with_context = false)
+      }, with_context = false)
+  } only
+%}

@@ -1,7 +1,0 @@
-title: 'Breadcrumb'
-breadcrumb:
-  - text: 'Crumb 1'
-    url: '#'
-  - text: 'Crumb 2'
-    url: '#'
-  - text: 'Crumb 3'

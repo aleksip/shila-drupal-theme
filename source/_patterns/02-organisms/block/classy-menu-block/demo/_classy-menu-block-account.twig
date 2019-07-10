@@ -1,0 +1,38 @@
+{% if attributes is not defined %}
+  {% set attributes = create_attribute({'class': [
+    'block', 'block-menu', 'navigation', 'menu--account'
+  ]}) %}
+{% endif %}
+{% if title_attributes is not defined %}
+  {% set title_attributes = create_attribute({'class': ['visually-hidden']}) %}
+{% endif %}
+{% if configuration is not defined %}
+  {% set configuration = {'label': 'User account menu'} %}
+{% endif %}
+{% if content is not defined %}
+  {% set content = include('@molecules/navigation/classy-menu/demo/classy-menu-demo.twig', {
+      'items': [
+        {
+          'attributes': create_attribute({'class': ['menu-item']}),
+          'link': '<a href="">Account menu item 1</a>'
+        },
+        {
+          'attributes': create_attribute({'class': ['menu-item']}),
+          'link': '<a href="">Account menu item 2</a>'
+        },
+        {
+          'attributes': create_attribute({'class': ['menu-item']}),
+          'link': '<a href="">Account menu item 3</a>'
+        }
+      ]
+    }, with_context = false) %}
+{% endif %}
+
+{%
+  include '@organisms/block/classy-menu-block/demo/classy-menu-block-demo.twig' with {
+    'attributes': attributes,
+    'title_attributes': title_attributes,
+    'configuration': configuration,
+    'content': content
+  } only
+%}

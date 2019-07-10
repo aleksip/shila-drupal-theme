@@ -1,0 +1,35 @@
+{% if attributes is not defined %}
+  {% set attributes = create_attribute({'class': ['field', 'field--comment']}) %}
+{% endif %}
+{% if title_attributes is not defined %}
+  {% set title_attributes = create_attribute({'class': ['field--comment__title']}) %}
+{% endif %}
+{% if label is not defined %}
+  {% set label = 'Comments' %}
+{% endif %}
+{% if comments is not defined %}
+  {% set comments %}
+    {% include '@organisms/content/classy-comment/demo/classy-comment-demo.twig' only %}
+    <div class="indented">
+      {% include '@organisms/content/classy-comment/demo/classy-comment-demo.twig' only %}
+    </div>
+    {% include '@organisms/content/classy-comment/demo/classy-comment-demo.twig' only %}
+  {% endset %}
+{% endif %}
+{% if comment_form_title is not defined %}
+  {% set comment_form_title = 'Add new comment' %}
+{% endif %}
+{% if comment_form is not defined %}
+  {% set comment_form = include('@molecules/form/classy-form/demo/_classy-form-comment.twig', with_context = false) %}
+{% endif %}
+
+{%
+  include '@organisms/field/classy-comments/_classy-comments.html.twig' with {
+    'attributes': attributes,
+    'title_attributes': title_attributes,
+    'label': label,
+    'comments': comments,
+    'comment_form_title': comment_form_title,
+    'comment_form': comment_form
+  } only
+%}
