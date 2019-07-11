@@ -3,8 +3,8 @@
 var cp = require('child_process');
 var fs = require('fs');
 
-var plConfig = require('./patternlab-config.json');
-var patternlab = require('@pattern-lab/core')(plConfig);
+var plConfig = undefined;
+var patternlab = undefined;
 var browserSync = require('browser-sync').create();
 var gulp = require('gulp');
 var concat = require('gulp-concat');
@@ -112,6 +112,12 @@ function plGenerate(cb) {
     });
   }
   else {
+    if (!plConfig) {
+      plConfig = require('./patternlab-config.json');
+    }
+    if (!patternlab) {
+      patternlab = require('@pattern-lab/core')(plConfig);
+    }
     patternlab
       .build({
         cleanPublic: plConfig.cleanPublic

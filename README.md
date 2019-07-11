@@ -37,8 +37,6 @@ To generate the Pattern Lab website run:
 gulp plGenerate
 ```
 
-This will generate the Pattern Lab website. Note that a message indicating that Pattern Lab Node has been initialized will be shown even if you have followed the instructions for using Pattern Lab PHP.
-
 
 ### Known issues with Pattern Lab Node
 
