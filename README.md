@@ -1,4 +1,4 @@
-# Shila theme for Drupal 8
+# Shila theme for Drupal 8 🐕
 
 An [atomic design](http://bradfrost.com/blog/post/atomic-web-design/) and [Pattern Lab](http://patternlab.io/) friendly, [component-based](https://github.com/aleksip/component-based-theming), fairly unopinionated starting point for new Drupal 8 themes. Shila theme can be used stand-alone with Pattern Lab, and currently supports both Pattern Lab Node and Pattern Lab PHP.
 
