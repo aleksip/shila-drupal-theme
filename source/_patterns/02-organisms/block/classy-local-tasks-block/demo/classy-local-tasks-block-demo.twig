@@ -1,0 +1,15 @@
+{% if attributes is not defined %}
+  {% set attributes = create_attribute({'class': [
+    'block', 'block-core', 'block-local-tasks-block'
+  ]}) %}
+{% endif %}
+{% if content is not defined %}
+  {% set content = include('@molecules/navigation/classy-menu-local-tasks/demo/classy-menu-local-tasks-demo.twig', with_context = false) %}
+{% endif %}
+
+{%
+  include '@organisms/block/classy-local-tasks-block/_classy-local-tasks-block.html.twig' with {
+    'attributes': attributes,
+    'content': content
+  } only
+%}

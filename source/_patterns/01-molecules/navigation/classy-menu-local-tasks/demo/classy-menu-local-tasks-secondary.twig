@@ -1,0 +1,25 @@
+{% set secondary_tabs_title = 'Secondary tabs' %}
+{% set secondary %}
+  {%
+    include '@molecules/navigation/classy-menu-local-task/demo/classy-menu-local-task-demo.twig' with {
+      'task_link': '<a href="">Secondary task 1</a>'
+    } only
+  %}
+  {%
+    include '@molecules/navigation/classy-menu-local-task/demo/classy-menu-local-task-demo.twig' with {
+      'task_link': '<a href="">Secondary task 2</a>'
+    } only
+  %}
+  {%
+    include '@molecules/navigation/classy-menu-local-task/demo/classy-menu-local-task-demo.twig' with {
+      'task_link': '<a href="">Secondary task 3</a>'
+    } only
+  %}
+{% endset %}
+
+{%
+  include '@molecules/navigation/classy-menu-local-tasks/demo/classy-menu-local-tasks-demo.twig' with {
+    'secondary_tabs_title': secondary_tabs_title,
+    'secondary': secondary
+  } only
+%}

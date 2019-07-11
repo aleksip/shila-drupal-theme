@@ -1,0 +1,16 @@
+{% extends "@organisms/block/classy-block/_classy-block.html.twig" %}
+{#
+/**
+ * @file
+ * Theme override for tabs.
+ *
+ * @see templates/block/block--local-tasks-block.html.twig
+ */
+#}
+{% block content %}
+  {% if content %}
+    <nav class="tabs" role="navigation" aria-label="{{ aria_label }}">
+      {{ content }}
+    </nav>
+  {% endif %}
+{% endblock %}

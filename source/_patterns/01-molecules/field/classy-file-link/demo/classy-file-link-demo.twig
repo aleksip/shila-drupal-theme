@@ -1,0 +1,17 @@
+{% if attributes is not defined %}
+  {% set attributes = create_attribute({'class': ['file', 'file--general']}) %}
+{% endif %}
+{% if icon is not defined %}
+  {% set icon = '' %}
+{% endif %}
+{% if file_link is not defined %}
+  {% set file_link = '<a href="">File link</a>' %}
+{% endif %}
+
+{%
+  include '@molecules/field/classy-file-link/_classy-file-link.html.twig' with {
+    'attributes': attributes,
+    'icon': icon,
+    'file_link': file_link
+  } only
+%}

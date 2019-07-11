@@ -1,0 +1,13 @@
+{% if attributes is not defined %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+{% if task_link is not defined %}
+  {% set task_link = '<a href="">Local task</a>' %}
+{% endif %}
+
+{%
+  include '@molecules/navigation/classy-menu-local-task/_classy-menu-local-task.html.twig' with {
+    'attributes': attributes,
+    'task_link': task_link
+  } only
+%}

@@ -1,0 +1,37 @@
+{% if primary_tabs_title is not defined %}
+  {% set primary_tabs_title = 'Primary tabs' %}
+{% endif %}
+{% if primary is not defined %}
+  {% set primary %}
+    {%
+      include '@molecules/navigation/classy-menu-local-task/demo/classy-menu-local-task-demo.twig' with {
+        'task_link': '<a href="">Local task 1</a>'
+      } only
+    %}
+    {%
+      include '@molecules/navigation/classy-menu-local-task/demo/classy-menu-local-task-demo.twig' with {
+        'task_link': '<a href="">Local task 2</a>'
+      } only
+    %}
+    {%
+      include '@molecules/navigation/classy-menu-local-task/demo/classy-menu-local-task-demo.twig' with {
+        'task_link': '<a href="">Local task 3</a>'
+      } only
+    %}
+  {% endset %}
+{% endif %}
+{% if secondary_tabs_title is not defined %}
+  {% set secondary_tabs_title = '' %}
+{% endif %}
+{% if secondary is not defined %}
+  {% set secondary = false %}
+{% endif %}
+
+{%
+  include '@molecules/navigation/classy-menu-local-tasks/_classy-menu-local-tasks.html.twig' with {
+    'primary_tabs_title': primary_tabs_title,
+    'primary': primary,
+    'secondary_tabs_title': secondary_tabs_title,
+    'secondary': secondary
+  } only
+%}
