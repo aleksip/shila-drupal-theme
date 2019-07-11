@@ -9,6 +9,7 @@
 !/source/css/stable/
 !/source/css/stable-theme.admin.css
 !/source/css/stable-theme.css
+/source/js/scripts-styleguide.js
 /vendor/
 /wiki/
 /composer.lock
