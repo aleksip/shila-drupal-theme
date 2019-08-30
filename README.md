@@ -40,7 +40,6 @@ gulp plGenerate
 
 ### Known issues with Pattern Lab Node
 
-- Lots of warnings about pattern files greater than 3 levels deep will be displayed. This should not be a problem. [Related issue](https://github.com/pattern-lab/patternlab-node/issues/1037).
 - An error about a missing `favicon.ico` file might be displayed. This should not be a problem.
 - There might be one or more errors similar to `request to http://127.0.0.1:32853/?type=renderFile failed, reason: connect ECONNRESET 127.0.0.1:32853`. Try generating the site again until there are no such errors.
 

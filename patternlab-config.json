@@ -46,7 +46,7 @@
       2600
     ]
   },
-  "logLevel": "info",
+  "logLevel": "error",
   "outputFileSuffixes": {
     "rendered": ".rendered",
     "rawTemplate": "",
