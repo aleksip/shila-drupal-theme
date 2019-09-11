@@ -48,7 +48,7 @@ gulp --tasks
 ```
 
 
-### Known issues with Pattern Lab Node
+## Known issues with Pattern Lab Node
 
 - There might be one or more errors similar to `request to http://127.0.0.1:32853/?type=renderFile failed, reason: connect ECONNRESET 127.0.0.1:32853`. Try generating the site again until there are no such errors.
 
