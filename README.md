@@ -9,7 +9,7 @@ For more information and documentation, see the [project Wiki](https://github.co
 
 Prerequisites: [npm](https://nodejs.org/) and [Composer](https://getcomposer.org/) installed.
 
-In the Shila theme root directory run:
+In the Shila theme root directory run
 
 ```sh
 npm run setup
@@ -20,7 +20,7 @@ npm run setup
 
 The default setup is for Pattern Lab Node. Follow these additional instructions if you want to use Pattern Lab PHP.
 
-In the Shila theme root directory run:
+In the Shila theme root directory run
 
 ```sh
 npm run setup-pattern-lab-php
@@ -29,18 +29,27 @@ npm run setup-pattern-lab-php
 Then open `gulp-config.yml` and uncomment the `dir` line in the Pattern Lab section.
 
 
-## Generating the Pattern Lab website
+## Gulp tasks
 
-To generate the Pattern Lab website run:
+The theme includes a `gulpfile.js` with some useful tasks. However, using Gulp and these tasks is completely optional.
+
+The default task compiles any Sass files, generates Pattern Lab, launches a Browsersync server at `http://localhost:3000` and then keeps watching for any changes made to Sass, Twig and other files.
+
+For the default task, in the Shila theme root directory run
 
 ```sh
-gulp plGenerate
+gulp
+```
+
+To list all available tasks with short descriptions, in the Shila theme root directory run
+
+```sh
+gulp --tasks
 ```
 
 
 ### Known issues with Pattern Lab Node
 
-- An error about a missing `favicon.ico` file might be displayed. This should not be a problem.
 - There might be one or more errors similar to `request to http://127.0.0.1:32853/?type=renderFile failed, reason: connect ECONNRESET 127.0.0.1:32853`. Try generating the site again until there are no such errors.
 
 
