@@ -1,0 +1,9 @@
+{% if form is not defined %}
+  {% set form = include('@molecules/form/classy-form/demo/classy-form-demo.twig', with_context = false) %}
+{% endif %}
+
+{%
+  include '@molecules/views/classy-views-exposed-form/_classy-views-exposed-form.html.twig' with {
+    'form': form
+  } only
+%}
