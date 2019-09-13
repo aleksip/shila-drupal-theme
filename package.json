@@ -15,7 +15,7 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-stylelint": "^9.0.0",
     "js-yaml": "^3.13.1",
-    "shila-css": "1.0.0",
+    "shila-css": "1.1.0",
     "stylelint": "^10.1.0",
     "stylelint-config-standard": "^18.3.0",
     "stylelint-no-browser-hacks": "^1.2.1",
