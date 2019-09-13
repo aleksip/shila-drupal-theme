@@ -15,9 +15,11 @@
 @import "partials/elements/elements.tables";
 
 @import "partials/styles/styles.typography";
+@import "partials/styles/styles.links";
 @import "partials/styles/styles.lists";
 @import "partials/styles/styles.tables";
 @import "partials/styles/styles.forms";
 @import "partials/styles/styles.buttons";
+@import "partials/styles/styles.focus";
 
 @import "../_patterns/**/_*.base.scss";
