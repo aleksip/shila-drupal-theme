@@ -3,6 +3,7 @@ type: theme
 description: 'An atomic design and Pattern Lab friendly starting point for new Drupal themes.'
 package: Shila
 core: 8.x
+core_version_requirement: ^8 || ^9
 
 # The core Normalize library is included and then replaced so that Normalize
 # will be the first stylesheet in the HTML source.
